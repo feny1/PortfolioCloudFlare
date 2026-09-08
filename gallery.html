@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>معرض الصور والمحطات التوثيقية | إيهاب يار - Ehab Yar</title>
+    <meta name="description" content="المعرض الكامل لصور ومحطات عالم الحاسب إيهاب يار - حفلات التخرج، المؤتمرات التقنية، المعارض الميدانية، والهوية القيادية.">
+    <link rel="icon" type="image/png" href="assets/images/ehab-yar-official-logo.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Tajawal:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <div class="grid-bg"></div>
+    <div class="glow-bg"></div>
+
+    <!-- Reading Progress Bar -->
+    <div class="reading-progress-container" id="reading-progress">
+        <div class="reading-progress-bar" id="reading-progress-bar" role="progressbar" aria-label="Reading progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img id="nav-logo-img" src="assets/images/ehab-yar-official-logo.png" alt="Ehab Yar Logo" class="nav-logo">
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a></li>
+                <li><a href="education.html" data-ar="المؤهلات" data-en="Education">المؤهلات</a></li>
+                <li><a href="expertise.html" data-ar="الخبرات" data-en="Expertise">الخبرات</a></li>
+                <li><a href="collaborations.html" data-ar="التعاونات" data-en="Experience">التعاونات</a></li>
+                <li><a href="people.html" data-ar="شخصيات عملت معهم" data-en="Network">شخصيات عملت معهم</a></li>
+                <li><a href="projects.html" data-ar="المشاريع" data-en="Projects">المشاريع</a></li>
+                <li><a href="gallery.html" class="active" data-ar="معرض الصور" data-en="Gallery">معرض الصور</a></li>
+                <li><a href="news.html" data-ar="مقالات وأخبار" data-en="News & Articles">مقالات وأخبار</a></li>
+                <li><a href="partnership.html" data-ar="كيف يمكنني إفادتك" data-en="Partnership">كيف يمكنني إفادتك</a></li>
+                <li><a href="index.html#contact" data-ar="اتصل بي" data-en="Contact">اتصل بي</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="lang-toggle" class="btn-lang" onclick="toggleLanguage()" aria-label="Toggle Language">
+                    <i class="fas fa-globe" style="margin-inline-end: 4px;"></i>
+                    <span class="lang-text" id="lang-text">English</span>
+                </button>
+            </div>
+            <div class="mobile-menu-btn" id="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="subpage-hero">
+            <div class="container">
+                <div class="subpage-breadcrumb">
+                    <a href="index.html"><i class="fas fa-home"></i> <span data-ar="الرئيسية" data-en="Home">الرئيسية</span></a>
+                    <span class="crumb-separator">/</span>
+                    <span data-ar="معرض الصور والمحطات" data-en="Moments & Gallery">معرض الصور والمحطات</span>
+                </div>
+
+                <div class="subpage-title-row">
+                    <div class="subpage-title-wrap">
+                        <h1 data-ar="معرض الصور والمحطات التوثيقية" data-en="Complete Moments & Photo Gallery">معرض الصور والمحطات التوثيقية</h1>
+                        <p data-ar="سجل مصور يوثق المحطات الأكاديمية والمهنية، مؤتمرات التحول الرقمي، أجنحة الابتكار، والعمليات التقنية الميدانية." data-en="A photographic journey documenting academic excellence, tech conferences, innovation showcases, and field operations.">سجل مصور يوثق المحطات الأكاديمية والمهنية، مؤتمرات التحول الرقمي، أجنحة الابتكار، والعمليات التقنية الميدانية.</p>
+                    </div>
+                    <div>
+                        <a href="index.html#gallery" class="subpage-back-btn">
+                            <i class="fas fa-arrow-right arrow-icon"></i>
+                            <span data-ar="العودة للصفحة الرئيسية" data-en="Back to Home">العودة للصفحة الرئيسية</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Metrics Bar -->
+                <div class="subpage-stats-bar">
+                    <div class="stat-metric-card">
+                        <div class="stat-metric-icon">
+                            <i class="fas fa-camera"></i>
+                        </div>
+                        <div class="stat-metric-info">
+                            <div class="stat-val">12</div>
+                            <div class="stat-lbl" data-ar="توثيق عالي الدقة: محطات حية" data-en="HD Documentation: Moments">توثيق عالي الدقة: محطات حية</div>
+                        </div>
+                    </div>
+                    <div class="stat-metric-card">
+                        <div class="stat-metric-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="stat-metric-info">
+                            <div class="stat-val">04</div>
+                            <div class="stat-lbl" data-ar="محطات أكاديمية: تكريم وتخرج" data-en="Academic Honors: UQU">محطات أكاديمية: تكريم وتخرج</div>
+                        </div>
+                    </div>
+                    <div class="stat-metric-card">
+                        <div class="stat-metric-icon">
+                            <i class="fas fa-vr-cardboard"></i>
+                        </div>
+                        <div class="stat-metric-info">
+                            <div class="stat-val">04</div>
+                            <div class="stat-lbl" data-ar="أجنحة ومؤتمرات: تقنية وابتكار" data-en="Tech Showcases: Mawsem AI">أجنحة ومؤتمرات: تقنية وابتكار</div>
+                        </div>
+                    </div>
+                    <div class="stat-metric-card">
+                        <div class="stat-metric-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="stat-metric-info">
+                            <div class="stat-val">100%</div>
+                            <div class="stat-lbl" data-ar="توثيق أصيل: سجل ميداني موثق" data-en="Authentic Records: Field Operations">توثيق أصيل: سجل ميداني موثق</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Intro Box -->
+                <div class="subpage-intro-box">
+                    <div class="subpage-intro-icon">
+                        <i class="fas fa-images"></i>
+                    </div>
+                    <div class="subpage-intro-text">
+                        <h3 data-ar="سجل موثق بالصور للرحلة العلمية والمهنية" data-en="A Visual Chronicle of Scientific & Professional Milestones">سجل موثق بالصور للرحلة العلمية والمهنية</h3>
+                        <p data-ar="تجسيد واقعي للحظات التخرج من جامعة أم القرى بمرتبة الشرف، واستعراض مشاريع الذكاء الاصطناعي في المعارض التقنية، وقيادة فرق العمليات التقنية في خدمة ضيوف الرحمن." data-en="Capturing honors graduation at Umm Al-Qura University, unveiling AI forecasting models at innovation booths, and directing mission-critical tech operations for Hajj season.">تجسيد واقعي للحظات التخرج من جامعة أم القرى بمرتبة الشرف، واستعراض مشاريع الذكاء الاصطناعي في المعارض التقنية، وقيادة فرق العمليات التقنية في خدمة ضيوف الرحمن.</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Filters -->
+                <div class="gallery-filters" id="gallery-filters" style="margin-bottom: 2.5rem;">
+                    <button class="filter-btn active" data-filter="all" onclick="filterGallery('all', this)">
+                        <i class="fas fa-th-large" style="margin-inline-end: 6px;"></i>
+                        <span data-ar="الكل (12)" data-en="All Photos (12)">الكل (12)</span>
+                    </button>
+                    <button class="filter-btn" data-filter="grad" onclick="filterGallery('grad', this)">
+                        <i class="fas fa-graduation-cap" style="margin-inline-end: 6px;"></i>
+                        <span data-ar="حفل التخرج ومشاريعها" data-en="Graduation">حفل التخرج ومشاريعها</span>
+                    </button>
+                    <button class="filter-btn" data-filter="work" onclick="filterGallery('work', this)">
+                        <i class="fas fa-briefcase" style="margin-inline-end: 6px;"></i>
+                        <span data-ar="الهوية والقيادة" data-en="Leadership & Identity">الهوية والقيادة</span>
+                    </button>
+                    <button class="filter-btn" data-filter="events" onclick="filterGallery('events', this)">
+                        <i class="fas fa-calendar-alt" style="margin-inline-end: 6px;"></i>
+                        <span data-ar="مؤتمرات وميداني" data-en="Events & Field">مؤتمرات وميداني</span>
+                    </button>
+                </div>
+
+                <div class="gallery-grid" id="gallery-full-container"></div>
+            </div>
+        </section>
+
+        <!-- Contact CTA -->
+        <section id="contact" style="padding-top: 2rem;">
+            <div class="container">
+                <div class="contact-card">
+                    <h2 id="contact-title" data-ar="هل تبحث عن شريك تقني؟" data-en="Seeking a Tech Partner?">هل تبحث عن شريك تقني؟</h2>
+                    <p id="contact-desc" data-ar="دعنا نناقش كيف يمكن لخبرتي كعالم حاسب أن تدعم نمو مشروعك وتضمن استقراره التقني." data-en="Let's discuss how my expertise as a Computer Scientist can support your project's growth and ensure its technical stability.">دعنا نناقش كيف يمكن لخبرتي كعالم حاسب أن تدعم نمو مشروعك وتضمن استقراره التقني.</p>
+                    <div class="social-links" id="social-links-container">
+                        <a href="https://x.com/_f_eny" target="_blank" rel="noopener noreferrer" title="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://www.linkedin.com/in/ehab-yar-4a1bb4193/" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/feny1" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                    <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+                        <a id="contact-whatsapp-btn" href="https://wa.me/966599727412" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-large">
+                            <i class="fab fa-whatsapp"></i>
+                            <span data-ar="تواصل معي الآن" data-en="Contact Me Now">تواصل معي الآن</span>
+                        </a>
+                        <a id="contact-email-btn" href="mailto:contact@eny.sa" class="btn btn-primary btn-large">
+                            <i class="fas fa-paper-plane"></i>
+                            <span data-ar="إرسال بريد إلكتروني" data-en="Send Email">إرسال بريد إلكتروني</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox-modal" id="lightbox-modal" onclick="handleLightboxBackdrop(event)">
+        <div class="lightbox-container" onclick="event.stopPropagation()">
+            <button class="lightbox-close-btn" onclick="closeLightbox()" aria-label="Close Lightbox">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="lightbox-counter" id="lightbox-counter">1 / 12</div>
+            <button class="lightbox-arrow lightbox-prev" onclick="prevLightbox(event)" aria-label="Previous Image">
+                <i class="fas fa-chevron-right lightbox-prev-icon"></i>
+            </button>
+            <div class="lightbox-img-wrap">
+                <img id="lightbox-img" src="" alt="Gallery Preview" class="lightbox-img">
+            </div>
+            <button class="lightbox-arrow lightbox-next" onclick="nextLightbox(event)" aria-label="Next Image">
+                <i class="fas fa-chevron-left lightbox-next-icon"></i>
+            </button>
+            <div class="lightbox-details">
+                <h3 class="lightbox-title" id="lightbox-title">عنوان الصورة</h3>
+                <p class="lightbox-desc" id="lightbox-desc">وصف الصورة</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <!-- Social Media Footer Bar -->
+            <div class="footer-social-bar" id="footer-social-bar">
+                <div class="footer-social-info">
+                    <div class="footer-social-title">
+                        <span class="footer-social-indicator" aria-hidden="true"></span>
+                        <span data-ar="تواصل ومتابعة مهنية" data-en="Connect &amp; Follow">تواصل ومتابعة مهنية</span>
+                    </div>
+                    <p class="footer-social-desc" data-ar="منصات ومنافذ التواصل المباشر مع إيهاب يار" data-en="Direct professional profiles &amp; channels for Ehab Yar">منصات ومنافذ التواصل المباشر مع إيهاب يار</p>
+                </div>
+                <div class="footer-social-links" id="footer-social-links">
+                    <a href="https://x.com/_f_eny" target="_blank" rel="noopener noreferrer" class="footer-social-item social-twitter" id="footer-link-twitter" title="X (Twitter)" aria-label="X (Twitter)">
+                        <i class="fab fa-x-twitter" aria-hidden="true"></i>
+                        <span>X</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ehab-yar-4a1bb4193/" target="_blank" rel="noopener noreferrer" class="footer-social-item social-linkedin" id="footer-link-linkedin" title="LinkedIn" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin" aria-hidden="true"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://github.com/feny1" target="_blank" rel="noopener noreferrer" class="footer-social-item social-github" id="footer-link-github" title="GitHub" aria-label="GitHub">
+                        <i class="fab fa-github" aria-hidden="true"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://wa.me/966599727412" target="_blank" rel="noopener noreferrer" class="footer-social-item social-whatsapp" id="footer-link-whatsapp" title="WhatsApp" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                        <span>WhatsApp</span>
+                    </a>
+                    <a href="mailto:contact@eny.sa" class="footer-social-item social-email" id="footer-link-email" title="Email" aria-label="Email">
+                        <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                        <span data-ar="البريد الإلكتروني" data-en="Email">البريد الإلكتروني</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-content">
+                <p data-ar="&copy; 2026 إيهاب يار. جميع الحقوق محفوظة." data-en="&copy; 2026 Ehab Yar. All rights reserved.">&copy; 2026 إيهاب يار. جميع الحقوق محفوظة.</p>
+                <div class="footer-links">
+                    <a href="index.html" class="footer-link" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+                    <a href="projects.html" class="footer-link" data-ar="المشاريع" data-en="Projects">المشاريع</a>
+                    <a href="news.html" class="footer-link" data-ar="المقالات" data-en="Articles">المقالات</a>
+                    <a href="index.html#contact" class="footer-link" data-ar="اتصل بي" data-en="Contact">اتصل بي</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button id="back-to-top" class="back-to-top" aria-label="Back to Top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="assets/data.js"></script>
+    <script src="assets/app.js"></script>
+    <script>
+        let currentLightboxIndex = 0;
+        let activeFilter = 'all';
+
+        function renderGalleryPage() {
+            const container = document.getElementById('gallery-full-container');
+            if (!container) return;
+            const isAr = window.getLanguage() === 'ar';
+            const list = siteData.gallery || [];
+
+            container.innerHTML = list.map((g, idx) => {
+                const title = isAr ? (g.titleAr || '') : (g.titleEn || '');
+                const desc = isAr ? (g.descAr || '') : (g.descEn || '');
+                const badge = isAr ? (g.badgeAr || '') : (g.badgeEn || '');
+
+                return `
+            <div class="gallery-item" data-category="${g.category || 'all'}" data-index="${idx}" onclick="openLightbox(${idx})">
+                <div class="gallery-card">
+                    <div class="gallery-img-wrap">
+                        <img src="${g.image}" alt="${title}" class="gallery-img" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-zoom-icon" onclick="event.stopPropagation(); openLightbox(${idx});"><i class="fas fa-expand-alt"></i></div>
+                            <div class="gallery-overlay-text">
+                                <h3 class="gallery-title">${title}</h3>
+                                <p class="gallery-desc">${desc}</p>
+                            </div>
+                        </div>
+                        <span class="gallery-badge">
+                            <span>${badge}</span>
+                        </span>
+                    </div>
+                    <div class="gallery-card-caption" style="padding: 1.1rem 1.25rem; background: rgba(15, 23, 42, 0.75); border-top: 1px solid rgba(255, 255, 255, 0.06); display: flex; flex-direction: column; gap: 0.35rem;">
+                        <h4 style="font-size: 1rem; font-weight: 700; color: #f8fafc; margin: 0; line-height: 1.4;">${title}</h4>
+                        <p style="font-size: 0.82rem; color: var(--text-gray); margin: 0; line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">${desc}</p>
+                    </div>
+                </div>
+            </div>
+            `;
+            }).join('');
+
+            updateGalleryFilterVisibility();
+        }
+
+        function filterGallery(category, btnEl) {
+            activeFilter = category;
+            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+            if (btnEl) btnEl.classList.add('active');
+            updateGalleryFilterVisibility();
+        }
+
+        function updateGalleryFilterVisibility() {
+            const items = document.querySelectorAll('.gallery-item');
+            items.forEach(item => {
+                const cat = item.getAttribute('data-category');
+                const matches = (activeFilter === 'all' || cat === activeFilter);
+                item.style.display = matches ? 'block' : 'none';
+            });
+        }
+
+        window.openLightbox = function (index) {
+            currentLightboxIndex = parseInt(index, 10) || 0;
+            updateLightboxContent();
+            const modal = document.getElementById('lightbox-modal');
+            if (modal) {
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        };
+
+        window.closeLightbox = function () {
+            const modal = document.getElementById('lightbox-modal');
+            if (modal) {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        };
+
+        window.handleLightboxBackdrop = function (e) {
+            if (e.target.id === 'lightbox-modal') {
+                window.closeLightbox();
+            }
+        };
+
+        window.nextLightbox = function (e) {
+            if (e) e.stopPropagation();
+            currentLightboxIndex++;
+            updateLightboxContent();
+        };
+
+        window.prevLightbox = function (e) {
+            if (e) e.stopPropagation();
+            currentLightboxIndex--;
+            updateLightboxContent();
+        };
+
+        function updateLightboxContent() {
+            const items = siteData.gallery || [];
+            if (items.length === 0) return;
+
+            if (currentLightboxIndex < 0) currentLightboxIndex = items.length - 1;
+            if (currentLightboxIndex >= items.length) currentLightboxIndex = 0;
+
+            const cur = items[currentLightboxIndex];
+            const isAr = window.getLanguage() === 'ar';
+
+            const imgEl = document.getElementById('lightbox-img');
+            const titleEl = document.getElementById('lightbox-title');
+            const descEl = document.getElementById('lightbox-desc');
+            const counterEl = document.getElementById('lightbox-counter');
+
+            if (imgEl) imgEl.src = cur.image;
+            if (titleEl) titleEl.textContent = isAr ? cur.titleAr : cur.titleEn;
+            if (descEl) descEl.textContent = isAr ? cur.descAr : cur.descEn;
+            if (counterEl) counterEl.textContent = `${currentLightboxIndex + 1} / ${items.length}`;
+        }
+
+        window.addEventListener('keydown', (e) => {
+            const lightbox = document.getElementById('lightbox-modal');
+            if (lightbox && lightbox.classList.contains('active')) {
+                if (e.key === 'Escape') window.closeLightbox();
+                if (e.key === 'ArrowLeft') {
+                    window.getLanguage() === 'ar' ? window.nextLightbox() : window.prevLightbox();
+                }
+                if (e.key === 'ArrowRight') {
+                    window.getLanguage() === 'ar' ? window.prevLightbox() : window.nextLightbox();
+                }
+            }
+        });
+
+        window.addEventListener('languageChanged', () => {
+            renderGalleryPage();
+            updateLightboxContent();
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderGalleryPage();
+            window.renderContact();
+        });
+    </script>
+</body>
+</html>

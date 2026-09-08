@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خبرات العمل والتعاونات المهنية | إيهاب يار - Ehab Yar</title>
+    <meta name="description" content="سجل التعاونات المهنية وخبرات العمل المؤسسية لعالم الحاسب إيهاب يار مع الجهات الحكومية والشركات ومكاتب المحاماة.">
+    <link rel="icon" type="image/png" href="assets/images/ehab-yar-official-logo.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Tajawal:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <div class="grid-bg"></div>
+    <div class="glow-bg"></div>
+
+    <!-- Reading Progress Bar -->
+    <div class="reading-progress-container" id="reading-progress">
+        <div class="reading-progress-bar" id="reading-progress-bar" role="progressbar" aria-label="Reading progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img id="nav-logo-img" src="assets/images/ehab-yar-official-logo.png" alt="Ehab Yar Logo" class="nav-logo">
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a></li>
+                <li><a href="education.html" data-ar="المؤهلات" data-en="Education">المؤهلات</a></li>
+                <li><a href="expertise.html" data-ar="الخبرات" data-en="Expertise">الخبرات</a></li>
+                <li><a href="collaborations.html" class="active" data-ar="التعاونات" data-en="Experience">التعاونات</a></li>
+                <li><a href="people.html" data-ar="شخصيات عملت معهم" data-en="Network">شخصيات عملت معهم</a></li>
+                <li><a href="projects.html" data-ar="المشاريع" data-en="Projects">المشاريع</a></li>
+                <li><a href="gallery.html" data-ar="معرض الصور" data-en="Gallery">معرض الصور</a></li>
+                <li><a href="news.html" data-ar="مقالات وأخبار" data-en="News & Articles">مقالات وأخبار</a></li>
+                <li><a href="partnership.html" data-ar="كيف يمكنني إفادتك" data-en="Partnership">كيف يمكنني إفادتك</a></li>
+                <li><a href="index.html#contact" data-ar="اتصل بي" data-en="Contact">اتصل بي</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="lang-toggle" class="btn-lang" onclick="toggleLanguage()" aria-label="Toggle Language">
+                    <i class="fas fa-globe" style="margin-inline-end: 4px;"></i>
+                    <span class="lang-text" id="lang-text">English</span>
+                </button>
+            </div>
+            <div class="mobile-menu-btn" id="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="subpage-hero">
+            <div class="container">
+                <div class="subpage-breadcrumb">
+                    <a href="index.html"><i class="fas fa-home"></i> <span data-ar="الرئيسية" data-en="Home">الرئيسية</span></a>
+                    <span class="crumb-separator">/</span>
+                    <span data-ar="خبرات العمل والتعاونات" data-en="Work Experience & Collaborations">خبرات العمل والتعاونات</span>
+                </div>
+
+                <div class="subpage-title-row">
+                    <div class="subpage-title-wrap">
+                        <h1 data-ar="خبرات العمل والتعاونات المهنية" data-en="Work Experience & Collaborations">خبرات العمل والتعاونات المهنية</h1>
+                        <p data-ar="محطات قيادية ومهنية وشراكات استراتيجية ناجحة تم خلالها قيادة وتطوير أنظمة تقنية حيوية تلبي أعلى معايير الاستقرار والموثوقية." data-en="Strategic leadership roles, advisory consultations, and mission-critical engineering engagements powering large-scale national and commercial operations.">محطات قيادية ومهنية وشراكات استراتيجية ناجحة تم خلالها قيادة وتطوير أنظمة تقنية حيوية تلبي أعلى معايير الاستقرار والموثوقية.</p>
+                    </div>
+                    <div>
+                        <a href="index.html#collaborations" class="subpage-back-btn">
+                            <i class="fas fa-arrow-right arrow-icon"></i>
+                            <span data-ar="العودة للصفحة الرئيسية" data-en="Back to Home">العودة للصفحة الرئيسية</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Metrics Bar -->
+                <div class="subpage-stats-bar" id="collab-stats-container"></div>
+
+                <!-- Intro Box -->
+                <div class="subpage-intro-box">
+                    <div class="subpage-intro-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <div class="subpage-intro-text">
+                        <h3 data-ar="سجل حافل في قيادة المشاريع التقنية المعقدة" data-en="A Proven Track Record in High-Stakes Technical Execution">سجل حافل في قيادة المشاريع التقنية المعقدة</h3>
+                        <p data-ar="من إدارة العمليات التقنية لخدمة أكثر من 30,000 حاج في شركة إكرام الضيف للسياحة، إلى الاستشارات البرمجية المتخصصة والشراكات الاستراتيجية مع قيادات الأعمال مثل الأستاذ هتان بن جمال خان." data-en="From orchestrating technical command centers serving 30,000+ pilgrims at Ikram Al-Daif Tourism, to high-level system consultations and strategic alliances with industry leaders like Mr. Hattan Jamal Khan.">من إدارة العمليات التقنية لخدمة أكثر من 30,000 حاج في شركة إكرام الضيف للسياحة، إلى الاستشارات البرمجية المتخصصة والشراكات الاستراتيجية مع قيادات الأعمال مثل الأستاذ هتان بن جمال خان.</p>
+                    </div>
+                </div>
+
+                <!-- Rich Case Cards Container -->
+                <div id="collab-full-container">
+                    <div class="skeleton-card skeleton-rich-case">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
+                            <div style="display: flex; align-items: center; gap: 1rem;">
+                                <div class="skeleton-bone skeleton-icon" style="margin-bottom: 0; width: 48px; height: 48px;"></div>
+                                <div>
+                                    <div class="skeleton-bone" style="width: 220px; height: 24px; margin-bottom: 0.5rem;"></div>
+                                    <div class="skeleton-bone" style="width: 140px; height: 14px;"></div>
+                                </div>
+                            </div>
+                            <div class="skeleton-bone skeleton-badge" style="width: 130px; height: 28px;"></div>
+                        </div>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin-bottom: 1.5rem;">
+                            <div style="background: rgba(255,255,255,0.02); padding: 1.2rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.04);">
+                                <div class="skeleton-bone" style="width: 120px; height: 16px; margin-bottom: 0.8rem;"></div>
+                                <div class="skeleton-bone skeleton-line" style="width: 100%;"></div>
+                                <div class="skeleton-bone skeleton-line" style="width: 85%;"></div>
+                            </div>
+                            <div style="background: rgba(255,255,255,0.02); padding: 1.2rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.04);">
+                                <div class="skeleton-bone" style="width: 120px; height: 16px; margin-bottom: 0.8rem;"></div>
+                                <div class="skeleton-bone skeleton-line" style="width: 100%;"></div>
+                                <div class="skeleton-bone skeleton-line" style="width: 90%;"></div>
+                            </div>
+                        </div>
+                        <div class="skeleton-footer-bar">
+                            <div style="display: flex; gap: 8px;">
+                                <div class="skeleton-bone skeleton-tag" style="width: 70px;"></div>
+                                <div class="skeleton-bone skeleton-tag" style="width: 90px;"></div>
+                                <div class="skeleton-bone skeleton-tag" style="width: 60px;"></div>
+                            </div>
+                            <div class="skeleton-bone" style="width: 120px; height: 32px; border-radius: 8px;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact CTA -->
+        <section id="contact" style="padding-top: 2rem;">
+            <div class="container">
+                <div class="contact-card">
+                    <h2 id="contact-title" data-ar="هل تبحث عن شريك تقني؟" data-en="Seeking a Tech Partner?">هل تبحث عن شريك تقني؟</h2>
+                    <p id="contact-desc" data-ar="دعنا نناقش كيف يمكن لخبرتي كعالم حاسب أن تدعم نمو مشروعك وتضمن استقراره التقني." data-en="Let's discuss how my expertise as a Computer Scientist can support your project's growth and ensure its technical stability.">دعنا نناقش كيف يمكن لخبرتي كعالم حاسب أن تدعم نمو مشروعك وتضمن استقراره التقني.</p>
+                    <div class="social-links" id="social-links-container">
+                        <a href="https://x.com/_f_eny" target="_blank" rel="noopener noreferrer" title="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://www.linkedin.com/in/ehab-yar-4a1bb4193/" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/feny1" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                    <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+                        <a id="contact-whatsapp-btn" href="https://wa.me/966599727412" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-large">
+                            <i class="fab fa-whatsapp"></i>
+                            <span data-ar="تواصل معي الآن" data-en="Contact Me Now">تواصل معي الآن</span>
+                        </a>
+                        <a id="contact-email-btn" href="mailto:contact@eny.sa" class="btn btn-primary btn-large">
+                            <i class="fas fa-paper-plane"></i>
+                            <span data-ar="إرسال بريد إلكتروني" data-en="Send Email">إرسال بريد إلكتروني</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <!-- Social Media Footer Bar -->
+            <div class="footer-social-bar" id="footer-social-bar">
+                <div class="footer-social-info">
+                    <div class="footer-social-title">
+                        <span class="footer-social-indicator" aria-hidden="true"></span>
+                        <span data-ar="تواصل ومتابعة مهنية" data-en="Connect &amp; Follow">تواصل ومتابعة مهنية</span>
+                    </div>
+                    <p class="footer-social-desc" data-ar="منصات ومنافذ التواصل المباشر مع إيهاب يار" data-en="Direct professional profiles &amp; channels for Ehab Yar">منصات ومنافذ التواصل المباشر مع إيهاب يار</p>
+                </div>
+                <div class="footer-social-links" id="footer-social-links">
+                    <a href="https://x.com/_f_eny" target="_blank" rel="noopener noreferrer" class="footer-social-item social-twitter" id="footer-link-twitter" title="X (Twitter)" aria-label="X (Twitter)">
+                        <i class="fab fa-x-twitter" aria-hidden="true"></i>
+                        <span>X</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ehab-yar-4a1bb4193/" target="_blank" rel="noopener noreferrer" class="footer-social-item social-linkedin" id="footer-link-linkedin" title="LinkedIn" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin" aria-hidden="true"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://github.com/feny1" target="_blank" rel="noopener noreferrer" class="footer-social-item social-github" id="footer-link-github" title="GitHub" aria-label="GitHub">
+                        <i class="fab fa-github" aria-hidden="true"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://wa.me/966599727412" target="_blank" rel="noopener noreferrer" class="footer-social-item social-whatsapp" id="footer-link-whatsapp" title="WhatsApp" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                        <span>WhatsApp</span>
+                    </a>
+                    <a href="mailto:contact@eny.sa" class="footer-social-item social-email" id="footer-link-email" title="Email" aria-label="Email">
+                        <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                        <span data-ar="البريد الإلكتروني" data-en="Email">البريد الإلكتروني</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-content">
+                <p data-ar="&copy; 2026 إيهاب يار. جميع الحقوق محفوظة." data-en="&copy; 2026 Ehab Yar. All rights reserved.">&copy; 2026 إيهاب يار. جميع الحقوق محفوظة.</p>
+                <div class="footer-links">
+                    <a href="index.html" class="footer-link" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+                    <a href="projects.html" class="footer-link" data-ar="المشاريع" data-en="Projects">المشاريع</a>
+                    <a href="news.html" class="footer-link" data-ar="المقالات" data-en="Articles">المقالات</a>
+                    <a href="index.html#contact" class="footer-link" data-ar="اتصل بي" data-en="Contact">اتصل بي</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button id="back-to-top" class="back-to-top" aria-label="Back to Top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="assets/data.js"></script>
+    <script src="assets/app.js"></script>
+    <script>
+        function renderCollaborationsPage() {
+            const container = document.getElementById('collab-full-container');
+            const statsContainer = document.getElementById('collab-stats-container');
+            if (!container) return;
+            const isAr = window.getLanguage() === 'ar';
+            const list = siteData.collaborations || [];
+            const stats = siteData.collaborationStats || [];
+
+            if (statsContainer) {
+                statsContainer.innerHTML = stats.map(st => `
+                    <div class="stat-metric-card">
+                        <div class="stat-metric-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <div class="stat-metric-info">
+                            <div class="stat-val">${st.num}</div>
+                            <div class="stat-lbl">${isAr ? st.labelAr : st.labelEn}: <strong>${isAr ? st.valAr : st.valEn}</strong></div>
+                        </div>
+                    </div>
+                `).join('');
+            }
+
+            container.innerHTML = list.map(item => {
+                const title = isAr ? (item.titleAr || '') : (item.titleEn || '');
+                const role = isAr ? (item.roleAr || '') : (item.roleEn || '');
+                const org = isAr ? (item.orgAr || item.titleAr || '') : (item.orgEn || item.titleEn || '');
+                const period = isAr ? (item.periodAr || '') : (item.periodEn || '');
+                const badge = isAr ? (item.badgeAr || 'تعاون استراتيجي') : (item.badgeEn || 'Strategic Engagement');
+                const overview = isAr ? (item.overviewAr || item.descAr || '') : (item.overviewEn || item.descEn || '');
+                const responsibilities = isAr ? (item.responsibilitiesAr || item.scopeAr || []) : (item.responsibilitiesEn || item.scopeEn || []);
+                const impact = isAr ? (item.impactAr || item.outcomesAr || '') : (item.impactEn || item.outcomesEn || '');
+                const tags = item.tags || [];
+
+                return `
+                <div class="rich-case-card" style="margin-bottom: 2.2rem;">
+                    <div class="rich-case-header">
+                        <div class="rich-case-title-area">
+                            <div class="rich-case-icon-badge">
+                                <i class="${item.icon || 'fas fa-building'}"></i>
+                            </div>
+                            <div>
+                                <h3 class="rich-case-title">${title}</h3>
+                                <div class="rich-case-subtitle">${role}${org ? ' &bull; ' + org : ''} ${period ? '(' + period + ')' : ''}</div>
+                            </div>
+                        </div>
+                        <span class="rich-case-badge">${badge}</span>
+                    </div>
+
+                    <div class="rich-case-body-grid">
+                        <div>
+                            ${overview ? `
+                            <div class="rich-section-block">
+                                <h4><i class="fas fa-info-circle"></i> <span>${isAr ? 'نبذة عن التعاون والدور المهني' : 'Role Overview & Engagement Scope'}</span></h4>
+                                <p>${overview}</p>
+                            </div>
+                            ` : ''}
+
+                            ${responsibilities.length ? `
+                            <div class="rich-section-block">
+                                <h4><i class="fas fa-tasks"></i> <span>${isAr ? 'المسؤوليات والمنجزات التقنية المنفذة' : 'Key Responsibilities & Deliverables'}</span></h4>
+                                <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.6rem;">
+                                    ${responsibilities.map(resp => `
+                                        <li style="font-size: 0.92rem; color: #cbd5e1; display: flex; align-items: flex-start; gap: 0.6rem; line-height: 1.55;">
+                                            <i class="fas fa-check-circle" style="color: var(--primary); font-size: 0.85rem; margin-top: 0.25rem;"></i>
+                                            <span>${resp}</span>
+                                        </li>
+                                    `).join('')}
+                                </ul>
+                            </div>
+                            ` : ''}
+
+                            ${impact ? `
+                            <div class="rich-quote-card" style="margin-top: 1rem;">
+                                ${impact}
+                            </div>
+                            ` : ''}
+                        </div>
+
+                        <div class="rich-meta-panel">
+                            <div class="rich-metric-item">
+                                <div class="rich-metric-num">${item.id === 'ikram' ? '30K+' : item.id === 'hattan' ? 'Strategic' : item.id === 'consulting' ? 'Zero-Fail' : 'Top Tier'}</div>
+                                <div class="rich-metric-desc">${isAr ? 'أثر تشغيلي وتقني ملموس' : 'Demonstrated Operational Impact'}</div>
+                            </div>
+                            <div class="rich-metric-item">
+                                <div class="rich-metric-num">100%</div>
+                                <div class="rich-metric-desc">${isAr ? 'التزام تام بالمواعيد والمعايير المؤسسية' : 'Milestone Compliance & Engineering Quality'}</div>
+                            </div>
+                            <div class="rich-metric-item">
+                                <div class="rich-metric-num">SLA</div>
+                                <div class="rich-metric-desc">${isAr ? 'معايير أمان موثقة وسيادة على البيانات' : 'Enterprise Data Sovereignty & Security'}</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="rich-case-footer">
+                        <div class="rich-tags-wrap">
+                            ${tags.map((t, idx) => `<span class="rich-tag ${idx === 0 ? 'featured-tag' : ''}">${t}</span>`).join('')}
+                        </div>
+                        <div>
+                            <a href="people.html" class="rich-action-btn">
+                                <span>${isAr ? 'عرض الشخصيات القيادية' : 'View Leadership Network'}</span>
+                                <i class="fas fa-arrow-left arrow-icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                `;
+            }).join('');
+            container.classList.add('content-loaded');
+        }
+
+        window.addEventListener('languageChanged', renderCollaborationsPage);
+        document.addEventListener('DOMContentLoaded', () => {
+            renderCollaborationsPage();
+            window.renderContact();
+        });
+    </script>
+</body>
+</html>

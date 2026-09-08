@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تغطيات صحفية ومقالات إعلامية | إيهاب يار - Ehab Yar</title>
+    <meta name="description" content="الأرشيف الكامل للتغطيات الصحفية والمقالات الموثقة لعالم الحاسب إيهاب يار في مختلف الصحف والمواقع الإخبارية.">
+    <link rel="icon" type="image/png" href="assets/images/ehab-yar-official-logo.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Tajawal:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <div class="grid-bg"></div>
+    <div class="glow-bg"></div>
+
+    <!-- Reading Progress Bar -->
+    <div class="reading-progress-container" id="reading-progress">
+        <div class="reading-progress-bar" id="reading-progress-bar" role="progressbar" aria-label="Reading progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img id="nav-logo-img" src="assets/images/ehab-yar-official-logo.png" alt="Ehab Yar Logo" class="nav-logo">
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a></li>
+                <li><a href="education.html" data-ar="المؤهلات" data-en="Education">المؤهلات</a></li>
+                <li><a href="expertise.html" data-ar="الخبرات" data-en="Expertise">الخبرات</a></li>
+                <li><a href="collaborations.html" data-ar="التعاونات" data-en="Experience">التعاونات</a></li>
+                <li><a href="people.html" data-ar="شخصيات عملت معهم" data-en="Network">شخصيات عملت معهم</a></li>
+                <li><a href="projects.html" data-ar="المشاريع" data-en="Projects">المشاريع</a></li>
+                <li><a href="gallery.html" data-ar="معرض الصور" data-en="Gallery">معرض الصور</a></li>
+                <li><a href="news.html" class="active" data-ar="مقالات وأخبار" data-en="News & Articles">مقالات وأخبار</a></li>
+                <li><a href="partnership.html" data-ar="كيف يمكنني إفادتك" data-en="Partnership">كيف يمكنني إفادتك</a></li>
+                <li><a href="index.html#contact" data-ar="اتصل بي" data-en="Contact">اتصل بي</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="lang-toggle" class="btn-lang" onclick="toggleLanguage()" aria-label="Toggle Language">
+                    <i class="fas fa-globe" style="margin-inline-end: 4px;"></i>
+                    <span class="lang-text" id="lang-text">English</span>
+                </button>
+            </div>
+            <div class="mobile-menu-btn" id="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="subpage-hero">
+            <div class="container">
+                <div class="subpage-breadcrumb">
+                    <a href="index.html"><i class="fas fa-home"></i> <span data-ar="الرئيسية" data-en="Home">الرئيسية</span></a>
+                    <span class="crumb-separator">/</span>
+                    <span data-ar="تغطيات صحفية ومقالات" data-en="Press & Media Coverage">تغطيات صحفية ومقالات</span>
+                </div>
+
+                <div class="subpage-title-row">
+                    <div class="subpage-title-wrap">
+                        <h1 data-ar="كافة التغطيات الصحفية والمقالات" data-en="All Press Coverage & Media Articles">كافة التغطيات الصحفية والمقالات</h1>
+                        <p data-ar="أرشيف شامل لجميع المقالات والتقارير الصحفية الموثقة المنشورة عن عالم الحاسب إيهاب يار وإسهاماته التقنية والبحثية." data-en="Comprehensive press archive featuring published media reports, tech columns, and news interviews documenting Ehab Yar's research and leadership.">أرشيف شامل لجميع المقالات والتقارير الصحفية الموثقة المنشورة عن عالم الحاسب إيهاب يار وإسهاماته التقنية والبحثية.</p>
+                    </div>
+                    <div>
+                        <a href="index.html#news" class="subpage-back-btn">
+                            <i class="fas fa-arrow-right arrow-icon"></i>
+                            <span data-ar="العودة للصفحة الرئيسية" data-en="Back to Home">العودة للصفحة الرئيسية</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Metrics Bar -->
+                <div class="subpage-stats-bar" id="news-stats-container"></div>
+
+                <!-- Intro Box -->
+                <div class="subpage-intro-box">
+                    <div class="subpage-intro-icon">
+                        <i class="fas fa-newspaper"></i>
+                    </div>
+                    <div class="subpage-intro-text">
+                        <h3 data-ar="حضور إعلامي وصحفي يبرز الإنجازات التقنية الوطنية" data-en="National Media & Press Highlighting Technological Impact">حضور إعلامي وصحفي يبرز الإنجازات التقنية الوطنية</h3>
+                        <p data-ar="توثيق صحفي معتمد من كبرى الصحف السعودية والمنصات الإخبارية لتطبيقات الذكاء الاصطناعي، ابتكارات خدمة الحجاج، والتحليلات البرمجية المتقدمة لعالم الحاسب إيهاب يار." data-en="Authoritative press coverage across leading Saudi dailies spotlighting predictive AI models, pilgrim service technologies, and applied computer science research.">توثيق صحفي معتمد من كبرى الصحف السعودية والمنصات الإخبارية لتطبيقات الذكاء الاصطناعي، ابتكارات خدمة الحجاج، والتحليلات البرمجية المتقدمة لعالم الحاسب إيهاب يار.</p>
+                    </div>
+                </div>
+
+                <div id="news-full-container" style="display: flex; flex-direction: column; gap: 2rem;"></div>
+            </div>
+        </section>
+
+        <!-- Contact CTA -->
+        <section id="contact" style="padding-top: 2rem;">
+            <div class="container">
+                <div class="contact-card">
+                    <h2 id="contact-title" data-ar="هل تبحث عن شريك تقني؟" data-en="Seeking a Tech Partner?">هل تبحث عن شريك تقني؟</h2>
+                    <p id="contact-desc" data-ar="دعنا نناقش كيف يمكن لخبرتي كعالم حاسب أن تدعم نمو مشروعك وتضمن استقراره التقني." data-en="Let's discuss how my expertise as a Computer Scientist can support your project's growth and ensure its technical stability.">دعنا نناقش كيف يمكن لخبرتي كعالم حاسب أن تدعم نمو مشروعك وتضمن استقراره التقني.</p>
+                    <div class="social-links" id="social-links-container">
+                        <a href="https://x.com/_f_eny" target="_blank" rel="noopener noreferrer" title="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://www.linkedin.com/in/ehab-yar-4a1bb4193/" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/feny1" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                    <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+                        <a id="contact-whatsapp-btn" href="https://wa.me/966599727412" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-large">
+                            <i class="fab fa-whatsapp"></i>
+                            <span data-ar="تواصل معي الآن" data-en="Contact Me Now">تواصل معي الآن</span>
+                        </a>
+                        <a id="contact-email-btn" href="mailto:contact@eny.sa" class="btn btn-primary btn-large">
+                            <i class="fas fa-paper-plane"></i>
+                            <span data-ar="إرسال بريد إلكتروني" data-en="Send Email">إرسال بريد إلكتروني</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <!-- Social Media Footer Bar -->
+            <div class="footer-social-bar" id="footer-social-bar">
+                <div class="footer-social-info">
+                    <div class="footer-social-title">
+                        <span class="footer-social-indicator" aria-hidden="true"></span>
+                        <span data-ar="تواصل ومتابعة مهنية" data-en="Connect &amp; Follow">تواصل ومتابعة مهنية</span>
+                    </div>
+                    <p class="footer-social-desc" data-ar="منصات ومنافذ التواصل المباشر مع إيهاب يار" data-en="Direct professional profiles &amp; channels for Ehab Yar">منصات ومنافذ التواصل المباشر مع إيهاب يار</p>
+                </div>
+                <div class="footer-social-links" id="footer-social-links">
+                    <a href="https://x.com/_f_eny" target="_blank" rel="noopener noreferrer" class="footer-social-item social-twitter" id="footer-link-twitter" title="X (Twitter)" aria-label="X (Twitter)">
+                        <i class="fab fa-x-twitter" aria-hidden="true"></i>
+                        <span>X</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ehab-yar-4a1bb4193/" target="_blank" rel="noopener noreferrer" class="footer-social-item social-linkedin" id="footer-link-linkedin" title="LinkedIn" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin" aria-hidden="true"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://github.com/feny1" target="_blank" rel="noopener noreferrer" class="footer-social-item social-github" id="footer-link-github" title="GitHub" aria-label="GitHub">
+                        <i class="fab fa-github" aria-hidden="true"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://wa.me/966599727412" target="_blank" rel="noopener noreferrer" class="footer-social-item social-whatsapp" id="footer-link-whatsapp" title="WhatsApp" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                        <span>WhatsApp</span>
+                    </a>
+                    <a href="mailto:contact@eny.sa" class="footer-social-item social-email" id="footer-link-email" title="Email" aria-label="Email">
+                        <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                        <span data-ar="البريد الإلكتروني" data-en="Email">البريد الإلكتروني</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-content">
+                <p data-ar="&copy; 2026 إيهاب يار. جميع الحقوق محفوظة." data-en="&copy; 2026 Ehab Yar. All rights reserved.">&copy; 2026 إيهاب يار. جميع الحقوق محفوظة.</p>
+                <div class="footer-links">
+                    <a href="index.html" class="footer-link" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+                    <a href="projects.html" class="footer-link" data-ar="المشاريع" data-en="Projects">المشاريع</a>
+                    <a href="news.html" class="footer-link" data-ar="المقالات" data-en="Articles">المقالات</a>
+                    <a href="index.html#contact" class="footer-link" data-ar="اتصل بي" data-en="Contact">اتصل بي</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button id="back-to-top" class="back-to-top" aria-label="Back to Top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="assets/data.js"></script>
+    <script src="assets/app.js"></script>
+    <script>
+        function renderNewsPage() {
+            const container = document.getElementById('news-full-container');
+            const statsContainer = document.getElementById('news-stats-container');
+            if (!container) return;
+            const isAr = window.getLanguage() === 'ar';
+            const list = siteData.news || [];
+            const stats = siteData.newsStats || [];
+
+            if (statsContainer) {
+                statsContainer.innerHTML = stats.map(st => `
+                    <div class="stat-metric-card">
+                        <div class="stat-metric-icon">
+                            <i class="fas fa-newspaper"></i>
+                        </div>
+                        <div class="stat-metric-info">
+                            <div class="stat-val">${st.num}</div>
+                            <div class="stat-lbl">${isAr ? st.labelAr : st.labelEn}: <strong>${isAr ? st.valAr : st.valEn}</strong></div>
+                        </div>
+                    </div>
+                `).join('');
+            }
+
+            container.innerHTML = list.map(item => {
+                const newspaper = isAr ? (item.newspaper || '') : (item.newspaperEn || item.newspaper || '');
+                const title = isAr ? (item.title || item.titleAr || '') : (item.titleEn || item.title || '');
+                const summary = isAr ? (item.summaryAr || item.excerptAr || '') : (item.summaryEn || item.excerptEn || '');
+                const quote = isAr ? (item.quoteAr || (item.keyPointsAr && item.keyPointsAr[0]) || '') : (item.quoteEn || (item.keyPointsEn && item.keyPointsEn[0]) || '');
+                const date = isAr ? (item.dateAr || (item.date ? item.date + 'م' : '2026م')) : (item.dateEn || item.date || '2026');
+                const category = isAr ? (item.categoryAr || (item.category === 'ai' ? 'ذكاء اصطناعي' : item.category === 'field' ? 'عمليات ميدانية' : 'تحول رقمي')) : (item.categoryEn || (item.category === 'ai' ? 'Artificial Intelligence' : item.category === 'field' ? 'Field Operations' : 'Digital Transformation'));
+                const tags = item.tags || (isAr ? item.keyPointsAr : item.keyPointsEn) || [];
+
+                return `
+                <div class="news-rich-card">
+                    <div class="news-rich-header">
+                        <div class="news-rich-source">
+                            <div class="news-source-badge">
+                                <i class="fas fa-newspaper"></i>
+                            </div>
+                            <div>
+                                <div style="font-weight: 700; color: #f8fafc; font-size: 1.05rem;">${newspaper}</div>
+                                <div class="news-rich-meta">
+                                    <span><i class="far fa-calendar-alt"></i> ${date}</span>
+                                    <span>&bull;</span>
+                                    <span><i class="fas fa-bookmark"></i> ${category}</span>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="rich-case-badge">${isAr ? (item.badge || 'تقرير صحفي') : (item.badgeEn || 'Press Report')}</span>
+                    </div>
+
+                    <h3 class="news-rich-title">
+                        <a href="${item.url}" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">
+                            ${title}
+                        </a>
+                    </h3>
+
+                    <p class="news-rich-summary">${summary}</p>
+
+                    ${quote ? `
+                    <div class="news-rich-quote">
+                        <i class="fas fa-quote-right" style="color: var(--primary); margin-inline-end: 0.5rem; opacity: 0.7;"></i>
+                        "${quote}"
+                    </div>
+                    ` : ''}
+
+                    <div class="news-rich-footer">
+                        <div class="rich-tags-wrap">
+                            ${tags.map((t, idx) => `<span class="rich-tag ${idx === 0 ? 'featured-tag' : ''}">${t}</span>`).join('')}
+                        </div>
+                        <div>
+                            <a href="${item.url}" target="_blank" rel="noopener noreferrer" class="rich-action-btn">
+                                <span>${isAr ? 'قراءة التغطية في الصحيفة الرسمية' : 'Read Full Press Coverage'}</span>
+                                <i class="fas fa-external-link-alt" style="font-size: 0.85rem;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                `;
+            }).join('');
+        }
+
+        window.addEventListener('languageChanged', renderNewsPage);
+        document.addEventListener('DOMContentLoaded', () => {
+            renderNewsPage();
+            window.renderContact();
+        });
+    </script>
+</body>
+</html>

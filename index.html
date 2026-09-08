@@ -66,2265 +66,7 @@
     }
     </script>
 
-    <style>
-        :root {
-            /* Neon Emerald & Holographic Accents (Reference 1 & Reference 2 clue.io) */
-            --primary: #f43f5e;
-            --primary-hover: #fb7185;
-            --primary-glow: rgba(244, 63, 94, 0.45);
-            --primary-subtle: rgba(244, 63, 94, 0.12);
-
-            --accent-cyan: #38bdf8;
-            --accent-cyan-glow: rgba(56, 189, 248, 0.35);
-            --accent-violet: #818cf8;
-            --accent-magenta: #f43f5e;
-
-            /* Warm Sand / Cream Editorial Accent Card (Reference 1) */
-            --accent-sand: #f5ebe0;
-            --accent-sand-subtle: #eeddc9;
-            --accent-sand-text: #0f172a;
-            --accent-sand-muted: #475569;
-
-            /* Obsidian Canvas (Reference 2 clue.io) */
-            --bg-dark: #050508;
-            --bg-surface: #0a0a10;
-            --bg-card: rgba(14, 15, 22, 0.72);
-            --bg-card-hover: rgba(22, 24, 35, 0.9);
-            --bg-card-solid: #0d0e15;
-
-            --text-white: #ffffff;
-            --text-gray: #94a3b8;
-            --text-muted: #64748b;
-
-            --border-subtle: rgba(255, 255, 255, 0.08);
-            --border-hover: rgba(244, 63, 94, 0.45);
-            --border-cyan: rgba(56, 189, 248, 0.4);
-            --grid-line: rgba(255, 255, 255, 0.035);
-
-            --nav-bg: rgba(9, 10, 15, 0.75);
-            --transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
-
-            --font-ar: 'Tajawal', sans-serif;
-            --font-en: 'Outfit', sans-serif;
-            --current-font: var(--font-ar);
-
-            --radius-sm: 8px;
-            --radius-md: 14px;
-            --radius-lg: 20px;
-            --radius-xl: 28px;
-            --radius-full: 9999px;
-        }
-
-        [lang="ar"] {
-            --current-font: var(--font-ar);
-        }
-
-        [lang="en"] {
-            --current-font: var(--font-en);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            background-color: var(--bg-dark);
-            color: var(--text-white);
-            font-family: var(--current-font);
-            line-height: 1.7;
-            overflow-x: hidden;
-            position: relative;
-            min-height: 100vh;
-        }
-
-        /* Subtle Architectural Background Grid */
-        .grid-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: 
-                linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-                linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-            background-size: 64px 64px;
-            z-index: -2;
-            pointer-events: none;
-        }
-
-        /* Multi-spectrum Ambient Glow */
-        .glow-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: 
-                radial-gradient(circle at 10% 15%, rgba(244, 63, 94, 0.08) 0%, transparent 40%),
-                radial-gradient(circle at 90% 20%, rgba(56, 189, 248, 0.08) 0%, transparent 45%),
-                radial-gradient(circle at 50% 60%, rgba(129, 140, 248, 0.06) 0%, transparent 50%),
-                radial-gradient(circle at 85% 85%, rgba(244, 63, 94, 0.05) 0%, transparent 40%);
-            z-index: -1;
-            pointer-events: none;
-        }
-
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: var(--bg-dark);
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: rgba(244, 63, 94, 0.35);
-            border-radius: 4px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: var(--primary);
-        }
-
-        .container {
-            max-width: 1300px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        /* Floating Pill Glass Navbar */
-        .navbar {
-            position: fixed;
-            top: 18px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: min(1280px, calc(100% - 2.5rem));
-            padding: 0.75rem 1.6rem;
-            border-radius: var(--radius-full);
-            background: var(--nav-bg);
-            backdrop-filter: blur(24px);
-            -webkit-backdrop-filter: blur(24px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.08);
-            z-index: 1000;
-            transition: var(--transition);
-        }
-
-        .navbar.scrolled {
-            top: 10px;
-            padding: 0.65rem 1.4rem;
-            background: rgba(6, 7, 11, 0.92);
-            border-color: rgba(244, 63, 94, 0.35);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8), 0 0 25px rgba(244, 63, 94, 0.12);
-        }
-
-        .navbar .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 100%;
-            padding: 0;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-        }
-
-        .nav-logo {
-            height: 42px;
-            width: auto;
-            filter: invert(1);
-            transition: var(--transition);
-        }
-
-        .logo:hover .nav-logo {
-            transform: scale(1.05);
-            filter: invert(1) drop-shadow(0 0 12px var(--primary-glow));
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 1.4rem;
-            align-items: center;
-        }
-
-        .nav-links a {
-            color: var(--text-gray);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.92rem;
-            position: relative;
-            transition: var(--transition);
-            cursor: pointer;
-            padding: 4px 6px;
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 0;
-            height: 2px;
-            background: var(--primary);
-            border-radius: 2px;
-            box-shadow: 0 0 8px var(--primary-glow);
-            transition: var(--transition);
-        }
-
-        .nav-links a:hover::after,
-        .nav-links a.active::after {
-            width: 80%;
-        }
-
-        .nav-links a:hover,
-        .nav-links a.active {
-            color: var(--text-white);
-        }
-
-        .nav-actions {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .btn-lang {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.14);
-            color: var(--text-white);
-            padding: 0.45rem 1.2rem;
-            border-radius: var(--radius-full);
-            cursor: pointer;
-            font-family: inherit;
-            font-weight: 700;
-            font-size: 0.9rem;
-            transition: var(--transition);
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .btn-lang:hover {
-            background: rgba(244, 63, 94, 0.15);
-            border-color: var(--primary);
-            color: var(--primary-hover);
-            box-shadow: 0 0 16px var(--primary-glow);
-        }
-
-        .mobile-menu-btn {
-            display: none;
-            flex-direction: column;
-            justify-content: space-between;
-            width: 26px;
-            height: 18px;
-            background: transparent;
-            border: none;
-            cursor: pointer;
-            z-index: 1002;
-        }
-
-        .mobile-menu-btn span {
-            width: 100%;
-            height: 2px;
-            background-color: var(--text-white);
-            border-radius: 4px;
-            transition: var(--transition);
-        }
-
-        .mobile-menu-btn.active span:nth-child(1) {
-            transform: translateY(8px) rotate(45deg);
-        }
-
-        .mobile-menu-btn.active span:nth-child(2) {
-            opacity: 0;
-        }
-
-        .mobile-menu-btn.active span:nth-child(3) {
-            transform: translateY(-8px) rotate(-45deg);
-        }
-
-        /* Hero Section */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-            padding-top: 130px;
-            padding-bottom: 50px;
-            border-bottom: 1px solid var(--border-subtle);
-        }
-
-        .liquid-ribbon-wrap {
-            position: absolute;
-            top: 5%;
-            left: -10%;
-            width: 120%;
-            height: 90%;
-            pointer-events: none;
-            z-index: 0;
-            opacity: 0.65;
-            overflow: hidden;
-        }
-
-        .liquid-ribbon-svg {
-            width: 100%;
-            height: 100%;
-            filter: drop-shadow(0 0 40px rgba(56, 189, 248, 0.25));
-            animation: ribbonFloat 18s ease-in-out infinite alternate;
-        }
-
-        @keyframes ribbonFloat {
-            0% { transform: translateY(0) scale(1); }
-            50% { transform: translateY(-15px) scale(1.02); }
-            100% { transform: translateY(10px) scale(0.98); }
-        }
-
-        .hero-content-wrapper {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 3.5rem;
-            width: 100%;
-            position: relative;
-            z-index: 2;
-        }
-
-        .hero-content {
-            flex: 1.25;
-        }
-
-        .hero-badge-pill {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 5px 14px;
-            border-radius: var(--radius-full);
-            background: rgba(244, 63, 94, 0.1);
-            border: 1px solid rgba(244, 63, 94, 0.3);
-            color: var(--primary);
-            font-size: 0.82rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            margin-bottom: 1.2rem;
-        }
-
-        .hero-badge-dot {
-            width: 7px;
-            height: 7px;
-            border-radius: 50%;
-            background: var(--primary);
-            box-shadow: 0 0 10px var(--primary);
-            animation: pulseDot 2s infinite;
-        }
-
-        @keyframes pulseDot {
-            0%, 100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.4; transform: scale(0.7); }
-        }
-
-        .greeting {
-            color: var(--text-gray);
-            font-weight: 600;
-            font-size: 1.15rem;
-            margin-bottom: 0.4rem;
-        }
-
-        .hero-title-group {
-            margin-bottom: 1.2rem;
-        }
-
-        .name {
-            font-size: clamp(2.8rem, 5.5vw, 4.4rem);
-            font-weight: 900;
-            line-height: 1.15;
-            letter-spacing: -0.02em;
-            margin-bottom: 0.3rem;
-            color: var(--text-white);
-        }
-
-        .hologram-gradient-text {
-            background: linear-gradient(135deg, #ffffff 30%, #fda4af 70%, #38bdf8 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .hero-outline-banner {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-top: 4px;
-        }
-
-        .outline-stroke-text {
-            font-family: var(--font-en);
-            font-weight: 900;
-            font-size: clamp(1.4rem, 3.2vw, 2.4rem);
-            letter-spacing: 0.04em;
-            text-transform: uppercase;
-            color: transparent;
-            -webkit-text-stroke: 1.4px rgba(255, 255, 255, 0.4);
-            line-height: 1;
-            transition: var(--transition);
-        }
-
-        .outline-stroke-text:hover {
-            -webkit-text-stroke: 1.4px var(--primary);
-            filter: drop-shadow(0 0 10px var(--primary-glow));
-        }
-
-        .name .en-name {
-            font-size: 0.52em;
-            color: var(--text-muted);
-            font-weight: 400;
-            letter-spacing: 0.05em;
-            margin-inline-start: 10px;
-        }
-
-        .role-pill-box {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 6px 16px;
-            background: rgba(255, 255, 255, 0.035);
-            border: 1px solid var(--border-subtle);
-            border-radius: var(--radius-full);
-            margin-bottom: 1.5rem;
-        }
-
-        .role-text {
-            font-size: clamp(1.1rem, 2.2vw, 1.4rem);
-            color: var(--primary);
-            font-weight: 700;
-            position: relative;
-        }
-
-        .typewriter-cursor {
-            display: inline-block;
-            width: 2.5px;
-            height: 1.1em;
-            background-color: var(--primary);
-            vertical-align: middle;
-            margin-inline-start: 4px;
-            animation: blink 0.8s infinite;
-        }
-
-        @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0; }
-        }
-
-        .hero-desc {
-            color: var(--text-gray);
-            font-size: 1.08rem;
-            line-height: 1.85;
-            margin-bottom: 2.2rem;
-            max-width: 640px;
-        }
-
-        .hero-btns {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-            align-items: center;
-        }
-
-        /* Buttons */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.75rem;
-            padding: 0.85rem 2rem;
-            border-radius: var(--radius-full);
-            font-weight: 700;
-            font-size: 0.98rem;
-            text-decoration: none;
-            cursor: pointer;
-            transition: var(--transition);
-            font-family: inherit;
-        }
-
-        .btn-primary {
-            background: var(--primary);
-            color: #ffffff;
-            border: 1px solid var(--primary);
-            box-shadow: 0 4px 25px var(--primary-glow);
-        }
-
-        .btn-primary:hover {
-            background: var(--primary-hover);
-            border-color: var(--primary-hover);
-            color: #ffffff;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 30px rgba(244, 63, 94, 0.6);
-        }
-
-        .btn-outline {
-            background: rgba(255, 255, 255, 0.04);
-            color: var(--text-white);
-            border: 1px solid rgba(255, 255, 255, 0.16);
-            backdrop-filter: blur(12px);
-        }
-
-        .btn-outline:hover {
-            border-color: var(--primary);
-            color: var(--primary);
-            transform: translateY(-2px);
-            background: rgba(244, 63, 94, 0.08);
-            box-shadow: 0 0 20px rgba(244, 63, 94, 0.15);
-        }
-
-        .btn-whatsapp {
-            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-            color: #ffffff;
-            border: 1px solid rgba(244, 63, 94, 0.4);
-            box-shadow: 0 4px 20px rgba(244, 63, 94, 0.3);
-        }
-
-        .btn-whatsapp:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(244, 63, 94, 0.5);
-            color: #ffffff;
-        }
-
-        /* Hero Right Column: Bento Ensemble */
-        .hero-bento-column {
-            flex: 0.95;
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            position: relative;
-        }
-
-        .hero-profile-bento {
-            display: grid;
-            grid-template-columns: 1.2fr 1fr;
-            gap: 16px;
-            align-items: stretch;
-        }
-
-        .profile-card {
-            position: relative;
-            width: 100%;
-            height: 380px;
-            border-radius: 22px;
-            background: var(--bg-card);
-            border: 1px solid var(--border-subtle);
-            overflow: hidden;
-            display: flex;
-            align-items: flex-end;
-            justify-content: center;
-            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6);
-            transition: var(--transition);
-        }
-
-        .profile-card:hover {
-            border-color: var(--primary);
-            box-shadow: 0 25px 50px var(--primary-glow);
-            transform: translateY(-4px);
-        }
-
-        .profile-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: top center;
-            transition: var(--transition);
-        }
-
-        .profile-card:hover .profile-img {
-            transform: scale(1.03);
-        }
-
-        .profile-bg-glow {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle, var(--primary-glow) 0%, transparent 70%);
-            opacity: 0.25;
-            pointer-events: none;
-        }
-
-        .card-corner-tl, .card-corner-br {
-            position: absolute;
-            width: 10px;
-            height: 10px;
-            border-color: var(--primary);
-            pointer-events: none;
-            z-index: 3;
-        }
-        .card-corner-tl {
-            top: 10px;
-            left: 10px;
-            border-top: 2px solid var(--primary);
-            border-left: 2px solid var(--primary);
-        }
-        .card-corner-br {
-            bottom: 10px;
-            right: 10px;
-            border-bottom: 2px solid var(--primary);
-            border-right: 2px solid var(--primary);
-        }
-
-        .bento-cards-stack {
-            display: flex;
-            flex-direction: column;
-            gap: 14px;
-            justify-content: space-between;
-        }
-
-        .bento-sand-card {
-            background: var(--accent-sand);
-            color: var(--accent-sand-text);
-            border-radius: 20px;
-            padding: 1.3rem 1.4rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            gap: 12px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
-            position: relative;
-            overflow: hidden;
-            transition: var(--transition);
-            height: 100%;
-        }
-
-        .bento-sand-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.55);
-            background: #fff8f0;
-        }
-
-        .bento-sand-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            gap: 10px;
-        }
-
-        .bento-sand-title {
-            font-size: 1.15rem;
-            font-weight: 800;
-            line-height: 1.25;
-            color: var(--accent-sand-text);
-        }
-
-        .bento-sand-subtitle {
-            font-size: 0.85rem;
-            color: var(--accent-sand-muted);
-            margin-top: 4px;
-            line-height: 1.4;
-        }
-
-        .sand-play-btn {
-            width: 38px;
-            height: 38px;
-            border-radius: 50%;
-            background: #0f172a;
-            color: #ffffff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.88rem;
-            flex-shrink: 0;
-            transition: var(--transition);
-        }
-
-        .bento-sand-card:hover .sand-play-btn {
-            transform: scale(1.08);
-            background: #000000;
-        }
-
-        .sand-pill-tag {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            font-size: 0.78rem;
-            font-weight: 700;
-            color: #e11d48;
-            background: rgba(244, 63, 94, 0.12);
-            padding: 3px 10px;
-            border-radius: var(--radius-full);
-            width: fit-content;
-        }
-
-        .bento-dark-badge {
-            background: #000000;
-            border: 1px solid rgba(255, 255, 255, 0.14);
-            border-radius: 18px;
-            padding: 1rem 1.3rem;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 14px;
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
-            transition: var(--transition);
-        }
-
-        .bento-dark-badge:hover {
-            border-color: var(--primary);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8), 0 0 15px var(--primary-glow);
-            transform: translateY(-3px);
-        }
-
-        .bento-dark-stat {
-            font-family: var(--font-en);
-            font-size: 1.9rem;
-            font-weight: 900;
-            color: #ffffff;
-            line-height: 1;
-        }
-
-        .bento-dark-label {
-            font-size: 0.76rem;
-            color: var(--text-gray);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            font-weight: 600;
-            line-height: 1.3;
-        }
-
-        .bento-avatars-row {
-            display: flex;
-            align-items: center;
-        }
-
-        .bento-avatar-icon {
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            background: #1e293b;
-            border: 2px solid #000000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.75rem;
-            color: var(--primary);
-            margin-inline-start: -8px;
-        }
-
-        .bento-avatar-icon:first-child {
-            margin-inline-start: 0;
-        }
-
-        .luminous-stat-banner {
-            margin: 40px auto 30px auto;
-            max-width: 1260px;
-            padding: 2.2rem 2.5rem;
-            border-radius: 28px;
-            background: rgba(12, 13, 20, 0.7);
-            backdrop-filter: blur(24px);
-            -webkit-backdrop-filter: blur(24px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 
-                0 25px 60px rgba(0, 0, 0, 0.7),
-                0 0 40px rgba(244, 63, 94, 0.06),
-                inset 0 1px 0 rgba(255, 255, 255, 0.14);
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 1.8rem;
-            position: relative;
-            z-index: 10;
-            transition: var(--transition);
-        }
-
-        .luminous-stat-banner::before {
-            content: '';
-            position: absolute;
-            inset: -1px;
-            border-radius: 29px;
-            padding: 1px;
-            background: linear-gradient(135deg, rgba(244, 63, 94, 0.5) 0%, rgba(56, 189, 248, 0.3) 50%, rgba(129, 140, 248, 0.4) 100%);
-            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-            -webkit-mask-composite: xor;
-            mask-composite: exclude;
-            pointer-events: none;
-        }
-
-        .stat-col {
-            text-align: center;
-            position: relative;
-            padding: 0 10px;
-        }
-
-        .stat-col:not(:last-child)::after {
-            content: '';
-            position: absolute;
-            top: 15%;
-            bottom: 15%;
-            left: 0;
-            width: 1px;
-            background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.12), transparent);
-        }
-
-        body[dir="ltr"] .stat-col:not(:last-child)::after {
-            left: auto;
-            right: 0;
-        }
-
-        .stat-num {
-            font-family: var(--font-en);
-            font-size: clamp(2.2rem, 3.4vw, 3.2rem);
-            font-weight: 800;
-            letter-spacing: -0.03em;
-            line-height: 1.1;
-            margin-bottom: 6px;
-            background: linear-gradient(135deg, #ffffff 40%, #fda4af 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .stat-title {
-            font-size: 0.94rem;
-            font-weight: 600;
-            color: var(--text-gray);
-            line-height: 1.4;
-        }
-
-        /* Section Header */
-        section {
-            padding: 90px 0;
-            position: relative;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 55px;
-        }
-
-        .section-header h2 {
-            font-size: clamp(2rem, 3.5vw, 2.6rem);
-            font-weight: 800;
-            color: var(--text-white);
-            margin-bottom: 14px;
-            letter-spacing: -0.01em;
-        }
-
-        .underline {
-            width: 50px;
-            height: 3px;
-            background: linear-gradient(90deg, var(--primary), #fb923c);
-            margin: 0 auto;
-            border-radius: 2px;
-            box-shadow: 0 0 12px var(--primary-glow);
-        }
-
-        /* Priority Roadmap / Timeline for Credentials */
-        .edu-timeline {
-            position: relative;
-            max-width: 960px;
-            margin: 0 auto;
-            padding: 20px 0;
-        }
-
-        .edu-timeline::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            right: 35px;
-            width: 2px;
-            background: linear-gradient(to bottom, var(--primary) 0%, rgba(251, 146, 60, 0.4) 70%, rgba(255, 255, 255, 0.05) 100%);
-            box-shadow: 0 0 15px var(--primary-glow);
-        }
-
-        body[dir="ltr"] .edu-timeline::before {
-            right: auto;
-            left: 35px;
-        }
-
-        .timeline-item {
-            position: relative;
-            margin-bottom: 45px;
-            padding-right: 90px;
-        }
-
-        body[dir="ltr"] .timeline-item {
-            padding-right: 0;
-            padding-left: 90px;
-        }
-
-        .timeline-item:last-child {
-            margin-bottom: 0;
-        }
-
-        .timeline-node {
-            position: absolute;
-            top: 20px;
-            right: 11px;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: #08090e;
-            border: 2px solid var(--primary);
-            color: var(--primary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            font-weight: 800;
-            box-shadow: 0 0 20px var(--primary-glow), inset 0 0 10px rgba(244, 63, 94, 0.3);
-            z-index: 2;
-            transition: var(--transition);
-        }
-
-        body[dir="ltr"] .timeline-node {
-            right: auto;
-            left: 11px;
-        }
-
-        .timeline-item:hover .timeline-node {
-            transform: scale(1.15);
-            background: var(--primary);
-            color: #ffffff;
-            box-shadow: 0 0 30px var(--primary);
-        }
-
-        .timeline-content-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-subtle);
-            border-radius: 20px;
-            padding: 2.2rem 2.4rem;
-            transition: var(--transition);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            position: relative;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-        }
-
-        .timeline-content-card.highlighted {
-            border-color: rgba(244, 63, 94, 0.35);
-            background: linear-gradient(145deg, rgba(20, 24, 34, 0.9) 0%, rgba(14, 16, 24, 0.75) 100%);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 0 25px rgba(244, 63, 94, 0.1);
-        }
-
-        .timeline-item:hover .timeline-content-card {
-            transform: translateY(-4px);
-            border-color: var(--primary);
-            box-shadow: 0 18px 45px rgba(0, 0, 0, 0.7), 0 0 30px var(--primary-glow);
-        }
-
-        .timeline-card-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-bottom: 12px;
-        }
-
-        .timeline-rank-badge {
-            font-size: 0.8rem;
-            font-weight: 700;
-            color: var(--primary);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .edu-status-badge {
-            font-size: 0.82rem;
-            font-weight: 700;
-            padding: 5px 14px;
-            border-radius: var(--radius-full);
-            background: rgba(244, 63, 94, 0.12);
-            border: 1px solid rgba(244, 63, 94, 0.4);
-            color: var(--primary-hover);
-        }
-
-        .timeline-degree-title {
-            font-size: 1.45rem;
-            font-weight: 800;
-            color: #ffffff;
-            margin-bottom: 8px;
-        }
-
-        .timeline-status {
-            font-size: 0.95rem;
-            color: var(--primary);
-            font-weight: 600;
-            margin-bottom: 18px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .timeline-details-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 14px;
-            padding-top: 18px;
-            border-top: 1px solid var(--border-subtle);
-        }
-
-        .timeline-detail-box {
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-            color: var(--text-gray);
-            font-size: 0.92rem;
-            line-height: 1.5;
-        }
-
-        .timeline-detail-box i {
-            color: var(--primary);
-            font-size: 1rem;
-            margin-top: 4px;
-            width: 18px;
-            text-align: center;
-        }
-
-        /* Generic Cards & Bento Grids */
-        .expertise-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 1.8rem;
-        }
-
-        .expertise-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-subtle);
-            border-radius: 20px;
-            padding: 2.4rem 2rem;
-            transition: var(--transition);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            display: flex;
-            flex-direction: column;
-        }
-
-        .expertise-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--primary);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 0 0 25px var(--primary-glow);
-        }
-
-        .icon-box {
-            width: 56px;
-            height: 56px;
-            background: linear-gradient(135deg, rgba(244, 63, 94, 0.15) 0%, rgba(56, 189, 248, 0.1) 100%);
-            border: 1px solid rgba(244, 63, 94, 0.3);
-            border-radius: 14px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            color: var(--primary);
-            margin-bottom: 1.5rem;
-            transition: var(--transition);
-        }
-
-        .expertise-card:hover .icon-box {
-            background: var(--primary);
-            color: #030712;
-            transform: scale(1.08);
-            box-shadow: 0 0 20px var(--primary-glow);
-        }
-
-        .expertise-card h3 {
-            font-size: 1.35rem;
-            margin-bottom: 1rem;
-            color: var(--text-white);
-            font-weight: 700;
-        }
-
-        .expertise-card p {
-            color: var(--text-gray);
-            line-height: 1.7;
-            font-size: 0.98rem;
-            flex-grow: 1;
-        }
-
-        .card-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-            margin-top: 18px;
-        }
-
-        .tag-pill {
-            font-size: 0.78rem;
-            padding: 4px 11px;
-            border-radius: var(--radius-full);
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid var(--border-subtle);
-            color: var(--text-gray);
-            transition: var(--transition);
-        }
-
-        .expertise-card:hover .tag-pill {
-            border-color: rgba(244, 63, 94, 0.3);
-            color: var(--text-white);
-        }
-
-        /* Collaborations Section */
-        .collab-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.8rem;
-        }
-
-        .collab-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-subtle);
-            border-radius: 20px;
-            padding: 2.2rem 1.8rem;
-            transition: var(--transition);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-        }
-
-        .collab-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--primary);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 0 0 25px var(--primary-glow);
-        }
-
-        .collab-icon {
-            width: 48px;
-            height: 48px;
-            background: rgba(244, 63, 94, 0.12);
-            border: 1px solid rgba(244, 63, 94, 0.3);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.3rem;
-            color: var(--primary);
-            margin-bottom: 1.2rem;
-            transition: var(--transition);
-        }
-
-        .collab-card:hover .collab-icon {
-            background: var(--primary);
-            color: #030712;
-            box-shadow: 0 0 15px var(--primary-glow);
-        }
-
-        .collab-card h3 {
-            font-size: 1.25rem;
-            margin-bottom: 0.8rem;
-            color: var(--text-white);
-            font-weight: 700;
-        }
-
-        .collab-card p {
-            color: var(--text-gray);
-            font-size: 0.94rem;
-            line-height: 1.7;
-        }
-
-        /* People Section (New) */
-        .people-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.8rem;
-        }
-
-        .person-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-subtle);
-            border-radius: 20px;
-            padding: 2rem 1.8rem;
-            transition: var(--transition);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .person-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--primary);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.65), 0 0 25px var(--primary-glow);
-        }
-
-        .person-header {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            margin-bottom: 14px;
-        }
-
-        .person-avatar {
-            width: 52px;
-            height: 52px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, rgba(244, 63, 94, 0.2) 0%, rgba(56, 189, 248, 0.15) 100%);
-            border: 1px solid rgba(244, 63, 94, 0.4);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.35rem;
-            color: var(--primary);
-            flex-shrink: 0;
-            transition: var(--transition);
-        }
-
-        .person-card:hover .person-avatar {
-            background: var(--primary);
-            color: #ffffff;
-            box-shadow: 0 0 18px var(--primary-glow);
-        }
-
-        .person-name {
-            font-size: 1.22rem;
-            font-weight: 800;
-            color: #ffffff;
-            line-height: 1.3;
-        }
-
-        .person-badge {
-            display: inline-block;
-            font-size: 0.76rem;
-            font-weight: 700;
-            color: var(--accent-cyan);
-            background: rgba(56, 189, 248, 0.1);
-            border: 1px solid rgba(56, 189, 248, 0.3);
-            border-radius: var(--radius-full);
-            padding: 2px 10px;
-            margin-top: 4px;
-        }
-
-        .person-org {
-            font-size: 0.92rem;
-            color: var(--primary-hover);
-            font-weight: 700;
-            margin-bottom: 8px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .person-desc {
-            color: var(--text-gray);
-            font-size: 0.94rem;
-            line-height: 1.7;
-            flex-grow: 1;
-        }
-
-        /* Projects Section */
-        .slider-container {
-            position: relative;
-            overflow: hidden;
-            padding: 10px 0 20px;
-        }
-
-        .slider-track {
-            display: flex;
-            gap: 1.8rem;
-            transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-        }
-
-        .project-card {
-            flex: 0 0 calc(33.333% - 1.2rem);
-            min-width: 300px;
-            background: var(--bg-card);
-            border: 1px solid var(--border-subtle);
-            border-radius: 20px;
-            padding: 2.2rem 2rem;
-            transition: var(--transition);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--primary);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.65), 0 0 25px var(--primary-glow);
-        }
-
-        .project-info h3 {
-            font-size: 1.35rem;
-            margin-bottom: 0.9rem;
-            color: var(--text-white);
-            font-weight: 700;
-        }
-
-        .project-info p {
-            color: var(--text-gray);
-            font-size: 0.95rem;
-            line-height: 1.7;
-            margin-bottom: 1.4rem;
-        }
-
-        .tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 1.4rem;
-        }
-
-        .tags span {
-            background: rgba(255, 255, 255, 0.04);
-            padding: 0.35rem 0.85rem;
-            border-radius: var(--radius-full);
-            font-size: 0.8rem;
-            color: var(--text-gray);
-            border: 1px solid var(--border-subtle);
-        }
-
-        .project-link {
-            color: var(--primary);
-            text-decoration: none;
-            font-size: 0.95rem;
-            font-weight: 700;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: var(--transition);
-        }
-
-        .project-link:hover {
-            color: var(--text-white);
-            gap: 0.8rem;
-        }
-
-        .slider-controls {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-
-        .slider-btn {
-            width: 46px;
-            height: 46px;
-            border-radius: 50%;
-            background: var(--bg-card);
-            border: 1px solid var(--border-subtle);
-            color: var(--text-white);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: var(--transition);
-            font-size: 1.1rem;
-        }
-
-        .slider-btn:hover {
-            background: var(--primary);
-            border-color: var(--primary);
-            color: #ffffff;
-            box-shadow: 0 0 20px var(--primary-glow);
-        }
-
-        /* Gallery Section */
-        .gallery-filters {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            flex-wrap: wrap;
-            margin-bottom: 35px;
-        }
-
-        .filter-btn {
-            padding: 8px 20px;
-            border-radius: var(--radius-full);
-            background: rgba(18, 19, 28, 0.8);
-            border: 1px solid var(--border-subtle);
-            color: var(--text-gray);
-            font-size: 0.9rem;
-            font-weight: 700;
-            cursor: pointer;
-            transition: var(--transition);
-            font-family: inherit;
-        }
-
-        .filter-btn:hover {
-            color: #ffffff;
-            border-color: var(--primary);
-            background: rgba(244, 63, 94, 0.12);
-        }
-
-        .filter-btn.active {
-            background: var(--primary);
-            border-color: var(--primary);
-            color: #ffffff;
-            box-shadow: 0 0 18px var(--primary-glow);
-        }
-
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 1.8rem;
-        }
-
-        .gallery-item {
-            transition: var(--transition);
-            cursor: pointer;
-        }
-
-        .gallery-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-subtle);
-            border-radius: 20px;
-            overflow: hidden;
-            transition: var(--transition);
-            position: relative;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .gallery-item:hover .gallery-card {
-            transform: translateY(-6px);
-            border-color: var(--primary);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7), 0 0 30px var(--primary-glow);
-        }
-
-        .gallery-img-wrap {
-            position: relative;
-            width: 100%;
-            aspect-ratio: 4 / 3;
-            overflow: hidden;
-            background: #000000;
-        }
-
-        .gallery-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-        }
-
-        .gallery-item:hover .gallery-img {
-            transform: scale(1.06);
-        }
-
-        .gallery-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to top, rgba(5, 5, 8, 0.95) 0%, rgba(5, 5, 8, 0.4) 50%, rgba(0, 0, 0, 0.1) 100%);
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            padding: 1.5rem;
-            opacity: 0;
-            transition: var(--transition);
-        }
-
-        .gallery-item:hover .gallery-overlay {
-            opacity: 1;
-        }
-
-        .gallery-zoom-icon {
-            position: absolute;
-            top: 14px;
-            left: 14px;
-            width: 42px;
-            height: 42px;
-            border-radius: 50%;
-            background: var(--primary);
-            color: #ffffff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.05rem;
-            box-shadow: 0 0 20px var(--primary-glow);
-            transform: scale(0.7);
-            transition: var(--transition);
-            cursor: pointer;
-            z-index: 10;
-        }
-
-        body[dir="ltr"] .gallery-zoom-icon {
-            left: auto;
-            right: 14px;
-        }
-
-        .gallery-item:hover .gallery-zoom-icon {
-            transform: scale(1);
-        }
-
-        .gallery-badge {
-            position: absolute;
-            top: 14px;
-            right: 14px;
-            background: rgba(5, 5, 8, 0.85);
-            backdrop-filter: blur(10px);
-            border: 1px solid var(--primary);
-            color: var(--primary-hover);
-            font-size: 0.8rem;
-            font-weight: 700;
-            padding: 4px 12px;
-            border-radius: var(--radius-full);
-            z-index: 2;
-        }
-
-        body[dir="ltr"] .gallery-badge {
-            right: auto;
-            left: 14px;
-        }
-
-        .gallery-overlay-text {
-            transform: translateY(15px);
-            transition: var(--transition);
-        }
-
-        .gallery-item:hover .gallery-overlay-text {
-            transform: translateY(0);
-        }
-
-        .gallery-title {
-            font-size: 1.15rem;
-            font-weight: 700;
-            color: #ffffff;
-            margin-bottom: 6px;
-        }
-
-        .gallery-desc {
-            color: var(--text-gray);
-            font-size: 0.88rem;
-            line-height: 1.6;
-        }
-
-        /* Lightbox Fullscreen Modal */
-        .lightbox-modal {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background: rgba(3, 3, 6, 0.95);
-            backdrop-filter: blur(25px);
-            -webkit-backdrop-filter: blur(25px);
-            z-index: 4000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            visibility: hidden;
-            pointer-events: none;
-            transition: var(--transition);
-            padding: 30px;
-        }
-
-        .lightbox-modal.active {
-            opacity: 1 !important;
-            visibility: visible !important;
-            pointer-events: auto !important;
-        }
-
-        .lightbox-container {
-            position: relative;
-            max-width: 1000px;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .lightbox-img-wrap {
-            position: relative;
-            max-height: 72vh;
-            max-width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9), 0 0 35px var(--primary-glow);
-            border: 1px solid rgba(244, 63, 94, 0.3);
-            background: #08080c;
-        }
-
-        .lightbox-img {
-            max-height: 72vh;
-            max-width: 100%;
-            object-fit: contain;
-            transition: transform 0.3s ease;
-        }
-
-        .lightbox-details {
-            margin-top: 18px;
-            text-align: center;
-            max-width: 800px;
-        }
-
-        .lightbox-title {
-            font-size: 1.35rem;
-            font-weight: 800;
-            color: #ffffff;
-            margin-bottom: 6px;
-        }
-
-        .lightbox-desc {
-            color: var(--text-gray);
-            font-size: 0.98rem;
-            line-height: 1.6;
-        }
-
-        .lightbox-counter {
-            position: absolute;
-            top: -45px;
-            left: 0;
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            font-weight: 600;
-        }
-
-        body[dir="ltr"] .lightbox-counter {
-            left: auto;
-            right: 0;
-        }
-
-        .lightbox-close-btn {
-            position: absolute;
-            top: -50px;
-            right: 0;
-            background: rgba(20, 20, 28, 0.8);
-            border: 1px solid var(--border-subtle);
-            color: var(--text-white);
-            width: 44px;
-            height: 44px;
-            border-radius: 50%;
-            font-size: 1.2rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        body[dir="ltr"] .lightbox-close-btn {
-            right: auto;
-            left: 0;
-        }
-
-        .lightbox-close-btn:hover {
-            background: #ef4444;
-            border-color: #ef4444;
-            transform: rotate(90deg);
-        }
-
-        .lightbox-arrow {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 52px;
-            height: 52px;
-            border-radius: 50%;
-            background: rgba(14, 15, 22, 0.85);
-            border: 1px solid var(--border-subtle);
-            color: var(--text-white);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.3rem;
-            cursor: pointer;
-            transition: var(--transition);
-            z-index: 10;
-        }
-
-        .lightbox-arrow:hover {
-            background: var(--primary);
-            border-color: var(--primary);
-            color: #ffffff;
-            box-shadow: 0 0 20px var(--primary-glow);
-            transform: translateY(-50%) scale(1.1);
-        }
-
-        .lightbox-prev {
-            right: -75px;
-        }
-
-        .lightbox-next {
-            left: -75px;
-        }
-
-        body[dir="ltr"] .lightbox-prev {
-            right: auto;
-            left: -75px;
-        }
-
-        body[dir="ltr"] .lightbox-next {
-            left: auto;
-            right: -75px;
-        }
-
-        /* Contact Section */
-        .contact-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-subtle);
-            border-radius: 28px;
-            padding: 4.5rem 2.5rem;
-            text-align: center;
-            max-width: 920px;
-            margin: 0 auto;
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7);
-        }
-
-        .contact-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle at center, var(--primary-glow) 0%, transparent 70%);
-            opacity: 0.12;
-            pointer-events: none;
-        }
-
-        .contact-card h2 {
-            font-size: clamp(2.2rem, 4vw, 3rem);
-            font-weight: 800;
-            margin-bottom: 1.1rem;
-            color: var(--text-white);
-        }
-
-        .contact-card p {
-            color: var(--text-gray);
-            font-size: 1.1rem;
-            max-width: 620px;
-            margin: 0 auto 2.5rem;
-            line-height: 1.8;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 1.2rem;
-            margin-bottom: 2.5rem;
-        }
-
-        .social-links a {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid var(--border-subtle);
-            color: var(--text-white);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.25rem;
-            transition: var(--transition);
-        }
-
-        .social-links a:hover {
-            background: var(--primary);
-            border-color: var(--primary);
-            color: #030712;
-            transform: translateY(-3px);
-            box-shadow: 0 0 20px var(--primary-glow);
-        }
-
-        .btn-large {
-            padding: 1rem 2.6rem;
-            font-size: 1.05rem;
-        }
-
-        /* Footer */
-        footer {
-            border-top: 1px solid var(--border-subtle);
-            padding: 2.8rem 0;
-            text-align: center;
-            background: rgba(5, 5, 8, 0.9);
-        }
-
-        footer .footer-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 1.5rem;
-        }
-
-        footer p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-        }
-
-        footer .footer-links {
-            display: flex;
-            gap: 1.5rem;
-        }
-
-        footer .footer-link {
-            color: var(--text-gray);
-            text-decoration: none;
-            font-size: 0.92rem;
-            transition: var(--transition);
-        }
-
-        footer .footer-link:hover {
-            color: var(--primary);
-        }
-
-        /* Back to Top */
-        .back-to-top {
-            position: fixed;
-            bottom: 25px;
-            right: 25px;
-            width: 46px;
-            height: 46px;
-            border-radius: 50%;
-            background: rgba(18, 19, 28, 0.85);
-            border: 1px solid var(--border-subtle);
-            color: var(--text-white);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.05rem;
-            cursor: pointer;
-            z-index: 999;
-            opacity: 0;
-            visibility: hidden;
-            transition: var(--transition);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
-        }
-
-        .back-to-top.visible {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .back-to-top:hover {
-            background: var(--primary);
-            border-color: var(--primary);
-            color: #ffffff;
-            box-shadow: 0 0 20px var(--primary-glow);
-            transform: translateY(-3px);
-        }
-
-        /* Responsive Design System */
-        @media (max-width: 1100px) {
-            .hero-content-wrapper {
-                flex-direction: column;
-                text-align: center;
-                gap: 2.5rem;
-            }
-
-            .hero-title-group {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .hero-outline-banner {
-                justify-content: center;
-            }
-
-            .hero-desc {
-                margin-left: auto;
-                margin-right: auto;
-            }
-
-            .hero-btns {
-                justify-content: center;
-            }
-
-            .hero-bento-column {
-                width: 100%;
-                max-width: 580px;
-                margin: 0 auto;
-            }
-
-            .luminous-stat-banner {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 1.5rem;
-                padding: 1.8rem 1.4rem;
-            }
-
-            .stat-col:nth-child(2)::after {
-                display: none;
-            }
-
-            .project-card {
-                flex: 0 0 calc(50% - 1rem);
-                min-width: calc(50% - 1rem);
-            }
-        }
-
-        @media (max-width: 768px) {
-            html, body {
-                overflow-x: hidden;
-                width: 100%;
-            }
-
-            .container {
-                padding: 0 1rem;
-                width: 100%;
-                box-sizing: border-box;
-            }
-
-            section {
-                padding: 50px 0;
-            }
-
-            .navbar {
-                top: 10px;
-                width: calc(100% - 1.4rem);
-                padding: 0.6rem 1rem;
-            }
-
-            .nav-logo {
-                height: 32px;
-            }
-
-            .mobile-menu-btn {
-                display: flex;
-            }
-
-            .nav-links {
-                position: fixed;
-                top: 0;
-                right: 0;
-                width: 82%;
-                max-width: 300px;
-                height: 100vh;
-                background: #0c080d;
-                border-left: 1px solid var(--border-subtle);
-                flex-direction: column;
-                justify-content: center;
-                align-items: flex-start;
-                gap: 18px;
-                padding: 40px 28px;
-                display: none;
-                z-index: 1001;
-                box-shadow: -15px 0 40px rgba(0, 0, 0, 0.9);
-            }
-
-            body[dir="ltr"] .nav-links {
-                right: auto;
-                left: 0;
-                border-left: none;
-                border-right: 1px solid var(--border-subtle);
-                box-shadow: 15px 0 40px rgba(0, 0, 0, 0.9);
-            }
-
-            .nav-links.active {
-                display: flex !important;
-            }
-
-            .nav-links a {
-                font-size: 1.15rem;
-                width: 100%;
-                padding: 6px 0;
-            }
-
-            .btn-lang {
-                padding: 0.35rem 0.85rem;
-                font-size: 0.82rem;
-            }
-
-            .hero {
-                padding-top: 80px;
-                padding-bottom: 25px;
-                min-height: auto;
-            }
-
-            .hero-content-wrapper {
-                display: flex;
-                flex-direction: column;
-                gap: 1.8rem;
-                text-align: center;
-            }
-
-            .hero-content {
-                width: 100%;
-                order: 0;
-            }
-
-            .hero-badge-pill {
-                padding: 4px 12px;
-                font-size: 0.76rem;
-                margin-bottom: 0.8rem;
-            }
-
-            .greeting {
-                font-size: 1.05rem;
-                margin-bottom: 0.2rem;
-            }
-
-            .name {
-                font-size: clamp(2.2rem, 8vw, 3rem);
-                line-height: 1.15;
-            }
-
-            .name .en-name {
-                display: block;
-                margin-inline-start: 0;
-                margin-top: 4px;
-                font-size: 0.55em;
-            }
-
-            .hero-outline-banner {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 6px;
-                margin-top: 6px;
-            }
-
-            .outline-stroke-text {
-                font-size: clamp(1.2rem, 5vw, 1.6rem);
-            }
-
-            .role-pill-box {
-                padding: 5px 14px;
-                margin-bottom: 1.1rem;
-            }
-
-            .role-text {
-                font-size: clamp(0.95rem, 3.8vw, 1.15rem);
-            }
-
-            .hero-desc {
-                font-size: 0.94rem;
-                line-height: 1.7;
-                margin-bottom: 1.5rem;
-                padding: 0 4px;
-            }
-
-            .hero-btns {
-                flex-direction: row;
-                flex-wrap: wrap;
-                width: 100%;
-                gap: 0.65rem;
-                justify-content: center;
-            }
-
-            .hero-btns .btn {
-                flex: 1 1 calc(50% - 0.4rem);
-                min-width: 140px;
-                justify-content: center;
-                padding: 0.75rem 1rem;
-                font-size: 0.88rem;
-            }
-
-            .hero-btns .btn:last-child {
-                flex: 1 1 100%;
-            }
-
-            .hero-bento-column {
-                display: contents;
-            }
-
-            .hero-profile-bento {
-                display: contents;
-            }
-
-            .profile-card {
-                order: -1;
-                width: 100%;
-                max-width: 280px;
-                height: auto;
-                aspect-ratio: 4 / 5;
-                border-radius: 20px;
-                margin: 0 auto;
-            }
-
-            .bento-cards-stack {
-                display: flex;
-                flex-direction: column;
-                gap: 12px;
-            }
-
-            .bento-sand-card {
-                padding: 1rem;
-                border-radius: 16px;
-                gap: 8px;
-            }
-
-            .bento-sand-title {
-                font-size: 0.95rem;
-            }
-
-            .bento-sand-subtitle {
-                font-size: 0.75rem;
-            }
-
-            .sand-play-btn {
-                width: 32px;
-                height: 32px;
-                font-size: 0.75rem;
-            }
-
-            .sand-pill-tag {
-                font-size: 0.7rem;
-                padding: 2px 8px;
-            }
-
-            .bento-dark-badge {
-                padding: 1rem;
-                border-radius: 16px;
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-                gap: 8px;
-            }
-
-            .bento-dark-stat {
-                font-size: 1.6rem;
-            }
-
-            .bento-dark-label {
-                font-size: 0.7rem;
-            }
-
-            .bento-avatar-icon {
-                width: 26px;
-                height: 26px;
-                font-size: 0.65rem;
-            }
-
-            .luminous-stat-banner {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 12px;
-                padding: 1.2rem 0.8rem;
-                margin: 20px auto 10px auto;
-                border-radius: 20px;
-            }
-
-            .stat-col {
-                padding: 8px 4px;
-            }
-
-            .stat-col:not(:last-child)::after {
-                display: none;
-            }
-
-            .stat-num {
-                font-size: 1.8rem;
-                margin-bottom: 3px;
-            }
-
-            .stat-title {
-                font-size: 0.78rem;
-            }
-
-            .edu-timeline::before {
-                right: 14px;
-            }
-
-            body[dir="ltr"] .edu-timeline::before {
-                right: auto;
-                left: 14px;
-            }
-
-            .timeline-item {
-                margin-bottom: 24px;
-                padding-right: 44px;
-                padding-left: 0;
-                width: 100%;
-                box-sizing: border-box;
-            }
-
-            body[dir="ltr"] .timeline-item {
-                padding-right: 0;
-                padding-left: 44px;
-            }
-
-            .timeline-node {
-                width: 32px;
-                height: 32px;
-                top: 12px;
-                right: 0;
-                font-size: 0.85rem;
-            }
-
-            body[dir="ltr"] .timeline-node {
-                right: auto;
-                left: 0;
-            }
-
-            .timeline-content-card {
-                padding: 1.4rem 1.2rem;
-                border-radius: 18px;
-            }
-
-            .timeline-degree-title {
-                font-size: 1.2rem;
-            }
-
-            .timeline-card-header {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 8px;
-            }
-
-            .timeline-details-grid {
-                grid-template-columns: 1fr;
-                gap: 10px;
-            }
-
-            .expertise-grid,
-            .collab-grid,
-            .people-grid,
-            .gallery-grid {
-                grid-template-columns: 1fr;
-                gap: 1.2rem;
-            }
-
-            .expertise-card,
-            .collab-card,
-            .person-card,
-            .gallery-card {
-                padding: 1.6rem 1.3rem;
-            }
-
-            .project-card {
-                flex: 0 0 100%;
-                min-width: 100%;
-                padding: 1.6rem 1.3rem;
-            }
-
-            .filter-btn {
-                padding: 6px 14px;
-                font-size: 0.82rem;
-            }
-
-            .lightbox-img-wrap {
-                max-height: 52vh;
-            }
-
-            .contact-card {
-                padding: 2.8rem 1.4rem;
-            }
-
-            .contact-card h2 {
-                font-size: 1.7rem;
-            }
-
-            footer .footer-links {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 1rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="assets/style.css">
 </head>
 
 <body>
@@ -2339,6 +81,11 @@
     <div style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;">
         <img src="https://eny.sa/gradEhabYar.jpg" alt="إيهاب نبيل يار - تخرج جامعة أم القرى - عالم حاسب وباحث ماجستير"
             width="1" height="1" style="display:none !important;">
+    </div>
+
+    <!-- Reading Progress Bar -->
+    <div class="reading-progress-container" id="reading-progress">
+        <div class="reading-progress-bar" id="reading-progress-bar" role="progressbar" aria-label="Reading progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
     </div>
 
     <!-- Navbar -->
@@ -2526,6 +273,12 @@
                     <div class="underline"></div>
                 </div>
                 <div class="edu-timeline" id="education-container"></div>
+                <div class="section-more-wrapper">
+                    <a href="education.html" class="btn-section-more">
+                        <span data-ar="عرض كافة المؤهلات والشهادات" data-en="See All Credentials & Degrees">عرض كافة المؤهلات والشهادات</span>
+                        <i class="fas fa-arrow-left arrow-icon"></i>
+                    </a>
+                </div>
             </div>
         </section>
 
@@ -2536,7 +289,50 @@
                     <h2 data-ar="مجالات الخبرة" data-en="Areas of Expertise">مجالات الخبرة</h2>
                     <div class="underline"></div>
                 </div>
-                <div class="expertise-grid" id="expertise-container"></div>
+                <div class="expertise-grid" id="expertise-container">
+                    <div class="skeleton-card skeleton-expertise">
+                        <div class="skeleton-bone skeleton-icon"></div>
+                        <div class="skeleton-bone skeleton-title"></div>
+                        <div class="skeleton-bone skeleton-line" style="width: 100%;"></div>
+                        <div class="skeleton-bone skeleton-line" style="width: 88%;"></div>
+                        <div class="skeleton-bone skeleton-line" style="width: 65%;"></div>
+                        <div class="skeleton-tags">
+                            <div class="skeleton-bone skeleton-tag" style="width: 75px;"></div>
+                            <div class="skeleton-bone skeleton-tag" style="width: 90px;"></div>
+                            <div class="skeleton-bone skeleton-tag" style="width: 65px;"></div>
+                        </div>
+                    </div>
+                    <div class="skeleton-card skeleton-expertise">
+                        <div class="skeleton-bone skeleton-icon"></div>
+                        <div class="skeleton-bone skeleton-title"></div>
+                        <div class="skeleton-bone skeleton-line" style="width: 100%;"></div>
+                        <div class="skeleton-bone skeleton-line" style="width: 88%;"></div>
+                        <div class="skeleton-bone skeleton-line" style="width: 65%;"></div>
+                        <div class="skeleton-tags">
+                            <div class="skeleton-bone skeleton-tag" style="width: 80px;"></div>
+                            <div class="skeleton-bone skeleton-tag" style="width: 70px;"></div>
+                            <div class="skeleton-bone skeleton-tag" style="width: 85px;"></div>
+                        </div>
+                    </div>
+                    <div class="skeleton-card skeleton-expertise">
+                        <div class="skeleton-bone skeleton-icon"></div>
+                        <div class="skeleton-bone skeleton-title"></div>
+                        <div class="skeleton-bone skeleton-line" style="width: 100%;"></div>
+                        <div class="skeleton-bone skeleton-line" style="width: 88%;"></div>
+                        <div class="skeleton-bone skeleton-line" style="width: 65%;"></div>
+                        <div class="skeleton-tags">
+                            <div class="skeleton-bone skeleton-tag" style="width: 95px;"></div>
+                            <div class="skeleton-bone skeleton-tag" style="width: 65px;"></div>
+                            <div class="skeleton-bone skeleton-tag" style="width: 75px;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-more-wrapper">
+                    <a href="expertise.html" class="btn-section-more">
+                        <span data-ar="عرض كافة مجالات الخبرة (6 مجالات)" data-en="See All Areas of Expertise (6 Domains)">عرض كافة مجالات الخبرة (6 مجالات)</span>
+                        <i class="fas fa-arrow-left arrow-icon"></i>
+                    </a>
+                </div>
             </div>
         </section>
 
@@ -2549,6 +345,12 @@
                     <div class="underline"></div>
                 </div>
                 <div class="collab-grid" id="collab-container"></div>
+                <div class="section-more-wrapper">
+                    <a href="collaborations.html" class="btn-section-more">
+                        <span data-ar="عرض كافة خبرات العمل والتعاونات" data-en="See All Collaborations & Experience">عرض كافة خبرات العمل والتعاونات</span>
+                        <i class="fas fa-arrow-left arrow-icon"></i>
+                    </a>
+                </div>
             </div>
         </section>
 
@@ -2560,6 +362,12 @@
                     <div class="underline"></div>
                 </div>
                 <div class="people-grid" id="people-container"></div>
+                <div class="section-more-wrapper">
+                    <a href="people.html" class="btn-section-more">
+                        <span data-ar="عرض كافة الشخصيات والقيادات" data-en="See All Leaders & People">عرض كافة الشخصيات والقيادات</span>
+                        <i class="fas fa-arrow-left arrow-icon"></i>
+                    </a>
+                </div>
             </div>
         </section>
 
@@ -2570,16 +378,76 @@
                     <h2 data-ar="أبرز المشاريع" data-en="Featured Projects">أبرز المشاريع</h2>
                     <div class="underline"></div>
                 </div>
-                <div class="slider-container" id="projects-slider">
-                    <div class="slider-track" id="projects-track"></div>
-                    <div class="slider-controls">
-                        <button class="slider-btn" id="slider-prev" aria-label="السابق">
-                            <i class="fas fa-chevron-right arrow-prev-icon"></i>
-                        </button>
-                        <button class="slider-btn" id="slider-next" aria-label="التالي">
-                            <i class="fas fa-chevron-left arrow-next-icon"></i>
-                        </button>
+                <div class="expertise-grid" id="projects-container">
+                    <div class="skeleton-card skeleton-project">
+                        <div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.2rem;">
+                                <div class="skeleton-bone skeleton-badge"></div>
+                                <div class="skeleton-bone" style="width: 20px; height: 20px; border-radius: 4px;"></div>
+                            </div>
+                            <div class="skeleton-bone skeleton-title" style="width: 75%; height: 26px;"></div>
+                            <div class="skeleton-bone skeleton-line" style="width: 100%;"></div>
+                            <div class="skeleton-bone skeleton-line" style="width: 90%;"></div>
+                            <div class="skeleton-bone skeleton-line" style="width: 60%;"></div>
+                            <div class="skeleton-tags" style="margin-bottom: 1.2rem; padding-top: 0.5rem;">
+                                <div class="skeleton-bone skeleton-tag" style="width: 70px;"></div>
+                                <div class="skeleton-bone skeleton-tag" style="width: 85px;"></div>
+                                <div class="skeleton-bone skeleton-tag" style="width: 60px;"></div>
+                            </div>
+                        </div>
+                        <div class="skeleton-footer-bar">
+                            <div class="skeleton-bone" style="width: 110px; height: 20px; border-radius: 4px;"></div>
+                            <div class="skeleton-bone" style="width: 80px; height: 16px; border-radius: 4px;"></div>
+                        </div>
                     </div>
+                    <div class="skeleton-card skeleton-project">
+                        <div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.2rem;">
+                                <div class="skeleton-bone skeleton-badge"></div>
+                                <div class="skeleton-bone" style="width: 20px; height: 20px; border-radius: 4px;"></div>
+                            </div>
+                            <div class="skeleton-bone skeleton-title" style="width: 70%; height: 26px;"></div>
+                            <div class="skeleton-bone skeleton-line" style="width: 100%;"></div>
+                            <div class="skeleton-bone skeleton-line" style="width: 85%;"></div>
+                            <div class="skeleton-bone skeleton-line" style="width: 65%;"></div>
+                            <div class="skeleton-tags" style="margin-bottom: 1.2rem; padding-top: 0.5rem;">
+                                <div class="skeleton-bone skeleton-tag" style="width: 80px;"></div>
+                                <div class="skeleton-bone skeleton-tag" style="width: 65px;"></div>
+                                <div class="skeleton-bone skeleton-tag" style="width: 90px;"></div>
+                            </div>
+                        </div>
+                        <div class="skeleton-footer-bar">
+                            <div class="skeleton-bone" style="width: 110px; height: 20px; border-radius: 4px;"></div>
+                            <div class="skeleton-bone" style="width: 80px; height: 16px; border-radius: 4px;"></div>
+                        </div>
+                    </div>
+                    <div class="skeleton-card skeleton-project">
+                        <div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.2rem;">
+                                <div class="skeleton-bone skeleton-badge"></div>
+                                <div class="skeleton-bone" style="width: 20px; height: 20px; border-radius: 4px;"></div>
+                            </div>
+                            <div class="skeleton-bone skeleton-title" style="width: 80%; height: 26px;"></div>
+                            <div class="skeleton-bone skeleton-line" style="width: 100%;"></div>
+                            <div class="skeleton-bone skeleton-line" style="width: 92%;"></div>
+                            <div class="skeleton-bone skeleton-line" style="width: 55%;"></div>
+                            <div class="skeleton-tags" style="margin-bottom: 1.2rem; padding-top: 0.5rem;">
+                                <div class="skeleton-bone skeleton-tag" style="width: 65px;"></div>
+                                <div class="skeleton-bone skeleton-tag" style="width: 75px;"></div>
+                                <div class="skeleton-bone skeleton-tag" style="width: 85px;"></div>
+                            </div>
+                        </div>
+                        <div class="skeleton-footer-bar">
+                            <div class="skeleton-bone" style="width: 110px; height: 20px; border-radius: 4px;"></div>
+                            <div class="skeleton-bone" style="width: 80px; height: 16px; border-radius: 4px;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-more-wrapper">
+                    <a href="projects.html" class="btn-section-more">
+                        <span data-ar="عرض كافة المشاريع والأنظمة التقنية" data-en="See All Featured Projects">عرض كافة المشاريع والأنظمة التقنية</span>
+                        <i class="fas fa-arrow-left arrow-icon"></i>
+                    </a>
                 </div>
             </div>
         </section>
@@ -2613,13 +481,11 @@
 
                 <div class="gallery-grid" id="gallery-container"></div>
 
-                <div style="text-align: center; margin-top: 35px;" id="gallery-toggle-wrapper">
-                    <button class="btn btn-outline" id="gallery-toggle-btn" onclick="toggleAllGallery()"
-                        style="padding: 10px 28px;">
-                        <i class="fas fa-chevron-down" id="gallery-toggle-icon" style="margin-inline-end: 6px;"></i>
-                        <span id="gallery-toggle-text" data-ar="عرض كافة الصور (12 صورة)"
-                            data-en="Show All Photos (12 Photos)">عرض كافة الصور (12 صورة)</span>
-                    </button>
+                <div class="section-more-wrapper" id="gallery-more-wrapper">
+                    <a href="gallery.html" class="btn-section-more">
+                        <span data-ar="عرض معرض الصور الكامل (12 محطة)" data-en="See Full Photo Gallery (12 Moments)">عرض معرض الصور الكامل (12 محطة)</span>
+                        <i class="fas fa-arrow-left arrow-icon"></i>
+                    </a>
                 </div>
             </div>
         </section>
@@ -2632,13 +498,11 @@
                     <div class="underline"></div>
                 </div>
                 <div class="expertise-grid" id="news-container"></div>
-                <div style="text-align: center; margin-top: 35px;" id="news-toggle-wrapper">
-                    <button class="btn btn-outline" id="news-toggle-btn" onclick="toggleAllNews()"
-                        style="padding: 10px 28px;">
-                        <i class="fas fa-chevron-down" id="news-toggle-icon" style="margin-inline-end: 6px;"></i>
-                        <span id="news-toggle-text" data-ar="عرض كافة المقالات والتغطيات (11 مقالاً)"
-                            data-en="Show All Articles (11 Articles)">عرض كافة المقالات والتغطيات (11 مقالاً)</span>
-                    </button>
+                <div class="section-more-wrapper" id="news-more-wrapper">
+                    <a href="news.html" class="btn-section-more">
+                        <span data-ar="عرض كافة التغطيات الصحفية والمقالات (11 مقالاً)" data-en="See All Press Coverage & Articles (11 Articles)">عرض كافة التغطيات الصحفية والمقالات (11 مقالاً)</span>
+                        <i class="fas fa-arrow-left arrow-icon"></i>
+                    </a>
                 </div>
             </div>
         </section>
@@ -2652,6 +516,12 @@
                     <div class="underline"></div>
                 </div>
                 <div class="expertise-grid" id="partnership-container"></div>
+                <div class="section-more-wrapper">
+                    <a href="partnership.html" class="btn-section-more">
+                        <span data-ar="عرض كافة حلول الشراكة التقنية (6 خدمات)" data-en="See All Tech Partner Solutions (6 Services)">عرض كافة حلول الشراكة التقنية (6 خدمات)</span>
+                        <i class="fas fa-arrow-left arrow-icon"></i>
+                    </a>
+                </div>
             </div>
         </section>
 
@@ -2692,21 +562,56 @@
 
     <!-- Footer -->
     <footer>
-        <div class="container footer-content">
-            <p data-ar="&copy; 2026 إيهاب يار. جميع الحقوق محفوظة."
-                data-en="&copy; 2026 Ehab Yar. All rights reserved.">
-                &copy; 2026 إيهاب يار. جميع الحقوق محفوظة.
-            </p>
-            <div class="footer-links">
-                <a href="#home" class="footer-link" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
-                <a href="#education" class="footer-link" data-ar="المؤهلات" data-en="Education">المؤهلات</a>
-                <a href="#expertise" class="footer-link" data-ar="الخبرات" data-en="Expertise">الخبرات</a>
-                <a href="#collaborations" class="footer-link" data-ar="التعاونات" data-en="Experience">التعاونات</a>
-                <a href="#people" class="footer-link" data-ar="شخصيات" data-en="Network">شخصيات</a>
-                <a href="#projects" class="footer-link" data-ar="المشاريع" data-en="Projects">المشاريع</a>
-                <a href="#gallery" class="footer-link" data-ar="معرض الصور" data-en="Gallery">معرض الصور</a>
-                <a href="#news" class="footer-link" data-ar="مقالات وأخبار" data-en="News & Articles">مقالات وأخبار</a>
-                <a href="#contact" class="footer-link" data-ar="اتصل بي" data-en="Contact">اتصل بي</a>
+        <div class="container">
+            <!-- Social Media Footer Bar -->
+            <div class="footer-social-bar" id="footer-social-bar">
+                <div class="footer-social-info">
+                    <div class="footer-social-title">
+                        <span class="footer-social-indicator" aria-hidden="true"></span>
+                        <span data-ar="تواصل ومتابعة مهنية" data-en="Connect &amp; Follow">تواصل ومتابعة مهنية</span>
+                    </div>
+                    <p class="footer-social-desc" data-ar="منصات ومنافذ التواصل المباشر مع إيهاب يار" data-en="Direct professional profiles &amp; channels for Ehab Yar">منصات ومنافذ التواصل المباشر مع إيهاب يار</p>
+                </div>
+                <div class="footer-social-links" id="footer-social-links">
+                    <a href="https://x.com/_f_eny" target="_blank" rel="noopener noreferrer" class="footer-social-item social-twitter" id="footer-link-twitter" title="X (Twitter)" aria-label="X (Twitter)">
+                        <i class="fab fa-x-twitter" aria-hidden="true"></i>
+                        <span>X</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ehab-yar-4a1bb4193/" target="_blank" rel="noopener noreferrer" class="footer-social-item social-linkedin" id="footer-link-linkedin" title="LinkedIn" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin" aria-hidden="true"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://github.com/feny1" target="_blank" rel="noopener noreferrer" class="footer-social-item social-github" id="footer-link-github" title="GitHub" aria-label="GitHub">
+                        <i class="fab fa-github" aria-hidden="true"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://wa.me/966599727412" target="_blank" rel="noopener noreferrer" class="footer-social-item social-whatsapp" id="footer-link-whatsapp" title="WhatsApp" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                        <span>WhatsApp</span>
+                    </a>
+                    <a href="mailto:contact@eny.sa" class="footer-social-item social-email" id="footer-link-email" title="Email" aria-label="Email">
+                        <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                        <span data-ar="البريد الإلكتروني" data-en="Email">البريد الإلكتروني</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-content">
+                <p data-ar="&copy; 2026 إيهاب يار. جميع الحقوق محفوظة."
+                    data-en="&copy; 2026 Ehab Yar. All rights reserved.">
+                    &copy; 2026 إيهاب يار. جميع الحقوق محفوظة.
+                </p>
+                <div class="footer-links">
+                    <a href="#home" class="footer-link" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+                    <a href="#education" class="footer-link" data-ar="المؤهلات" data-en="Education">المؤهلات</a>
+                    <a href="#expertise" class="footer-link" data-ar="الخبرات" data-en="Expertise">الخبرات</a>
+                    <a href="#collaborations" class="footer-link" data-ar="التعاونات" data-en="Experience">التعاونات</a>
+                    <a href="#people" class="footer-link" data-ar="شخصيات" data-en="Network">شخصيات</a>
+                    <a href="#projects" class="footer-link" data-ar="المشاريع" data-en="Projects">المشاريع</a>
+                    <a href="#gallery" class="footer-link" data-ar="معرض الصور" data-en="Gallery">معرض الصور</a>
+                    <a href="#news" class="footer-link" data-ar="مقالات وأخبار" data-en="News & Articles">مقالات وأخبار</a>
+                    <a href="#contact" class="footer-link" data-ar="اتصل بي" data-en="Contact">اتصل بي</a>
+                </div>
             </div>
         </div>
     </footer>
@@ -2740,649 +645,11 @@
     </div>
 
     <!-- JavaScript Application Engine -->
+    <script src="assets/data.js"></script>
     <script>
-        const initialDefaultData = {
-            "hero": {
-                "greetingAr": "أهلاً بك، أنا",
-                "greetingEn": "Welcome, I am",
-                "nameAr": "إيهاب يار",
-                "nameEn": "Ehab Yar",
-                "phrasesAr": [
-                    "باحث ماجستير وعالم حاسب",
-                    "رئيس تقني ومستشار حلول",
-                    "مهندس واجهات خلفية وقواعد بيانات",
-                    "قائد التحول الرقمي والذكاء الاصطناعي",
-                    "محلل ومصمم نظم برمجية"
-                ],
-                "phrasesEn": [
-                    "Master's Candidate & Computer Scientist",
-                    "CTO & Technical Consultant",
-                    "Backend & Database Architect",
-                    "Digital Transformation & AI Lead",
-                    "Systems Analyst & Architect"
-                ],
-                "descAr": "عالم حاسب وباحث ماجستير في قسم علوم الحاسب والذكاء الاصطناعي بكلية الحاسبات بجامعة أم القرى. أتخصص في تطوير الواجهات الخلفية وإدارة قواعد البيانات وهندسة أنظمة آمنة وقابلة للتوسع.",
-                "descEn": "Computer Scientist and Master's Candidate at the Department of Computer Science & Artificial Intelligence, College of Computing, Umm Al-Qura University. Specializing in backend development, database architecture, and secure scalable systems.",
-                "profileImg": "assets/images/ehab-nabeel-yar-computer-scientist-profile.png",
-                "logoImg": "assets/images/ehab-yar-official-logo.png"
-            },
-            "education": [
-                {
-                    "id": "edu-1",
-                    "rank": "01",
-                    "rankLabelAr": "المستوى الأكاديمي المتقدم",
-                    "rankLabelEn": "Advanced Academic Level",
-                    "degreeAr": "ماجستير علوم الحاسب",
-                    "degreeEn": "M.Sc. in Computer Science (General)",
-                    "statusAr": "الحالة الدراسية الحالية: طالب ماجستير (مستمر)",
-                    "statusEn": "Current Study Status: Master's Candidate",
-                    "badgeAr": "قيد الدراسة حالياً",
-                    "badgeEn": "Current Candidate",
-                    "isCert": false,
-                    "label1Ar": "الجامعة:",
-                    "label1En": "University:",
-                    "val1Ar": "جامعة أم القرى",
-                    "val1En": "Umm Al-Qura University",
-                    "label2Ar": "الكلية:",
-                    "label2En": "College:",
-                    "val2Ar": "كلية الحاسبات",
-                    "val2En": "College of Computing",
-                    "label3Ar": "القسم / التخصص:",
-                    "label3En": "Department / Major:",
-                    "val3Ar": "قسم علوم الحاسب والذكاء الاصطناعي",
-                    "val3En": "Dept. of Computer Science & AI",
-                    "icon": "fas fa-user-graduate",
-                    "highlight": true
-                },
-                {
-                    "id": "cert-pmp",
-                    "rank": "02",
-                    "rankLabelAr": "الاعتماد المهني القيادي",
-                    "rankLabelEn": "Executive Professional Credential",
-                    "degreeAr": "محترف إدارة المشاريع (PMP®)",
-                    "degreeEn": "Project Management Professional (PMP®)",
-                    "statusAr": "الحالة الحالية: مؤهل للاختبار ومُرشح للاعتماد (قريباً)",
-                    "statusEn": "Current Status: Exam Eligible Candidate - PMI",
-                    "badgeAr": "مؤهل للاختبار",
-                    "badgeEn": "Exam Eligible",
-                    "isCert": true,
-                    "label1Ar": "الجهة المانحة:",
-                    "label1En": "Issuing Body:",
-                    "val1Ar": "معهد إدارة المشاريع العالمي (PMI)",
-                    "val1En": "Project Management Institute (PMI)",
-                    "label2Ar": "المجال المعتمد:",
-                    "label2En": "Certified Domain:",
-                    "val2Ar": "إدارة المشاريع الاحترافية والتحول الرقمي",
-                    "val2En": "Professional Project Management & Digital Transformation",
-                    "label3Ar": "نطاق المنهجيات:",
-                    "label3En": "Methodologies:",
-                    "val3Ar": "منهجيات إدارة المشاريع الرشيقة والتنبؤية",
-                    "val3En": "Agile, Predictive & Hybrid Frameworks",
-                    "icon": "fas fa-award",
-                    "highlight": true
-                },
-                {
-                    "id": "edu-2",
-                    "rank": "03",
-                    "rankLabelAr": "المؤهل الجامعي الأساسي",
-                    "rankLabelEn": "Foundational Degree",
-                    "degreeAr": "بكالوريوس علوم الحاسب الآلي",
-                    "degreeEn": "B.Sc. in Computer Science (Excellence)",
-                    "statusAr": "المؤهل الحالي: خريج الدفعة 74 بتقدير ممتاز",
-                    "statusEn": "Current Degree: 74th Batch Graduate with Excellence",
-                    "badgeAr": "تقدير ممتاز",
-                    "badgeEn": "Excellence",
-                    "isCert": false,
-                    "label1Ar": "الجامعة:",
-                    "label1En": "University:",
-                    "val1Ar": "جامعة أم القرى",
-                    "val1En": "Umm Al-Qura University",
-                    "label2Ar": "الكلية:",
-                    "label2En": "College:",
-                    "val2Ar": "كلية الحاسبات",
-                    "val2En": "College of Computing",
-                    "label3Ar": "القسم / التخصص:",
-                    "label3En": "Department / Major:",
-                    "val3Ar": "قسم علوم الحاسب والذكاء الاصطناعي",
-                    "val3En": "Dept. of Computer Science & AI",
-                    "icon": "fas fa-graduation-cap",
-                    "highlight": false
-                }
-            ],
-            "expertise": [
-                {
-                    "id": "exp-1",
-                    "icon": "fas fa-server",
-                    "titleAr": "تطوير الواجهات الخلفية وقواعد البيانات",
-                    "titleEn": "Backend & Database Architecture",
-                    "descAr": "متخصص في إدارة أنظمة قواعد البيانات مثل MySQL و MariaDB و NoSQL، مع خبرة متقدمة في Node.js و PHP و Java لضمان سلامة البيانات وأدائها.",
-                    "descEn": "Specialized in database management including MySQL, MariaDB, and NoSQL, with advanced expertise in Node.js, PHP and Java to ensure data integrity.",
-                    "tags": ["MySQL", "MariaDB", "Node.js", "PHP", "Java", "REST APIs"]
-                },
-                {
-                    "id": "exp-sys-analysis",
-                    "icon": "fas fa-sitemap",
-                    "titleAr": "تحليل وتصميم النظم البرمجية",
-                    "titleEn": "Systems Analysis & Design",
-                    "descAr": "تحليل متطلبات الأعمال المعقدة، نمذجة تدفق البيانات والعمليات (BPMN & DFD)، وتصميم المخططات الهندسية (UML) لتحويل الاحتياجات التشغيلية إلى نظم برمجية متكاملة وقابلة للتوسع.",
-                    "descEn": "Analyzing complex business requirements, modeling data and workflow processes (BPMN & DFD), and designing architectural blueprints (UML) to transform operational needs into scalable software systems.",
-                    "tags": ["Systems Analysis", "UML & DFD", "Requirements Engineering", "BPMN", "Process Modeling", "Software Architecture"]
-                },
-                {
-                    "id": "exp-2",
-                    "icon": "fas fa-project-diagram",
-                    "titleAr": "هندسة البرمجيات الآمنة",
-                    "titleEn": "Secure Software Architecture",
-                    "descAr": "تصميم بنية تحتية قابلة للتوسع للمشاريع الضخمة، مع التركيز على الأداء العالي والتحول الرقمي الشامل للشركات والمؤسسات.",
-                    "descEn": "Designing scalable infrastructure for large-scale projects, focusing on high performance and comprehensive digital transformation for enterprises.",
-                    "tags": ["System Architecture", "Scalability", "Security", "Code Reviews", "Digital Transformation"]
-                },
-                {
-                    "id": "exp-3",
-                    "icon": "fas fa-network-wired",
-                    "titleAr": "الشبكات والخوادم المحلية",
-                    "titleEn": "Networking & Local Servers",
-                    "descAr": "خبرة في إدارة أنظمة الخوادم المحلية، إعداد شبكات VLAN، وبناء أنظمة مراقبة حية لضمان استقرار العمليات التقنية.",
-                    "descEn": "Expertise in managing local servers, configuring VLANs, and building real-time monitoring systems to ensure the stability of technical operations.",
-                    "tags": ["Local Servers", "VLAN", "Real-Time Monitoring", "Telemetry"]
-                }
-            ],
-            "collaborations": [
-                {
-                    "id": "collab-1",
-                    "icon": "fas fa-rocket",
-                    "titleAr": "فريق FENY",
-                    "titleEn": "FENY",
-                    "descAr": "قيادة الفريق التقني، تنفيذ خرائط الطريق التقنية، ودمج تقنيات الويب الحديثة لمشاريع التحول الرقمي كعالم حاسب.",
-                    "descEn": "Technical Lead Developer implementing technical roadmaps and integrating modern web technologies for digital transformation projects."
-                },
-                {
-                    "id": "collab-2",
-                    "icon": "fas fa-building",
-                    "titleAr": "مؤسسة شعاع الشروق المتميزة",
-                    "titleEn": "Shoa'a Shorouk Co.",
-                    "descAr": "إدارة مشاريع التحول الرقمي الكاملة، بما في ذلك بناء أنظمة الاتصالات الإدارية وتحسين البنية التحتية التقنية.",
-                    "descEn": "Managed full digital transformation projects, including building administrative correspondence systems and optimizing infrastructure."
-                },
-                {
-                    "id": "collab-3",
-                    "icon": "fas fa-kaaba",
-                    "titleAr": "شركة ضيوف البيت (خدمات الحج)",
-                    "titleEn": "Albait Guests (Hajj Services)",
-                    "descAr": "خبرة تمتد لـ 4 سنوات في إدارة وتطوير العمليات التقنية وأنظمة جوازات الحج بمركز الخدمة تحت رئاسة الأستاذ هتان بن جمال خان، مع تطوير حلول ذكية لإدارة وتتبع العمليات الميدانية والبيانات الحية.",
-                    "descEn": "4-year extensive track record managing and digitizing Hajj systems and field operations at the Service Center headed by Mr. Hattan Jamal Khan, building intelligent real-time platforms."
-                }
-            ],
-            "people": [
-                {
-                    "id": "person-hattan",
-                    "nameAr": "أ. هتان بن جمال خان",
-                    "nameEn": "Mr. Hattan Jamal Khan",
-                    "roleAr": "رئيس مركز الخدمة",
-                    "roleEn": "Head of Service Center",
-                    "badgeAr": "قيادة وإشراف",
-                    "badgeEn": "Leadership & Supervision",
-                    "orgAr": "شركة ضيوف البيت (خدمات الحج)",
-                    "orgEn": "Albait Guests (Hajj Services)",
-                    "descAr": "العمل المشترك والقيادة الميدانية على مدار 4 مواسم حج في إدارة العمليات التقنية، رقمنة أنظمة جوازات الحج، وتطوير الحلول الذكية لمتابعة الحشود ومطابقة الوثائق بدقة عالية.",
-                    "descEn": "Collaborated over 4 Hajj seasons in technical field leadership, digitizing pilgrim passport workflows, and engineering smart real-time verification and operations systems."
-                },
-                {
-                    "id": "person-khaled",
-                    "nameAr": "خالد الجمل",
-                    "nameEn": "Khaled Al-Jamal",
-                    "roleAr": "شريك مؤسس وعضو مجلس إدارة",
-                    "roleEn": "Co-founder & Board Member",
-                    "badgeAr": "فريق FENY",
-                    "badgeEn": "FENY Team",
-                    "orgAr": "FENY",
-                    "orgEn": "FENY",
-                    "descAr": "شريك ومساهم تقني رئيسي في تأسيس وتطوير منظومة FENY، قيادة خرائط الطريق البرمجية، وهندسة البنى التحتية للمشاريع الرقمية المشتركة.",
-                    "descEn": "Key partner in founding and scaling FENY, executing technical roadmaps, and architecting robust infrastructure for joint digital solutions."
-                    
-                },
-                {
-                    "id": "person-abdulaziz",
-                    "nameAr": "عبدالعزيز حافظ",
-                    "nameEn": "Abdulaziz Hafiz",
-                    "roleAr": "مهنـدس برمجـيات وذكـاء اصطناعـي",
-                    "roleEn": "Software & AI Engineer",
-                    "badgeAr": "زميل جامعة ومشاريع",
-                    "badgeEn": "Colleague & Co-builder",
-                    "orgAr": "جامعة أم القرى • مبادرات تقنية",
-                    "orgEn": "UQU • Technical Initiatives",
-                    "descAr": "زميل دراسة بجامعة أم القرى وشريك عمل في مشاريع برمجية وهندسية متعددة، تمحورت حول تحليل الأنظمة وتطوير البرمجيات وحل المشكلات الحسابية.",
-                    "descEn": "University colleague and collaborator across multiple engineering initiatives, focusing on systems analysis, software engineering, and clean architecture.",
-                    "url": "https://ahafiz.sa"
-                },
-                {
-                    "id": "person-malek",
-                    "nameAr": "مالك اللهيبي",
-                    "nameEn": "Malek AlLehaibi",
-                    "roleAr": "مهندس برمجيات ونظم ذكية",
-                    "roleEn": "Software & AI Systems Engineer",
-                    "badgeAr": "شريك مشروع موسم (Mawsem)",
-                    "badgeEn": "Mawsem Co-author",
-                    "orgAr": "جامعة أم القرى (مشروع التخرج)",
-                    "orgEn": "Umm Al-Qura University",
-                    "descAr": "زميل دراسة ومشاريع تقنية متعددة، وشريك رئيسي في إنجاز وتطوير مشروع التخرج (منصة موسم للتنبؤ بالطلب بالذكاء الاصطناعي) وتحليل السلاسل الزمنية.",
-                    "descEn": "Key partner in multiple software projects and co-author of the graduation platform Mawsem (AI Retail Demand Forecasting) leveraging time-series modeling.",
-                    "url": "https://www.linkedin.com/in/malikallehaibi/"
-                },
-                {
-                    "id": "person-zeyad",
-                    "nameAr": "زياد فلاته",
-                    "nameEn": "Zyad Fallatah",
-                    "roleAr": "مهندس برمجيات وحلول رقمية",
-                    "roleEn": "Software & Solutions Engineer",
-                    "badgeAr": "شريك مشروع موسم (Mawsem)",
-                    "badgeEn": "Mawsem Co-author",
-                    "orgAr": "جامعة أم القرى (مشروع التخرج)",
-                    "orgEn": "Umm Al-Qura University",
-                    "descAr": "زميل دراسة ومشاريع برمجية، وشريك أساسي في تطوير منظومة منصة موسم المعروضة في معرض إنجاز، مع التركيز على تدفق البيانات وتكامل الواجهات.",
-                    "descEn": "Academic colleague and core collaborator on the Mawsem forecasting platform showcased at the Injaz exhibition, contributing to workflow and UI/UX integration.",
-                    "url": "https://zyadfallatah.com/"
-                },
-                {
-                    "id": "person-mohammed",
-                    "nameAr": "محمد الشريف",
-                    "nameEn": "Mohammed Al-Sharif",
-                    "roleAr": "مهندس برمجيات ونظم",
-                    "roleEn": "Software & Systems Engineer",
-                    "badgeAr": "شريك مشروع موسم (Mawsem)",
-                    "badgeEn": "Mawsem Co-author",
-                    "orgAr": "جامعة أم القرى (مشروع التخرج)",
-                    "orgEn": "Umm Al-Qura University",
-                    "descAr": "زميل دراسة ومشاريع متعددة، ومشارك في بناء منصة موسم التنبؤية بالذكاء الاصطناعي، وهندسة نماذج المعالجة وربط المكونات البرمجية.",
-                    "descEn": "Colleague across several engineering projects and key partner on the Mawsem AI platform, focusing on model integration and robust software architecture.",
-                    "url": "https://mki7r.github.io/portfolio/"
-                }
-            ],
-            "projects": [
-                {
-                    "id": "prj-payment",
-                    "titleAr": "المدفوعات مع إيهاب",
-                    "titleEn": "Payments with Ehab",
-                    "descAr": "واجهة موحدة ومبسطة تتيح للمتاجر وأصحاب الأعمال عرض ومشاركة بيانات حساباتهم البنكية ووسائل التحويل المعتمدة للعملاء بسهولة.",
-                    "descEn": "A centralized, clean interface enabling merchants to display and share bank account details and transfer methods with customers.",
-                    "tags": ["HTML5", "Tailwind CSS", "JavaScript", "Cloudflare Workers", "Moyasar API"],
-                    "linkUrl": "https://payment.eny.sa/",
-                    "linkTextAr": "زيارة الموقع",
-                    "linkTextEn": "Visit Website",
-                    "linkIcon": "fas fa-external-link-alt"
-                },
-                {
-                    "id": "prj-passport",
-                    "titleAr": "تطبيق مكتب الجوازات",
-                    "titleEn": "Passport Office App",
-                    "descAr": "تطبيق مبتكر مصمم لأتمتة فحص ومطابقة وثائق وجوازات سفر الحجاج عبر طوابير معالجة غير متزامنة، مما يساهم في خفض زمن فرز الوثائق بنسبة 85% وضمان استمرارية التشغيل الميداني دون توقف.",
-                    "descEn": "An innovative application designed to automate the verification and matching of pilgrim passport data and documents using asynchronous queues, reducing document sorting time by 85% and ensuring continuous field operations.",
-                    "tags": ["OCR & NFC", "Asynchronous Queues", "Offline-First (Hybrid Data)", "Systems Architecture", "Enterprise Robustness"],
-                    "linkUrl": "https://eny.sa/assets/passport_app.pdf",
-                    "linkTextAr": "عرض المستند المرجعي",
-                    "linkTextEn": "View Reference Document",
-                    "linkIcon": "fas fa-file-pdf"
-                },
-                {
-                    "id": "prj-1",
-                    "titleAr": "موسم (Mawsem)",
-                    "titleEn": "Mawsem",
-                    "descAr": "منصة مدعومة بالذكاء الاصطناعي للتنبؤ بالطلب في قطاع التجزئة باستخدام خوارزميات SARIMAX، طُورت كمشروع تخرج متميز في كلية الحاسبات بجامعة أم القرى.",
-                    "descEn": "An AI-driven retail demand forecasting platform using SARIMAX algorithms, developed as an honors graduation project at the College of Computing, UQU.",
-                    "tags": ["AI / ML", "SARIMAX", "Node.js", "Laravel", "React"],
-                    "linkUrl": "https://eny.sa/assets/mawsem.pdf",
-                    "linkTextAr": "عرض البوستر المرجعي",
-                    "linkTextEn": "View Reference Poster",
-                    "linkIcon": "fas fa-file-pdf"
-                },
-                {
-                    "id": "prj-2",
-                    "titleAr": "نظام الاتصالات الإدارية",
-                    "titleEn": "Admin Correspondence",
-                    "descAr": "مشروع تحول رقمي شامل لمؤسسة شعاع الشروق بتطوير PHP نقية ونموذج Naive Bayes لأرشفة وتصنيف المعاملات بدقة.",
-                    "descEn": "Full digital transformation for Shoa'a Shorouk built with pure PHP (OOP) and Naive Bayes for automated document classification.",
-                    "tags": ["Pure PHP (OOP)", "Custom ORM", "Naive Bayes", "Security"]
-                },
-                {
-                    "id": "prj-3",
-                    "titleAr": "نظام مراقبة الخوادم المحلية",
-                    "titleEn": "Local Servers Monitoring",
-                    "descAr": "نظام ذكي لمراقبة أداء الخوادم في الوقت الفعلي مع لوحة تحكم تفاعلية وقنوات تنبيه فورية.",
-                    "descEn": "A smart real-time monitoring system offering interactive dashboards and centralized logs.",
-                    "tags": ["Monitoring", "Dashboards", "Logs", "Telemetry"]
-                },
-                {
-                    "id": "prj-4",
-                    "titleAr": "السكرتير الذكي",
-                    "titleEn": "Smart Secretary (AI)",
-                    "descAr": "مساعد إداري مدعوم بالذكاء الاصطناعي يفهم اللغة الطبيعية ويكتشف تعارضات المواعيد بدقة.",
-                    "descEn": "An AI-powered administrative assistant understanding Arabic NLP and detecting schedule conflicts.",
-                    "tags": ["AI Assistant", "Gemini API", "NLP"]
-                },
-                {
-                    "id": "prj-6",
-                    "titleAr": "محرك ومفسر قوالب PPHP",
-                    "titleEn": "PPHP Template Engine",
-                    "descAr": "لغة قوالب ومفسر مخصص لـ PHP يهدف لتبسيط وتسريع عملية التطوير، مع دعم كامل للإضافات في VS Code.",
-                    "descEn": "A custom template language and interpreter for PHP designed to simplify and speed up development, with full support for VS Code extensions.",
-                    "tags": ["PHP Internals", "Interpreter", "VS Code Extension"],
-                    "linkUrl": "https://github.com/feny1/pphp",
-                    "linkTextAr": "عرض على GitHub",
-                    "linkTextEn": "View on GitHub",
-                    "linkIcon": "fab fa-github"
-                }
-            ],
-            "gallery": [
-                {
-                    "id": "gal-1",
-                    "image": "assets/images/ehab-yar-umm-al-qura-university-graduation-portrait.jpg",
-                    "badgeAr": "حفل التخرج",
-                    "badgeEn": "Graduation",
-                    "titleAr": "حفل تخرج الدفعة 74 - جامعة أم القرى",
-                    "titleEn": "74th Graduation Ceremony - Umm Al-Qura",
-                    "descAr": "توثيق التكريم والاحتفال بحفل تخرج الدفعة 74 من جامعة أم القرى كعالم حاسب متميز.",
-                    "descEn": "Documenting the honor and celebration of the 74th graduation ceremony at Umm Al-Qura University.",
-                    "category": "grad"
-                },
-                {
-                    "id": "gal-2",
-                    "image": "assets/images/ehab-yar-computer-science-bachelor-excellence-uqu.jpg",
-                    "badgeAr": "الدفعة 74",
-                    "badgeEn": "74th Batch",
-                    "titleAr": "منصة التكريم الجامعي",
-                    "titleEn": "Academic Honor Stage",
-                    "descAr": "لحظة التكريم والتتويج على منصة حفل التخرج بجامعة أم القرى.",
-                    "descEn": "A distinguished moment on stage at the Umm Al-Qura University graduation ceremony.",
-                    "category": "grad"
-                },
-                {
-                    "id": "gal-3",
-                    "image": "assets/images/ehab-yar-74th-batch-graduation-ceremony-umm-al-qura.jpg",
-                    "badgeAr": "حفل التخرج",
-                    "badgeEn": "Graduation",
-                    "titleAr": "التخرج والتميز الأكاديمي - علوم الحاسب",
-                    "titleEn": "Graduation & Academic Excellence - Computer Science",
-                    "descAr": "إيهاب يار في حفل التخرج الرسمي لعلوم الحاسب بجامعة أم القرى.",
-                    "descEn": "Ehab Yar at the official Computer Science graduation ceremony at Umm Al-Qura University.",
-                    "category": "grad"
-                },
-                {
-                    "id": "gal-4",
-                    "image": "assets/images/ehab-yar-mawsem-ai-retail-forecasting-booth.jpg",
-                    "badgeAr": "لقطات التخرج",
-                    "badgeEn": "Ceremony Highlights",
-                    "titleAr": "أجواء وفرحة التخرج",
-                    "titleEn": "Graduation Joy & Atmosphere",
-                    "descAr": "مشاركة الفرحة والتتويج الأكاديمي مع الزملاء والأساتذة.",
-                    "descEn": "Sharing the celebration and academic achievement with peers and mentors.",
-                    "category": "grad"
-                },
-                {
-                    "id": "gal-5",
-                    "image": "assets/images/ehab-yar-mawsem-ai-project-presentation-honors.jpg",
-                    "badgeAr": "ذكريات التخرج",
-                    "badgeEn": "Milestone Moments",
-                    "titleAr": "التكريم والتقدير الجامعي",
-                    "titleEn": "University Honor & Recognition",
-                    "descAr": "محطة فارقة تتوج سنوات من دراسة وبحوث علوم الحاسب والأنظمة وقواعد البيانات.",
-                    "descEn": "A milestone celebrating years of Computer Science research and database systems.",
-                    "category": "grad"
-                },
-                {
-                    "id": "gal-6",
-                    "image": "assets/images/ehab-yar-college-of-computing-graduation-celebration.jpg",
-                    "badgeAr": "القيادة المهنية",
-                    "badgeEn": "Leadership",
-                    "titleAr": "الهوية المهنية والقيادة التقنية",
-                    "titleEn": "Professional Identity & Leadership",
-                    "descAr": "رئيس تقني وعالم حاسب يقود مشاريع التحول الرقمي والذكاء الاصطناعي.",
-                    "descEn": "CTO and Computer Scientist leading digital transformation and AI innovations.",
-                    "category": "work"
-                },
-                {
-                    "id": "gal-7",
-                    "image": "assets/images/ehab-yar-executive-tech-lead-studio-portrait.jpg",
-                    "badgeAr": "مشروع التخرج",
-                    "badgeEn": "Graduation Project",
-                    "titleAr": "معرض مشاريع التخرج - منصة موسم (Mawsem)",
-                    "titleEn": "Graduation Projects Exhibition - Mawsem",
-                    "descAr": "عرض وتقديم مشروع التخرج (منصة موسم للتنبؤ بالطلب بالذكاء الاصطناعي) وفريق العمل في معرض مشاريع التخرج بجامعة أم القرى.",
-                    "descEn": "Presenting the graduation project (Mawsem AI demand forecasting platform) with the engineering team at the Umm Al-Qura University Graduation Exhibition.",
-                    "category": "grad"
-                },
-                {
-                    "id": "gal-8",
-                    "image": "assets/images/ehab-yar-backend-database-architect-workspace.jpg",
-                    "badgeAr": "حفل التخرج",
-                    "badgeEn": "Graduation",
-                    "titleAr": "حفل تخرج الدفعة 74 - جامعة أم القرى (1447هـ / 2026م)",
-                    "titleEn": "74th Graduation Ceremony - Umm Al-Qura (1447H / 2026)",
-                    "descAr": "الصورة الرسمية في حفل تخرج الدفعة 74 بجامعة أم القرى - كلية الحاسبات وتتويج مسيرة علوم الحاسب الآلي.",
-                    "descEn": "Official portrait at the 74th Graduation Ceremony of Umm Al-Qura University - College of Computing.",
-                    "category": "grad"
-                },
-                {
-                    "id": "gal-9",
-                    "image": "assets/images/ehab-yar-systems-analyst-consultant-identity.jpg",
-                    "badgeAr": "محطات",
-                    "badgeEn": "Moments",
-                    "titleAr": "لقطات العمل والمشاريع الميدانية",
-                    "titleEn": "Project & Field Operations",
-                    "descAr": "متابعة وإدارة العمليات التقنية والأنظمة التشغيلية تحت الضغط العالي.",
-                    "descEn": "Managing technical operations and mission-critical systems in the field.",
-                    "category": "events"
-                },
-                {
-                    "id": "gal-10",
-                    "image": "assets/images/ehab-yar-digital-transformation-tech-conference.jpg",
-                    "badgeAr": "حفل التخرج",
-                    "badgeEn": "Graduation",
-                    "titleAr": "لحظات وفرحة التخرج مع الزملاء - الدفعة 74",
-                    "titleEn": "Graduation Moments with Classmates - 74th Batch",
-                    "descAr": "أجواء الفرحة والاحتفال بحفل التخرج الرسمي بجامعة أم القرى مع زملاء كلية الحاسب الآلي ونظم المعلومات.",
-                    "descEn": "Celebration and joy with Computer Science peers during the official graduation ceremony at Umm Al-Qura University.",
-                    "category": "grad"
-                },
-                {
-                    "id": "gal-11",
-                    "image": "assets/images/ehab-yar-hajj-technical-operations-service-center.jpg",
-                    "badgeAr": "موسم الحج 1447هـ",
-                    "badgeEn": "Hajj 1447H",
-                    "titleAr": "إدارة العمليات الميدانية - موسم الحج (مركز الخدمة)",
-                    "titleEn": "Field Technical Operations - Hajj (Service Center)",
-                    "descAr": "توثيق قيادة العمليات الرقمية والأنظمة الميدانية لجوازات الحج بمركز الخدمة تحت رئاسة الأستاذ هتان بن جمال خان.",
-                    "descEn": "Documenting digital operations and field passport systems at the Service Center led by Mr. Hattan Jamal Khan.",
-                    "category": "events"
-                },
-                {
-                    "id": "gal-12",
-                    "image": "assets/images/ehab-yar-computer-science-master-research-symposium.png",
-                    "badgeAr": "الهوية البصرية",
-                    "badgeEn": "Brand Identity",
-                    "titleAr": "الشعار الرسمي والهوية البرمجية",
-                    "titleEn": "Official Identity & Signature",
-                    "descAr": "الهوية البرمجية الرسمية لإيهاب يار feny.",
-                    "descEn": "Official brand identity for Ehab Yar feny.",
-                    "category": "work"
-                }
-            ],
-            "news": [
-                {
-                    "id": "news-1",
-                    "newspaper": "صحيفة هوية",
-                    "newspaperEn": "Howyah Newspaper",
-                    "title": "إيهاب بن نبيل يار ومستقبل الأعمال في عصر الذكاء الاصطناعي",
-                    "titleEn": "Ehab Nabeel Yar and the Future of Business in the Age of AI",
-                    "url": "https://howyah.com/%d8%a5%d9%8a%d9%87%d8%a7%d8%a8-%d8%a8%d9%86-%d9%86%d8%a8%d9%8a%d9%84-%d9%8a%d8%a7%d8%b1-%d9%88%d9%85%d8%b3%d8%aa%d9%82%d8%a8%d9%84-%d8%a7%d9%84%d8%a3%d8%b9%d9%85%d8%a7%d9%84-%d9%81%d9%8a-%d8%b9%d8%b5/",
-                    "badge": "تغطية صحفية",
-                    "badgeEn": "Press Coverage"
-                },
-                {
-                    "id": "news-2",
-                    "newspaper": "إكستيرا نيوز",
-                    "newspaperEn": "Extera News",
-                    "title": "إيهاب بن نبيل يار والذكاء الاصطناعي في صياغة مستقبل الاقتصاد الرقمي",
-                    "titleEn": "Ehab Nabeel Yar and Artificial Intelligence in Shaping the Digital Economy",
-                    "url": "https://exteranews.com/%d8%a5%d9%8a%d9%87%d8%a7%d8%a8-%d8%a8%d9%86-%d9%86%d8%a8%d9%8a%d9%84-%d9%8a%d8%a7%d8%b1-%d9%88%d8%a7%d9%84%d8%b0%d9%83%d8%a7%d8%a1-%d8%a7%d9%84%d8%a7%d8%b5%d8%b7%d9%86%d8%a7%d8%b9%d9%8a-%d9%81%d9%8a/",
-                    "badge": "تغطية صحفية",
-                    "badgeEn": "Press Coverage"
-                },
-                {
-                    "id": "news-3",
-                    "newspaper": "صحيفة أخبار الوطن",
-                    "newspaperEn": "Akhbar Al-Watan Newspaper",
-                    "title": "إيهاب بن نبيل يار: الذكاء الاصطناعي والتحول الرقمي في دعم الاقتصاد",
-                    "titleEn": "Ehab Nabeel Yar: AI & Digital Transformation Supporting the Economy",
-                    "url": "https://akhber-alwatan.com/?p=57996",
-                    "badge": "تغطية صحفية",
-                    "badgeEn": "Press Coverage"
-                },
-                {
-                    "id": "news-4",
-                    "newspaper": "كايرو 24",
-                    "newspaperEn": "Cairo 24",
-                    "title": "إيهاب بن نبيل يار يتحدث عن دور الذكاء الاصطناعي في مستقبل الاقتصاد الرقمي",
-                    "titleEn": "Ehab Nabeel Yar Speaks on the Role of AI in the Future of Digital Economy",
-                    "url": "https://www.cairo24.online/2026/08/59.html?m=1",
-                    "badge": "تغطية صحفية",
-                    "badgeEn": "Press Coverage"
-                },
-                {
-                    "id": "news-5",
-                    "newspaper": "صحيفة الدستور 24",
-                    "newspaperEn": "Aldostor 24",
-                    "title": "إيهاب بن نبيل يار ودور التخطيط الهندسي في نجاح المشاريع التقنية",
-                    "titleEn": "Ehab Nabeel Yar & The Role of System Planning in Tech Projects",
-                    "url": "https://aldostor24.com/%d8%a5%d9%8a%d9%87%d8%a7%d8%a8-%d8%a8%d9%86-%d9%86%d8%a8%d9%8a%d9%84-%d9%8a%d8%a7%d8%b1-%d9%88%d8%af%d9%88%d8%b1-%d8%a7%d9%84%d8%aa%d8%ae%d8%b7%d9%8a%d8%b7-%d8%a7%d9%84%d9%87%d9%86%d8%af%d8%b3%d9%8a/",
-                    "badge": "تغطية صحفية",
-                    "badgeEn": "Press Coverage"
-                },
-                {
-                    "id": "news-6",
-                    "newspaper": "الخبر الفوري",
-                    "newspaperEn": "Al-Khabar Al-Fawri",
-                    "title": "إيهاب بن نبيل يار وتطوير المنتجات الرقمية المبتكرة",
-                    "titleEn": "Ehab Nabeel Yar and Developing Innovative Digital Products",
-                    "url": "https://alkhabaralfawriu.com/%d8%a5%d9%8a%d9%87%d8%a7%d8%a8-%d8%a8%d9%86-%d9%86%d8%a8%d9%8a%d9%84-%d9%8a%d8%a7%d8%b1-%d9%88%d8%aa%d8%b7%d9%88%d9%8a%d8%b1-%d8%a7%d9%84%d9%85%d9%86%d8%aa%d8%ac%d8%a7%d8%aa-%d8%a7%d9%84%d8%b1%d9%82/",
-                    "badge": "تغطية صحفية",
-                    "badgeEn": "Press Coverage"
-                },
-                {
-                    "id": "news-7",
-                    "newspaper": "صحيفة الأخبار",
-                    "newspaperEn": "Al-Akhbar News",
-                    "title": "إيهاب بن نبيل يار: الذكاء الاصطناعي وآفاق التحول الرقمي الحديث",
-                    "titleEn": "Ehab Nabeel Yar: Artificial Intelligence & Modern Digital Horizons",
-                    "url": "https://alakhbar.org/26025/",
-                    "badge": "تغطية صحفية",
-                    "badgeEn": "Press Coverage"
-                },
-                {
-                    "id": "news-8",
-                    "newspaper": "مصر مباشر",
-                    "newspaperEn": "Misr Mubashir",
-                    "title": "إيهاب بن نبيل يار ومستقبل هندسة النظم السحابية وقواعد البيانات",
-                    "titleEn": "Ehab Nabeel Yar & The Future of Cloud Architecture and Databases",
-                    "url": "https://misrmubashir.com/295626",
-                    "badge": "تغطية صحفية",
-                    "badgeEn": "Press Coverage"
-                },
-                {
-                    "id": "news-9",
-                    "newspaper": "الفجر العربي 24",
-                    "newspaperEn": "Al-Fajr Al-Arabi 24",
-                    "title": "إيهاب بن نبيل يار ودور التقنيات الحديثة في استقرار قواعد البيانات",
-                    "titleEn": "Ehab Nabeel Yar and Modern Technologies in Database Reliability",
-                    "url": "https://alfagrelaraby24.com/37978/",
-                    "badge": "تغطية صحفية",
-                    "badgeEn": "Press Coverage"
-                },
-                {
-                    "id": "news-10",
-                    "newspaper": "نجوم بلس",
-                    "newspaperEn": "Nojoom Plus",
-                    "title": "إيهاب بن نبيل يار وهندسة المنتجات التقنية الذكية",
-                    "titleEn": "Ehab Nabeel Yar and Smart Tech Product Engineering",
-                    "url": "https://nojoomplus.com/149825/%d8%a5%d9%8a%d9%87%d8%a7%d8%a8-%d8%a8%d9%86-%d9%86%d8%a8%d9%8a%d9%84-%d9%8a%d8%a7%d8%b1-%d9%88%d9%87%d9%86%d8%af%d8%b3%d8%a9-%d8%a7%d9%84%d9%85%d9%86%d8%aa%d8%ac%d8%a7%d8%aa-%d8%a7%d9%84%d8%aa%d9%82/",
-                    "badge": "تغطية صحفية",
-                    "badgeEn": "Press Coverage"
-                },
-                {
-                    "id": "news-11",
-                    "newspaper": "موجز نت",
-                    "newspaperEn": "Mowjaz Net",
-                    "title": "إيهاب بن نبيل يار: الذكاء الاصطناعي وتشكيل مستقبل الأنظمة الذكية",
-                    "titleEn": "Ehab Nabeel Yar: AI & Shaping the Future of Intelligent Systems",
-                    "url": "https://mowjaz.net/%d8%a5%d9%8a%d9%87%d8%a7%d8%a8-%d8%a8%d9%86-%d9%86%d8%a8%d9%8a%d9%84-%d9%8a%d8%a7%d8%b1-%d8%a7%d9%84%d8%b0%d9%83%d8%a7%d8%a1-%d8%a7%d9%84%d8%a7%d8%b5%d8%b7%d9%86%d8%a7%d8%b9%d9%8a-%d9%88%d8%aa%d8%b4/",
-                    "badge": "تغطية صحفية",
-                    "badgeEn": "Press Coverage"
-                }
-            ],
-            "partnership": [
-                {
-                    "id": "part-1",
-                    "icon": "fas fa-robot",
-                    "titleAr": "إذا كنت تحتاج أدوات ذكاء اصطناعي مخصصة",
-                    "titleEn": "Custom AI Tools & Solutions",
-                    "descAr": "أقوم ببناء وتطوير أدوات ذكاء اصطناعي مخصصة ومساعدين أذكياء (AI Agents) لتلبية احتياجاتك اليومية، مثل جدولة المواعيد الذكية، واكتشاف التعارضات، وتحليل النصوص والبيانات باللغة الطبيعية لرفع كفاءة أعمالك.",
-                    "descEn": "I build and develop custom AI tools and intelligent agents specialized for your daily operations, providing advanced natural language processing and task automation."
-                },
-                {
-                    "id": "part-2",
-                    "icon": "fas fa-gavel",
-                    "titleAr": "إذا كنت محامياً أو صاحب مكتب محاماة",
-                    "titleEn": "If You Are a Lawyer or Law Firm Owner",
-                    "descAr": "أساعدك في بناء أنظمة أرشفة ذكية وإدارة قضايا آمنة مع هيكلة وتنظيم الوثائق والمستندات القضائية وتصنيفها تلقائياً لتسريع البحث القانوني وحماية سرية بيانات الموكلين.",
-                    "descEn": "I help you build secure case management systems to structure and organize legal documents, automating classification and accelerating legal research while protecting client data confidentiality."
-                },
-                {
-                    "id": "part-3",
-                    "icon": "fas fa-store",
-                    "titleAr": "إذا كنت تاجرًا أو صاحب متجر",
-                    "titleEn": "If You Are a Merchant",
-                    "descAr": "أساعدك في أتمتة إدارة المخزون، وتوقع مواسم ذروة الطلب وانخفاضه باستخدام الذكاء الاصطناعي (مثل نظام موسم) لتقليل الهدر وزيادة المبيعات.",
-                    "descEn": "I help you automate inventory management and forecast demand peaks using AI to reduce waste and maximize sales."
-                },
-                {
-                    "id": "part-4",
-                    "icon": "fas fa-building",
-                    "titleAr": "إذا كنت صاحب مؤسسة أو شركة",
-                    "titleEn": "If You Are a Business Owner",
-                    "descAr": "نقوم برقمنة أعمالك بالكامل وتحويل المعاملات الورقية المجهدة إلى أنظمة اتصالات إدارية وأرشفة سحابية آمنة وبنية تحتية مستقرة قابلة للتوسع.",
-                    "descEn": "We fully digitize your operations, transforming tedious paperwork into secure administrative correspondence systems and scalable infrastructure."
-                },
-                {
-                    "id": "part-5",
-                    "icon": "fas fa-lightbulb",
-                    "titleAr": "إذا كنت رائد أعمال أو صاحب فكرة",
-                    "titleEn": "If You Are an Entrepreneur",
-                    "descAr": "أقود معك التخطيط التقني وهندسة الأنظمة لبناء نموذج منتجك الأولي (MVP) في وقت قياسي وبأعلى معايير الأمان وجودة الأكواد.",
-                    "descEn": "I lead the technical planning and system architecture to build your MVP in record time with top-tier security and code quality."
-                },
-                {
-                    "id": "part-6",
-                    "icon": "fas fa-bus-alt",
-                    "titleAr": "إذا كنت تدير عمليات موسمية وميدانية",
-                    "titleEn": "If You Manage Seasonal Operations",
-                    "descAr": "نوفر لك حلولاً تقنية ميدانية (تطبيقات أندرويد متكاملة، أنظمة تذاكر ذكية، تتبع حشود) مصممة للعمل تحت الضغط العالي والمفاجئ لضمان دقة البيانات وسرعتها.",
-                    "descEn": "We provide on-the-ground technical solutions (integrated Android apps, smart ticketing systems) designed to operate smoothly under high pressure."
-                }
-            ],
-            "contact": {
-                "titleAr": "هل تبحث عن شريك تقني؟",
-                "titleEn": "Seeking a Tech Partner?",
-                "descAr": "دعنا نناقش كيف يمكن لخبرتي كعالم حاسب أن تدعم نمو مشروعك وتضمن استقراره التقني.",
-                "descEn": "Let's discuss how my expertise as a Computer Scientist can support your project's growth and ensure its technical stability.",
-                "whatsapp": "966599727412",
-                "email": "contact@eny.sa",
-                "twitter": "https://x.com/_f_eny",
-                "linkedin": "https://www.linkedin.com/in/ehab-yar-4a1bb4193/",
-                "github": "https://github.com/feny1"
-            }
-        };
+        let siteData = window.siteData;
 
-        let siteData = initialDefaultData;
-        let currentLang = 'ar';
+        let currentLang = localStorage.getItem('eny_portfolio_lang') || 'ar';
         let currentLightboxIndex = 0;
         let activeFilter = 'all';
         let allGalleryExpanded = false;
@@ -3395,6 +662,9 @@
 
         window.setLanguage = function (lang) {
             currentLang = lang;
+            try {
+                localStorage.setItem('eny_portfolio_lang', lang);
+            } catch (e) {}
             const html = document.documentElement;
             const langText = document.getElementById('lang-text');
 
@@ -3417,45 +687,15 @@
                 }
             });
 
-            const arrow = document.querySelector('.arrow-icon');
-            if (arrow) {
+            document.querySelectorAll('.arrow-icon').forEach(arrow => {
                 arrow.className = lang === 'en' ? 'fas fa-arrow-right arrow-icon' : 'fas fa-arrow-left arrow-icon';
-            }
+            });
 
             renderAll();
-            updateSliderPosition();
         };
-
-        // Gallery Show More / Less
-        window.toggleAllGallery = function () {
-            allGalleryExpanded = !allGalleryExpanded;
-            const icon = document.getElementById('gallery-toggle-icon');
-            const text = document.getElementById('gallery-toggle-text');
-            const isAr = currentLang === 'ar';
-
-            updateGalleryVisibility();
-
-            if (icon) {
-                icon.className = allGalleryExpanded ? 'fas fa-chevron-up' : 'fas fa-chevron-down';
-            }
-            if (text) {
-                const matchingCount = getMatchingGalleryCount();
-                if (allGalleryExpanded) {
-                    text.textContent = isAr ? 'عرض أقل' : 'Show Less';
-                } else {
-                    text.textContent = isAr ? `عرض كافة الصور (${matchingCount} صورة)` : `Show All Photos (${matchingCount} Photos)`;
-                }
-            }
-        };
-
-        function getMatchingGalleryCount() {
-            const items = siteData.gallery || [];
-            if (activeFilter === 'all') return items.length;
-            return items.filter(g => g.category === activeFilter).length;
-        }
 
         function updateGalleryVisibility() {
-            const items = document.querySelectorAll('.gallery-item');
+            const items = document.querySelectorAll('#gallery-container .gallery-item');
             let matchingIdx = 0;
 
             items.forEach(item => {
@@ -3463,7 +703,7 @@
                 const matchesCategory = (activeFilter === 'all' || cat === activeFilter);
 
                 if (matchesCategory) {
-                    if (allGalleryExpanded || matchingIdx < 6) {
+                    if (matchingIdx < 6) {
                         item.style.display = 'block';
                     } else {
                         item.style.display = 'none';
@@ -3473,17 +713,6 @@
                     item.style.display = 'none';
                 }
             });
-
-            const toggleWrapper = document.getElementById('gallery-toggle-wrapper');
-            const text = document.getElementById('gallery-toggle-text');
-            const isAr = currentLang === 'ar';
-
-            if (toggleWrapper) {
-                toggleWrapper.style.display = matchingIdx > 6 ? 'block' : 'none';
-            }
-            if (text && !allGalleryExpanded) {
-                text.textContent = isAr ? `عرض كافة الصور (${matchingIdx} صورة)` : `Show All Photos (${matchingIdx} Photos)`;
-            }
         }
 
         window.filterGallery = function (category, btnEl) {
@@ -3496,31 +725,6 @@
                 if (targetBtn) targetBtn.classList.add('active');
             }
             updateGalleryVisibility();
-        };
-
-        // News Toggle
-        window.toggleAllNews = function () {
-            allNewsExpanded = !allNewsExpanded;
-            const extraItems = document.querySelectorAll('.news-item-extra');
-            const icon = document.getElementById('news-toggle-icon');
-            const text = document.getElementById('news-toggle-text');
-            const isAr = currentLang === 'ar';
-
-            extraItems.forEach(item => {
-                item.style.display = allNewsExpanded ? 'flex' : 'none';
-            });
-
-            if (icon) {
-                icon.className = allNewsExpanded ? 'fas fa-chevron-up' : 'fas fa-chevron-down';
-            }
-            if (text) {
-                const total = (siteData.news || []).length;
-                if (allNewsExpanded) {
-                    text.textContent = isAr ? 'عرض أقل' : 'Show Less';
-                } else {
-                    text.textContent = isAr ? `عرض كافة المقالات والتغطيات (${total} مقالاً)` : `Show All Articles (${total} Articles)`;
-                }
-            }
         };
 
         // Lightbox
@@ -3621,7 +825,7 @@
             if (!container) return;
             const isAr = currentLang === 'ar';
 
-            container.innerHTML = (siteData.education || []).map(edu => {
+            container.innerHTML = (siteData.education || []).slice(0, 2).map(edu => {
                 const isCert = edu.isCert;
                 const icon = edu.icon || (isCert ? 'fas fa-award' : 'fas fa-graduation-cap');
                 const icon1 = isCert ? 'fas fa-certificate' : 'fas fa-landmark';
@@ -3687,18 +891,19 @@
             if (!container) return;
             const isAr = currentLang === 'ar';
 
-            container.innerHTML = siteData.expertise.map(item => `
+            container.innerHTML = (siteData.expertise || []).slice(0, 3).map(item => `
             <div class="expertise-card">
                 <div class="icon-box">
                     <i class="${item.icon || 'fas fa-code'}"></i>
                 </div>
-                <h3>${isAr ? item.titleAr : item.titleEn}</h3>
-                <p>${isAr ? item.descAr : item.descEn}</p>
+                <h3>${isAr ? (item.titleAr || '') : (item.titleEn || '')}</h3>
+                <p>${isAr ? (item.descAr || '') : (item.descEn || '')}</p>
                 <div class="card-tags">
                     ${(item.tags || []).map(t => `<span class="tag-pill">${t}</span>`).join('')}
                 </div>
             </div>
             `).join('');
+            container.classList.add('content-loaded');
         }
 
         function renderCollaborations() {
@@ -3706,8 +911,8 @@
             if (!container) return;
             const isAr = currentLang === 'ar';
 
-            container.innerHTML = (siteData.collaborations || []).map(item => {
-                let desc = isAr ? item.descAr : item.descEn;
+            container.innerHTML = (siteData.collaborations || []).slice(0, 3).map(item => {
+                let desc = isAr ? (item.descAr || '') : (item.descEn || '');
                 if (isAr && desc.includes('الأستاذ هتان بن جمال خان')) {
                     desc = desc.replace('الأستاذ هتان بن جمال خان', '<span style="color: var(--primary); font-weight: 700;">الأستاذ هتان بن جمال خان</span>');
                 } else if (!isAr && desc.includes('Mr. Hattan Jamal Khan')) {
@@ -3716,7 +921,7 @@
                 return `
                 <div class="collab-card">
                     <div class="collab-icon"><i class="${item.icon || 'fas fa-building'}"></i></div>
-                    <h3>${isAr ? item.titleAr : item.titleEn}</h3>
+                    <h3>${isAr ? (item.titleAr || '') : (item.titleEn || '')}</h3>
                     <p>${desc}</p>
                 </div>
                 `;
@@ -3727,22 +932,28 @@
             const container = document.getElementById('people-container');
             if (!container) return;
             const isAr = currentLang === 'ar';
-            
 
-            container.innerHTML = (siteData.people || []).map(person => `
+            container.innerHTML = (siteData.people || []).slice(0, 3).map(person => {
+                const name = isAr ? (person.nameAr || '') : (person.nameEn || '');
+                const badge = isAr ? (person.badgeAr || '') : (person.badgeEn || '');
+                const role = isAr ? (person.roleAr || '') : (person.roleEn || '');
+                const org = isAr ? (person.orgAr || '') : (person.orgEn || '');
+                const desc = isAr ? (person.descAr || '') : (person.descEn || '');
+
+                return `
             <div class="person-card">
                 <div class="person-header">
                     <div class="person-avatar">
                         <i class="fas fa-user-check"></i>
                     </div>
                     <div>
-                        <div class="person-name">${isAr ? person.nameAr : person.nameEn}</div>
-                        <span class="person-badge">${isAr ? person.badgeAr : person.badgeEn}</span>
+                        <div class="person-name">${name}</div>
+                        <span class="person-badge">${badge}</span>
                     </div>
                 </div>
                 <div class="person-org">
                     <i class="fas fa-briefcase" style="font-size: 0.85rem;"></i>
-                    <span>${isAr ? person.roleAr : person.roleEn} • ${isAr ? person.orgAr : person.orgEn}</span>
+                    <span>${role}${org ? ' • ' + org : ''}</span>
                 </div>
                  ${person.url ? `
                         <div style="margin-bottom: 1rem;">
@@ -3754,50 +965,57 @@
                             </a>
                         </div>
                     ` : ''}
-                <p class="person-desc">${isAr ? person.descAr : person.descEn}</p>
+                <p class="person-desc">${desc}</p>
             </div>
-            `).join('');
+            `;
+            }).join('');
         }
 
         function renderProjects() {
-            const track = document.getElementById('projects-track');
-            if (!track) return;
+            const container = document.getElementById('projects-container');
+            if (!container) return;
             const isAr = currentLang === 'ar';
 
-            track.innerHTML = siteData.projects.map(p => `
-            <div class="project-card">
+            container.innerHTML = (siteData.projects || []).slice(0, 3).map(p => {
+                const title = isAr ? (p.titleAr || '') : (p.titleEn || '');
+                const desc = isAr ? (p.descAr || '') : (p.descEn || '');
+                const badge = isAr ? (p.badgeAr || 'مشروع هندسي معتمد') : (p.badgeEn || 'Engineering System');
+
+                return `
+            <div class="project-card" style="display: flex; flex-direction: column; justify-content: space-between; border-radius: 20px;">
                 <div class="project-info">
-                    <h3>${isAr ? p.titleAr : p.titleEn}</h3>
-                    <p>${isAr ? p.descAr : p.descEn}</p>
-                    ${p.linkUrl ? `
-                        <div style="margin-bottom: 1rem;">
-                            <a style="color: white;" href="${p.linkUrl}" target="_blank"
-                                rel="noopener noreferrer"
-                                class="text-white hover:underline text-sm inline-flex items-center gap-1">
-                                <span>${isAr ? (p.linkTextAr || 'زيارة الموقع') : (p.linkTextEn || 'Visit')}</span>
-                                <span>↗</span>
-                            </a>
-                        </div>
-                    ` : ''}
-                    <div class="tags">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.9rem;">
+                        <span style="font-size: 0.75rem; background: rgba(56, 189, 248, 0.12); border: 1px solid rgba(56, 189, 248, 0.35); color: var(--accent-cyan); padding: 3px 10px; border-radius: 50px; font-weight: 600;">
+                            ${badge}
+                        </span>
+                        <i class="fas fa-code-branch" style="color: var(--text-gray); font-size: 0.9rem;"></i>
+                    </div>
+                    <h3 style="font-size: 1.22rem; margin-bottom: 0.7rem; color: #f8fafc;">${title}</h3>
+                    <p style="color: var(--text-gray); font-size: 0.92rem; line-height: 1.65; margin-bottom: 1rem;">${desc}</p>
+                    <div class="tags" style="margin-bottom: 1.2rem;">
                         ${(p.tags || []).map(t => `<span>${t}</span>`).join('')}
                     </div>
+                </div>
+                <div style="margin-top: auto; padding-top: 1rem; border-top: 1px solid rgba(255, 255, 255, 0.06); display: flex; align-items: center; justify-content: space-between;">
                     ${p.linkUrl ? `
-                        <a href="${p.linkUrl}" target="_blank" rel="noopener noreferrer" class="project-link">
+                        <a href="${p.linkUrl}" target="_blank" rel="noopener noreferrer" class="project-link" style="color: var(--accent-cyan);">
                             <span>${isAr ? (p.linkTextAr || 'عرض الرابط') : (p.linkTextEn || 'Open Link')}</span>
-                            <i class="${p.linkIcon || 'fas fa-arrow-left'}"></i>
+                            <i class="${p.linkIcon || 'fas fa-external-link-alt'}"></i>
                         </a>
                     ` : `
-                        <span class="project-link">
-                            <span>${isAr ? 'نظام معتمد' : 'Verified'}</span>
+                        <span class="project-link" style="color: #10b981;">
+                            <span>${isAr ? 'نظام معتمد قيد التشغيل' : 'Production Verified'}</span>
                             <i class="fas fa-check-circle"></i>
                         </span>
                     `}
+                    <a href="projects.html" style="font-size: 0.82rem; color: var(--text-gray); text-decoration: none;" class="hover:text-white">
+                        <span>${isAr ? 'دراسة الحالة' : 'Case Study'}</span> &larr;
+                    </a>
                 </div>
             </div>
-            `).join('');
-
-            calcVisibleSlides();
+            `;
+            }).join('');
+            container.classList.add('content-loaded');
         }
 
         function renderGallery() {
@@ -3805,25 +1023,35 @@
             if (!container) return;
             const isAr = currentLang === 'ar';
 
-            container.innerHTML = siteData.gallery.map((g, idx) => `
+            container.innerHTML = (siteData.gallery || []).map((g, idx) => {
+                const title = isAr ? (g.titleAr || '') : (g.titleEn || '');
+                const desc = isAr ? (g.descAr || '') : (g.descEn || '');
+                const badge = isAr ? (g.badgeAr || '') : (g.badgeEn || '');
+
+                return `
             <div class="gallery-item" data-category="${g.category || 'all'}" data-index="${idx}" onclick="openLightbox(${idx})">
                 <div class="gallery-card">
                     <div class="gallery-img-wrap">
-                        <img src="${g.image}" alt="${isAr ? g.titleAr : g.titleEn}" class="gallery-img" loading="lazy">
+                        <img src="${g.image}" alt="${title}" class="gallery-img" loading="lazy">
                         <div class="gallery-overlay">
                             <div class="gallery-zoom-icon" onclick="event.stopPropagation(); openLightbox(${idx});"><i class="fas fa-expand-alt"></i></div>
                             <div class="gallery-overlay-text">
-                                <h3 class="gallery-title">${isAr ? g.titleAr : g.titleEn}</h3>
-                                <p class="gallery-desc">${isAr ? g.descAr : g.descEn}</p>
+                                <h3 class="gallery-title">${title}</h3>
+                                <p class="gallery-desc">${desc}</p>
                             </div>
                         </div>
                         <span class="gallery-badge">
-                            <span>${isAr ? g.badgeAr : g.badgeEn}</span>
+                            <span>${badge}</span>
                         </span>
+                    </div>
+                    <div class="gallery-card-caption" style="padding: 1.1rem 1.25rem; background: rgba(15, 23, 42, 0.75); border-top: 1px solid rgba(255, 255, 255, 0.06); display: flex; flex-direction: column; gap: 0.35rem;">
+                        <h4 style="font-size: 1rem; font-weight: 700; color: #f8fafc; margin: 0; line-height: 1.4;">${title}</h4>
+                        <p style="font-size: 0.82rem; color: var(--text-gray); margin: 0; line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">${desc}</p>
                     </div>
                 </div>
             </div>
-            `).join('');
+            `;
+            }).join('');
 
             updateGalleryVisibility();
         }
@@ -3832,36 +1060,41 @@
             const container = document.getElementById('news-container');
             if (!container) return;
             const isAr = currentLang === 'ar';
-            const total = (siteData.news || []).length;
 
-            container.innerHTML = (siteData.news || []).map((item, idx) => {
-                const isExtra = idx >= 6;
+            container.innerHTML = (siteData.news || []).slice(0, 3).map(item => {
+                const newspaper = isAr ? (item.newspaper || '') : (item.newspaperEn || item.newspaper || '');
+                const title = isAr ? (item.title || item.titleAr || '') : (item.titleEn || item.title || '');
+                const excerpt = isAr ? (item.excerptAr || item.summaryAr || '') : (item.excerptEn || item.summaryEn || '');
+                const badge = isAr ? (item.badge || 'تغطية صحفية') : (item.badgeEn || 'Press Coverage');
+                const date = isAr ? (item.dateAr || item.date || '2026م') : (item.dateEn || item.date || '2026');
+
                 return `
-                <div class="expertise-card news-item ${isExtra ? 'news-item-extra' : ''}" style="${isExtra && !allNewsExpanded ? 'display: none;' : 'display: flex;'}">
-                    <div class="icon-box"><i class="fas fa-newspaper"></i></div>
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-                        <span style="font-size: 0.85rem; color: var(--primary);">
-                            ${isAr ? item.newspaper : item.newspaperEn}
-                        </span>
-                        <span style="font-size: 0.75rem; background: rgba(244, 63, 94, 0.12); border: 1px solid rgba(244, 63, 94, 0.35); color: var(--primary); padding: 2px 8px; border-radius: 50px;">
-                            ${isAr ? (item.badge || 'تغطية صحفية') : (item.badgeEn || 'Press')}
-                        </span>
+                <div class="expertise-card" style="display: flex; flex-direction: column; justify-content: space-between; position: relative;">
+                    <div>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.1rem;">
+                            <div style="display: flex; align-items: center; gap: 0.6rem;">
+                                <div class="icon-box" style="width: 38px; height: 38px; font-size: 1rem; margin-bottom: 0; border-radius: 10px;">
+                                    <i class="fas fa-newspaper"></i>
+                                </div>
+                                <span style="font-size: 0.95rem; color: #f8fafc; font-weight: 700;">${newspaper}</span>
+                            </div>
+                            <span style="font-size: 0.74rem; background: rgba(244, 63, 94, 0.12); border: 1px solid rgba(244, 63, 94, 0.35); color: var(--primary); padding: 3px 10px; border-radius: 50px; font-weight: 600;">
+                                ${badge}
+                            </span>
+                        </div>
+                        <h3 style="font-size: 1.15rem; line-height: 1.55; margin-bottom: 0.8rem; color: #f1f5f9;">${title}</h3>
+                        ${excerpt ? `<p style="font-size: 0.88rem; color: var(--text-gray); line-height: 1.6; margin-bottom: 1.2rem;">${excerpt}</p>` : ''}
                     </div>
-                    <h3>${isAr ? item.title : item.titleEn}</h3>
-                    <div style="margin-top: auto; padding-top: 16px;">
-                        <a href="${item.url}" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="font-size: 0.88rem; padding: 8px 16px; width: 100%; justify-content: center;">
+                    <div style="margin-top: auto; padding-top: 1rem; border-top: 1px solid rgba(255, 255, 255, 0.06); display: flex; align-items: center; justify-content: space-between;">
+                        <span style="font-size: 0.8rem; color: var(--text-gray);"><i class="far fa-calendar-alt" style="margin-inline-end: 5px;"></i>${date}</span>
+                        <a href="${item.url}" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="font-size: 0.82rem; padding: 7px 14px; gap: 6px;">
                             <span>${isAr ? 'قراءة الخبر' : 'Read Article'}</span>
-                            <i class="fas fa-external-link-alt" style="margin-inline-start: 6px;"></i>
+                            <i class="fas fa-external-link-alt" style="font-size: 0.75rem;"></i>
                         </a>
                     </div>
                 </div>
                 `;
             }).join('');
-
-            const toggleWrapper = document.getElementById('news-toggle-wrapper');
-            if (toggleWrapper) {
-                toggleWrapper.style.display = total > 6 ? 'block' : 'none';
-            }
         }
 
         function renderPartnership() {
@@ -3869,13 +1102,47 @@
             if (!container) return;
             const isAr = currentLang === 'ar';
 
-            container.innerHTML = siteData.partnership.map(item => `
-            <div class="expertise-card">
-                <div class="icon-box"><i class="${item.icon || 'fas fa-lightbulb'}"></i></div>
-                <h3>${isAr ? item.titleAr : item.titleEn}</h3>
-                <p>${isAr ? item.descAr : item.descEn}</p>
-            </div>
-            `).join('');
+            container.innerHTML = (siteData.partnership || []).slice(0, 3).map(item => {
+                const title = isAr ? (item.titleAr || '') : (item.titleEn || '');
+                const desc = isAr ? (item.descAr || '') : (item.descEn || '');
+                const badge = isAr ? (item.badgeAr || item.idealForAr || 'شراكة تقنية') : (item.badgeEn || item.idealForEn || 'Tech Partnership');
+                const details = isAr ? (item.detailsAr || item.benefitsAr || []) : (item.detailsEn || item.benefitsEn || []);
+
+                return `
+                <div class="expertise-card" style="display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.2rem;">
+                            <div class="icon-box" style="margin-bottom: 0;">
+                                <i class="${item.icon || 'fas fa-lightbulb'}"></i>
+                            </div>
+                            <span style="font-size: 0.75rem; background: rgba(56, 189, 248, 0.12); border: 1px solid rgba(56, 189, 248, 0.35); color: var(--accent-cyan); padding: 3px 10px; border-radius: 50px; font-weight: 600;">
+                                ${badge}
+                            </span>
+                        </div>
+                        <h3 style="font-size: 1.15rem; line-height: 1.5; margin-bottom: 0.8rem; color: #f1f5f9;">${title}</h3>
+                        <p style="font-size: 0.88rem; color: var(--text-gray); line-height: 1.6; margin-bottom: 1.2rem;">${desc}</p>
+
+                        ${details.length ? `
+                        <div style="margin-bottom: 1.2rem; display: flex; flex-direction: column; gap: 0.45rem;">
+                            ${details.slice(0, 2).map(d => `
+                                <div style="font-size: 0.82rem; color: #cbd5e1; display: flex; align-items: flex-start; gap: 0.5rem; line-height: 1.45;">
+                                    <i class="fas fa-check-circle" style="color: #10b981; font-size: 0.75rem; margin-top: 0.2rem; flex-shrink: 0;"></i>
+                                    <span>${d}</span>
+                                </div>
+                            `).join('')}
+                        </div>
+                        ` : ''}
+                    </div>
+
+                    <div style="margin-top: auto; padding-top: 1rem; border-top: 1px solid rgba(255, 255, 255, 0.06);">
+                        <a href="https://wa.me/966599727412?text=${encodeURIComponent(isAr ? 'مرحباً إيهاب، أود مناقشة شراكة تقنية: ' + title : 'Hello Ehab, I would like to discuss: ' + title)}" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="font-size: 0.85rem; padding: 8px 16px; width: 100%; justify-content: center;">
+                            <i class="fab fa-whatsapp" style="color: #25D366; margin-inline-end: 6px;"></i>
+                            <span>${isAr ? 'طلب استشارة ومناقشة الحل' : 'Discuss Solution on WhatsApp'}</span>
+                        </a>
+                    </div>
+                </div>
+                `;
+            }).join('');
         }
 
         function renderContact() {
@@ -3896,6 +1163,22 @@
 
             const ce = document.getElementById('contact-email-btn');
             if (ce) ce.href = `mailto:${c.email}`;
+
+            // Footer Social Links Sync
+            const fTw = document.getElementById('footer-link-twitter');
+            if (fTw && c.twitter) fTw.href = c.twitter;
+
+            const fLi = document.getElementById('footer-link-linkedin');
+            if (fLi && c.linkedin) fLi.href = c.linkedin;
+
+            const fGh = document.getElementById('footer-link-github');
+            if (fGh && c.github) fGh.href = c.github;
+
+            const fWa = document.getElementById('footer-link-whatsapp');
+            if (fWa && c.whatsapp) fWa.href = `https://wa.me/${c.whatsapp}`;
+
+            const fEm = document.getElementById('footer-link-email');
+            if (fEm && c.email) fEm.href = `mailto:${c.email}`;
         }
 
         function renderAll() {
@@ -3956,58 +1239,34 @@
             runTypewriter();
         }
 
-        // Slider Controls
-        let currentSlide = 0;
-        let visibleSlides = 3;
-        let maxSlideIndex = 0;
-
-        function calcVisibleSlides() {
-            const width = window.innerWidth;
-            const total = (siteData.projects || []).length;
-            if (width <= 768) {
-                visibleSlides = 1;
-            } else if (width <= 1024) {
-                visibleSlides = 2;
-            } else {
-                visibleSlides = 3;
-            }
-            maxSlideIndex = Math.max(0, total - visibleSlides);
-            if (currentSlide > maxSlideIndex) currentSlide = maxSlideIndex;
-            updateSliderPosition();
-        }
-
-        function updateSliderPosition() {
-            const track = document.getElementById('projects-track');
-            if (!track) return;
-
-            const slideWidthPercent = 100 / visibleSlides;
-            const isRtl = currentLang === 'ar';
-            const directionMultiplier = isRtl ? 1 : -1;
-
-            track.style.transform = `translateX(${directionMultiplier * (currentSlide * slideWidthPercent)}%)`;
-        }
-
-        function nextSlide() {
-            currentSlide = currentSlide < maxSlideIndex ? currentSlide + 1 : 0;
-            updateSliderPosition();
-        }
-
-        function prevSlide() {
-            currentSlide = currentSlide > 0 ? currentSlide - 1 : maxSlideIndex;
-            updateSliderPosition();
-        }
-
         // Scroll and Navbar Interactions
         function setupNavigation() {
             const navbar = document.getElementById('navbar');
             const backToTop = document.getElementById('back-to-top');
             const mobileToggle = document.getElementById('mobile-menu-toggle');
             const navLinks = document.getElementById('nav-links');
+            const progressBar = document.getElementById('reading-progress-bar');
+
+            function updateReadingProgress() {
+                if (!progressBar) return;
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+                const scrollHeight = (document.documentElement.scrollHeight || document.body.scrollHeight) - document.documentElement.clientHeight;
+                if (scrollHeight > 5) {
+                    const progress = Math.min(100, Math.max(0, (scrollTop / scrollHeight) * 100));
+                    progressBar.style.width = progress + '%';
+                    progressBar.setAttribute('aria-valuenow', Math.round(progress).toString());
+                } else {
+                    progressBar.style.width = '0%';
+                    progressBar.setAttribute('aria-valuenow', '0');
+                }
+            }
 
             window.addEventListener('scroll', () => {
                 const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
                 if (navbar) navbar.classList.toggle('scrolled', scrollTop > 50);
                 if (backToTop) backToTop.classList.toggle('visible', scrollTop > 400);
+
+                updateReadingProgress();
 
                 const sections = document.querySelectorAll('section[id]');
                 sections.forEach(section => {
@@ -4020,29 +1279,54 @@
                         });
                     }
                 });
-            });
+            }, { passive: true });
+
+            window.addEventListener('resize', updateReadingProgress, { passive: true });
+            updateReadingProgress();
 
             if (mobileToggle && navLinks) {
-                mobileToggle.addEventListener('click', () => {
-                    mobileToggle.classList.toggle('active');
-                    navLinks.classList.toggle('active');
-                });
+                let backdrop = document.getElementById('mobile-menu-backdrop');
+                if (!backdrop) {
+                    backdrop = document.createElement('div');
+                    backdrop.id = 'mobile-menu-backdrop';
+                    backdrop.className = 'mobile-menu-backdrop';
+                    document.body.appendChild(backdrop);
+                }
+
+                const closeMenu = () => {
+                    mobileToggle.classList.remove('active');
+                    mobileToggle.setAttribute('aria-expanded', 'false');
+                    navLinks.classList.remove('active');
+                    if (backdrop) backdrop.classList.remove('active');
+                    document.body.classList.remove('menu-open');
+                };
+
+                const toggleMenu = () => {
+                    const willOpen = !navLinks.classList.contains('active');
+                    mobileToggle.classList.toggle('active', willOpen);
+                    mobileToggle.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+                    navLinks.classList.toggle('active', willOpen);
+                    if (backdrop) backdrop.classList.toggle('active', willOpen);
+                    document.body.classList.toggle('menu-open', willOpen);
+                };
+
+                mobileToggle.addEventListener('click', toggleMenu);
+                backdrop.addEventListener('click', closeMenu);
+
                 document.querySelectorAll('.nav-links a').forEach(link => {
-                    link.addEventListener('click', () => {
-                        mobileToggle.classList.remove('active');
-                        navLinks.classList.remove('active');
-                    });
+                    link.addEventListener('click', closeMenu);
+                });
+
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape' && navLinks.classList.contains('active')) {
+                        closeMenu();
+                    }
                 });
             }
 
             if (backToTop) {
                 backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
             }
-
-            const prevBtn = document.getElementById('slider-prev');
-            const nextBtn = document.getElementById('slider-next');
-            if (prevBtn) prevBtn.addEventListener('click', prevSlide);
-            if (nextBtn) nextBtn.addEventListener('click', nextSlide);
 
             window.addEventListener('keydown', (e) => {
                 const lightbox = document.getElementById('lightbox-modal');
@@ -4058,12 +1342,64 @@
             });
         }
 
+        function setupSectionScrollReveal() {
+            if (!('IntersectionObserver' in window)) {
+                document.querySelectorAll('section > .container, section > [class*="container"]').forEach(el => {
+                    el.classList.add('is-visible');
+                });
+                return;
+            }
+
+            const candidates = document.querySelectorAll('section > .container, section > [class*="container"]');
+            const sectionsWithoutContainer = Array.from(document.querySelectorAll('section')).filter(sec => !sec.querySelector('.container, [class*="container"]'));
+            const elementsToAnimate = [...new Set([...candidates, ...sectionsWithoutContainer])];
+
+            if (elementsToAnimate.length === 0) return;
+
+            const observer = new IntersectionObserver((entries, obs) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        obs.unobserve(entry.target);
+                    }
+                });
+            }, {
+                root: null,
+                rootMargin: '0px 0px -40px 0px',
+                threshold: 0.08
+            });
+
+            elementsToAnimate.forEach(el => {
+                el.classList.add('reveal-fade-up');
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    requestAnimationFrame(() => {
+                        el.classList.add('is-visible');
+                    });
+                } else {
+                    observer.observe(el);
+                }
+            });
+
+            window.addEventListener('hashchange', () => {
+                if (window.location.hash) {
+                    const target = document.querySelector(window.location.hash);
+                    if (target) {
+                        const container = target.querySelector('.container, [class*="container"]') || target;
+                        if (container) container.classList.add('is-visible');
+                    }
+                }
+            });
+        }
+
         function initPortfolioApp() {
             setupNavigation();
-            calcVisibleSlides();
-            renderAll();
-
-            window.addEventListener('resize', calcVisibleSlides);
+            if (currentLang && currentLang !== 'ar') {
+                window.setLanguage(currentLang);
+            } else {
+                renderAll();
+            }
+            setupSectionScrollReveal();
         }
 
         if (document.readyState === 'loading') {

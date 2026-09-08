@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المؤهلات الأكاديمية والشهادات المهنية | إيهاب يار - Ehab Yar</title>
+    <meta name="description" content="كافة المؤهلات الأكاديمية والشهادات المهنية لعالم الحاسب إيهاب يار - ماجستير علوم الحاسب، PMP، وبكالوريوس بتقدير ممتاز.">
+    <link rel="icon" type="image/png" href="assets/images/ehab-yar-official-logo.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Tajawal:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <div class="grid-bg"></div>
+    <div class="glow-bg"></div>
+
+    <!-- Reading Progress Bar -->
+    <div class="reading-progress-container" id="reading-progress">
+        <div class="reading-progress-bar" id="reading-progress-bar" role="progressbar" aria-label="Reading progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img id="nav-logo-img" src="assets/images/ehab-yar-official-logo.png" alt="Ehab Yar Logo" class="nav-logo">
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a></li>
+                <li><a href="education.html" class="active" data-ar="المؤهلات" data-en="Education">المؤهلات</a></li>
+                <li><a href="expertise.html" data-ar="الخبرات" data-en="Expertise">الخبرات</a></li>
+                <li><a href="collaborations.html" data-ar="التعاونات" data-en="Experience">التعاونات</a></li>
+                <li><a href="people.html" data-ar="شخصيات عملت معهم" data-en="Network">شخصيات عملت معهم</a></li>
+                <li><a href="projects.html" data-ar="المشاريع" data-en="Projects">المشاريع</a></li>
+                <li><a href="gallery.html" data-ar="معرض الصور" data-en="Gallery">معرض الصور</a></li>
+                <li><a href="news.html" data-ar="مقالات وأخبار" data-en="News & Articles">مقالات وأخبار</a></li>
+                <li><a href="partnership.html" data-ar="كيف يمكنني إفادتك" data-en="Partnership">كيف يمكنني إفادتك</a></li>
+                <li><a href="index.html#contact" data-ar="اتصل بي" data-en="Contact">اتصل بي</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="lang-toggle" class="btn-lang" onclick="toggleLanguage()" aria-label="Toggle Language">
+                    <i class="fas fa-globe" style="margin-inline-end: 4px;"></i>
+                    <span class="lang-text" id="lang-text">English</span>
+                </button>
+            </div>
+            <div class="mobile-menu-btn" id="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="subpage-hero">
+            <div class="container">
+                <div class="subpage-breadcrumb">
+                    <a href="index.html"><i class="fas fa-home"></i> <span data-ar="الرئيسية" data-en="Home">الرئيسية</span></a>
+                    <span class="crumb-separator">/</span>
+                    <span data-ar="المؤهلات الأكاديمية والشهادات" data-en="Academic & Professional Credentials">المؤهلات الأكاديمية والشهادات</span>
+                </div>
+
+                <div class="subpage-title-row">
+                    <div class="subpage-title-wrap">
+                        <h1 data-ar="المؤهلات الأكاديمية والاعتمادات المهنية" data-en="Academic & Professional Credentials">المؤهلات الأكاديمية والاعتمادات المهنية</h1>
+                        <p data-ar="المسيرة الأكاديمية والبحثية والشهادات المهنية المعتمدة في علوم الحاسب، الذكاء الاصطناعي، وهندسة إدارة المشاريع الاحترافية." data-en="Comprehensive academic roadmap, scientific research, and certified credentials in Computer Science, Artificial Intelligence, and Professional Project Management.">المسيرة الأكاديمية والبحثية والشهادات المهنية المعتمدة في علوم الحاسب، الذكاء الاصطناعي، وهندسة إدارة المشاريع الاحترافية.</p>
+                    </div>
+                    <div>
+                        <a href="index.html#education" class="subpage-back-btn">
+                            <i class="fas fa-arrow-right arrow-icon"></i>
+                            <span data-ar="العودة للصفحة الرئيسية" data-en="Back to Home">العودة للصفحة الرئيسية</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Metrics Bar -->
+                <div class="subpage-stats-bar" id="education-stats-container"></div>
+
+                <!-- Section Intro Note -->
+                <div class="subpage-intro-box">
+                    <div class="subpage-intro-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <div class="subpage-intro-text">
+                        <h3 data-ar="التأصيل العلمي والأكاديمي في علوم الحاسب" data-en="Rigorous Foundations in Computer Science">التأصيل العلمي والأكاديمي في علوم الحاسب</h3>
+                        <p data-ar="الجمع بين الأساس النظري المتين لعلوم الحاسب والذكاء الاصطناعي بجامعة أم القرى، والمنهجيات القيادية العالمية لمعهد إدارة المشاريع الأمريكي (PMI) لبناء أنظمة فائقة الاستقرار." data-en="Bridging foundational theory in Computer Science & AI from Umm Al-Qura University with global executive frameworks from PMI to architect robust, mission-critical systems.">الجمع بين الأساس النظري المتين لعلوم الحاسب والذكاء الاصطناعي بجامعة أم القرى، والمنهجيات القيادية العالمية لمعهد إدارة المشاريع الأمريكي (PMI) لبناء أنظمة فائقة الاستقرار.</p>
+                    </div>
+                </div>
+
+                <div class="edu-timeline" id="education-full-container"></div>
+
+                <!-- Academic Deep-Dive Section -->
+                <div style="margin-top: 4rem;">
+                    <div class="rich-case-card">
+                        <div class="rich-case-header">
+                            <div class="rich-case-title-area">
+                                <div class="rich-case-icon-badge">
+                                    <i class="fas fa-atom"></i>
+                                </div>
+                                <div>
+                                    <h2 class="rich-case-title" data-ar="فلسفة البحث العلمي والمنهج الهندسي" data-en="Scientific Research & Engineering Philosophy">فلسفة البحث العلمي والمنهج الهندسي</h2>
+                                    <div class="rich-case-subtitle" data-ar="كيف يدعم البحث الأكاديمي استقرار الأنظمة الإنتاجية المعقدة" data-en="How Academic Rigor Directly Strengthens Mission-Critical Production Systems">كيف يدعم البحث الأكاديمي استقرار الأنظمة الإنتاجية المعقدة</div>
+                                </div>
+                            </div>
+                            <span class="rich-case-badge" data-ar="منهجية علمية" data-en="Scientific Method">منهجية علمية</span>
+                        </div>
+
+                        <div class="rich-case-body-grid">
+                            <div>
+                                <div class="rich-section-block">
+                                    <h4><i class="fas fa-check-circle"></i> <span data-ar="أهمية علوم الحاسب النظرية في الإنتاج" data-en="Theoretical CS in Production Environments">أهمية علوم الحاسب النظرية في الإنتاج</span></h4>
+                                    <p data-ar="إن الفهم العميق لنظرية التعقيد الحسابي (Computational Complexity)، وإدارة الذاكرة، وخوارزميات التزامن (Concurrency Controls) ليس مجرد تدريب أكاديمي؛ بل هو الفارق الحاسم بين نظام ينهار تحت ضغط الملايين ونظام يظل صامداً بكفاءة زمنية واستقرار تام." data-en="Deep mastery of computational complexity, memory allocation models, and concurrency control is not merely academic theory; it is the definitive difference between systems that fail under peak traffic and systems that maintain sub-second response times.">إن الفهم العميق لنظرية التعقيد الحسابي (Computational Complexity)، وإدارة الذاكرة، وخوارزميات التزامن (Concurrency Controls) ليس مجرد تدريب أكاديمي؛ بل هو الفارق الحاسم بين نظام ينهار تحت ضغط الملايين ونظام يظل صامداً بكفاءة زمنية واستقرار تام.</p>
+                                </div>
+                                <div class="rich-section-block">
+                                    <h4><i class="fas fa-check-circle"></i> <span data-ar="الجمع بين البحث الأكاديمي والقيادة المهنية" data-en="Uniting Graduate Research with PMP® Leadership">الجمع بين البحث الأكاديمي والقيادة المهنية</span></h4>
+                                    <p data-ar="الجمع بين أبحاث الماجستير في كلية الحاسبات بجامعة أم القرى ومعايير إدارة المشاريع الاحترافية من معهد PMI يمكّنني من قيادة الفرق البرمجية بدقة هندسية ومواءمة الحلول الرقمية مع أهداف الأعمال الاستراتيجية." data-en="Combining Master's level research at UQU with PMI's global project management frameworks empowers me to direct engineering sprints with mathematical precision while aligning technical roadmaps with organizational objectives.">الجمع بين أبحاث الماجستير في كلية الحاسبات بجامعة أم القرى ومعايير إدارة المشاريع الاحترافية من معهد PMI يمكّنني من قيادة الفرق البرمجية بدقة هندسية ومواءمة الحلول الرقمية مع أهداف الأعمال الاستراتيجية.</p>
+                                </div>
+                            </div>
+
+                            <div class="rich-meta-panel">
+                                <div class="rich-metric-item">
+                                    <div class="rich-metric-num">B.Sc.</div>
+                                    <div class="rich-metric-desc" data-ar="بكالوريوس علوم الحاسب بتقدير ممتاز مع مرتبة الشرف - جامعة أم القرى (الدفعة 74)" data-en="B.Sc. in Computer Science with Excellence & Honors - Umm Al-Qura University (74th Batch)">بكالوريوس علوم الحاسب بتقدير ممتاز مع مرتبة الشرف - جامعة أم القرى (الدفعة 74)</div>
+                                </div>
+                                <div class="rich-metric-item">
+                                    <div class="rich-metric-num">M.Sc.</div>
+                                    <div class="rich-metric-desc" data-ar="باحث ماجستير في علوم الحاسب والذكاء الاصطناعي - تركيز أبحاث النظم وقواعد البيانات" data-en="M.Sc. Candidate in Computer Science & AI - Systems & Database Architecture Focus">باحث ماجستير في علوم الحاسب والذكاء الاصطناعي - تركيز أبحاث النظم وقواعد البيانات</div>
+                                </div>
+                                <div class="rich-metric-item">
+                                    <div class="rich-metric-num">PMP®</div>
+                                    <div class="rich-metric-desc" data-ar="مؤهل ومعتمد للاختبار المهني لإدارة المشاريع الرشيقة والتنبؤية من معهد PMI العالمي" data-en="Exam Eligible Candidate for Professional Project Management from the Project Management Institute (PMI)">مؤهل ومعتمد للاختبار المهني لإدارة المشاريع الرشيقة والتنبؤية من معهد PMI العالمي</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="rich-case-footer">
+                            <div class="rich-tags-wrap">
+                                <span class="rich-tag featured-tag">Umm Al-Qura University</span>
+                                <span class="rich-tag">Computer Science & AI</span>
+                                <span class="rich-tag">PMI - PMP® Candidate</span>
+                                <span class="rich-tag">Database Systems</span>
+                                <span class="rich-tag">Distributed Computing</span>
+                                <span class="rich-tag">Scientific Research</span>
+                            </div>
+                            <div>
+                                <a href="projects.html" class="rich-action-btn">
+                                    <span data-ar="استعراض المشاريع الأكاديمية والعملية" data-en="Explore Applied Projects">استعراض المشاريع الأكاديمية والعملية</span>
+                                    <i class="fas fa-arrow-left arrow-icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact CTA -->
+        <section id="contact" style="padding-top: 2rem;">
+            <div class="container">
+                <div class="contact-card">
+                    <h2 id="contact-title" data-ar="هل تبحث عن شريك تقني؟" data-en="Seeking a Tech Partner?">هل تبحث عن شريك تقني؟</h2>
+                    <p id="contact-desc" data-ar="دعنا نناقش كيف يمكن لخبرتي كعالم حاسب أن تدعم نمو مشروعك وتضمن استقراره التقني." data-en="Let's discuss how my expertise as a Computer Scientist can support your project's growth and ensure its technical stability.">دعنا نناقش كيف يمكن لخبرتي كعالم حاسب أن تدعم نمو مشروعك وتضمن استقراره التقني.</p>
+                    <div class="social-links" id="social-links-container">
+                        <a href="https://x.com/_f_eny" target="_blank" rel="noopener noreferrer" title="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://www.linkedin.com/in/ehab-yar-4a1bb4193/" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/feny1" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                    <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+                        <a id="contact-whatsapp-btn" href="https://wa.me/966599727412" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-large">
+                            <i class="fab fa-whatsapp"></i>
+                            <span data-ar="تواصل معي الآن" data-en="Contact Me Now">تواصل معي الآن</span>
+                        </a>
+                        <a id="contact-email-btn" href="mailto:contact@eny.sa" class="btn btn-primary btn-large">
+                            <i class="fas fa-paper-plane"></i>
+                            <span data-ar="إرسال بريد إلكتروني" data-en="Send Email">إرسال بريد إلكتروني</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <!-- Social Media Footer Bar -->
+            <div class="footer-social-bar" id="footer-social-bar">
+                <div class="footer-social-info">
+                    <div class="footer-social-title">
+                        <span class="footer-social-indicator" aria-hidden="true"></span>
+                        <span data-ar="تواصل ومتابعة مهنية" data-en="Connect &amp; Follow">تواصل ومتابعة مهنية</span>
+                    </div>
+                    <p class="footer-social-desc" data-ar="منصات ومنافذ التواصل المباشر مع إيهاب يار" data-en="Direct professional profiles &amp; channels for Ehab Yar">منصات ومنافذ التواصل المباشر مع إيهاب يار</p>
+                </div>
+                <div class="footer-social-links" id="footer-social-links">
+                    <a href="https://x.com/_f_eny" target="_blank" rel="noopener noreferrer" class="footer-social-item social-twitter" id="footer-link-twitter" title="X (Twitter)" aria-label="X (Twitter)">
+                        <i class="fab fa-x-twitter" aria-hidden="true"></i>
+                        <span>X</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ehab-yar-4a1bb4193/" target="_blank" rel="noopener noreferrer" class="footer-social-item social-linkedin" id="footer-link-linkedin" title="LinkedIn" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin" aria-hidden="true"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://github.com/feny1" target="_blank" rel="noopener noreferrer" class="footer-social-item social-github" id="footer-link-github" title="GitHub" aria-label="GitHub">
+                        <i class="fab fa-github" aria-hidden="true"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://wa.me/966599727412" target="_blank" rel="noopener noreferrer" class="footer-social-item social-whatsapp" id="footer-link-whatsapp" title="WhatsApp" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                        <span>WhatsApp</span>
+                    </a>
+                    <a href="mailto:contact@eny.sa" class="footer-social-item social-email" id="footer-link-email" title="Email" aria-label="Email">
+                        <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                        <span data-ar="البريد الإلكتروني" data-en="Email">البريد الإلكتروني</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-content">
+                <p data-ar="&copy; 2026 إيهاب يار. جميع الحقوق محفوظة." data-en="&copy; 2026 Ehab Yar. All rights reserved.">&copy; 2026 إيهاب يار. جميع الحقوق محفوظة.</p>
+                <div class="footer-links">
+                    <a href="index.html" class="footer-link" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+                    <a href="projects.html" class="footer-link" data-ar="المشاريع" data-en="Projects">المشاريع</a>
+                    <a href="news.html" class="footer-link" data-ar="المقالات" data-en="Articles">المقالات</a>
+                    <a href="index.html#contact" class="footer-link" data-ar="اتصل بي" data-en="Contact">اتصل بي</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button id="back-to-top" class="back-to-top" aria-label="Back to Top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="assets/data.js"></script>
+    <script src="assets/app.js"></script>
+    <script>
+        function renderEducationPage() {
+            const container = document.getElementById('education-full-container');
+            const statsContainer = document.getElementById('education-stats-container');
+            if (!container) return;
+            const isAr = window.getLanguage() === 'ar';
+            const list = siteData.education || [];
+            const stats = siteData.educationStats || [];
+
+            if (statsContainer) {
+                statsContainer.innerHTML = stats.map(st => `
+                    <div class="stat-metric-card">
+                        <div class="stat-metric-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div class="stat-metric-info">
+                            <div class="stat-val">${st.num}</div>
+                            <div class="stat-lbl">${isAr ? st.labelAr : st.labelEn}: <strong>${isAr ? st.valAr : st.valEn}</strong></div>
+                        </div>
+                    </div>
+                `).join('');
+            }
+
+            container.innerHTML = list.map(edu => {
+                const isCert = edu.isCert;
+                const icon = edu.icon || (isCert ? 'fas fa-award' : 'fas fa-graduation-cap');
+                const icon1 = isCert ? 'fas fa-certificate' : 'fas fa-landmark';
+                const icon2 = isCert ? 'fas fa-tasks' : 'fas fa-layer-group';
+                const icon3 = isCert ? 'fas fa-project-diagram' : 'fas fa-brain';
+
+                const label1 = isAr ? edu.label1Ar : edu.label1En;
+                const val1 = isAr ? edu.val1Ar : edu.val1En;
+                const label2 = isAr ? edu.label2Ar : edu.label2En;
+                const val2 = isAr ? edu.val2Ar : edu.val2En;
+                const label3 = isAr ? edu.label3Ar : edu.label3En;
+                const val3 = isAr ? edu.val3Ar : edu.val3En;
+
+                const overview = isAr ? edu.overviewAr : edu.overviewEn;
+                const coreTopics = isAr ? (edu.coreTopicsAr || []) : (edu.coreTopicsEn || []);
+                const milestone = isAr ? edu.milestoneAr : edu.milestoneEn;
+
+                return `
+                <div class="timeline-item">
+                    <div class="timeline-node">
+                        <i class="${icon}"></i>
+                    </div>
+                    <div class="timeline-content-card ${edu.highlight ? 'highlighted' : ''}">
+                        <div class="timeline-card-header">
+                            <span class="timeline-rank-badge">
+                                <i class="fas fa-crown"></i>
+                                <span>${isAr ? (edu.rankLabelAr || '') : (edu.rankLabelEn || '')}</span>
+                            </span>
+                            <span class="edu-status-badge">${isAr ? (edu.badgeAr || '') : (edu.badgeEn || '')}</span>
+                        </div>
+                        <h3 class="timeline-degree-title">${isAr ? edu.degreeAr : edu.degreeEn}</h3>
+                        <div class="timeline-status">
+                            <i class="${edu.highlight ? 'fas fa-spinner fa-spin' : 'fas fa-medal'}" style="color: var(--primary);"></i>
+                            <span>${isAr ? edu.statusAr : edu.statusEn}</span>
+                        </div>
+
+                        ${overview ? `
+                        <p style="color: var(--text-gray); font-size: 0.98rem; line-height: 1.7; margin: 1rem 0;">
+                            ${overview}
+                        </p>
+                        ` : ''}
+
+                        <div class="timeline-details-grid">
+                            <div class="timeline-detail-box">
+                                <i class="${icon1}"></i>
+                                <div>
+                                    <strong>${label1}</strong>
+                                    <div>${val1}</div>
+                                </div>
+                            </div>
+                            <div class="timeline-detail-box">
+                                <i class="${icon2}"></i>
+                                <div>
+                                    <strong>${label2}</strong>
+                                    <div>${val2}</div>
+                                </div>
+                            </div>
+                            <div class="timeline-detail-box" style="grid-column: 1 / -1;">
+                                <i class="${icon3}"></i>
+                                <div>
+                                    <strong>${label3}</strong>
+                                    <div>${val3}</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        ${coreTopics.length ? `
+                        <div style="margin-top: 1.5rem; padding-top: 1.2rem; border-top: 1px solid rgba(255, 255, 255, 0.06);">
+                            <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--accent-cyan); margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.5rem;">
+                                <i class="fas fa-book-open"></i>
+                                <span>${isAr ? 'المحاور والمقررات التخصصية الدقيقة' : 'Core Specialized Curriculum & Competencies'}</span>
+                            </h4>
+                            <ul style="list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 0.6rem;">
+                                ${coreTopics.map(topic => `
+                                    <li style="font-size: 0.9rem; color: #cbd5e1; display: flex; align-items: flex-start; gap: 0.6rem; line-height: 1.5;">
+                                        <i class="fas fa-check" style="color: var(--primary); font-size: 0.8rem; margin-top: 0.3rem;"></i>
+                                        <span>${topic}</span>
+                                    </li>
+                                `).join('')}
+                            </ul>
+                        </div>
+                        ` : ''}
+
+                        ${milestone ? `
+                        <div style="margin-top: 1.2rem; background: rgba(56, 189, 248, 0.06); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: var(--radius-md); padding: 0.85rem 1.2rem; display: flex; align-items: center; gap: 0.8rem;">
+                            <i class="fas fa-trophy" style="color: var(--accent-cyan); font-size: 1.1rem; flex-shrink: 0;"></i>
+                            <div style="font-size: 0.9rem; color: #e0f2fe;">
+                                <strong>${isAr ? 'المحطة الأكاديمية البارزة: ' : 'Key Milestone: '}</strong>
+                                ${milestone}
+                            </div>
+                        </div>
+                        ` : ''}
+                    </div>
+                </div>
+                `;
+            }).join('');
+        }
+
+        window.addEventListener('languageChanged', renderEducationPage);
+        document.addEventListener('DOMContentLoaded', () => {
+            renderEducationPage();
+            window.renderContact();
+        });
+    </script>
+</body>
+</html>

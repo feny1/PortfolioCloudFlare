@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>كيف يمكنني إفادتك كشريك تقني | إيهاب يار - Ehab Yar</title>
+    <meta name="description" content="الحلول والخدمات التقنية المخصصة التي يقدمها عالم الحاسب إيهاب يار للشركات، مكاتب المحاماة، المتاجر، ورواد الأعمال.">
+    <link rel="icon" type="image/png" href="assets/images/ehab-yar-official-logo.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Tajawal:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <div class="grid-bg"></div>
+    <div class="glow-bg"></div>
+
+    <!-- Reading Progress Bar -->
+    <div class="reading-progress-container" id="reading-progress">
+        <div class="reading-progress-bar" id="reading-progress-bar" role="progressbar" aria-label="Reading progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img id="nav-logo-img" src="assets/images/ehab-yar-official-logo.png" alt="Ehab Yar Logo" class="nav-logo">
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a></li>
+                <li><a href="education.html" data-ar="المؤهلات" data-en="Education">المؤهلات</a></li>
+                <li><a href="expertise.html" data-ar="الخبرات" data-en="Expertise">الخبرات</a></li>
+                <li><a href="collaborations.html" data-ar="التعاونات" data-en="Experience">التعاونات</a></li>
+                <li><a href="people.html" data-ar="شخصيات عملت معهم" data-en="Network">شخصيات عملت معهم</a></li>
+                <li><a href="projects.html" data-ar="المشاريع" data-en="Projects">المشاريع</a></li>
+                <li><a href="gallery.html" data-ar="معرض الصور" data-en="Gallery">معرض الصور</a></li>
+                <li><a href="news.html" data-ar="مقالات وأخبار" data-en="News & Articles">مقالات وأخبار</a></li>
+                <li><a href="partnership.html" class="active" data-ar="كيف يمكنني إفادتك" data-en="Partnership">كيف يمكنني إفادتك</a></li>
+                <li><a href="index.html#contact" data-ar="اتصل بي" data-en="Contact">اتصل بي</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="lang-toggle" class="btn-lang" onclick="toggleLanguage()" aria-label="Toggle Language">
+                    <i class="fas fa-globe" style="margin-inline-end: 4px;"></i>
+                    <span class="lang-text" id="lang-text">English</span>
+                </button>
+            </div>
+            <div class="mobile-menu-btn" id="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="subpage-hero">
+            <div class="container">
+                <div class="subpage-breadcrumb">
+                    <a href="index.html"><i class="fas fa-home"></i> <span data-ar="الرئيسية" data-en="Home">الرئيسية</span></a>
+                    <span class="crumb-separator">/</span>
+                    <span data-ar="كيف يمكنني إفادتك كشريك تقني؟" data-en="How Can I Help You as a Tech Partner?">كيف يمكنني إفادتك كشريك تقني؟</span>
+                </div>
+
+                <div class="subpage-title-row">
+                    <div class="subpage-title-wrap">
+                        <h1 data-ar="كيف يمكنني إفادتك كشريك تقني؟" data-en="How Can I Help You as a Tech Partner?">كيف يمكنني إفادتك كشريك تقني؟</h1>
+                        <p data-ar="حلول تقنية واستشارية مدروسة لمختلف القطاعات، مدعومة بالبحث العلمي والخبرة الميدانية في بناء الأنظمة المستقرة." data-en="Specialized technology partnerships and advisory solutions tailored for enterprises, law firms, merchants, and innovative startups.">حلول تقنية واستشارية مدروسة لمختلف القطاعات، مدعومة بالبحث العلمي والخبرة الميدانية في بناء الأنظمة المستقرة.</p>
+                    </div>
+                    <div>
+                        <a href="index.html#partnership" class="subpage-back-btn">
+                            <i class="fas fa-arrow-right arrow-icon"></i>
+                            <span data-ar="العودة للصفحة الرئيسية" data-en="Back to Home">العودة للصفحة الرئيسية</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Metrics Bar -->
+                <div class="subpage-stats-bar" id="partnership-stats-container"></div>
+
+                <!-- Intro Box -->
+                <div class="subpage-intro-box">
+                    <div class="subpage-intro-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <div class="subpage-intro-text">
+                        <h3 data-ar="شراكة استراتيجية تبني أنظمة مستدامة وتلغي الديون التقنية" data-en="Strategic Tech Partnership Building Scalable & Resilient Systems">شراكة استراتيجية تبني أنظمة مستدامة وتلغي الديون التقنية</h3>
+                        <p data-ar="لا أقدم مجرد خدمات برمجية عابرة، بل شريكاً تقنياً وعالماً حاسوبياً يحلل تحديات عملك، ويصمم الحل البرمجي الأمثل، ويقود التطوير وفق أعلى معايير الحماية والأداء." data-en="Not just transactional coding, but an embedded Computer Scientist partner who audits your operations, engineers clean system architectures, and ensures high availability and data integrity.">لا أقدم مجرد خدمات برمجية عابرة، بل شريكاً تقنياً وعالماً حاسوبياً يحلل تحديات عملك، ويصمم الحل البرمجي الأمثل، ويقود التطوير وفق أعلى معايير الحماية والأداء.</p>
+                    </div>
+                </div>
+
+                <!-- Partnership Sectors Grid -->
+                <div id="partnership-full-container" style="display: flex; flex-direction: column; gap: 2.5rem;"></div>
+
+                <!-- Methodology / Engagement Framework -->
+                <div style="margin-top: 3.5rem; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 2rem;">
+                    <div style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1.5rem;">
+                        <div style="width: 44px; height: 44px; border-radius: var(--radius-sm); background: rgba(56, 189, 248, 0.12); color: var(--accent-cyan); display: flex; align-items: center; justify-content: center; font-size: 1.25rem;">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <div>
+                            <h3 style="font-size: 1.25rem; font-weight: 700; color: #f8fafc;" data-ar="منهجية العمل والشراكة التقنية (4 مراحل)" data-en="Consulting & Engagement Framework (4 Phases)">منهجية العمل والشراكة التقنية (4 مراحل)</h3>
+                            <p style="font-size: 0.88rem; color: var(--text-gray); margin: 0;" data-ar="خطوات منهجية واضحة تضمن تسليم مشاريع برمجية خالية من العيوب الهندسية" data-en="Structured scientific phases ensuring high-velocity delivery with zero technical debt">خطوات منهجية واضحة تضمن تسليم مشاريع برمجية خالية من العيوب الهندسية</p>
+                        </div>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.2rem;">
+                        <div style="background: rgba(15, 23, 42, 0.5); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: var(--radius-sm); padding: 1.2rem;">
+                            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.6rem;">
+                                <span style="font-weight: 800; font-size: 1.2rem; color: var(--primary);">01</span>
+                                <i class="fas fa-search-plus" style="color: var(--text-gray);"></i>
+                            </div>
+                            <h4 style="font-size: 1rem; color: #f1f5f9; margin-bottom: 0.4rem;" data-ar="التشخيص والتدقيق التقني" data-en="Audit & Discovery">التشخيص والتدقيق التقني</h4>
+                            <p style="font-size: 0.82rem; color: var(--text-gray); line-height: 1.5; margin: 0;" data-ar="تحليل عميق للاختناقات، متطلبات الأداء، ثغرات الأمان، والديون التقنية المتراكمة في بنيتكم الحالية." data-en="Deep audit of bottlenecks, performance ceilings, security postures, and architectural technical debt.">تحليل عميق للاختناقات، متطلبات الأداء، ثغرات الأمان، والديون التقنية المتراكمة في بنيتكم الحالية.</p>
+                        </div>
+
+                        <div style="background: rgba(15, 23, 42, 0.5); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: var(--radius-sm); padding: 1.2rem;">
+                            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.6rem;">
+                                <span style="font-weight: 800; font-size: 1.2rem; color: var(--accent-cyan);">02</span>
+                                <i class="fas fa-drafting-compass" style="color: var(--text-gray);"></i>
+                            </div>
+                            <h4 style="font-size: 1rem; color: #f1f5f9; margin-bottom: 0.4rem;" data-ar="المخطط المعماري والنمذجة" data-en="System Architecture Blueprint">المخطط المعماري والنمذجة</h4>
+                            <p style="font-size: 0.82rem; color: var(--text-gray); line-height: 1.5; margin: 0;" data-ar="تصميم مخططات قواعد البيانات، تدفق البيانات، نماذج الذكاء الاصطناعي، ومصفوفات الصلاحيات الدقيقة." data-en="Engineering relational schemas, data pipeline flowcharts, AI model specifications, and RBAC matrix.">تصميم مخططات قواعد البيانات، تدفق البيانات، نماذج الذكاء الاصطناعي، ومصفوفات الصلاحيات الدقيقة.</p>
+                        </div>
+
+                        <div style="background: rgba(15, 23, 42, 0.5); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: var(--radius-sm); padding: 1.2rem;">
+                            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.6rem;">
+                                <span style="font-weight: 800; font-size: 1.2rem; color: #10b981;">03</span>
+                                <i class="fas fa-code-branch" style="color: var(--text-gray);"></i>
+                            </div>
+                            <h4 style="font-size: 1rem; color: #f1f5f9; margin-bottom: 0.4rem;" data-ar="التطوير الهندسي والاختبار" data-en="Phased Development & QA">التطوير الهندسي والاختبار</h4>
+                            <p style="font-size: 0.82rem; color: var(--text-gray); line-height: 1.5; margin: 0;" data-ar="كتابة كود نظيف مقروء، اختبارات تكاملية، واختبارات ضغط تحت أحمال محاكاة حقيقية." data-en="Clean-code implementation, comprehensive integration test suites, and extreme synthetic load testing.">كتابة كود نظيف مقروء، اختبارات تكاملية، واختبارات ضغط تحت أحمال محاكاة حقيقية.</p>
+                        </div>
+
+                        <div style="background: rgba(15, 23, 42, 0.5); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: var(--radius-sm); padding: 1.2rem;">
+                            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.6rem;">
+                                <span style="font-weight: 800; font-size: 1.2rem; color: #a855f7;">04</span>
+                                <i class="fas fa-rocket" style="color: var(--text-gray);"></i>
+                            </div>
+                            <h4 style="font-size: 1rem; color: #f1f5f9; margin-bottom: 0.4rem;" data-ar="النشر والتدريب والجاهزية" data-en="Deployment & Knowledge Transfer">النشر والتدريب والجاهزية</h4>
+                            <p style="font-size: 0.82rem; color: var(--text-gray); line-height: 1.5; margin: 0;" data-ar="إطلاق سلس بدون توقف للخدمة، توثيق شامل للكود والـ APIs، وتدريب فريقكم التقني الداخلي." data-en="Zero-downtime deployment, exhaustive API documentation, and hands-on training for in-house teams.">إطلاق سلس بدون توقف للخدمة، توثيق شامل للكود والـ APIs، وتدريب فريقكم التقني الداخلي.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact CTA -->
+        <section id="contact" style="padding-top: 2rem;">
+            <div class="container">
+                <div class="contact-card">
+                    <h2 id="contact-title" data-ar="هل تبحث عن شريك تقني؟" data-en="Seeking a Tech Partner?">هل تبحث عن شريك تقني؟</h2>
+                    <p id="contact-desc" data-ar="دعنا نناقش كيف يمكن لخبرتي كعالم حاسب أن تدعم نمو مشروعك وتضمن استقراره التقني." data-en="Let's discuss how my expertise as a Computer Scientist can support your project's growth and ensure its technical stability.">دعنا نناقش كيف يمكن لخبرتي كعالم حاسب أن تدعم نمو مشروعك وتضمن استقراره التقني.</p>
+                    <div class="social-links" id="social-links-container">
+                        <a href="https://x.com/_f_eny" target="_blank" rel="noopener noreferrer" title="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://www.linkedin.com/in/ehab-yar-4a1bb4193/" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/feny1" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                    <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+                        <a id="contact-whatsapp-btn" href="https://wa.me/966599727412" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-large">
+                            <i class="fab fa-whatsapp"></i>
+                            <span data-ar="تواصل معي الآن" data-en="Contact Me Now">تواصل معي الآن</span>
+                        </a>
+                        <a id="contact-email-btn" href="mailto:contact@eny.sa" class="btn btn-primary btn-large">
+                            <i class="fas fa-paper-plane"></i>
+                            <span data-ar="إرسال بريد إلكتروني" data-en="Send Email">إرسال بريد إلكتروني</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <!-- Social Media Footer Bar -->
+            <div class="footer-social-bar" id="footer-social-bar">
+                <div class="footer-social-info">
+                    <div class="footer-social-title">
+                        <span class="footer-social-indicator" aria-hidden="true"></span>
+                        <span data-ar="تواصل ومتابعة مهنية" data-en="Connect &amp; Follow">تواصل ومتابعة مهنية</span>
+                    </div>
+                    <p class="footer-social-desc" data-ar="منصات ومنافذ التواصل المباشر مع إيهاب يار" data-en="Direct professional profiles &amp; channels for Ehab Yar">منصات ومنافذ التواصل المباشر مع إيهاب يار</p>
+                </div>
+                <div class="footer-social-links" id="footer-social-links">
+                    <a href="https://x.com/_f_eny" target="_blank" rel="noopener noreferrer" class="footer-social-item social-twitter" id="footer-link-twitter" title="X (Twitter)" aria-label="X (Twitter)">
+                        <i class="fab fa-x-twitter" aria-hidden="true"></i>
+                        <span>X</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ehab-yar-4a1bb4193/" target="_blank" rel="noopener noreferrer" class="footer-social-item social-linkedin" id="footer-link-linkedin" title="LinkedIn" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin" aria-hidden="true"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://github.com/feny1" target="_blank" rel="noopener noreferrer" class="footer-social-item social-github" id="footer-link-github" title="GitHub" aria-label="GitHub">
+                        <i class="fab fa-github" aria-hidden="true"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://wa.me/966599727412" target="_blank" rel="noopener noreferrer" class="footer-social-item social-whatsapp" id="footer-link-whatsapp" title="WhatsApp" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                        <span>WhatsApp</span>
+                    </a>
+                    <a href="mailto:contact@eny.sa" class="footer-social-item social-email" id="footer-link-email" title="Email" aria-label="Email">
+                        <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                        <span data-ar="البريد الإلكتروني" data-en="Email">البريد الإلكتروني</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-content">
+                <p data-ar="&copy; 2026 إيهاب يار. جميع الحقوق محفوظة." data-en="&copy; 2026 Ehab Yar. All rights reserved.">&copy; 2026 إيهاب يار. جميع الحقوق محفوظة.</p>
+                <div class="footer-links">
+                    <a href="index.html" class="footer-link" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+                    <a href="projects.html" class="footer-link" data-ar="المشاريع" data-en="Projects">المشاريع</a>
+                    <a href="news.html" class="footer-link" data-ar="المقالات" data-en="Articles">المقالات</a>
+                    <a href="index.html#contact" class="footer-link" data-ar="اتصل بي" data-en="Contact">اتصل بي</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button id="back-to-top" class="back-to-top" aria-label="Back to Top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="assets/data.js"></script>
+    <script src="assets/app.js"></script>
+    <script>
+        function renderPartnershipPage() {
+            const container = document.getElementById('partnership-full-container');
+            const statsContainer = document.getElementById('partnership-stats-container');
+            if (!container) return;
+            const isAr = window.getLanguage() === 'ar';
+            const list = siteData.partnership || [];
+            const stats = siteData.partnershipStats || [];
+
+            if (statsContainer) {
+                statsContainer.innerHTML = stats.map(st => `
+                    <div class="stat-metric-card">
+                        <div class="stat-metric-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <div class="stat-metric-info">
+                            <div class="stat-val">${st.num}</div>
+                            <div class="stat-lbl">${isAr ? st.labelAr : st.labelEn}: <strong>${isAr ? st.valAr : st.valEn}</strong></div>
+                        </div>
+                    </div>
+                `).join('');
+            }
+
+            container.innerHTML = list.map(item => {
+                const title = isAr ? (item.titleAr || '') : (item.titleEn || '');
+                const desc = isAr ? (item.descAr || '') : (item.descEn || '');
+                const audience = isAr ? (item.audienceAr || item.idealForAr || '') : (item.audienceEn || item.idealForEn || '');
+                const deliverable = isAr ? (item.deliverableAr || (item.detailsAr && item.detailsAr[0]) || 'حل تقني مخصص ومستدام') : (item.deliverableEn || (item.detailsEn && item.detailsEn[0]) || 'Custom Scalable Technical Solution');
+                const badge = isAr ? (item.badgeAr || 'شراكة تقنية معتمدة') : (item.badgeEn || 'Strategic Tech Partnership');
+                const benefits = isAr ? (item.benefitsAr || item.detailsAr || []) : (item.benefitsEn || item.detailsEn || []);
+
+                return `
+                <div class="rich-case-card">
+                    <div class="rich-case-header">
+                        <div class="rich-case-title-area">
+                            <div class="rich-case-icon-badge">
+                                <i class="${item.icon || 'fas fa-lightbulb'}"></i>
+                            </div>
+                            <div>
+                                <h3 class="rich-case-title">${title}</h3>
+                                <div class="rich-case-subtitle">
+                                    <i class="fas fa-bullseye" style="color: var(--primary); margin-inline-end: 0.3rem;"></i>
+                                    <strong>${isAr ? 'الفئة المستهدفة: ' : 'Target Segment: '}</strong>${audience}
+                                </div>
+                            </div>
+                        </div>
+                        <span class="rich-case-badge">${badge}</span>
+                    </div>
+
+                    <div class="rich-case-body-grid">
+                        <div>
+                            <div class="rich-section-block">
+                                <h4><i class="fas fa-info-circle" style="color: var(--primary);"></i> <span>${isAr ? 'طبيعة القيمة التقنية المضافة' : 'Technical Value Proposition'}</span></h4>
+                                <p>${desc}</p>
+                            </div>
+
+                            ${benefits.length ? `
+                            <div class="rich-section-block">
+                                <h4><i class="fas fa-layer-group" style="color: var(--accent-cyan);"></i> <span>${isAr ? 'الحلول والمخرجات الهندسية المقدمة' : 'Key Deliverables & Architectural Solutions'}</span></h4>
+                                <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.6rem;">
+                                    ${benefits.map(b => `
+                                        <li style="font-size: 0.92rem; color: #cbd5e1; display: flex; align-items: flex-start; gap: 0.6rem; line-height: 1.55;">
+                                            <i class="fas fa-check-circle" style="color: #10b981; font-size: 0.85rem; margin-top: 0.25rem;"></i>
+                                            <span>${b}</span>
+                                        </li>
+                                    `).join('')}
+                                </ul>
+                            </div>
+                            ` : ''}
+                        </div>
+
+                        <div class="rich-meta-panel" style="justify-content: center;">
+                            <div class="rich-metric-item">
+                                <div class="rich-metric-num"><i class="fas fa-award"></i></div>
+                                <div class="rich-metric-desc" style="margin-top: 0.5rem; line-height: 1.4;">
+                                    <strong>${isAr ? 'المخرج النهائي:' : 'Core Deliverable:'}</strong><br>
+                                    ${deliverable}
+                                </div>
+                            </div>
+                            <div class="rich-metric-item">
+                                <div class="rich-metric-num"><i class="fas fa-lock"></i></div>
+                                <div class="rich-metric-desc" style="margin-top: 0.5rem;">
+                                    <strong>${isAr ? 'أمان وسرية:' : 'Data Privacy:'}</strong><br>
+                                    ${isAr ? 'اتفاقيات عدم إفشاء (NDA) وسيادة كاملة لبياناتك' : 'Comprehensive NDA & Full On-Prem / Cloud Sovereignty'}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="rich-case-footer">
+                        <div style="font-size: 0.88rem; color: var(--text-gray); display: flex; align-items: center; gap: 0.5rem;">
+                            <i class="fas fa-shield-alt" style="color: var(--accent-cyan);"></i>
+                            <span>${isAr ? 'جاهز للبدء فوراً بنموذج شراكة مرن' : 'Ready to engage under flexible partner models'}</span>
+                        </div>
+                        <div>
+                            <a href="https://wa.me/966599727412?text=${encodeURIComponent(isAr ? 'مرحباً إيهاب، أود مناقشة شراكة تقنية في مجال ' + title : 'Hello Ehab, I would like to discuss a tech partnership regarding ' + title)}" target="_blank" rel="noopener noreferrer" class="rich-action-btn">
+                                <span>${isAr ? 'طلب استشارة ومناقشة الشراكة' : 'Discuss Partnership'}</span>
+                                <i class="fab fa-whatsapp" style="font-size: 0.95rem;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                `;
+            }).join('');
+        }
+
+        window.addEventListener('languageChanged', renderPartnershipPage);
+        document.addEventListener('DOMContentLoaded', () => {
+            renderPartnershipPage();
+            window.renderContact();
+        });
+    </script>
+</body>
+</html>
