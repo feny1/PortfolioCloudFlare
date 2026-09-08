@@ -2939,19 +2939,21 @@
                     "orgEn": "FENY",
                     "descAr": "شريك ومساهم تقني رئيسي في تأسيس وتطوير منظومة FENY، قيادة خرائط الطريق البرمجية، وهندسة البنى التحتية للمشاريع الرقمية المشتركة.",
                     "descEn": "Key partner in founding and scaling FENY, executing technical roadmaps, and architecting robust infrastructure for joint digital solutions."
+                    
                 },
                 {
                     "id": "person-abdulaziz",
                     "nameAr": "عبدالعزيز حافظ",
-                    "nameEn": "Abdulaziz Hafez",
-                    "roleAr": "عالم حاسب ومطور نظم",
-                    "roleEn": "Computer Scientist & Systems Dev",
+                    "nameEn": "Abdulaziz Hafiz",
+                    "roleAr": "مهنـدس برمجـيات وذكـاء اصطناعـي",
+                    "roleEn": "Software & AI Engineer",
                     "badgeAr": "زميل جامعة ومشاريع",
                     "badgeEn": "Colleague & Co-builder",
                     "orgAr": "جامعة أم القرى • مبادرات تقنية",
                     "orgEn": "UQU • Technical Initiatives",
                     "descAr": "زميل دراسة بجامعة أم القرى وشريك عمل في مشاريع برمجية وهندسية متعددة، تمحورت حول تحليل الأنظمة وتطوير البرمجيات وحل المشكلات الحسابية.",
-                    "descEn": "University colleague and collaborator across multiple engineering initiatives, focusing on systems analysis, software engineering, and clean architecture."
+                    "descEn": "University colleague and collaborator across multiple engineering initiatives, focusing on systems analysis, software engineering, and clean architecture.",
+                    "url": "https://ahafiz.sa"
                 },
                 {
                     "id": "person-malek",
@@ -3722,6 +3724,7 @@
             const container = document.getElementById('people-container');
             if (!container) return;
             const isAr = currentLang === 'ar';
+            
 
             container.innerHTML = (siteData.people || []).map(person => `
             <div class="person-card">
@@ -3738,6 +3741,16 @@
                     <i class="fas fa-briefcase" style="font-size: 0.85rem;"></i>
                     <span>${isAr ? person.roleAr : person.roleEn} • ${isAr ? person.orgAr : person.orgEn}</span>
                 </div>
+                 ${p.url ? `
+                        <div style="margin-bottom: 1rem;">
+                            <a style="color: white;" href="${p.linkUrl}" target="_blank"
+                                rel="noopener noreferrer"
+                                class="text-white hover:underline text-sm inline-flex items-center gap-1">
+                                <span>${isAr ? ( 'زيارة الموقع الشخصي') : (p.linkTextEn || 'Visit Portfolio')}</span>
+                                <span>↗</span>
+                            </a>
+                        </div>
+                    ` : ''}
                 <p class="person-desc">${isAr ? person.descAr : person.descEn}</p>
             </div>
             `).join('');
