@@ -143,7 +143,7 @@
             min-height: 100vh;
         }
 
-        /* Subtle Architectural Background Grid (Reference 1) */
+        /* Subtle Architectural Background Grid */
         .grid-bg {
             position: fixed;
             top: 0;
@@ -158,7 +158,7 @@
             pointer-events: none;
         }
 
-        /* Multi-spectrum Ambient Glow (Reference 2) */
+        /* Multi-spectrum Ambient Glow */
         .glow-bg {
             position: fixed;
             top: 0;
@@ -197,7 +197,7 @@
             padding: 0 2rem;
         }
 
-        /* Floating Pill Glass Navbar (Reference 2 clue.io) */
+        /* Floating Pill Glass Navbar */
         .navbar {
             position: fixed;
             top: 18px;
@@ -252,7 +252,7 @@
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 1.6rem;
+            gap: 1.4rem;
             align-items: center;
         }
 
@@ -260,7 +260,7 @@
             color: var(--text-gray);
             text-decoration: none;
             font-weight: 500;
-            font-size: 0.95rem;
+            font-size: 0.92rem;
             position: relative;
             transition: var(--transition);
             cursor: pointer;
@@ -352,7 +352,7 @@
             transform: translateY(-8px) rotate(-45deg);
         }
 
-        /* Hero Section (Reference 1 Editorial Grid + Reference 2 clue.io Liquid Waves) */
+        /* Hero Section */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -365,7 +365,6 @@
             border-bottom: 1px solid var(--border-subtle);
         }
 
-        /* Liquid Ribbon SVG Container behind hero text (Reference 2) */
         .liquid-ribbon-wrap {
             position: absolute;
             top: 5%;
@@ -386,15 +385,9 @@
         }
 
         @keyframes ribbonFloat {
-            0% {
-                transform: translateY(0) scale(1);
-            }
-            50% {
-                transform: translateY(-15px) scale(1.02);
-            }
-            100% {
-                transform: translateY(10px) scale(0.98);
-            }
+            0% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-15px) scale(1.02); }
+            100% { transform: translateY(10px) scale(0.98); }
         }
 
         .hero-content-wrapper {
@@ -411,7 +404,6 @@
             flex: 1.25;
         }
 
-        /* Hero Tag Badge */
         .hero-badge-pill {
             display: inline-flex;
             align-items: center;
@@ -449,7 +441,6 @@
             margin-bottom: 0.4rem;
         }
 
-        /* Main Hero Display Typography (Fusion of Ref 1 Swiss & Ref 2 Hollow Outline) */
         .hero-title-group {
             margin-bottom: 1.2rem;
         }
@@ -469,7 +460,6 @@
             -webkit-text-fill-color: transparent;
         }
 
-        /* Hollow Outline Display Typography (Reference 2 clue.io "NEVER LOSE YOUR SECRETS") */
         .hero-outline-banner {
             display: flex;
             align-items: center;
@@ -550,7 +540,7 @@
             align-items: center;
         }
 
-        /* Buttons (Pill Aesthetic) */
+        /* Buttons */
         .btn {
             display: inline-flex;
             align-items: center;
@@ -566,7 +556,6 @@
             font-family: inherit;
         }
 
-        /* Electric Emerald Pill CTA (Reference 2 "Get started" & Ref 1 "Hire Experts") */
         .btn-primary {
             background: var(--primary);
             color: #ffffff;
@@ -610,7 +599,7 @@
             color: #ffffff;
         }
 
-        /* Hero Right Column: Editorial Bento Grid Ensemble (Reference 1) */
+        /* Hero Right Column: Bento Ensemble */
         .hero-bento-column {
             flex: 0.95;
             display: flex;
@@ -671,7 +660,6 @@
             pointer-events: none;
         }
 
-        /* Architectural Corner Brackets */
         .card-corner-tl, .card-corner-br {
             position: absolute;
             width: 10px;
@@ -700,7 +688,6 @@
             justify-content: space-between;
         }
 
-        /* Warm Sand Editorial Accent Card (Reference 1) */
         .bento-sand-card {
             background: var(--accent-sand);
             color: var(--accent-sand-text);
@@ -776,7 +763,6 @@
             width: fit-content;
         }
 
-        /* Stark Contrast Black Stat Card (Reference 1) */
         .bento-dark-badge {
             background: #000000;
             border: 1px solid rgba(255, 255, 255, 0.14);
@@ -836,7 +822,6 @@
             margin-inline-start: 0;
         }
 
-        /* Luminous Floating Glass Stat Banner (Reference 2 clue.io) */
         .luminous-stat-banner {
             margin: 40px auto 30px auto;
             max-width: 1260px;
@@ -1107,7 +1092,7 @@
             text-align: center;
         }
 
-        /* Expertise Section (Bento Grid Style) */
+        /* Generic Cards & Bento Grids */
         .expertise-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -1245,6 +1230,97 @@
             color: var(--text-gray);
             font-size: 0.94rem;
             line-height: 1.7;
+        }
+
+        /* People Section (New) */
+        .people-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.8rem;
+        }
+
+        .person-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 20px;
+            padding: 2rem 1.8rem;
+            transition: var(--transition);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .person-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.65), 0 0 25px var(--primary-glow);
+        }
+
+        .person-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 14px;
+        }
+
+        .person-avatar {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(244, 63, 94, 0.2) 0%, rgba(56, 189, 248, 0.15) 100%);
+            border: 1px solid rgba(244, 63, 94, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.35rem;
+            color: var(--primary);
+            flex-shrink: 0;
+            transition: var(--transition);
+        }
+
+        .person-card:hover .person-avatar {
+            background: var(--primary);
+            color: #ffffff;
+            box-shadow: 0 0 18px var(--primary-glow);
+        }
+
+        .person-name {
+            font-size: 1.22rem;
+            font-weight: 800;
+            color: #ffffff;
+            line-height: 1.3;
+        }
+
+        .person-badge {
+            display: inline-block;
+            font-size: 0.76rem;
+            font-weight: 700;
+            color: var(--accent-cyan);
+            background: rgba(56, 189, 248, 0.1);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            border-radius: var(--radius-full);
+            padding: 2px 10px;
+            margin-top: 4px;
+        }
+
+        .person-org {
+            font-size: 0.92rem;
+            color: var(--primary-hover);
+            font-weight: 700;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .person-desc {
+            color: var(--text-gray);
+            font-size: 0.94rem;
+            line-height: 1.7;
+            flex-grow: 1;
         }
 
         /* Projects Section */
@@ -1843,9 +1919,7 @@
             transform: translateY(-3px);
         }
 
-        /* ========================================================
-           Responsive Design System for Mobile, Tablet & Desktop
-           ======================================================== */
+        /* Responsive Design System */
         @media (max-width: 1100px) {
             .hero-content-wrapper {
                 flex-direction: column;
@@ -1910,7 +1984,6 @@
                 padding: 50px 0;
             }
 
-            /* Floating Navbar Mobile */
             .navbar {
                 top: 10px;
                 width: calc(100% - 1.4rem);
@@ -1937,7 +2010,7 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: flex-start;
-                gap: 20px;
+                gap: 18px;
                 padding: 40px 28px;
                 display: none;
                 z-index: 1001;
@@ -1967,7 +2040,6 @@
                 font-size: 0.82rem;
             }
 
-            /* Hero Mobile Redesigned for Optimal Phone Layout */
             .hero {
                 padding-top: 80px;
                 padding-bottom: 25px;
@@ -2056,7 +2128,6 @@
                 flex: 1 1 100%;
             }
 
-            /* Mobile Bento Section */
             .hero-bento-column {
                 display: contents;
             }
@@ -2129,7 +2200,6 @@
                 font-size: 0.65rem;
             }
 
-            /* Luminous Stat Banner Mobile: 2x2 Grid */
             .luminous-stat-banner {
                 grid-template-columns: repeat(2, 1fr);
                 gap: 12px;
@@ -2155,7 +2225,6 @@
                 font-size: 0.78rem;
             }
 
-            /* Timeline Mobile */
             .edu-timeline::before {
                 right: 14px;
             }
@@ -2211,9 +2280,9 @@
                 gap: 10px;
             }
 
-            /* Grids Mobile */
             .expertise-grid,
             .collab-grid,
+            .people-grid,
             .gallery-grid {
                 grid-template-columns: 1fr;
                 gap: 1.2rem;
@@ -2221,11 +2290,11 @@
 
             .expertise-card,
             .collab-card,
+            .person-card,
             .gallery-card {
                 padding: 1.6rem 1.3rem;
             }
 
-            /* Projects Slider Mobile */
             .project-card {
                 flex: 0 0 100%;
                 min-width: 100%;
@@ -2260,15 +2329,14 @@
 
 <body>
 
-    <!-- Subtle Architectural Background Grid (Reference 1) -->
+    <!-- Subtle Architectural Background Grid -->
     <div class="grid-bg"></div>
 
-    <!-- Ambient Multi-Spectrum Glow (Reference 2) -->
+    <!-- Ambient Multi-Spectrum Glow -->
     <div class="glow-bg"></div>
 
     <!-- Hidden SEO Anchor -->
-    <div
-        style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;">
+    <div style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;">
         <img src="https://eny.sa/gradEhabYar.jpg" alt="إيهاب نبيل يار - تخرج جامعة أم القرى - عالم حاسب وباحث ماجستير"
             width="1" height="1" style="display:none !important;">
     </div>
@@ -2285,6 +2353,7 @@
                 <li><a href="#education" data-ar="المؤهلات" data-en="Education">المؤهلات</a></li>
                 <li><a href="#expertise" data-ar="الخبرات" data-en="Expertise">الخبرات</a></li>
                 <li><a href="#collaborations" data-ar="التعاونات" data-en="Experience">التعاونات</a></li>
+                <li><a href="#people" data-ar="شخصيات عملت معهم" data-en="Network">شخصيات عملت معهم</a></li>
                 <li><a href="#projects" data-ar="المشاريع" data-en="Projects">المشاريع</a></li>
                 <li><a href="#gallery" data-ar="معرض الصور" data-en="Gallery">معرض الصور</a></li>
                 <li><a href="#news" data-ar="مقالات وأخبار" data-en="News & Articles">مقالات وأخبار</a></li>
@@ -2306,9 +2375,8 @@
     </nav>
 
     <main>
-        <!-- Hero Section (Fusion of Reference 1 Grid & Reference 2 clue.io) -->
+        <!-- Hero Section -->
         <section id="home" class="hero">
-            <!-- Fluid Liquid Holographic Ribbon (Reference 2 clue.io) -->
             <div class="liquid-ribbon-wrap" aria-hidden="true">
                 <svg class="liquid-ribbon-svg" viewBox="0 0 1200 600" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <defs>
@@ -2324,7 +2392,6 @@
                             <stop offset="100%" stop-color="#a855f7" stop-opacity="0.1" />
                         </linearGradient>
                     </defs>
-                    <!-- Fluid flowing organic ribbon paths -->
                     <path d="M-100,280 C200,120 450,450 780,220 C1000,80 1150,320 1300,240" stroke="url(#liquidGrad1)" stroke-width="14" stroke-linecap="round" fill="none" opacity="0.85" />
                     <path d="M-100,280 C200,120 450,450 780,220 C1000,80 1150,320 1300,240" stroke="url(#liquidGrad1)" stroke-width="36" stroke-linecap="round" fill="none" opacity="0.25" />
                     <path d="M-50,380 C250,220 520,520 850,280 C1050,150 1200,380 1350,300" stroke="url(#liquidGrad2)" stroke-width="20" stroke-linecap="round" fill="none" opacity="0.7" />
@@ -2334,7 +2401,6 @@
             <div class="container">
                 <div class="hero-content-wrapper">
                     <div class="hero-content">
-                        <!-- Pill Status Badge -->
                         <div class="hero-badge-pill">
                             <span class="hero-badge-dot"></span>
                             <span data-ar="باحث ماجستير • عالم حاسب • رئيس تقني" data-en="M.Sc. Candidate • Computer Scientist • CTO">باحث ماجستير • عالم حاسب • رئيس تقني</span>
@@ -2342,7 +2408,6 @@
 
                         <div class="greeting" id="hero-greeting" data-ar="أهلاً بك، أنا" data-en="Welcome, I am">أهلاً بك، أنا</div>
 
-                        <!-- Main Title with Hologram & Layered Outline Typography -->
                         <div class="hero-title-group">
                             <h1 class="name">
                                 <span id="hero-name-ar" class="hologram-gradient-text">إيهاب يار</span>
@@ -2384,10 +2449,8 @@
                         </div>
                     </div>
 
-                    <!-- Hero Right Column: Editorial Bento Ensemble (Reference 1) -->
                     <div class="hero-bento-column">
                         <div class="hero-profile-bento">
-                            <!-- Refined Profile Card with hairline frame -->
                             <div class="profile-card">
                                 <div class="card-corner-tl"></div>
                                 <div class="card-corner-br"></div>
@@ -2398,9 +2461,7 @@
                                 <div class="profile-bg-glow"></div>
                             </div>
 
-                            <!-- Bento Cards Stack -->
                             <div class="bento-cards-stack">
-                                <!-- Warm Sand Editorial Card (Reference 1) -->
                                 <div class="bento-sand-card">
                                     <div class="bento-sand-header">
                                         <div>
@@ -2419,7 +2480,6 @@
                                     </div>
                                 </div>
 
-                                <!-- Stark Contrast Black Stat Card (Reference 1) -->
                                 <div class="bento-dark-badge">
                                     <div>
                                         <div class="bento-dark-stat">74th</div>
@@ -2436,7 +2496,6 @@
                     </div>
                 </div>
 
-                <!-- Luminous Floating Glass Stat Banner (Reference 2 clue.io) -->
                 <div class="luminous-stat-banner">
                     <div class="stat-col">
                         <div class="stat-num">+11</div>
@@ -2458,7 +2517,7 @@
             </div>
         </section>
 
-        <!-- Academic Credentials & Education Section (Priority Timeline) -->
+        <!-- Academic Credentials & Education Section -->
         <section id="education">
             <div class="container">
                 <div class="section-header">
@@ -2466,166 +2525,7 @@
                         المؤهلات الأكاديمية والشهادات المهنية</h2>
                     <div class="underline"></div>
                 </div>
-                <div class="edu-timeline" id="education-container">
-
-                    <div class="timeline-item">
-                        <div class="timeline-node">
-                            <i class="fas fa-user-graduate"></i>
-                        </div>
-                        <div class="timeline-content-card highlighted">
-                            <div class="timeline-card-header">
-                                <span class="timeline-rank-badge">
-                                    <i class="fas fa-crown"></i>
-                                    <span data-ar="المستوى الأكاديمي المتقدم" data-en="Advanced Academic Level">المستوى
-                                        الأكاديمي المتقدم</span>
-                                </span>
-                                <span class="edu-status-badge" data-ar="قيد الدراسة حالياً"
-                                    data-en="Current Candidate">قيد الدراسة حالياً</span>
-                            </div>
-                            <h3 class="timeline-degree-title" data-ar="ماجستير علوم الحاسب"
-                                data-en="M.Sc. in Computer Science (General)">ماجستير علوم الحاسب</h3>
-                            <div class="timeline-status">
-                                <i class="fas fa-spinner fa-spin" style="color: var(--primary);"></i>
-                                <span data-ar="الحالة الدراسية الحالية: طالب ماجستير (مستمر)"
-                                    data-en="Current Study Status: Master's Candidate">الحالة الدراسية الحالية: طالب
-                                    ماجستير (مستمر)</span>
-                            </div>
-                            <div class="timeline-details-grid">
-                                <div class="timeline-detail-box">
-                                    <i class="fas fa-landmark"></i>
-                                    <div>
-                                        <strong data-ar="الجامعة:" data-en="University:">الجامعة:</strong>
-                                        <div data-ar="جامعة أم القرى" data-en="Umm Al-Qura University">جامعة أم القرى
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="timeline-detail-box">
-                                    <i class="fas fa-layer-group"></i>
-                                    <div>
-                                        <strong data-ar="الكلية:" data-en="College:">الكلية:</strong>
-                                        <div data-ar="كلية الحاسبات" data-en="College of Computing">كلية الحاسبات</div>
-                                    </div>
-                                </div>
-                                <div class="timeline-detail-box" style="grid-column: 1 / -1;">
-                                    <i class="fas fa-brain"></i>
-                                    <div>
-                                        <strong data-ar="القسم / التخصص:" data-en="Department / Major:">القسم /
-                                            التخصص:</strong>
-                                        <div data-ar="قسم علوم الحاسب والذكاء الاصطناعي"
-                                            data-en="Dept. of Computer Science & AI">قسم علوم الحاسب والذكاء الاصطناعي
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-node">
-                            <i class="fas fa-award"></i>
-                        </div>
-                        <div class="timeline-content-card highlighted">
-                            <div class="timeline-card-header">
-                                <span class="timeline-rank-badge">
-                                    <i class="fas fa-crown"></i>
-                                    <span data-ar="الاعتماد المهني القيادي"
-                                        data-en="Executive Professional Credential">الاعتماد المهني القيادي</span>
-                                </span>
-                                <span class="edu-status-badge" data-ar="مؤهل للاختبار" data-en="Exam Eligible">مؤهل
-                                    للاختبار</span>
-                            </div>
-                            <h3 class="timeline-degree-title" data-ar="محترف إدارة المشاريع (PMP®)"
-                                data-en="Project Management Professional (PMP®)">محترف إدارة المشاريع (PMP®)</h3>
-                            <div class="timeline-status">
-                                <i class="fas fa-spinner fa-spin" style="color: var(--primary);"></i>
-                                <span data-ar="الحالة الحالية: مؤهل للاختبار ومُرشح للاعتماد (قريباً)"
-                                    data-en="Current Status: Exam Eligible Candidate - PMI">الحالة الحالية: مؤهل
-                                    للاختبار ومُرشح للاعتماد (قريباً)</span>
-                            </div>
-                            <div class="timeline-details-grid">
-                                <div class="timeline-detail-box">
-                                    <i class="fas fa-certificate"></i>
-                                    <div>
-                                        <strong data-ar="الجهة المانحة:" data-en="Issuing Body:">الجهة المانحة:</strong>
-                                        <div data-ar="معهد إدارة المشاريع العالمي (PMI)"
-                                            data-en="Project Management Institute (PMI)">معهد إدارة المشاريع العالمي
-                                            (PMI)</div>
-                                    </div>
-                                </div>
-                                <div class="timeline-detail-box">
-                                    <i class="fas fa-tasks"></i>
-                                    <div>
-                                        <strong data-ar="المجال المعتمد:" data-en="Certified Domain:">المجال
-                                            المعتمد:</strong>
-                                        <div data-ar="إدارة المشاريع الاحترافية والتحول الرقمي"
-                                            data-en="Professional Project Management & Digital Transformation">إدارة
-                                            المشاريع الاحترافية والتحول الرقمي</div>
-                                    </div>
-                                </div>
-                                <div class="timeline-detail-box" style="grid-column: 1 / -1;">
-                                    <i class="fas fa-project-diagram"></i>
-                                    <div>
-                                        <strong data-ar="نطاق المنهجيات:" data-en="Methodologies:">نطاق
-                                            المنهجيات:</strong>
-                                        <div data-ar="منهجيات إدارة المشاريع الرشيقة والتنبؤية"
-                                            data-en="Agile, Predictive & Hybrid Frameworks">منهجيات إدارة المشاريع
-                                            الرشيقة والتنبؤية</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-node">
-                            <i class="fas fa-graduation-cap"></i>
-                        </div>
-                        <div class="timeline-content-card ">
-                            <div class="timeline-card-header">
-                                <span class="timeline-rank-badge">
-                                    <i class="fas fa-crown"></i>
-                                    <span data-ar="المؤهل الجامعي الأساسي" data-en="Foundational Degree">المؤهل الجامعي
-                                        الأساسي</span>
-                                </span>
-                                <span class="edu-status-badge" data-ar="تقدير ممتاز" data-en="Excellence">تقدير
-                                    ممتاز</span>
-                            </div>
-                            <h3 class="timeline-degree-title" data-ar="بكالوريوس علوم الحاسب الآلي"
-                                data-en="B.Sc. in Computer Science (Excellence)">بكالوريوس علوم الحاسب الآلي</h3>
-                            <div class="timeline-status">
-                                <i class="fas fa-medal" style="color: var(--primary);"></i>
-                                <span data-ar="المؤهل الحالي: خريج الدفعة 74 بتقدير ممتاز"
-                                    data-en="Current Degree: 74th Batch Graduate with Excellence">المؤهل الحالي: خريج
-                                    الدفعة 74 بتقدير ممتاز</span>
-                            </div>
-                            <div class="timeline-details-grid">
-                                <div class="timeline-detail-box">
-                                    <i class="fas fa-landmark"></i>
-                                    <div>
-                                        <strong data-ar="الجامعة:" data-en="University:">الجامعة:</strong>
-                                        <div data-ar="جامعة أم القرى" data-en="Umm Al-Qura University">جامعة أم القرى
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="timeline-detail-box">
-                                    <i class="fas fa-layer-group"></i>
-                                    <div>
-                                        <strong data-ar="الكلية:" data-en="College:">الكلية:</strong>
-                                        <div data-ar="كلية الحاسبات" data-en="College of Computing">كلية الحاسبات</div>
-                                    </div>
-                                </div>
-                                <div class="timeline-detail-box" style="grid-column: 1 / -1;">
-                                    <i class="fas fa-brain"></i>
-                                    <div>
-                                        <strong data-ar="القسم / التخصص:" data-en="Department / Major:">القسم /
-                                            التخصص:</strong>
-                                        <div data-ar="قسم علوم الحاسب والذكاء الاصطناعي"
-                                            data-en="Dept. of Computer Science & AI">قسم علوم الحاسب والذكاء الاصطناعي
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <div class="edu-timeline" id="education-container"></div>
             </div>
         </section>
 
@@ -2636,65 +2536,7 @@
                     <h2 data-ar="مجالات الخبرة" data-en="Areas of Expertise">مجالات الخبرة</h2>
                     <div class="underline"></div>
                 </div>
-                <div class="expertise-grid" id="expertise-container">
-
-                    <div class="expertise-card">
-                        <div class="icon-box"><i class="fas fa-server"></i></div>
-                        <h3 data-ar="تطوير الواجهات الخلفية وقواعد البيانات" data-en="Backend & Database Architecture">
-                            تطوير الواجهات الخلفية وقواعد البيانات</h3>
-                        <p data-ar="متخصص في إدارة أنظمة قواعد البيانات مثل MySQL و MariaDB و NoSQL، مع خبرة متقدمة في Node.js و PHP و Java لضمان سلامة البيانات وأدائها."
-                            data-en="Specialized in database management including MySQL, MariaDB, and NoSQL, with advanced expertise in Node.js, PHP and Java to ensure data integrity.">
-                            متخصص في إدارة أنظمة قواعد البيانات مثل MySQL و MariaDB و NoSQL، مع خبرة متقدمة في Node.js و
-                            PHP و Java لضمان سلامة البيانات وأدائها.</p>
-                        <div class="card-tags">
-                            <span class="tag-pill">MySQL</span><span class="tag-pill">MariaDB</span><span
-                                class="tag-pill">Node.js</span><span class="tag-pill">PHP</span><span
-                                class="tag-pill">Java</span><span class="tag-pill">REST APIs</span>
-                        </div>
-                    </div>
-                    <div class="expertise-card">
-                        <div class="icon-box"><i class="fas fa-sitemap"></i></div>
-                        <h3 data-ar="تحليل وتصميم النظم البرمجية" data-en="Systems Analysis & Design">تحليل وتصميم النظم
-                            البرمجية</h3>
-                        <p data-ar="تحليل متطلبات الأعمال المعقدة، نمذجة تدفق البيانات والعمليات (BPMN & DFD)، وتصميم المخططات الهندسية (UML) لتحويل الاحتياجات التشغيلية إلى نظم برمجية متكاملة وقابلة للتوسع."
-                            data-en="Analyzing complex business requirements, modeling data and workflow processes (BPMN & DFD), and designing architectural blueprints (UML) to transform operational needs into scalable software systems.">
-                            تحليل متطلبات الأعمال المعقدة، نمذجة تدفق البيانات والعمليات (BPMN & DFD)، وتصميم المخططات
-                            الهندسية (UML) لتحويل الاحتياجات التشغيلية إلى نظم برمجية متكاملة وقابلة للتوسع.</p>
-                        <div class="card-tags">
-                            <span class="tag-pill">Systems Analysis</span><span class="tag-pill">UML & DFD</span><span
-                                class="tag-pill">Requirements Engineering</span><span class="tag-pill">BPMN</span><span
-                                class="tag-pill">Process Modeling</span><span class="tag-pill">Software
-                                Architecture</span>
-                        </div>
-                    </div>
-                    <div class="expertise-card">
-                        <div class="icon-box"><i class="fas fa-project-diagram"></i></div>
-                        <h3 data-ar="هندسة البرمجيات الآمنة" data-en="Secure Software Architecture">هندسة البرمجيات
-                            الآمنة</h3>
-                        <p data-ar="تصميم بنية تحتية قابلة للتوسع للمشاريع الضخمة، مع التركيز على الأداء العالي والتحول الرقمي الشامل للشركات والمؤسسات."
-                            data-en="Designing scalable infrastructure for large-scale projects, focusing on high performance and comprehensive digital transformation for enterprises.">
-                            تصميم بنية تحتية قابلة للتوسع للمشاريع الضخمة، مع التركيز على الأداء العالي والتحول الرقمي
-                            الشامل للشركات والمؤسسات.</p>
-                        <div class="card-tags">
-                            <span class="tag-pill">System Architecture</span><span
-                                class="tag-pill">Scalability</span><span class="tag-pill">Security</span><span
-                                class="tag-pill">Code Reviews</span><span class="tag-pill">Digital Transformation</span>
-                        </div>
-                    </div>
-                    <div class="expertise-card">
-                        <div class="icon-box"><i class="fas fa-network-wired"></i></div>
-                        <h3 data-ar="الشبكات والخوادم المحلية" data-en="Networking & Local Servers">الشبكات والخوادم
-                            المحلية</h3>
-                        <p data-ar="خبرة في إدارة أنظمة الخوادم المحلية، إعداد شبكات VLAN، وبناء أنظمة مراقبة حية لضمان استقرار العمليات التقنية."
-                            data-en="Expertise in managing local servers, configuring VLANs, and building real-time monitoring systems to ensure the stability of technical operations.">
-                            خبرة في إدارة أنظمة الخوادم المحلية، إعداد شبكات VLAN، وبناء أنظمة مراقبة حية لضمان استقرار
-                            العمليات التقنية.</p>
-                        <div class="card-tags">
-                            <span class="tag-pill">Local Servers</span><span class="tag-pill">VLAN</span><span
-                                class="tag-pill">Real-Time Monitoring</span><span class="tag-pill">Telemetry</span>
-                        </div>
-                    </div>
-                </div>
+                <div class="expertise-grid" id="expertise-container"></div>
             </div>
         </section>
 
@@ -2706,30 +2548,18 @@
                         والتعاونات</h2>
                     <div class="underline"></div>
                 </div>
-                <div class="collab-grid" id="collab-container">
+                <div class="collab-grid" id="collab-container"></div>
+            </div>
+        </section>
 
-                    <div class="collab-card">
-                        <div class="collab-icon"><i class="fas fa-rocket"></i></div>
-                        <h3 data-ar="فريق FENY" data-en="FENY">فريق FENY</h3>
-                        <p>قيادة الفريق التقني، تنفيذ خرائط الطريق التقنية، ودمج تقنيات الويب الحديثة لمشاريع التحول
-                            الرقمي كعالم حاسب.</p>
-                    </div>
-                    <div class="collab-card">
-                        <div class="collab-icon"><i class="fas fa-building"></i></div>
-                        <h3 data-ar="مؤسسة شعاع الشروق المتميزة" data-en="Shoa'a Shorouk Co.">مؤسسة شعاع الشروق المتميزة
-                        </h3>
-                        <p>إدارة مشاريع التحول الرقمي الكاملة، بما في ذلك بناء أنظمة الاتصالات الإدارية وتحسين البنية
-                            التحتية التقنية.</p>
-                    </div>
-                    <div class="collab-card">
-                        <div class="collab-icon"><i class="fas fa-kaaba"></i></div>
-                        <h3 data-ar="شركة ضيوف البيت (خدمات الحج)" data-en="Albait Guests (Hajj Services)">شركة ضيوف
-                            البيت (خدمات الحج)</h3>
-                        <p>خبرة تمتد لـ 4 سنوات في إدارة وتطوير العمليات التقنية وأنظمة جوازات الحج بمركز الخدمة تحت
-                            رئاسة <span style="color: var(--primary); font-weight: 700;">الأستاذ هتان بن جمال
-                                خان</span>، مع تطوير حلول ذكية لإدارة وتتبع العمليات الميدانية والبيانات الحية.</p>
-                    </div>
+        <!-- People I Worked With Section (New) -->
+        <section id="people" style="background: rgba(255, 255, 255, 0.015);">
+            <div class="container">
+                <div class="section-header">
+                    <h2 data-ar="شخصيات وزملاء تشرفت بالعمل معهم" data-en="People & Leaders I Worked With">شخصيات وزملاء تشرفت بالعمل معهم</h2>
+                    <div class="underline"></div>
                 </div>
+                <div class="people-grid" id="people-container"></div>
             </div>
         </section>
 
@@ -2741,146 +2571,7 @@
                     <div class="underline"></div>
                 </div>
                 <div class="slider-container" id="projects-slider">
-                    <div class="slider-track" id="projects-track">
-                        <div class="project-card">
-                            <div class="project-info">
-                                <h3 data-ar="المدفوعات مع إيهاب" data-en="Payments with Ehab">المدفوعات مع إيهاب</h3>
-                                <p data-ar="واجهة موحدة ومبسطة تتيح للمتاجر وأصحاب الأعمال عرض ومشاركة بيانات حساباتهم البنكية ووسائل التحويل المعتمدة للعملاء بسهولة."
-                                    data-en="A centralized, clean interface enabling merchants to display and share bank account details and transfer methods with customers.">
-                                    واجهة موحدة ومبسطة تتيح للمتاجر وأصحاب الأعمال عرض ومشاركة بيانات حساباتهم البنكية
-                                    ووسائل التحويل المعتمدة للعملاء بسهولة.
-                                </p>
-                                <div class="mt-2">
-                                    <a style="color: white;" href="https://payment.eny.sa/" target="_blank"
-                                        rel="noopener noreferrer"
-                                        class="text-white hover:underline text-sm inline-flex items-center gap-1">
-                                        <span data-ar="زيارة الموقع" data-en="Visit Website">زيارة الموقع</span>
-                                        <span>↗</span>
-                                    </a>
-                                </div><br>
-                                <div class="tags">
-                                    <span>HTML5</span>
-                                    <span>Tailwind CSS</span>
-                                    <span>JavaScript</span>
-                                    <span>Cloudflare Workers</span>
-                                    <span>Moyasar API</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-card">
-    <div class="project-info">
-        <h3 data-ar="تطبيق قارئ الجوازات" data-en="Passport Reader App">تطبيق قارئ الجوازات</h3>
-        <p data-ar="تطبيق مبتكر مصمم لأتمتة فحص وممتاثلة وثائق وجوازات سفر الحجاج عبر طوابير معالجة غير متزامنة، مما يساهم في خفض زمن فرز الوثائق بنسبة 85% وضمان استمرارية التشغيل الميداني دون توقف."
-            data-en="An innovative application designed to automate the verification and matching of pilgrim passport data and documents using asynchronous queues, reducing document sorting time by 85% and ensuring continuous field operations.">
-            تطبيق مبتكر مصمم لأتمتة فحص وممتاثلة وثائق وجوازات سفر الحجاج عبر طوابير معالجة غير متزامنة، مما يساهم في خفض زمن فرز الوثائق بنسبة 85% وضمان استمرارية التشغيل الميداني دون توقف.
-        </p>
-        <div class="mt-2">
-            <a style="color: white;" href="https://eny.sa/assets/passport_app.pdf" target="_blank"
-                rel="noopener noreferrer"
-                class="text-white hover:underline text-sm inline-flex items-center gap-1">
-                <span data-ar="عرض المستند المرجعي" data-en="View Reference Document">عرض المستند المرجعي</span>
-                <span>↗</span>
-            </a>
-        </div><br>
-        <div class="tags">
-            <span>OCR & NFC</span>
-            <span>Asynchronous Queues</span>
-            <span>Offline-First (Hybrid Data)</span>
-            <span>Systems Architecture</span>
-            <span>Enterprise Robustness</span>
-        </div>
-    </div>
-</div>
-
-                        <div class="project-card">
-                            <div class="project-info">
-                                <h3 data-ar="موسم (Mawsem)" data-en="Mawsem">موسم (Mawsem)</h3>
-                                <p data-ar="منصة مدعومة بالذكاء الاصطناعي للتنبؤ بالطلب في قطاع التجزئة باستخدام خوارزميات SARIMAX."
-                                    data-en="An AI-driven retail demand forecasting platform using SARIMAX algorithms.">
-                                    منصة مدعومة بالذكاء الاصطناعي للتنبؤ بالطلب في قطاع التجزئة باستخدام خوارزميات
-                                    SARIMAX.</p>
-                                <div class="mt-2">
-            <a style="color: white;" href="https://eny.sa/assets/mawsem.pdf" target="_blank"
-                rel="noopener noreferrer"
-                class="text-white hover:underline text-sm inline-flex items-center gap-1">
-                <span data-ar="عرض لبوستر المرجعي" data-en="View Reference Poster">عرض البوستر المرجعي</span>
-                <span>↗</span>
-            </a>
-        </div><br>
-                                <div class="tags">
-                                    <span>AI / ML</span>
-                                    <span>SARIMAX</span>
-                                    <span>Node.js</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="project-card">
-                            <div class="project-info">
-                                <h3 data-ar="نظام الاتصالات الإدارية" data-en="Admin Correspondence">نظام الاتصالات
-                                    الإدارية</h3>
-                                <p data-ar="مشروع تحول رقمي شامل لمؤسسة شعاع الشروق بتطوير PHP نقية ونموذج Naive Bayes."
-                                    data-en="Full digital transformation for Shoa'a Shorouk built with pure PHP (OOP) and Naive Bayes.">
-                                    مشروع تحول رقمي شامل لمؤسسة شعاع الشروق بتطوير PHP نقية ونموذج Naive Bayes.</p>
-                                <div class="tags">
-                                    <span>Pure PHP (OOP)</span>
-                                    <span>Custom ORM</span>
-                                    <span>Naive Bayes</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="project-card">
-                            <div class="project-info">
-                                <h3 data-ar="نظام مراقبة الخوادم المحلية" data-en="Local Servers Monitoring">نظام مراقبة
-                                    الخوادم المحلية</h3>
-                                <p data-ar="نظام ذكي لمراقبة أداء الخوادم في الوقت الفعلي مع لوحة تحكم تفاعلية."
-                                    data-en="A smart real-time monitoring system offering interactive dashboards and centralized logs.">
-                                    نظام ذكي لمراقبة أداء الخوادم في الوقت الفعلي مع لوحة تحكم تفاعلية.</p>
-                                <div class="tags">
-                                    <span>Monitoring</span>
-                                    <span>Dashboards</span>
-                                    <span>Logs</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="project-card">
-                            <div class="project-info">
-                                <h3 data-ar="السكرتير الذكي" data-en="Smart Secretary (AI)">السكرتير الذكي</h3>
-                                <p data-ar="مساعد إداري مدعوم بالذكاء الاصطناعي يفهم اللغة الطبيعية ويكتشف تعارضات المواعيد بدقة."
-                                    data-en="An AI-powered administrative assistant understanding Arabic NLP and detecting schedule conflicts.">
-                                    مساعد إداري مدعوم بالذكاء الاصطناعي يفهم اللغة الطبيعية ويكتشف تعارضات المواعيد
-                                    بدقة.</p>
-                                <div class="tags">
-                                    <span>AI Assistant</span>
-                                    <span>Gemini API</span>
-                                    <span>NLP</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="project-card">
-                            <div class="project-info">
-                                <h3 data-ar="محرك ومفسر قوالب PPHP" data-en="PPHP Template Engine">محرك ومفسر قوالب PPHP
-                                </h3>
-                                <p data-ar="لغة قوالب ومفسر مخصص لـ PHP يهدف لتبسيط وتسريع عملية التطوير، مع دعم كامل للإضافات في VS Code."
-                                    data-en="A custom template language and interpreter for PHP designed to simplify and speed up development, with full support for VS Code extensions.">
-                                    لغة قوالب ومفسر مخصص لـ PHP يهدف لتبسيط وتسريع عملية التطوير، مع دعم كامل للإضافات
-                                    في VS Code.</p>
-                                <div class="tags">
-                                    <span>PHP Internals</span>
-                                    <span>Interpreter</span>
-                                    <span>VS Code Extension</span>
-                                </div>
-                                <a href="https://github.com/feny1/pphp" target="_blank" rel="noopener noreferrer"
-                                    class="project-link">
-                                    <span data-ar="عرض على GitHub" data-en="View on GitHub">عرض على GitHub</span>
-                                    <i class="fab fa-github"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="slider-track" id="projects-track"></div>
                     <div class="slider-controls">
                         <button class="slider-btn" id="slider-prev" aria-label="السابق">
                             <i class="fas fa-chevron-right arrow-prev-icon"></i>
@@ -2901,7 +2592,6 @@
                     <div class="underline"></div>
                 </div>
 
-                <!-- Category Filters -->
                 <div class="gallery-filters" id="gallery-filters">
                     <button class="filter-btn active" data-filter="all" onclick="filterGallery('all', this)">
                         <i class="fas fa-th-large" style="margin-inline-end: 6px;"></i>
@@ -2921,319 +2611,7 @@
                     </button>
                 </div>
 
-                <div class="gallery-grid" id="gallery-container">
-
-                    <div class="gallery-item " data-category="grad" data-index="0" onclick="openLightbox(0)" style="">
-                        <div class="gallery-card">
-                            <div class="gallery-img-wrap">
-                                <img src="assets/images/ehab-yar-umm-al-qura-university-graduation-portrait.jpg"
-                                    alt="حفل تخرج الدفعة 74 - جامعة أم القرى" class="gallery-img" loading="lazy">
-                                <div class="gallery-overlay">
-                                    <div class="gallery-zoom-icon" onclick="event.stopPropagation(); openLightbox(0);">
-                                        <i class="fas fa-expand-alt"></i>
-                                    </div>
-                                    <div class="gallery-overlay-text">
-                                        <h3 class="gallery-title" data-ar="حفل تخرج الدفعة 74 - جامعة أم القرى"
-                                            data-en="74th Graduation Ceremony - Umm Al-Qura">حفل تخرج الدفعة 74 - جامعة
-                                            أم القرى</h3>
-                                        <p class="gallery-desc"
-                                            data-ar="توثيق التكريم والاحتفال بحفل تخرج الدفعة 74 من جامعة أم القرى كعالم حاسب متميز."
-                                            data-en="Documenting the honor and celebration of the 74th graduation ceremony at Umm Al-Qura University.">
-                                            توثيق التكريم والاحتفال بحفل تخرج الدفعة 74 من جامعة أم القرى كعالم حاسب
-                                            متميز.</p>
-                                    </div>
-                                </div>
-                                <span class="gallery-badge">
-                                    <span data-ar="حفل التخرج" data-en="Graduation">حفل التخرج</span>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="gallery-item " data-category="grad" data-index="1" onclick="openLightbox(1)" style="">
-                        <div class="gallery-card">
-                            <div class="gallery-img-wrap">
-                                <img src="assets/images/ehab-yar-computer-science-bachelor-excellence-uqu.jpg"
-                                    alt="منصة التكريم الجامعي" class="gallery-img" loading="lazy">
-                                <div class="gallery-overlay">
-                                    <div class="gallery-zoom-icon" onclick="event.stopPropagation(); openLightbox(1);">
-                                        <i class="fas fa-expand-alt"></i>
-                                    </div>
-                                    <div class="gallery-overlay-text">
-                                        <h3 class="gallery-title" data-ar="منصة التكريم الجامعي"
-                                            data-en="Academic Honor Stage">منصة التكريم الجامعي</h3>
-                                        <p class="gallery-desc"
-                                            data-ar="لحظة التكريم والتتويج على منصة حفل التخرج بجامعة أم القرى."
-                                            data-en="A distinguished moment on stage at the Umm Al-Qura University graduation ceremony.">
-                                            لحظة التكريم والتتويج على منصة حفل التخرج بجامعة أم القرى.</p>
-                                    </div>
-                                </div>
-                                <span class="gallery-badge">
-                                    <span data-ar="الدفعة 74" data-en="74th Batch">الدفعة 74</span>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="gallery-item " data-category="grad" data-index="2" onclick="openLightbox(2)" style="">
-                        <div class="gallery-card">
-                            <div class="gallery-img-wrap">
-                                <img src="assets/images/ehab-yar-74th-batch-graduation-ceremony-umm-al-qura.jpg"
-                                    alt="التخرج والتميز الأكاديمي - علوم الحاسب" class="gallery-img" loading="lazy">
-                                <div class="gallery-overlay">
-                                    <div class="gallery-zoom-icon" onclick="event.stopPropagation(); openLightbox(2);">
-                                        <i class="fas fa-expand-alt"></i>
-                                    </div>
-                                    <div class="gallery-overlay-text">
-                                        <h3 class="gallery-title" data-ar="التخرج والتميز الأكاديمي - علوم الحاسب"
-                                            data-en="Graduation & Academic Excellence - Computer Science">التخرج والتميز
-                                            الأكاديمي - علوم الحاسب</h3>
-                                        <p class="gallery-desc"
-                                            data-ar="إيهاب يار في حفل التخرج الرسمي لعلوم الحاسب بجامعة أم القرى."
-                                            data-en="Ehab Yar at the official Computer Science graduation ceremony at Umm Al-Qura University.">
-                                            إيهاب يار في حفل التخرج الرسمي لعلوم الحاسب بجامعة أم القرى.</p>
-                                    </div>
-                                </div>
-                                <span class="gallery-badge">
-                                    <span data-ar="حفل التخرج" data-en="Graduation">حفل التخرج</span>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="gallery-item " data-category="grad" data-index="3" onclick="openLightbox(3)" style="">
-                        <div class="gallery-card">
-                            <div class="gallery-img-wrap">
-                                <img src="assets/images/ehab-yar-mawsem-ai-retail-forecasting-booth.jpg"
-                                    alt="أجواء وفرحة التخرج" class="gallery-img" loading="lazy">
-                                <div class="gallery-overlay">
-                                    <div class="gallery-zoom-icon" onclick="event.stopPropagation(); openLightbox(3);">
-                                        <i class="fas fa-expand-alt"></i>
-                                    </div>
-                                    <div class="gallery-overlay-text">
-                                        <h3 class="gallery-title" data-ar="أجواء وفرحة التخرج"
-                                            data-en="Graduation Joy & Atmosphere">أجواء وفرحة التخرج</h3>
-                                        <p class="gallery-desc"
-                                            data-ar="مشاركة الفرحة والتتويج الأكاديمي مع الزملاء والأساتذة."
-                                            data-en="Sharing the celebration and academic achievement with peers and mentors.">
-                                            مشاركة الفرحة والتتويج الأكاديمي مع الزملاء والأساتذة.</p>
-                                    </div>
-                                </div>
-                                <span class="gallery-badge">
-                                    <span data-ar="لقطات التخرج" data-en="Ceremony Highlights">لقطات التخرج</span>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="gallery-item " data-category="grad" data-index="4" onclick="openLightbox(4)" style="">
-                        <div class="gallery-card">
-                            <div class="gallery-img-wrap">
-                                <img src="assets/images/ehab-yar-mawsem-ai-project-presentation-honors.jpg"
-                                    alt="التكريم والتقدير الجامعي" class="gallery-img" loading="lazy">
-                                <div class="gallery-overlay">
-                                    <div class="gallery-zoom-icon" onclick="event.stopPropagation(); openLightbox(4);">
-                                        <i class="fas fa-expand-alt"></i>
-                                    </div>
-                                    <div class="gallery-overlay-text">
-                                        <h3 class="gallery-title" data-ar="التكريم والتقدير الجامعي"
-                                            data-en="University Honor & Recognition">التكريم والتقدير الجامعي</h3>
-                                        <p class="gallery-desc"
-                                            data-ar="محطة فارقة تتوج سنوات من دراسة وبحوث علوم الحاسب والأنظمة وقواعد البيانات."
-                                            data-en="A milestone celebrating years of Computer Science research and database systems.">
-                                            محطة فارقة تتوج سنوات من دراسة وبحوث علوم الحاسب والأنظمة وقواعد البيانات.
-                                        </p>
-                                    </div>
-                                </div>
-                                <span class="gallery-badge">
-                                    <span data-ar="ذكريات التخرج" data-en="Milestone Moments">ذكريات التخرج</span>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="gallery-item " data-category="work" data-index="5" onclick="openLightbox(5)" style="">
-                        <div class="gallery-card">
-                            <div class="gallery-img-wrap">
-                                <img src="assets/images/ehab-yar-college-of-computing-graduation-celebration.jpg"
-                                    alt="الهوية المهنية والقيادة التقنية" class="gallery-img" loading="lazy">
-                                <div class="gallery-overlay">
-                                    <div class="gallery-zoom-icon" onclick="event.stopPropagation(); openLightbox(5);">
-                                        <i class="fas fa-expand-alt"></i>
-                                    </div>
-                                    <div class="gallery-overlay-text">
-                                        <h3 class="gallery-title" data-ar="الهوية المهنية والقيادة التقنية"
-                                            data-en="Professional Identity & Leadership">الهوية المهنية والقيادة التقنية
-                                        </h3>
-                                        <p class="gallery-desc"
-                                            data-ar="رئيس تقني وعالم حاسب يقود مشاريع التحول الرقمي والذكاء الاصطناعي."
-                                            data-en="CTO and Computer Scientist leading digital transformation and AI innovations.">
-                                            رئيس تقني وعالم حاسب يقود مشاريع التحول الرقمي والذكاء الاصطناعي.</p>
-                                    </div>
-                                </div>
-                                <span class="gallery-badge">
-                                    <span data-ar="القيادة المهنية" data-en="Leadership">القيادة المهنية</span>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="gallery-item gallery-item-extra" data-category="grad" data-index="6"
-                        onclick="openLightbox(6)" style="display: none;">
-                        <div class="gallery-card">
-                            <div class="gallery-img-wrap">
-                                <img src="assets/images/ehab-yar-executive-tech-lead-studio-portrait.jpg"
-                                    alt="معرض مشاريع التخرج - منصة موسم (Mawsem)" class="gallery-img" loading="lazy">
-                                <div class="gallery-overlay">
-                                    <div class="gallery-zoom-icon" onclick="event.stopPropagation(); openLightbox(6);">
-                                        <i class="fas fa-expand-alt"></i>
-                                    </div>
-                                    <div class="gallery-overlay-text">
-                                        <h3 class="gallery-title" data-ar="معرض مشاريع التخرج - منصة موسم (Mawsem)"
-                                            data-en="Graduation Projects Exhibition - Mawsem">معرض مشاريع التخرج - منصة
-                                            موسم (Mawsem)</h3>
-                                        <p class="gallery-desc"
-                                            data-ar="عرض وتقديم مشروع التخرج (منصة موسم للتنبؤ بالطلب بالذكاء الاصطناعي) وفريق العمل في معرض مشاريع التخرج بجامعة أم القرى."
-                                            data-en="Presenting the graduation project (Mawsem AI demand forecasting platform) with the engineering team at the Umm Al-Qura University Graduation Exhibition.">
-                                            عرض وتقديم مشروع التخرج (منصة موسم للتنبؤ بالطلب بالذكاء الاصطناعي) وفريق
-                                            العمل في معرض مشاريع التخرج بجامعة أم القرى.</p>
-                                    </div>
-                                </div>
-                                <span class="gallery-badge">
-                                    <span data-ar="مشروع التخرج" data-en="Graduation Project">مشروع التخرج</span>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="gallery-item gallery-item-extra" data-category="grad" data-index="7"
-                        onclick="openLightbox(7)" style="display: none;">
-                        <div class="gallery-card">
-                            <div class="gallery-img-wrap">
-                                <img src="assets/images/ehab-yar-backend-database-architect-workspace.jpg"
-                                    alt="حفل تخرج الدفعة 74 - جامعة أم القرى (1447هـ / 2026م)" class="gallery-img"
-                                    loading="lazy">
-                                <div class="gallery-overlay">
-                                    <div class="gallery-zoom-icon" onclick="event.stopPropagation(); openLightbox(7);">
-                                        <i class="fas fa-expand-alt"></i>
-                                    </div>
-                                    <div class="gallery-overlay-text">
-                                        <h3 class="gallery-title"
-                                            data-ar="حفل تخرج الدفعة 74 - جامعة أم القرى (1447هـ / 2026م)"
-                                            data-en="74th Graduation Ceremony - Umm Al-Qura (1447H / 2026)">حفل تخرج
-                                            الدفعة 74 - جامعة أم القرى (1447هـ / 2026م)</h3>
-                                        <p class="gallery-desc"
-                                            data-ar="الصورة الرسمية في حفل تخرج الدفعة 74 بجامعة أم القرى - كلية الحاسبات وتتويج مسيرة علوم الحاسب الآلي."
-                                            data-en="Official portrait at the 74th Graduation Ceremony of Umm Al-Qura University - College of Computing.">
-                                            الصورة الرسمية في حفل تخرج الدفعة 74 بجامعة أم القرى - كلية الحاسبات وتتويج
-                                            مسيرة علوم الحاسب الآلي.</p>
-                                    </div>
-                                </div>
-                                <span class="gallery-badge">
-                                    <span data-ar="حفل التخرج" data-en="Graduation">حفل التخرج</span>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="gallery-item gallery-item-extra" data-category="events" data-index="8"
-                        onclick="openLightbox(8)" style="display: none;">
-                        <div class="gallery-card">
-                            <div class="gallery-img-wrap">
-                                <img src="assets/images/ehab-yar-systems-analyst-consultant-identity.jpg"
-                                    alt="لقطات العمل والمشاريع الميدانية" class="gallery-img" loading="lazy">
-                                <div class="gallery-overlay">
-                                    <div class="gallery-zoom-icon" onclick="event.stopPropagation(); openLightbox(8);">
-                                        <i class="fas fa-expand-alt"></i>
-                                    </div>
-                                    <div class="gallery-overlay-text">
-                                        <h3 class="gallery-title" data-ar="لقطات العمل والمشاريع الميدانية"
-                                            data-en="Project & Field Operations">لقطات العمل والمشاريع الميدانية</h3>
-                                        <p class="gallery-desc"
-                                            data-ar="متابعة وإدارة العمليات التقنية والأنظمة التشغيلية تحت الضغط العالي."
-                                            data-en="Managing technical operations and mission-critical systems in the field.">
-                                            متابعة وإدارة العمليات التقنية والأنظمة التشغيلية تحت الضغط العالي.</p>
-                                    </div>
-                                </div>
-                                <span class="gallery-badge">
-                                    <span data-ar="محطات" data-en="Moments">محطات</span>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="gallery-item gallery-item-extra" data-category="grad" data-index="9"
-                        onclick="openLightbox(9)" style="display: none;">
-                        <div class="gallery-card">
-                            <div class="gallery-img-wrap">
-                                <img src="assets/images/ehab-yar-digital-transformation-tech-conference.jpg"
-                                    alt="لحظات وفرحة التخرج مع الزملاء - الدفعة 74" class="gallery-img" loading="lazy">
-                                <div class="gallery-overlay">
-                                    <div class="gallery-zoom-icon" onclick="event.stopPropagation(); openLightbox(9);">
-                                        <i class="fas fa-expand-alt"></i>
-                                    </div>
-                                    <div class="gallery-overlay-text">
-                                        <h3 class="gallery-title" data-ar="لحظات وفرحة التخرج مع الزملاء - الدفعة 74"
-                                            data-en="Graduation Moments with Classmates - 74th Batch">لحظات وفرحة التخرج
-                                            مع الزملاء - الدفعة 74</h3>
-                                        <p class="gallery-desc"
-                                            data-ar="أجواء الفرحة والاحتفال بحفل التخرج الرسمي بجامعة أم القرى مع زملاء كلية الحاسب الآلي ونظم المعلومات."
-                                            data-en="Celebration and joy with Computer Science peers during the official graduation ceremony at Umm Al-Qura University.">
-                                            أجواء الفرحة والاحتفال بحفل التخرج الرسمي بجامعة أم القرى مع زملاء كلية
-                                            الحاسب الآلي ونظم المعلومات.</p>
-                                    </div>
-                                </div>
-                                <span class="gallery-badge">
-                                    <span data-ar="حفل التخرج" data-en="Graduation">حفل التخرج</span>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="gallery-item gallery-item-extra" data-category="events" data-index="10"
-                        onclick="openLightbox(10)" style="display: none;">
-                        <div class="gallery-card">
-                            <div class="gallery-img-wrap">
-                                <img src="assets/images/ehab-yar-hajj-technical-operations-service-center.jpg"
-                                    alt="إدارة العمليات الميدانية - موسم الحج (مركز الخدمة)" class="gallery-img"
-                                    loading="lazy">
-                                <div class="gallery-overlay">
-                                    <div class="gallery-zoom-icon" onclick="event.stopPropagation(); openLightbox(10);">
-                                        <i class="fas fa-expand-alt"></i>
-                                    </div>
-                                    <div class="gallery-overlay-text">
-                                        <h3 class="gallery-title"
-                                            data-ar="إدارة العمليات الميدانية - موسم الحج (مركز الخدمة)"
-                                            data-en="Field Technical Operations - Hajj (Service Center)">إدارة العمليات
-                                            الميدانية - موسم الحج (مركز الخدمة)</h3>
-                                        <p class="gallery-desc"
-                                            data-ar="توثيق قيادة العمليات الرقمية والأنظمة الميدانية لجوازات الحج بمركز الخدمة تحت رئاسة الأستاذ هتان بن جمال خان."
-                                            data-en="Documenting digital operations and field passport systems at the Service Center led by Mr. Hattan Jamal Khan.">
-                                            توثيق قيادة العمليات الرقمية والأنظمة الميدانية لجوازات الحج بمركز الخدمة
-                                            تحت رئاسة الأستاذ هتان بن جمال خان.</p>
-                                    </div>
-                                </div>
-                                <span class="gallery-badge">
-                                    <span data-ar="موسم الحج 1447هـ" data-en="Hajj 1447H">موسم الحج 1447هـ</span>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="gallery-item gallery-item-extra" data-category="work" data-index="11"
-                        onclick="openLightbox(11)" style="display: none;">
-                        <div class="gallery-card">
-                            <div class="gallery-img-wrap">
-                                <img src="assets/images/ehab-yar-computer-science-master-research-symposium.png"
-                                    alt="الشعار الرسمي والهوية البرمجية" class="gallery-img" loading="lazy">
-                                <div class="gallery-overlay">
-                                    <div class="gallery-zoom-icon" onclick="event.stopPropagation(); openLightbox(11);">
-                                        <i class="fas fa-expand-alt"></i>
-                                    </div>
-                                    <div class="gallery-overlay-text">
-                                        <h3 class="gallery-title" data-ar="الشعار الرسمي والهوية البرمجية"
-                                            data-en="Official Identity & Signature">الشعار الرسمي والهوية البرمجية</h3>
-                                        <p class="gallery-desc" data-ar="الهوية البرمجية الرسمية لإيهاب يار feny."
-                                            data-en="Official brand identity for Ehab Yar feny.">الهوية البرمجية الرسمية
-                                            لإيهاب يار feny.</p>
-                                    </div>
-                                </div>
-                                <span class="gallery-badge">
-                                    <span data-ar="الهوية البصرية" data-en="Brand Identity">الهوية البصرية</span>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <div class="gallery-grid" id="gallery-container"></div>
 
                 <div style="text-align: center; margin-top: 35px;" id="gallery-toggle-wrapper">
                     <button class="btn btn-outline" id="gallery-toggle-btn" onclick="toggleAllGallery()"
@@ -3253,251 +2631,7 @@
                     <h2 data-ar="تغطيات صحفية ومقالات" data-en="Press & Media Coverage">تغطيات صحفية ومقالات</h2>
                     <div class="underline"></div>
                 </div>
-                <div class="expertise-grid" id="news-container">
-
-                    <div class="expertise-card news-item " style="">
-                        <div class="icon-box"><i class="fas fa-newspaper"></i></div>
-                        <div
-                            style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-                            <span style="font-size: 0.85rem; color: var(--primary);" data-ar="صحيفة هوية"
-                                data-en="Howyah Newspaper">صحيفة هوية</span>
-                            <span
-                                style="font-size: 0.75rem; background: rgba(244, 63, 94, 0.12); border: 1px solid rgba(244, 63, 94, 0.35); color: var(--primary); padding: 2px 8px; border-radius: 50px;"
-                                data-ar="تغطية صحفية" data-en="Press Coverage">تغطية صحفية</span>
-                        </div>
-                        <h3 data-ar="إيهاب بن نبيل يار ومستقبل الأعمال في عصر الذكاء الاصطناعي"
-                            data-en="Ehab Nabeel Yar and the Future of Business in the Age of AI">إيهاب بن نبيل يار
-                            ومستقبل الأعمال في عصر الذكاء الاصطناعي</h3>
-                        <div style="margin-top: auto; padding-top: 16px;">
-                            <a href="https://howyah.com/%d8%a5%d9%8a%d9%87%d8%a7%d8%a8-%d8%a8%d9%86-%d9%86%d8%a8%d9%8a%d9%84-%d9%8a%d8%a7%d8%b1-%d9%88%d9%85%d8%b3%d8%aa%d9%82%d8%a8%d9%84-%d8%a7%d9%84%d8%a3%d8%b9%d9%85%d8%a7%d9%84-%d9%81%d9%8a-%d8%b9%d8%b5/"
-                                target="_blank" rel="noopener noreferrer" class="btn btn-outline"
-                                style="font-size: 0.88rem; padding: 8px 16px; width: 100%; justify-content: center;">
-                                <span data-ar="قراءة الخبر" data-en="Read Article">قراءة الخبر</span>
-                                <i class="fas fa-external-link-alt" style="margin-inline-start: 6px;"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="expertise-card news-item " style="">
-                        <div class="icon-box"><i class="fas fa-newspaper"></i></div>
-                        <div
-                            style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-                            <span style="font-size: 0.85rem; color: var(--primary);" data-ar="إكستيرا نيوز"
-                                data-en="Extera News">إكستيرا نيوز</span>
-                            <span
-                                style="font-size: 0.75rem; background: rgba(244, 63, 94, 0.12); border: 1px solid rgba(244, 63, 94, 0.35); color: var(--primary); padding: 2px 8px; border-radius: 50px;"
-                                data-ar="تغطية صحفية" data-en="Press Coverage">تغطية صحفية</span>
-                        </div>
-                        <h3 data-ar="إيهاب بن نبيل يار والذكاء الاصطناعي في صياغة مستقبل الاقتصاد الرقمي"
-                            data-en="Ehab Nabeel Yar and Artificial Intelligence in Shaping the Digital Economy">إيهاب
-                            بن نبيل يار والذكاء الاصطناعي في صياغة مستقبل الاقتصاد الرقمي</h3>
-                        <div style="margin-top: auto; padding-top: 16px;">
-                            <a href="https://exteranews.com/%d8%a5%d9%8a%d9%87%d8%a7%d8%a8-%d8%a8%d9%86-%d9%86%d8%a8%d9%8a%d9%84-%d9%8a%d8%a7%d8%b1-%d9%88%d8%a7%d9%84%d8%b0%d9%83%d8%a7%d8%a1-%d8%a7%d9%84%d8%a7%d8%b5%d8%b7%d9%86%d8%a7%d8%b9%d9%8a-%d9%81%d9%8a/"
-                                target="_blank" rel="noopener noreferrer" class="btn btn-outline"
-                                style="font-size: 0.88rem; padding: 8px 16px; width: 100%; justify-content: center;">
-                                <span data-ar="قراءة الخبر" data-en="Read Article">قراءة الخبر</span>
-                                <i class="fas fa-external-link-alt" style="margin-inline-start: 6px;"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="expertise-card news-item " style="">
-                        <div class="icon-box"><i class="fas fa-newspaper"></i></div>
-                        <div
-                            style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-                            <span style="font-size: 0.85rem; color: var(--primary);" data-ar="صحيفة أخبار الوطن"
-                                data-en="Akhbar Al-Watan Newspaper">صحيفة أخبار الوطن</span>
-                            <span
-                                style="font-size: 0.75rem; background: rgba(244, 63, 94, 0.12); border: 1px solid rgba(244, 63, 94, 0.35); color: var(--primary); padding: 2px 8px; border-radius: 50px;"
-                                data-ar="تغطية صحفية" data-en="Press Coverage">تغطية صحفية</span>
-                        </div>
-                        <h3 data-ar="إيهاب بن نبيل يار: الذكاء الاصطناعي والتحول الرقمي في دعم الاقتصاد"
-                            data-en="Ehab Nabeel Yar: AI & Digital Transformation Supporting the Economy">إيهاب بن نبيل
-                            يار: الذكاء الاصطناعي والتحول الرقمي في دعم الاقتصاد</h3>
-                        <div style="margin-top: auto; padding-top: 16px;">
-                            <a href="https://akhber-alwatan.com/?p=57996" target="_blank" rel="noopener noreferrer"
-                                class="btn btn-outline"
-                                style="font-size: 0.88rem; padding: 8px 16px; width: 100%; justify-content: center;">
-                                <span data-ar="قراءة الخبر" data-en="Read Article">قراءة الخبر</span>
-                                <i class="fas fa-external-link-alt" style="margin-inline-start: 6px;"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="expertise-card news-item " style="">
-                        <div class="icon-box"><i class="fas fa-newspaper"></i></div>
-                        <div
-                            style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-                            <span style="font-size: 0.85rem; color: var(--primary);" data-ar="كايرو 24"
-                                data-en="Cairo 24">كايرو 24</span>
-                            <span
-                                style="font-size: 0.75rem; background: rgba(244, 63, 94, 0.12); border: 1px solid rgba(244, 63, 94, 0.35); color: var(--primary); padding: 2px 8px; border-radius: 50px;"
-                                data-ar="تغطية صحفية" data-en="Press Coverage">تغطية صحفية</span>
-                        </div>
-                        <h3 data-ar="إيهاب بن نبيل يار يتحدث عن دور الذكاء الاصطناعي في مستقبل الاقتصاد الرقمي"
-                            data-en="Ehab Nabeel Yar Speaks on the Role of AI in the Future of Digital Economy">إيهاب بن
-                            نبيل يار يتحدث عن دور الذكاء الاصطناعي في مستقبل الاقتصاد الرقمي</h3>
-                        <div style="margin-top: auto; padding-top: 16px;">
-                            <a href="https://www.cairo24.online/2026/08/59.html?m=1" target="_blank"
-                                rel="noopener noreferrer" class="btn btn-outline"
-                                style="font-size: 0.88rem; padding: 8px 16px; width: 100%; justify-content: center;">
-                                <span data-ar="قراءة الخبر" data-en="Read Article">قراءة الخبر</span>
-                                <i class="fas fa-external-link-alt" style="margin-inline-start: 6px;"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="expertise-card news-item " style="">
-                        <div class="icon-box"><i class="fas fa-newspaper"></i></div>
-                        <div
-                            style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-                            <span style="font-size: 0.85rem; color: var(--primary);" data-ar="صحيفة الدستور 24"
-                                data-en="Aldostor 24">صحيفة الدستور 24</span>
-                            <span
-                                style="font-size: 0.75rem; background: rgba(244, 63, 94, 0.12); border: 1px solid rgba(244, 63, 94, 0.35); color: var(--primary); padding: 2px 8px; border-radius: 50px;"
-                                data-ar="تغطية صحفية" data-en="Press Coverage">تغطية صحفية</span>
-                        </div>
-                        <h3 data-ar="إيهاب بن نبيل يار ودور التخطيط الهندسي في نجاح المشاريع التقنية"
-                            data-en="Ehab Nabeel Yar & The Role of System Planning in Tech Projects">إيهاب بن نبيل يار
-                            ودور التخطيط الهندسي في نجاح المشاريع التقنية</h3>
-                        <div style="margin-top: auto; padding-top: 16px;">
-                            <a href="https://aldostor24.com/%d8%a5%d9%8a%d9%87%d8%a7%d8%a8-%d8%a8%d9%86-%d9%86%d8%a8%d9%8a%d9%84-%d9%8a%d8%a7%d8%b1-%d9%88%d8%af%d9%88%d8%b1-%d8%a7%d9%84%d8%aa%d8%ae%d8%b7%d9%8a%d8%b7-%d8%a7%d9%84%d9%87%d9%86%d8%af%d8%b3%d9%8a/"
-                                target="_blank" rel="noopener noreferrer" class="btn btn-outline"
-                                style="font-size: 0.88rem; padding: 8px 16px; width: 100%; justify-content: center;">
-                                <span data-ar="قراءة الخبر" data-en="Read Article">قراءة الخبر</span>
-                                <i class="fas fa-external-link-alt" style="margin-inline-start: 6px;"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="expertise-card news-item " style="">
-                        <div class="icon-box"><i class="fas fa-newspaper"></i></div>
-                        <div
-                            style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-                            <span style="font-size: 0.85rem; color: var(--primary);" data-ar="الخبر الفوري"
-                                data-en="Al-Khabar Al-Fawri">الخبر الفوري</span>
-                            <span
-                                style="font-size: 0.75rem; background: rgba(244, 63, 94, 0.12); border: 1px solid rgba(244, 63, 94, 0.35); color: var(--primary); padding: 2px 8px; border-radius: 50px;"
-                                data-ar="تغطية صحفية" data-en="Press Coverage">تغطية صحفية</span>
-                        </div>
-                        <h3 data-ar="إيهاب بن نبيل يار وتطوير المنتجات الرقمية المبتكرة"
-                            data-en="Ehab Nabeel Yar and Developing Innovative Digital Products">إيهاب بن نبيل يار
-                            وتطوير المنتجات الرقمية المبتكرة</h3>
-                        <div style="margin-top: auto; padding-top: 16px;">
-                            <a href="https://alkhabaralfawriu.com/%d8%a5%d9%8a%d9%87%d8%a7%d8%a8-%d8%a8%d9%86-%d9%86%d8%a8%d9%8a%d9%84-%d9%8a%d8%a7%d8%b1-%d9%88%d8%aa%d8%b7%d9%88%d9%8a%d8%b1-%d8%a7%d9%84%d9%85%d9%86%d8%aa%d8%ac%d8%a7%d8%aa-%d8%a7%d9%84%d8%b1%d9%82/"
-                                target="_blank" rel="noopener noreferrer" class="btn btn-outline"
-                                style="font-size: 0.88rem; padding: 8px 16px; width: 100%; justify-content: center;">
-                                <span data-ar="قراءة الخبر" data-en="Read Article">قراءة الخبر</span>
-                                <i class="fas fa-external-link-alt" style="margin-inline-start: 6px;"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="expertise-card news-item news-item-extra" style="display: none;">
-                        <div class="icon-box"><i class="fas fa-newspaper"></i></div>
-                        <div
-                            style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-                            <span style="font-size: 0.85rem; color: var(--primary);" data-ar="صحيفة الأخبار"
-                                data-en="Al-Akhbar News">صحيفة الأخبار</span>
-                            <span
-                                style="font-size: 0.75rem; background: rgba(244, 63, 94, 0.12); border: 1px solid rgba(244, 63, 94, 0.35); color: var(--primary); padding: 2px 8px; border-radius: 50px;"
-                                data-ar="تغطية صحفية" data-en="Press Coverage">تغطية صحفية</span>
-                        </div>
-                        <h3 data-ar="إيهاب بن نبيل يار: الذكاء الاصطناعي وآفاق التحول الرقمي الحديث"
-                            data-en="Ehab Nabeel Yar: Artificial Intelligence & Modern Digital Horizons">إيهاب بن نبيل
-                            يار: الذكاء الاصطناعي وآفاق التحول الرقمي الحديث</h3>
-                        <div style="margin-top: auto; padding-top: 16px;">
-                            <a href="https://alakhbar.org/26025/" target="_blank" rel="noopener noreferrer"
-                                class="btn btn-outline"
-                                style="font-size: 0.88rem; padding: 8px 16px; width: 100%; justify-content: center;">
-                                <span data-ar="قراءة الخبر" data-en="Read Article">قراءة الخبر</span>
-                                <i class="fas fa-external-link-alt" style="margin-inline-start: 6px;"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="expertise-card news-item news-item-extra" style="display: none;">
-                        <div class="icon-box"><i class="fas fa-newspaper"></i></div>
-                        <div
-                            style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-                            <span style="font-size: 0.85rem; color: var(--primary);" data-ar="مصر مباشر"
-                                data-en="Misr Mubashir">مصر مباشر</span>
-                            <span
-                                style="font-size: 0.75rem; background: rgba(244, 63, 94, 0.12); border: 1px solid rgba(244, 63, 94, 0.35); color: var(--primary); padding: 2px 8px; border-radius: 50px;"
-                                data-ar="تغطية صحفية" data-en="Press Coverage">تغطية صحفية</span>
-                        </div>
-                        <h3 data-ar="إيهاب بن نبيل يار ومستقبل هندسة النظم السحابية وقواعد البيانات"
-                            data-en="Ehab Nabeel Yar & The Future of Cloud Architecture and Databases">إيهاب بن نبيل يار
-                            ومستقبل هندسة النظم السحابية وقواعد البيانات</h3>
-                        <div style="margin-top: auto; padding-top: 16px;">
-                            <a href="https://misrmubashir.com/295626" target="_blank" rel="noopener noreferrer"
-                                class="btn btn-outline"
-                                style="font-size: 0.88rem; padding: 8px 16px; width: 100%; justify-content: center;">
-                                <span data-ar="قراءة الخبر" data-en="Read Article">قراءة الخبر</span>
-                                <i class="fas fa-external-link-alt" style="margin-inline-start: 6px;"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="expertise-card news-item news-item-extra" style="display: none;">
-                        <div class="icon-box"><i class="fas fa-newspaper"></i></div>
-                        <div
-                            style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-                            <span style="font-size: 0.85rem; color: var(--primary);" data-ar="الفجر العربي 24"
-                                data-en="Al-Fajr Al-Arabi 24">الفجر العربي 24</span>
-                            <span
-                                style="font-size: 0.75rem; background: rgba(244, 63, 94, 0.12); border: 1px solid rgba(244, 63, 94, 0.35); color: var(--primary); padding: 2px 8px; border-radius: 50px;"
-                                data-ar="تغطية صحفية" data-en="Press Coverage">تغطية صحفية</span>
-                        </div>
-                        <h3 data-ar="إيهاب بن نبيل يار ودور التقنيات الحديثة في استقرار قواعد البيانات"
-                            data-en="Ehab Nabeel Yar and Modern Technologies in Database Reliability">إيهاب بن نبيل يار
-                            ودور التقنيات الحديثة في استقرار قواعد البيانات</h3>
-                        <div style="margin-top: auto; padding-top: 16px;">
-                            <a href="https://alfagrelaraby24.com/37978/" target="_blank" rel="noopener noreferrer"
-                                class="btn btn-outline"
-                                style="font-size: 0.88rem; padding: 8px 16px; width: 100%; justify-content: center;">
-                                <span data-ar="قراءة الخبر" data-en="Read Article">قراءة الخبر</span>
-                                <i class="fas fa-external-link-alt" style="margin-inline-start: 6px;"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="expertise-card news-item news-item-extra" style="display: none;">
-                        <div class="icon-box"><i class="fas fa-newspaper"></i></div>
-                        <div
-                            style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-                            <span style="font-size: 0.85rem; color: var(--primary);" data-ar="نجوم بلس"
-                                data-en="Nojoom Plus">نجوم بلس</span>
-                            <span
-                                style="font-size: 0.75rem; background: rgba(244, 63, 94, 0.12); border: 1px solid rgba(244, 63, 94, 0.35); color: var(--primary); padding: 2px 8px; border-radius: 50px;"
-                                data-ar="تغطية صحفية" data-en="Press Coverage">تغطية صحفية</span>
-                        </div>
-                        <h3 data-ar="إيهاب بن نبيل يار وهندسة المنتجات التقنية الذكية"
-                            data-en="Ehab Nabeel Yar and Smart Tech Product Engineering">إيهاب بن نبيل يار وهندسة
-                            المنتجات التقنية الذكية</h3>
-                        <div style="margin-top: auto; padding-top: 16px;">
-                            <a href="https://nojoomplus.com/149825/%d8%a5%d9%8a%d9%87%d8%a7%d8%a8-%d8%a8%d9%86-%d9%86%d8%a8%d9%8a%d9%84-%d9%8a%d8%a7%d8%b1-%d9%88%d9%87%d9%86%d8%af%d8%b3%d8%a9-%d8%a7%d9%84%d9%85%d9%86%d8%aa%d8%ac%d8%a7%d8%aa-%d8%a7%d9%84%d8%aa%d9%82/"
-                                target="_blank" rel="noopener noreferrer" class="btn btn-outline"
-                                style="font-size: 0.88rem; padding: 8px 16px; width: 100%; justify-content: center;">
-                                <span data-ar="قراءة الخبر" data-en="Read Article">قراءة الخبر</span>
-                                <i class="fas fa-external-link-alt" style="margin-inline-start: 6px;"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="expertise-card news-item news-item-extra" style="display: none;">
-                        <div class="icon-box"><i class="fas fa-newspaper"></i></div>
-                        <div
-                            style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-                            <span style="font-size: 0.85rem; color: var(--primary);" data-ar="موجز نت"
-                                data-en="Mowjaz Net">موجز نت</span>
-                            <span
-                                style="font-size: 0.75rem; background: rgba(244, 63, 94, 0.12); border: 1px solid rgba(244, 63, 94, 0.35); color: var(--primary); padding: 2px 8px; border-radius: 50px;"
-                                data-ar="تغطية صحفية" data-en="Press Coverage">تغطية صحفية</span>
-                        </div>
-                        <h3 data-ar="إيهاب بن نبيل يار: الذكاء الاصطناعي وتشكيل مستقبل الأنظمة الذكية"
-                            data-en="Ehab Nabeel Yar: AI & Shaping the Future of Intelligent Systems">إيهاب بن نبيل يار:
-                            الذكاء الاصطناعي وتشكيل مستقبل الأنظمة الذكية</h3>
-                        <div style="margin-top: auto; padding-top: 16px;">
-                            <a href="https://mowjaz.net/%d8%a5%d9%8a%d9%87%d8%a7%d8%a8-%d8%a8%d9%86-%d9%86%d8%a8%d9%8a%d9%84-%d9%8a%d8%a7%d8%b1-%d8%a7%d9%84%d8%b0%d9%83%d8%a7%d8%a1-%d8%a7%d9%84%d8%a7%d8%b5%d8%b7%d9%86%d8%a7%d8%b9%d9%8a-%d9%88%d8%aa%d8%b4/"
-                                target="_blank" rel="noopener noreferrer" class="btn btn-outline"
-                                style="font-size: 0.88rem; padding: 8px 16px; width: 100%; justify-content: center;">
-                                <span data-ar="قراءة الخبر" data-en="Read Article">قراءة الخبر</span>
-                                <i class="fas fa-external-link-alt" style="margin-inline-start: 6px;"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                <div class="expertise-grid" id="news-container"></div>
                 <div style="text-align: center; margin-top: 35px;" id="news-toggle-wrapper">
                     <button class="btn btn-outline" id="news-toggle-btn" onclick="toggleAllNews()"
                         style="padding: 10px 28px;">
@@ -3517,68 +2651,7 @@
                         يمكنني إفادتك كشريك تقني؟</h2>
                     <div class="underline"></div>
                 </div>
-                <div class="expertise-grid" id="partnership-container">
-                    <div class="expertise-card">
-                        <div class="icon-box"><i class="fas fa-robot"></i></div>
-                        <h3 data-ar="إذا كنت تحتاج أدوات ذكاء اصطناعي مخصصة" data-en="Custom AI Tools & Solutions">إذا
-                            كنت تحتاج أدوات ذكاء اصطناعي مخصصة</h3>
-                        <p data-ar="أقوم ببناء وتطوير أدوات ذكاء اصطناعي مخصصة ومساعدين أذكياء (AI Agents) لتلبية احتياجاتك اليومية، مثل جدولة المواعيد الذكية، واكتشاف التعارضات، وتحليل النصوص والبيانات باللغة الطبيعية لرفع كفاءة أعمالك."
-                            data-en="I build and develop custom AI tools and intelligent agents specialized for your daily operations, providing advanced natural language processing and task automation.">
-                            أقوم ببناء وتطوير أدوات ذكاء اصطناعي مخصصة ومساعدين أذكياء (AI Agents) لتلبية احتياجاتك
-                            اليومية، مثل جدولة المواعيد الذكية، واكتشاف التعارضات، وتحليل النصوص والبيانات باللغة
-                            الطبيعية لرفع كفاءة أعمالك.</p>
-                    </div>
-
-                    <div class="expertise-card">
-                        <div class="icon-box"><i class="fas fa-gavel"></i></div>
-                        <h3 data-ar="إذا كنت محامياً أو صاحب مكتب محاماة"
-                            data-en="If You Are a Lawyer or Law Firm Owner">إذا كنت محامياً أو صاحب مكتب محاماة</h3>
-                        <p data-ar="أساعدك في بناء أنظمة أرشفة ذكية وإدارة قضايا آمنة مع هيكلة وتنظيم الوثائق والمستندات القضائية وتصنيفها تلقائياً لتسريع البحث القانوني وحماية سرية بيانات الموكلين."
-                            data-en="I help you build secure case management systems to structure and organize legal documents, automating classification and accelerating legal research while protecting client data confidentiality.">
-                            أساعدك في بناء أنظمة أرشفة ذكية وإدارة قضايا آمنة مع هيكلة وتنظيم الوثائق والمستندات
-                            القضائية وتصنيفها تلقائياً لتسريع البحث القانوني وحماية سرية بيانات الموكلين.</p>
-                    </div>
-
-                    <div class="expertise-card">
-                        <div class="icon-box"><i class="fas fa-store"></i></div>
-                        <h3 data-ar="إذا كنت تاجرًا أو صاحب متجر" data-en="If You Are a Merchant">إذا كنت تاجرًا أو صاحب
-                            متجر</h3>
-                        <p data-ar="أساعدك في أتمتة إدارة المخزون، وتوقع مواسم ذروة الطلب وانخفاضه باستخدام الذكاء الاصطناعي (مثل نظام موسم) لتقليل الهدر وزيادة المبيعات."
-                            data-en="I help you automate inventory management and forecast demand peaks using AI to reduce waste and maximize sales.">
-                            أساعدك في أتمتة إدارة المخزون، وتوقع مواسم ذروة الطلب وانخفاضه باستخدام الذكاء الاصطناعي
-                            (مثل نظام موسم) لتقليل الهدر وزيادة المبيعات.</p>
-                    </div>
-
-                    <div class="expertise-card">
-                        <div class="icon-box"><i class="fas fa-building"></i></div>
-                        <h3 data-ar="إذا كنت صاحب مؤسسة أو شركة" data-en="If You Are a Business Owner">إذا كنت صاحب
-                            مؤسسة أو شركة</h3>
-                        <p data-ar="نقوم برقمنة أعمالك بالكامل وتحويل المعاملات الورقية المجهدة إلى أنظمة اتصالات إدارية وأرشفة سحابية آمنة وبنية تحتية مستقرة قابلة للتوسع."
-                            data-en="We fully digitize your operations, transforming tedious paperwork into secure administrative correspondence systems and scalable infrastructure.">
-                            نقوم برقمنة أعمالك بالكامل وتحويل المعاملات الورقية المجهدة إلى أنظمة اتصالات إدارية وأرشفة
-                            سحابية آمنة وبنية تحتية مستقرة قابلة للتوسع.</p>
-                    </div>
-
-                    <div class="expertise-card">
-                        <div class="icon-box"><i class="fas fa-lightbulb"></i></div>
-                        <h3 data-ar="إذا كنت رائد أعمال أو صاحب فكرة" data-en="If You Are an Entrepreneur">إذا كنت رائد
-                            أعمال أو صاحب فكرة</h3>
-                        <p data-ar="أقود معك التخطيط التقني وهندسة الأنظمة لبناء نموذج منتجك الأولي (MVP) في وقت قياسي وبأعلى معايير الأمان وجودة الأكواد."
-                            data-en="I lead the technical planning and system architecture to build your MVP in record time with top-tier security and code quality.">
-                            أقود معك التخطيط التقني وهندسة الأنظمة لبناء نموذج منتجك الأولي (MVP) في وقت قياسي وبأعلى
-                            معايير الأمان وجودة الأكواد.</p>
-                    </div>
-
-                    <div class="expertise-card">
-                        <div class="icon-box"><i class="fas fa-bus-alt"></i></div>
-                        <h3 data-ar="إذا كنت تدير عمليات موسمية وميدانية" data-en="If You Manage Seasonal Operations">
-                            إذا كنت تدير عمليات موسمية وميدانية</h3>
-                        <p data-ar="نوفر لك حلولاً تقنية ميدانية (تطبيقات أندرويد متكاملة، أنظمة تذاكر ذكية، تتبع حشود) مصممة للعمل تحت الضغط العالي والمفاجئ لضمان دقة البيانات وسرعتها."
-                            data-en="We provide on-the-ground technical solutions (integrated Android apps, smart ticketing systems) designed to operate smoothly under high pressure.">
-                            نوفر لك حلولاً تقنية ميدانية (تطبيقات أندرويد متكاملة، أنظمة تذاكر ذكية، تتبع حشود) مصممة
-                            للعمل تحت الضغط العالي والمفاجئ لضمان دقة البيانات وسرعتها.</p>
-                    </div>
-                </div>
+                <div class="expertise-grid" id="partnership-container"></div>
             </div>
         </section>
 
@@ -3628,6 +2701,8 @@
                 <a href="#home" class="footer-link" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
                 <a href="#education" class="footer-link" data-ar="المؤهلات" data-en="Education">المؤهلات</a>
                 <a href="#expertise" class="footer-link" data-ar="الخبرات" data-en="Expertise">الخبرات</a>
+                <a href="#collaborations" class="footer-link" data-ar="التعاونات" data-en="Experience">التعاونات</a>
+                <a href="#people" class="footer-link" data-ar="شخصيات" data-en="Network">شخصيات</a>
                 <a href="#projects" class="footer-link" data-ar="المشاريع" data-en="Projects">المشاريع</a>
                 <a href="#gallery" class="footer-link" data-ar="معرض الصور" data-en="Gallery">معرض الصور</a>
                 <a href="#news" class="footer-link" data-ar="مقالات وأخبار" data-en="News & Articles">مقالات وأخبار</a>
@@ -3647,21 +2722,16 @@
             <button class="lightbox-close-btn" onclick="closeLightbox()" aria-label="Close Lightbox">
                 <i class="fas fa-times"></i>
             </button>
-
             <div class="lightbox-counter" id="lightbox-counter">1 / 12</div>
-
             <button class="lightbox-arrow lightbox-prev" onclick="prevLightbox(event)" aria-label="Previous Image">
                 <i class="fas fa-chevron-right lightbox-prev-icon"></i>
             </button>
-
             <div class="lightbox-img-wrap">
                 <img id="lightbox-img" src="" alt="Gallery Preview" class="lightbox-img">
             </div>
-
             <button class="lightbox-arrow lightbox-next" onclick="nextLightbox(event)" aria-label="Next Image">
                 <i class="fas fa-chevron-left lightbox-next-icon"></i>
             </button>
-
             <div class="lightbox-details">
                 <h3 class="lightbox-title" id="lightbox-title">عنوان الصورة</h3>
                 <p class="lightbox-desc" id="lightbox-desc">وصف الصورة</p>
@@ -3669,12 +2739,642 @@
         </div>
     </div>
 
-    <!-- Global Robust JavaScript -->
+    <!-- JavaScript Application Engine -->
     <script>
-        /**
-         * Ehab Yar Portfolio - Master Dynamic Engine
-         */
-        const initialDefaultData = { "hero": { "greetingAr": "أهلاً بك، أنا", "greetingEn": "Welcome, I am", "nameAr": "إيهاب يار", "nameEn": "Ehab Yar", "phrasesAr": ["باحث ماجستير وعالم حاسب", "رئيس تقني ومستشار حلول", "مهندس واجهات خلفية وقواعد بيانات", "قائد التحول الرقمي والذكاء الاصطناعي", "محلل ومصمم نظم برمجية"], "phrasesEn": ["Master's Candidate & Computer Scientist", "CTO & Technical Consultant", "Backend & Database Architect", "Digital Transformation & AI Lead", "Systems Analyst & Architect"], "descAr": "عالم حاسب وباحث ماجستير في قسم علوم الحاسب والذكاء الاصطناعي بكلية الحاسبات بجامعة أم القرى. أتخصص في تطوير الواجهات الخلفية وإدارة قواعد البيانات وهندسة أنظمة آمنة وقابلة للتوسع.", "descEn": "Computer Scientist and Master's Candidate at the Department of Computer Science & Artificial Intelligence, College of Computing, Umm Al-Qura University. Specializing in backend development, database architecture, and secure scalable systems.", "profileImg": "assets/images/ehab-nabeel-yar-computer-scientist-profile.png", "logoImg": "assets/images/ehab-yar-official-logo.png" }, "education": [{ "id": "edu-1", "rank": "01", "rankLabelAr": "المستوى الأكاديمي المتقدم", "rankLabelEn": "Advanced Academic Level", "degreeAr": "ماجستير علوم الحاسب", "degreeEn": "M.Sc. in Computer Science (General)", "statusAr": "الحالة الدراسية الحالية: طالب ماجستير (مستمر)", "statusEn": "Current Study Status: Master's Candidate", "badgeAr": "قيد الدراسة حالياً", "badgeEn": "Current Candidate", "isCert": false, "label1Ar": "الجامعة:", "label1En": "University:", "val1Ar": "جامعة أم القرى", "val1En": "Umm Al-Qura University", "label2Ar": "الكلية:", "label2En": "College:", "val2Ar": "كلية الحاسبات", "val2En": "College of Computing", "label3Ar": "القسم / التخصص:", "label3En": "Department / Major:", "val3Ar": "قسم علوم الحاسب والذكاء الاصطناعي", "val3En": "Dept. of Computer Science & AI", "icon": "fas fa-user-graduate", "highlight": true }, { "id": "cert-pmp", "rank": "02", "rankLabelAr": "الاعتماد المهني القيادي", "rankLabelEn": "Executive Professional Credential", "degreeAr": "محترف إدارة المشاريع (PMP®)", "degreeEn": "Project Management Professional (PMP®)", "statusAr": "الحالة الحالية: مؤهل للاختبار ومُرشح للاعتماد (قريباً)", "statusEn": "Current Status: Exam Eligible Candidate - PMI", "badgeAr": "مؤهل للاختبار", "badgeEn": "Exam Eligible", "isCert": true, "label1Ar": "الجهة المانحة:", "label1En": "Issuing Body:", "val1Ar": "معهد إدارة المشاريع العالمي (PMI)", "val1En": "Project Management Institute (PMI)", "label2Ar": "المجال المعتمد:", "label2En": "Certified Domain:", "val2Ar": "إدارة المشاريع الاحترافية والتحول الرقمي", "val2En": "Professional Project Management & Digital Transformation", "label3Ar": "نطاق المنهجيات:", "label3En": "Methodologies:", "val3Ar": "منهجيات إدارة المشاريع الرشيقة والتنبؤية", "val3En": "Agile, Predictive & Hybrid Frameworks", "icon": "fas fa-award", "highlight": true }, { "id": "edu-2", "rank": "03", "rankLabelAr": "المؤهل الجامعي الأساسي", "rankLabelEn": "Foundational Degree", "degreeAr": "بكالوريوس علوم الحاسب الآلي", "degreeEn": "B.Sc. in Computer Science (Excellence)", "statusAr": "المؤهل الحالي: خريج الدفعة 74 بتقدير ممتاز", "statusEn": "Current Degree: 74th Batch Graduate with Excellence", "badgeAr": "تقدير ممتاز", "badgeEn": "Excellence", "isCert": false, "label1Ar": "الجامعة:", "label1En": "University:", "val1Ar": "جامعة أم القرى", "val1En": "Umm Al-Qura University", "label2Ar": "الكلية:", "label2En": "College:", "val2Ar": "كلية الحاسبات", "val2En": "College of Computing", "label3Ar": "القسم / التخصص:", "label3En": "Department / Major:", "val3Ar": "قسم علوم الحاسب والذكاء الاصطناعي", "val3En": "Dept. of Computer Science & AI", "icon": "fas fa-graduation-cap", "highlight": false }], "expertise": [{ "id": "exp-1", "icon": "fas fa-server", "titleAr": "تطوير الواجهات الخلفية وقواعد البيانات", "titleEn": "Backend & Database Architecture", "descAr": "متخصص في إدارة أنظمة قواعد البيانات مثل MySQL و MariaDB و NoSQL، مع خبرة متقدمة في Node.js و PHP و Java لضمان سلامة البيانات وأدائها.", "descEn": "Specialized in database management including MySQL, MariaDB, and NoSQL, with advanced expertise in Node.js, PHP and Java to ensure data integrity.", "tags": ["MySQL", "MariaDB", "Node.js", "PHP", "Java", "REST APIs"] }, { "id": "exp-sys-analysis", "icon": "fas fa-sitemap", "titleAr": "تحليل وتصميم النظم البرمجية", "titleEn": "Systems Analysis & Design", "descAr": "تحليل متطلبات الأعمال المعقدة، نمذجة تدفق البيانات والعمليات (BPMN & DFD)، وتصميم المخططات الهندسية (UML) لتحويل الاحتياجات التشغيلية إلى نظم برمجية متكاملة وقابلة للتوسع.", "descEn": "Analyzing complex business requirements, modeling data and workflow processes (BPMN & DFD), and designing architectural blueprints (UML) to transform operational needs into scalable software systems.", "tags": ["Systems Analysis", "UML & DFD", "Requirements Engineering", "BPMN", "Process Modeling", "Software Architecture"] }, { "id": "exp-2", "icon": "fas fa-project-diagram", "titleAr": "هندسة البرمجيات الآمنة", "titleEn": "Secure Software Architecture", "descAr": "تصميم بنية تحتية قابلة للتوسع للمشاريع الضخمة، مع التركيز على الأداء العالي والتحول الرقمي الشامل للشركات والمؤسسات.", "descEn": "Designing scalable infrastructure for large-scale projects, focusing on high performance and comprehensive digital transformation for enterprises.", "tags": ["System Architecture", "Scalability", "Security", "Code Reviews", "Digital Transformation"] }, { "id": "exp-3", "icon": "fas fa-network-wired", "titleAr": "الشبكات والخوادم المحلية", "titleEn": "Networking & Local Servers", "descAr": "خبرة في إدارة أنظمة الخوادم المحلية، إعداد شبكات VLAN، وبناء أنظمة مراقبة حية لضمان استقرار العمليات التقنية.", "descEn": "Expertise in managing local servers, configuring VLANs, and building real-time monitoring systems to ensure the stability of technical operations.", "tags": ["Local Servers", "VLAN", "Real-Time Monitoring", "Telemetry"] }], "collaborations": [{ "id": "collab-1", "icon": "fas fa-rocket", "titleAr": "فريق FENY", "titleEn": "FENY", "descAr": "قيادة الفريق التقني، تنفيذ خرائط الطريق التقنية، ودمج تقنيات الويب الحديثة لمشاريع التحول الرقمي كعالم حاسب.", "descEn": "Technical Lead Developer implementing technical roadmaps and integrating modern web technologies for digital transformation projects." }, { "id": "collab-2", "icon": "fas fa-building", "titleAr": "مؤسسة شعاع الشروق المتميزة", "titleEn": "Shoa'a Shorouk Co.", "descAr": "إدارة مشاريع التحول الرقمي الكاملة، بما في ذلك بناء أنظمة الاتصالات الإدارية وتحسين البنية التحتية التقنية.", "descEn": "Managed full digital transformation projects, including building administrative correspondence systems and optimizing infrastructure." }, { "id": "collab-3", "icon": "fas fa-kaaba", "titleAr": "شركة ضيوف البيت (خدمات الحج)", "titleEn": "Albait Guests (Hajj Services)", "descAr": "خبرة تمتد لـ 4 سنوات في إدارة وتطوير العمليات التقنية وأنظمة جوازات الحج بمركز الخدمة تحت رئاسة الأستاذ هتان بن جمال خان، مع تطوير حلول ذكية لإدارة وتتبع العمليات الميدانية والبيانات الحية.", "descEn": "4-year extensive track record managing and digitizing Hajj systems and field operations at the Service Center headed by Mr. Hattan Jamal Khan, building intelligent real-time platforms." }], "projects": [{ "id": "prj-1", "titleAr": "موسم (Mawsem)", "titleEn": "Mawsem", "descAr": "منصة مدعومة بالذكاء الاصطناعي للتنبؤ بالطلب في قطاع التجزئة باستخدام خوارزميات SARIMAX.", "descEn": "An AI-driven retail demand forecasting platform using SARIMAX algorithms.", "tags": ["AI / ML", "SARIMAX", "Node.js"] }, { "id": "prj-2", "titleAr": "نظام الاتصالات الإدارية", "titleEn": "Admin Correspondence", "descAr": "مشروع تحول رقمي شامل لمؤسسة شعاع الشروق بتطوير PHP نقية ونموذج Naive Bayes.", "descEn": "Full digital transformation for Shoa'a Shorouk built with pure PHP (OOP) and Naive Bayes.", "tags": ["Pure PHP (OOP)", "Custom ORM", "Naive Bayes"] }, { "id": "prj-3", "titleAr": "نظام مراقبة الخوادم المحلية", "titleEn": "Local Servers Monitoring", "descAr": "نظام ذكي لمراقبة أداء الخوادم في الوقت الفعلي مع لوحة تحكم تفاعلية.", "descEn": "A smart real-time monitoring system offering interactive dashboards and centralized logs.", "tags": ["Monitoring", "Dashboards", "Logs"] }, { "id": "prj-4", "titleAr": "السكرتير الذكي", "titleEn": "Smart Secretary (AI)", "descAr": "مساعد إداري مدعوم بالذكاء الاصطناعي يفهم اللغة الطبيعية ويكتشف تعارضات المواعيد بدقة.", "descEn": "An AI-powered administrative assistant understanding Arabic NLP and detecting schedule conflicts.", "tags": ["AI Assistant", "Gemini API", "NLP"] }, { "id": "prj-5", "titleAr": "نظام الإدارة الذكي لجوازات الحج", "titleEn": "Hajj Passport System", "descAr": "نظام متكامل لرقمنة بيانات الحجاج مع تحليلات تنبؤية وتكامل سحابي مستقر.", "descEn": "A comprehensive system to digitize pilgrim data with predictive analytics.", "tags": ["Cloud", "Analytics", "Mobile"] }, { "id": "prj-6", "titleAr": "محرك ومفسر قوالب PPHP", "titleEn": "PPHP Template Engine", "descAr": "لغة قوالب ومفسر مخصص لـ PHP يهدف لتبسيط وتسريع عملية التطوير، مع دعم كامل للإضافات في VS Code.", "descEn": "A custom template language and interpreter for PHP designed to simplify and speed up development, with full support for VS Code extensions.", "tags": ["PHP Internals", "Interpreter", "VS Code Extension"], "linkUrl": "https://github.com/feny1/pphp", "linkTextAr": "عرض على GitHub", "linkTextEn": "View on GitHub", "linkIcon": "fab fa-github" }], "gallery": [{ "id": "gal-1", "image": "assets/images/ehab-yar-umm-al-qura-university-graduation-portrait.jpg", "badgeAr": "حفل التخرج", "badgeEn": "Graduation", "titleAr": "حفل تخرج الدفعة 74 - جامعة أم القرى", "titleEn": "74th Graduation Ceremony - Umm Al-Qura", "descAr": "توثيق التكريم والاحتفال بحفل تخرج الدفعة 74 من جامعة أم القرى كعالم حاسب متميز.", "descEn": "Documenting the honor and celebration of the 74th graduation ceremony at Umm Al-Qura University.", "category": "grad" }, { "id": "gal-2", "image": "assets/images/ehab-yar-computer-science-bachelor-excellence-uqu.jpg", "badgeAr": "الدفعة 74", "badgeEn": "74th Batch", "titleAr": "منصة التكريم الجامعي", "titleEn": "Academic Honor Stage", "descAr": "لحظة التكريم والتتويج على منصة حفل التخرج بجامعة أم القرى.", "descEn": "A distinguished moment on stage at the Umm Al-Qura University graduation ceremony.", "category": "grad" }, { "id": "gal-3", "image": "assets/images/ehab-yar-74th-batch-graduation-ceremony-umm-al-qura.jpg", "badgeAr": "حفل التخرج", "badgeEn": "Graduation", "titleAr": "التخرج والتميز الأكاديمي - علوم الحاسب", "titleEn": "Graduation & Academic Excellence - Computer Science", "descAr": "إيهاب يار في حفل التخرج الرسمي لعلوم الحاسب بجامعة أم القرى.", "descEn": "Ehab Yar at the official Computer Science graduation ceremony at Umm Al-Qura University.", "category": "grad" }, { "id": "gal-4", "image": "assets/images/ehab-yar-mawsem-ai-retail-forecasting-booth.jpg", "badgeAr": "لقطات التخرج", "badgeEn": "Ceremony Highlights", "titleAr": "أجواء وفرحة التخرج", "titleEn": "Graduation Joy & Atmosphere", "descAr": "مشاركة الفرحة والتتويج الأكاديمي مع الزملاء والأساتذة.", "descEn": "Sharing the celebration and academic achievement with peers and mentors.", "category": "grad" }, { "id": "gal-5", "image": "assets/images/ehab-yar-mawsem-ai-project-presentation-honors.jpg", "badgeAr": "ذكريات التخرج", "badgeEn": "Milestone Moments", "titleAr": "التكريم والتقدير الجامعي", "titleEn": "University Honor & Recognition", "descAr": "محطة فارقة تتوج سنوات من دراسة وبحوث علوم الحاسب والأنظمة وقواعد البيانات.", "descEn": "A milestone celebrating years of Computer Science research and database systems.", "category": "grad" }, { "id": "gal-6", "image": "assets/images/ehab-yar-college-of-computing-graduation-celebration.jpg", "badgeAr": "القيادة المهنية", "badgeEn": "Leadership", "titleAr": "الهوية المهنية والقيادة التقنية", "titleEn": "Professional Identity & Leadership", "descAr": "رئيس تقني وعالم حاسب يقود مشاريع التحول الرقمي والذكاء الاصطناعي.", "descEn": "CTO and Computer Scientist leading digital transformation and AI innovations.", "category": "work" }, { "id": "gal-7", "image": "assets/images/ehab-yar-executive-tech-lead-studio-portrait.jpg", "badgeAr": "مشروع التخرج", "badgeEn": "Graduation Project", "titleAr": "معرض مشاريع التخرج - منصة موسم (Mawsem)", "titleEn": "Graduation Projects Exhibition - Mawsem", "descAr": "عرض وتقديم مشروع التخرج (منصة موسم للتنبؤ بالطلب بالذكاء الاصطناعي) وفريق العمل في معرض مشاريع التخرج بجامعة أم القرى.", "descEn": "Presenting the graduation project (Mawsem AI demand forecasting platform) with the engineering team at the Umm Al-Qura University Graduation Exhibition.", "category": "grad" }, { "id": "gal-8", "image": "assets/images/ehab-yar-backend-database-architect-workspace.jpg", "badgeAr": "حفل التخرج", "badgeEn": "Graduation", "titleAr": "حفل تخرج الدفعة 74 - جامعة أم القرى (1447هـ / 2026م)", "titleEn": "74th Graduation Ceremony - Umm Al-Qura (1447H / 2026)", "descAr": "الصورة الرسمية في حفل تخرج الدفعة 74 بجامعة أم القرى - كلية الحاسبات وتتويج مسيرة علوم الحاسب الآلي.", "descEn": "Official portrait at the 74th Graduation Ceremony of Umm Al-Qura University - College of Computing.", "category": "grad" }, { "id": "gal-9", "image": "assets/images/ehab-yar-systems-analyst-consultant-identity.jpg", "badgeAr": "محطات", "badgeEn": "Moments", "titleAr": "لقطات العمل والمشاريع الميدانية", "titleEn": "Project & Field Operations", "descAr": "متابعة وإدارة العمليات التقنية والأنظمة التشغيلية تحت الضغط العالي.", "descEn": "Managing technical operations and mission-critical systems in the field.", "category": "events" }, { "id": "gal-10", "image": "assets/images/ehab-yar-digital-transformation-tech-conference.jpg", "badgeAr": "حفل التخرج", "badgeEn": "Graduation", "titleAr": "لحظات وفرحة التخرج مع الزملاء - الدفعة 74", "titleEn": "Graduation Moments with Classmates - 74th Batch", "descAr": "أجواء الفرحة والاحتفال بحفل التخرج الرسمي بجامعة أم القرى مع زملاء كلية الحاسب الآلي ونظم المعلومات.", "descEn": "Celebration and joy with Computer Science peers during the official graduation ceremony at Umm Al-Qura University.", "category": "grad" }, { "id": "gal-11", "image": "assets/images/ehab-yar-hajj-technical-operations-service-center.jpg", "badgeAr": "موسم الحج 1447هـ", "badgeEn": "Hajj 1447H", "titleAr": "إدارة العمليات الميدانية - موسم الحج (مركز الخدمة)", "titleEn": "Field Technical Operations - Hajj (Service Center)", "descAr": "توثيق قيادة العمليات الرقمية والأنظمة الميدانية لجوازات الحج بمركز الخدمة تحت رئاسة الأستاذ هتان بن جمال خان.", "descEn": "Documenting digital operations and field passport systems at the Service Center led by Mr. Hattan Jamal Khan.", "category": "events" }, { "id": "gal-12", "image": "assets/images/ehab-yar-computer-science-master-research-symposium.png", "badgeAr": "الهوية البصرية", "badgeEn": "Brand Identity", "titleAr": "الشعار الرسمي والهوية البرمجية", "titleEn": "Official Identity & Signature", "descAr": "الهوية البرمجية الرسمية لإيهاب يار feny.", "descEn": "Official brand identity for Ehab Yar feny.", "category": "work" }], "news": [{ "id": "news-1", "newspaper": "صحيفة هوية", "newspaperEn": "Howyah Newspaper", "title": "إيهاب بن نبيل يار ومستقبل الأعمال في عصر الذكاء الاصطناعي", "titleEn": "Ehab Nabeel Yar and the Future of Business in the Age of AI", "url": "https://howyah.com/%d8%a5%d9%8a%d9%87%d8%a7%d8%a8-%d8%a8%d9%86-%d9%86%d8%a8%d9%8a%d9%84-%d9%8a%d8%a7%d8%b1-%d9%88%d9%85%d8%b3%d8%aa%d9%82%d8%a8%d9%84-%d8%a7%d9%84%d8%a3%d8%b9%d9%85%d8%a7%d9%84-%d9%81%d9%8a-%d8%b9%d8%b5/", "badge": "تغطية صحفية", "badgeEn": "Press Coverage" }, { "id": "news-2", "newspaper": "إكستيرا نيوز", "newspaperEn": "Extera News", "title": "إيهاب بن نبيل يار والذكاء الاصطناعي في صياغة مستقبل الاقتصاد الرقمي", "titleEn": "Ehab Nabeel Yar and Artificial Intelligence in Shaping the Digital Economy", "url": "https://exteranews.com/%d8%a5%d9%8a%d9%87%d8%a7%d8%a8-%d8%a8%d9%86-%d9%86%d8%a8%d9%8a%d9%84-%d9%8a%d8%a7%d8%b1-%d9%88%d8%a7%d9%84%d8%b0%d9%83%d8%a7%d8%a1-%d8%a7%d9%84%d8%a7%d8%b5%d8%b7%d9%86%d8%a7%d8%b9%d9%8a-%d9%81%d9%8a/", "badge": "تغطية صحفية", "badgeEn": "Press Coverage" }, { "id": "news-3", "newspaper": "صحيفة أخبار الوطن", "newspaperEn": "Akhbar Al-Watan Newspaper", "title": "إيهاب بن نبيل يار: الذكاء الاصطناعي والتحول الرقمي في دعم الاقتصاد", "titleEn": "Ehab Nabeel Yar: AI & Digital Transformation Supporting the Economy", "url": "https://akhber-alwatan.com/?p=57996", "badge": "تغطية صحفية", "badgeEn": "Press Coverage" }, { "id": "news-4", "newspaper": "كايرو 24", "newspaperEn": "Cairo 24", "title": "إيهاب بن نبيل يار يتحدث عن دور الذكاء الاصطناعي في مستقبل الاقتصاد الرقمي", "titleEn": "Ehab Nabeel Yar Speaks on the Role of AI in the Future of Digital Economy", "url": "https://www.cairo24.online/2026/08/59.html?m=1", "badge": "تغطية صحفية", "badgeEn": "Press Coverage" }, { "id": "news-5", "newspaper": "صحيفة الدستور 24", "newspaperEn": "Aldostor 24", "title": "إيهاب بن نبيل يار ودور التخطيط الهندسي في نجاح المشاريع التقنية", "titleEn": "Ehab Nabeel Yar & The Role of System Planning in Tech Projects", "url": "https://aldostor24.com/%d8%a5%d9%8a%d9%87%d8%a7%d8%a8-%d8%a8%d9%86-%d9%86%d8%a8%d9%8a%d9%84-%d9%8a%d8%a7%d8%b1-%d9%88%d8%af%d9%88%d8%b1-%d8%a7%d9%84%d8%aa%d8%ae%d8%b7%d9%8a%d8%b7-%d8%a7%d9%84%d9%87%d9%86%d8%af%d8%b3%d9%8a/", "badge": "تغطية صحفية", "badgeEn": "Press Coverage" }, { "id": "news-6", "newspaper": "الخبر الفوري", "newspaperEn": "Al-Khabar Al-Fawri", "title": "إيهاب بن نبيل يار وتطوير المنتجات الرقمية المبتكرة", "titleEn": "Ehab Nabeel Yar and Developing Innovative Digital Products", "url": "https://alkhabaralfawriu.com/%d8%a5%d9%8a%d9%87%d8%a7%d8%a8-%d8%a8%d9%86-%d9%86%d8%a8%d9%8a%d9%84-%d9%8a%d8%a7%d8%b1-%d9%88%d8%aa%d8%b7%d9%88%d9%8a%d8%b1-%d8%a7%d9%84%d9%85%d9%86%d8%aa%d8%ac%d8%a7%d8%aa-%d8%a7%d9%84%d8%b1%d9%82/", "badge": "تغطية صحفية", "badgeEn": "Press Coverage" }, { "id": "news-7", "newspaper": "صحيفة الأخبار", "newspaperEn": "Al-Akhbar News", "title": "إيهاب بن نبيل يار: الذكاء الاصطناعي وآفاق التحول الرقمي الحديث", "titleEn": "Ehab Nabeel Yar: Artificial Intelligence & Modern Digital Horizons", "url": "https://alakhbar.org/26025/", "badge": "تغطية صحفية", "badgeEn": "Press Coverage" }, { "id": "news-8", "newspaper": "مصر مباشر", "newspaperEn": "Misr Mubashir", "title": "إيهاب بن نبيل يار ومستقبل هندسة النظم السحابية وقواعد البيانات", "titleEn": "Ehab Nabeel Yar & The Future of Cloud Architecture and Databases", "url": "https://misrmubashir.com/295626", "badge": "تغطية صحفية", "badgeEn": "Press Coverage" }, { "id": "news-9", "newspaper": "الفجر العربي 24", "newspaperEn": "Al-Fajr Al-Arabi 24", "title": "إيهاب بن نبيل يار ودور التقنيات الحديثة في استقرار قواعد البيانات", "titleEn": "Ehab Nabeel Yar and Modern Technologies in Database Reliability", "url": "https://alfagrelaraby24.com/37978/", "badge": "تغطية صحفية", "badgeEn": "Press Coverage" }, { "id": "news-10", "newspaper": "نجوم بلس", "newspaperEn": "Nojoom Plus", "title": "إيهاب بن نبيل يار وهندسة المنتجات التقنية الذكية", "titleEn": "Ehab Nabeel Yar and Smart Tech Product Engineering", "url": "https://nojoomplus.com/149825/%d8%a5%d9%8a%d9%87%d8%a7%d8%a8-%d8%a8%d9%86-%d9%86%d8%a8%d9%8a%d9%84-%d9%8a%d8%a7%d8%b1-%d9%88%d9%87%d9%86%d8%af%d8%b3%d8%a9-%d8%a7%d9%84%d9%85%d9%86%d8%aa%d8%ac%d8%a7%d8%aa-%d8%a7%d9%84%d8%aa%d9%82/", "badge": "تغطية صحفية", "badgeEn": "Press Coverage" }, { "id": "news-11", "newspaper": "موجز نت", "newspaperEn": "Mowjaz Net", "title": "إيهاب بن نبيل يار: الذكاء الاصطناعي وتشكيل مستقبل الأنظمة الذكية", "titleEn": "Ehab Nabeel Yar: AI & Shaping the Future of Intelligent Systems", "url": "https://mowjaz.net/%d8%a5%d9%8a%d9%87%d8%a7%d8%a8-%d8%a8%d9%86-%d9%86%d8%a8%d9%8a%d9%84-%d9%8a%d8%a7%d8%b1-%d8%a7%d9%84%d8%b0%d9%83%d8%a7%d8%a1-%d8%a7%d9%84%d8%a7%d8%b5%d8%b7%d9%86%d8%a7%d8%b9%d9%8a-%d9%88%d8%aa%d8%b4/", "badge": "تغطية صحفية", "badgeEn": "Press Coverage" }], "partnership": [{ "id": "part-1", "icon": "fas fa-robot", "titleAr": "إذا كنت تحتاج أدوات ذكاء اصطناعي مخصصة", "titleEn": "Custom AI Tools & Solutions", "descAr": "أقوم ببناء وتطوير أدوات ذكاء اصطناعي مخصصة ومساعدين أذكياء (AI Agents) لتلبية احتياجاتك اليومية، مثل جدولة المواعيد الذكية، واكتشاف التعارضات، وتحليل النصوص والبيانات باللغة الطبيعية لرفع كفاءة أعمالك.", "descEn": "I build and develop custom AI tools and intelligent agents specialized for your daily operations, providing advanced natural language processing and task automation." }, { "id": "part-2", "icon": "fas fa-gavel", "titleAr": "إذا كنت محامياً أو صاحب مكتب محاماة", "titleEn": "If You Are a Lawyer or Law Firm Owner", "descAr": "أساعدك في بناء أنظمة أرشفة ذكية وإدارة قضايا آمنة مع هيكلة وتنظيم الوثائق والمستندات القضائية وتصنيفها تلقائياً لتسريع البحث القانوني وحماية سرية بيانات الموكلين.", "descEn": "I help you build secure case management systems to structure and organize legal documents, automating classification and accelerating legal research while protecting client data confidentiality." }, { "id": "part-3", "icon": "fas fa-store", "titleAr": "إذا كنت تاجرًا أو صاحب متجر", "titleEn": "If You Are a Merchant", "descAr": "أساعدك في أتمتة إدارة المخزون، وتوقع مواسم ذروة الطلب وانخفاضه باستخدام الذكاء الاصطناعي (مثل نظام موسم) لتقليل الهدر وزيادة المبيعات.", "descEn": "I help you automate inventory management and forecast demand peaks using AI to reduce waste and maximize sales." }, { "id": "part-4", "icon": "fas fa-building", "titleAr": "إذا كنت صاحب مؤسسة أو شركة", "titleEn": "If You Are a Business Owner", "descAr": "نقوم برقمنة أعمالك بالكامل وتحويل المعاملات الورقية المجهدة إلى أنظمة اتصالات إدارية وأرشفة سحابية آمنة وبنية تحتية مستقرة قابلة للتوسع.", "descEn": "We fully digitize your operations, transforming tedious paperwork into secure administrative correspondence systems and scalable infrastructure." }, { "id": "part-5", "icon": "fas fa-lightbulb", "titleAr": "إذا كنت رائد أعمال أو صاحب فكرة", "titleEn": "If You Are an Entrepreneur", "descAr": "أقود معك التخطيط التقني وهندسة الأنظمة لبناء نموذج منتجك الأولي (MVP) في وقت قياسي وبأعلى معايير الأمان وجودة الأكواد.", "descEn": "I lead the technical planning and system architecture to build your MVP in record time with top-tier security and code quality." }, { "id": "part-6", "icon": "fas fa-bus-alt", "titleAr": "إذا كنت تدير عمليات موسمية وميدانية", "titleEn": "If You Manage Seasonal Operations", "descAr": "نوفر لك حلولاً تقنية ميدانية (تطبيقات أندرويد متكاملة، أنظمة تذاكر ذكية، تتبع حشود) مصممة للعمل تحت الضغط العالي والمفاجئ لضمان دقة البيانات وسرعتها.", "descEn": "We provide on-the-ground technical solutions (integrated Android apps, smart ticketing systems) designed to operate smoothly under high pressure." }], "contact": { "titleAr": "هل تبحث عن شريك تقني؟", "titleEn": "Seeking a Tech Partner?", "descAr": "دعنا نناقش كيف يمكن لخبرتي كعالم حاسب أن تدعم نمو مشروعك وتضمن استقراره التقني.", "descEn": "Let's discuss how my expertise as a Computer Scientist can support your project's growth and ensure its technical stability.", "whatsapp": "966599727412", "email": "contact@eny.sa", "twitter": "https://x.com/_f_eny", "linkedin": "https://www.linkedin.com/in/ehab-yar-4a1bb4193/", "github": "https://github.com/feny1" } };
+        const initialDefaultData = {
+            "hero": {
+                "greetingAr": "أهلاً بك، أنا",
+                "greetingEn": "Welcome, I am",
+                "nameAr": "إيهاب يار",
+                "nameEn": "Ehab Yar",
+                "phrasesAr": [
+                    "باحث ماجستير وعالم حاسب",
+                    "رئيس تقني ومستشار حلول",
+                    "مهندس واجهات خلفية وقواعد بيانات",
+                    "قائد التحول الرقمي والذكاء الاصطناعي",
+                    "محلل ومصمم نظم برمجية"
+                ],
+                "phrasesEn": [
+                    "Master's Candidate & Computer Scientist",
+                    "CTO & Technical Consultant",
+                    "Backend & Database Architect",
+                    "Digital Transformation & AI Lead",
+                    "Systems Analyst & Architect"
+                ],
+                "descAr": "عالم حاسب وباحث ماجستير في قسم علوم الحاسب والذكاء الاصطناعي بكلية الحاسبات بجامعة أم القرى. أتخصص في تطوير الواجهات الخلفية وإدارة قواعد البيانات وهندسة أنظمة آمنة وقابلة للتوسع.",
+                "descEn": "Computer Scientist and Master's Candidate at the Department of Computer Science & Artificial Intelligence, College of Computing, Umm Al-Qura University. Specializing in backend development, database architecture, and secure scalable systems.",
+                "profileImg": "assets/images/ehab-nabeel-yar-computer-scientist-profile.png",
+                "logoImg": "assets/images/ehab-yar-official-logo.png"
+            },
+            "education": [
+                {
+                    "id": "edu-1",
+                    "rank": "01",
+                    "rankLabelAr": "المستوى الأكاديمي المتقدم",
+                    "rankLabelEn": "Advanced Academic Level",
+                    "degreeAr": "ماجستير علوم الحاسب",
+                    "degreeEn": "M.Sc. in Computer Science (General)",
+                    "statusAr": "الحالة الدراسية الحالية: طالب ماجستير (مستمر)",
+                    "statusEn": "Current Study Status: Master's Candidate",
+                    "badgeAr": "قيد الدراسة حالياً",
+                    "badgeEn": "Current Candidate",
+                    "isCert": false,
+                    "label1Ar": "الجامعة:",
+                    "label1En": "University:",
+                    "val1Ar": "جامعة أم القرى",
+                    "val1En": "Umm Al-Qura University",
+                    "label2Ar": "الكلية:",
+                    "label2En": "College:",
+                    "val2Ar": "كلية الحاسبات",
+                    "val2En": "College of Computing",
+                    "label3Ar": "القسم / التخصص:",
+                    "label3En": "Department / Major:",
+                    "val3Ar": "قسم علوم الحاسب والذكاء الاصطناعي",
+                    "val3En": "Dept. of Computer Science & AI",
+                    "icon": "fas fa-user-graduate",
+                    "highlight": true
+                },
+                {
+                    "id": "cert-pmp",
+                    "rank": "02",
+                    "rankLabelAr": "الاعتماد المهني القيادي",
+                    "rankLabelEn": "Executive Professional Credential",
+                    "degreeAr": "محترف إدارة المشاريع (PMP®)",
+                    "degreeEn": "Project Management Professional (PMP®)",
+                    "statusAr": "الحالة الحالية: مؤهل للاختبار ومُرشح للاعتماد (قريباً)",
+                    "statusEn": "Current Status: Exam Eligible Candidate - PMI",
+                    "badgeAr": "مؤهل للاختبار",
+                    "badgeEn": "Exam Eligible",
+                    "isCert": true,
+                    "label1Ar": "الجهة المانحة:",
+                    "label1En": "Issuing Body:",
+                    "val1Ar": "معهد إدارة المشاريع العالمي (PMI)",
+                    "val1En": "Project Management Institute (PMI)",
+                    "label2Ar": "المجال المعتمد:",
+                    "label2En": "Certified Domain:",
+                    "val2Ar": "إدارة المشاريع الاحترافية والتحول الرقمي",
+                    "val2En": "Professional Project Management & Digital Transformation",
+                    "label3Ar": "نطاق المنهجيات:",
+                    "label3En": "Methodologies:",
+                    "val3Ar": "منهجيات إدارة المشاريع الرشيقة والتنبؤية",
+                    "val3En": "Agile, Predictive & Hybrid Frameworks",
+                    "icon": "fas fa-award",
+                    "highlight": true
+                },
+                {
+                    "id": "edu-2",
+                    "rank": "03",
+                    "rankLabelAr": "المؤهل الجامعي الأساسي",
+                    "rankLabelEn": "Foundational Degree",
+                    "degreeAr": "بكالوريوس علوم الحاسب الآلي",
+                    "degreeEn": "B.Sc. in Computer Science (Excellence)",
+                    "statusAr": "المؤهل الحالي: خريج الدفعة 74 بتقدير ممتاز",
+                    "statusEn": "Current Degree: 74th Batch Graduate with Excellence",
+                    "badgeAr": "تقدير ممتاز",
+                    "badgeEn": "Excellence",
+                    "isCert": false,
+                    "label1Ar": "الجامعة:",
+                    "label1En": "University:",
+                    "val1Ar": "جامعة أم القرى",
+                    "val1En": "Umm Al-Qura University",
+                    "label2Ar": "الكلية:",
+                    "label2En": "College:",
+                    "val2Ar": "كلية الحاسبات",
+                    "val2En": "College of Computing",
+                    "label3Ar": "القسم / التخصص:",
+                    "label3En": "Department / Major:",
+                    "val3Ar": "قسم علوم الحاسب والذكاء الاصطناعي",
+                    "val3En": "Dept. of Computer Science & AI",
+                    "icon": "fas fa-graduation-cap",
+                    "highlight": false
+                }
+            ],
+            "expertise": [
+                {
+                    "id": "exp-1",
+                    "icon": "fas fa-server",
+                    "titleAr": "تطوير الواجهات الخلفية وقواعد البيانات",
+                    "titleEn": "Backend & Database Architecture",
+                    "descAr": "متخصص في إدارة أنظمة قواعد البيانات مثل MySQL و MariaDB و NoSQL، مع خبرة متقدمة في Node.js و PHP و Java لضمان سلامة البيانات وأدائها.",
+                    "descEn": "Specialized in database management including MySQL, MariaDB, and NoSQL, with advanced expertise in Node.js, PHP and Java to ensure data integrity.",
+                    "tags": ["MySQL", "MariaDB", "Node.js", "PHP", "Java", "REST APIs"]
+                },
+                {
+                    "id": "exp-sys-analysis",
+                    "icon": "fas fa-sitemap",
+                    "titleAr": "تحليل وتصميم النظم البرمجية",
+                    "titleEn": "Systems Analysis & Design",
+                    "descAr": "تحليل متطلبات الأعمال المعقدة، نمذجة تدفق البيانات والعمليات (BPMN & DFD)، وتصميم المخططات الهندسية (UML) لتحويل الاحتياجات التشغيلية إلى نظم برمجية متكاملة وقابلة للتوسع.",
+                    "descEn": "Analyzing complex business requirements, modeling data and workflow processes (BPMN & DFD), and designing architectural blueprints (UML) to transform operational needs into scalable software systems.",
+                    "tags": ["Systems Analysis", "UML & DFD", "Requirements Engineering", "BPMN", "Process Modeling", "Software Architecture"]
+                },
+                {
+                    "id": "exp-2",
+                    "icon": "fas fa-project-diagram",
+                    "titleAr": "هندسة البرمجيات الآمنة",
+                    "titleEn": "Secure Software Architecture",
+                    "descAr": "تصميم بنية تحتية قابلة للتوسع للمشاريع الضخمة، مع التركيز على الأداء العالي والتحول الرقمي الشامل للشركات والمؤسسات.",
+                    "descEn": "Designing scalable infrastructure for large-scale projects, focusing on high performance and comprehensive digital transformation for enterprises.",
+                    "tags": ["System Architecture", "Scalability", "Security", "Code Reviews", "Digital Transformation"]
+                },
+                {
+                    "id": "exp-3",
+                    "icon": "fas fa-network-wired",
+                    "titleAr": "الشبكات والخوادم المحلية",
+                    "titleEn": "Networking & Local Servers",
+                    "descAr": "خبرة في إدارة أنظمة الخوادم المحلية، إعداد شبكات VLAN، وبناء أنظمة مراقبة حية لضمان استقرار العمليات التقنية.",
+                    "descEn": "Expertise in managing local servers, configuring VLANs, and building real-time monitoring systems to ensure the stability of technical operations.",
+                    "tags": ["Local Servers", "VLAN", "Real-Time Monitoring", "Telemetry"]
+                }
+            ],
+            "collaborations": [
+                {
+                    "id": "collab-1",
+                    "icon": "fas fa-rocket",
+                    "titleAr": "فريق FENY",
+                    "titleEn": "FENY",
+                    "descAr": "قيادة الفريق التقني، تنفيذ خرائط الطريق التقنية، ودمج تقنيات الويب الحديثة لمشاريع التحول الرقمي كعالم حاسب.",
+                    "descEn": "Technical Lead Developer implementing technical roadmaps and integrating modern web technologies for digital transformation projects."
+                },
+                {
+                    "id": "collab-2",
+                    "icon": "fas fa-building",
+                    "titleAr": "مؤسسة شعاع الشروق المتميزة",
+                    "titleEn": "Shoa'a Shorouk Co.",
+                    "descAr": "إدارة مشاريع التحول الرقمي الكاملة، بما في ذلك بناء أنظمة الاتصالات الإدارية وتحسين البنية التحتية التقنية.",
+                    "descEn": "Managed full digital transformation projects, including building administrative correspondence systems and optimizing infrastructure."
+                },
+                {
+                    "id": "collab-3",
+                    "icon": "fas fa-kaaba",
+                    "titleAr": "شركة ضيوف البيت (خدمات الحج)",
+                    "titleEn": "Albait Guests (Hajj Services)",
+                    "descAr": "خبرة تمتد لـ 4 سنوات في إدارة وتطوير العمليات التقنية وأنظمة جوازات الحج بمركز الخدمة تحت رئاسة الأستاذ هتان بن جمال خان، مع تطوير حلول ذكية لإدارة وتتبع العمليات الميدانية والبيانات الحية.",
+                    "descEn": "4-year extensive track record managing and digitizing Hajj systems and field operations at the Service Center headed by Mr. Hattan Jamal Khan, building intelligent real-time platforms."
+                }
+            ],
+            "people": [
+                {
+                    "id": "person-hattan",
+                    "nameAr": "أ. هتان بن جمال خان",
+                    "nameEn": "Mr. Hattan Jamal Khan",
+                    "roleAr": "رئيس مركز الخدمة",
+                    "roleEn": "Head of Service Center",
+                    "badgeAr": "قيادة وإشراف",
+                    "badgeEn": "Leadership & Supervision",
+                    "orgAr": "شركة ضيوف البيت (خدمات الحج)",
+                    "orgEn": "Albait Guests (Hajj Services)",
+                    "descAr": "العمل المشترك والقيادة الميدانية على مدار 4 مواسم حج في إدارة العمليات التقنية، رقمنة أنظمة جوازات الحج، وتطوير الحلول الذكية لمتابعة الحشود ومطابقة الوثائق بدقة عالية.",
+                    "descEn": "Collaborated over 4 Hajj seasons in technical field leadership, digitizing pilgrim passport workflows, and engineering smart real-time verification and operations systems."
+                },
+                {
+                    "id": "person-khaled",
+                    "nameAr": "خالد الجمل",
+                    "nameEn": "Khaled Al-Jamal",
+                    "roleAr": "شريك مؤسس وعضو مجلس إدارة",
+                    "roleEn": "Co-founder & Board Member",
+                    "badgeAr": "فريق FENY",
+                    "badgeEn": "FENY Team",
+                    "orgAr": "FENY",
+                    "orgEn": "FENY",
+                    "descAr": "شريك ومساهم تقني رئيسي في تأسيس وتطوير منظومة FENY، قيادة خرائط الطريق البرمجية، وهندسة البنى التحتية للمشاريع الرقمية المشتركة.",
+                    "descEn": "Key partner in founding and scaling FENY, executing technical roadmaps, and architecting robust infrastructure for joint digital solutions."
+                },
+                {
+                    "id": "person-abdulaziz",
+                    "nameAr": "عبدالعزيز حافظ",
+                    "nameEn": "Abdulaziz Hafez",
+                    "roleAr": "عالم حاسب ومطور نظم",
+                    "roleEn": "Computer Scientist & Systems Dev",
+                    "badgeAr": "زميل جامعة ومشاريع",
+                    "badgeEn": "Colleague & Co-builder",
+                    "orgAr": "جامعة أم القرى • مبادرات تقنية",
+                    "orgEn": "UQU • Technical Initiatives",
+                    "descAr": "زميل دراسة بجامعة أم القرى وشريك عمل في مشاريع برمجية وهندسية متعددة، تمحورت حول تحليل الأنظمة وتطوير البرمجيات وحل المشكلات الحسابية.",
+                    "descEn": "University colleague and collaborator across multiple engineering initiatives, focusing on systems analysis, software engineering, and clean architecture."
+                },
+                {
+                    "id": "person-malek",
+                    "nameAr": "مالك اللهيبي",
+                    "nameEn": "Malek Al-Luhaibi",
+                    "roleAr": "مهندس برمجيات ونظم ذكية",
+                    "roleEn": "Software & AI Systems Engineer",
+                    "badgeAr": "شريك مشروع موسم (Mawsem)",
+                    "badgeEn": "Mawsem Co-author",
+                    "orgAr": "جامعة أم القرى (مشروع التخرج)",
+                    "orgEn": "Umm Al-Qura University",
+                    "descAr": "زميل دراسة ومشاريع تقنية متعددة، وشريك رئيسي في إنجاز وتطوير مشروع التخرج (منصة موسم للتنبؤ بالطلب بالذكاء الاصطناعي) وتحليل السلاسل الزمنية.",
+                    "descEn": "Key partner in multiple software projects and co-author of the graduation platform Mawsem (AI Retail Demand Forecasting) leveraging time-series modeling."
+                },
+                {
+                    "id": "person-zeyad",
+                    "nameAr": "زياد فلاته",
+                    "nameEn": "Zeyad Fallatah",
+                    "roleAr": "مهندس برمجيات وحلول رقمية",
+                    "roleEn": "Software & Solutions Engineer",
+                    "badgeAr": "شريك مشروع موسم (Mawsem)",
+                    "badgeEn": "Mawsem Co-author",
+                    "orgAr": "جامعة أم القرى (مشروع التخرج)",
+                    "orgEn": "Umm Al-Qura University",
+                    "descAr": "زميل دراسة ومشاريع برمجية، وشريك أساسي في تطوير منظومة منصة موسم المعروضة في معرض إنجاز، مع التركيز على تدفق البيانات وتكامل الواجهات.",
+                    "descEn": "Academic colleague and core collaborator on the Mawsem forecasting platform showcased at the Injaz exhibition, contributing to workflow and UI/UX integration."
+                },
+                {
+                    "id": "person-mohammed",
+                    "nameAr": "محمد الشريف",
+                    "nameEn": "Mohammed Al-Sharif",
+                    "roleAr": "مهندس برمجيات ونظم",
+                    "roleEn": "Software & Systems Engineer",
+                    "badgeAr": "شريك مشروع موسم (Mawsem)",
+                    "badgeEn": "Mawsem Co-author",
+                    "orgAr": "جامعة أم القرى (مشروع التخرج)",
+                    "orgEn": "Umm Al-Qura University",
+                    "descAr": "زميل دراسة ومشاريع متعددة، ومشارك في بناء منصة موسم التنبؤية بالذكاء الاصطناعي، وهندسة نماذج المعالجة وربط المكونات البرمجية.",
+                    "descEn": "Colleague across several engineering projects and key partner on the Mawsem AI platform, focusing on model integration and robust software architecture."
+                }
+            ],
+            "projects": [
+                {
+                    "id": "prj-payment",
+                    "titleAr": "المدفوعات مع إيهاب",
+                    "titleEn": "Payments with Ehab",
+                    "descAr": "واجهة موحدة ومبسطة تتيح للمتاجر وأصحاب الأعمال عرض ومشاركة بيانات حساباتهم البنكية ووسائل التحويل المعتمدة للعملاء بسهولة.",
+                    "descEn": "A centralized, clean interface enabling merchants to display and share bank account details and transfer methods with customers.",
+                    "tags": ["HTML5", "Tailwind CSS", "JavaScript", "Cloudflare Workers", "Moyasar API"],
+                    "linkUrl": "https://payment.eny.sa/",
+                    "linkTextAr": "زيارة الموقع",
+                    "linkTextEn": "Visit Website",
+                    "linkIcon": "fas fa-external-link-alt"
+                },
+                {
+                    "id": "prj-passport",
+                    "titleAr": "تطبيق قارئ الجوازات",
+                    "titleEn": "Passport Reader App",
+                    "descAr": "تطبيق مبتكر مصمم لأتمتة فحص ومطابقة وثائق وجوازات سفر الحجاج عبر طوابير معالجة غير متزامنة، مما يساهم في خفض زمن فرز الوثائق بنسبة 85% وضمان استمرارية التشغيل الميداني دون توقف.",
+                    "descEn": "An innovative application designed to automate the verification and matching of pilgrim passport data and documents using asynchronous queues, reducing document sorting time by 85% and ensuring continuous field operations.",
+                    "tags": ["OCR & NFC", "Asynchronous Queues", "Offline-First (Hybrid Data)", "Systems Architecture", "Enterprise Robustness"],
+                    "linkUrl": "https://eny.sa/assets/passport_app.pdf",
+                    "linkTextAr": "عرض المستند المرجعي",
+                    "linkTextEn": "View Reference Document",
+                    "linkIcon": "fas fa-file-pdf"
+                },
+                {
+                    "id": "prj-1",
+                    "titleAr": "موسم (Mawsem)",
+                    "titleEn": "Mawsem",
+                    "descAr": "منصة مدعومة بالذكاء الاصطناعي للتنبؤ بالطلب في قطاع التجزئة باستخدام خوارزميات SARIMAX، طُورت كمشروع تخرج متميز في كلية الحاسبات بجامعة أم القرى.",
+                    "descEn": "An AI-driven retail demand forecasting platform using SARIMAX algorithms, developed as an honors graduation project at the College of Computing, UQU.",
+                    "tags": ["AI / ML", "SARIMAX", "Node.js", "Laravel", "React"],
+                    "linkUrl": "https://eny.sa/assets/mawsem.pdf",
+                    "linkTextAr": "عرض البوستر المرجعي",
+                    "linkTextEn": "View Reference Poster",
+                    "linkIcon": "fas fa-file-pdf"
+                },
+                {
+                    "id": "prj-2",
+                    "titleAr": "نظام الاتصالات الإدارية",
+                    "titleEn": "Admin Correspondence",
+                    "descAr": "مشروع تحول رقمي شامل لمؤسسة شعاع الشروق بتطوير PHP نقية ونموذج Naive Bayes لأرشفة وتصنيف المعاملات بدقة.",
+                    "descEn": "Full digital transformation for Shoa'a Shorouk built with pure PHP (OOP) and Naive Bayes for automated document classification.",
+                    "tags": ["Pure PHP (OOP)", "Custom ORM", "Naive Bayes", "Security"]
+                },
+                {
+                    "id": "prj-3",
+                    "titleAr": "نظام مراقبة الخوادم المحلية",
+                    "titleEn": "Local Servers Monitoring",
+                    "descAr": "نظام ذكي لمراقبة أداء الخوادم في الوقت الفعلي مع لوحة تحكم تفاعلية وقنوات تنبيه فورية.",
+                    "descEn": "A smart real-time monitoring system offering interactive dashboards and centralized logs.",
+                    "tags": ["Monitoring", "Dashboards", "Logs", "Telemetry"]
+                },
+                {
+                    "id": "prj-4",
+                    "titleAr": "السكرتير الذكي",
+                    "titleEn": "Smart Secretary (AI)",
+                    "descAr": "مساعد إداري مدعوم بالذكاء الاصطناعي يفهم اللغة الطبيعية ويكتشف تعارضات المواعيد بدقة.",
+                    "descEn": "An AI-powered administrative assistant understanding Arabic NLP and detecting schedule conflicts.",
+                    "tags": ["AI Assistant", "Gemini API", "NLP"]
+                },
+                {
+                    "id": "prj-6",
+                    "titleAr": "محرك ومفسر قوالب PPHP",
+                    "titleEn": "PPHP Template Engine",
+                    "descAr": "لغة قوالب ومفسر مخصص لـ PHP يهدف لتبسيط وتسريع عملية التطوير، مع دعم كامل للإضافات في VS Code.",
+                    "descEn": "A custom template language and interpreter for PHP designed to simplify and speed up development, with full support for VS Code extensions.",
+                    "tags": ["PHP Internals", "Interpreter", "VS Code Extension"],
+                    "linkUrl": "https://github.com/feny1/pphp",
+                    "linkTextAr": "عرض على GitHub",
+                    "linkTextEn": "View on GitHub",
+                    "linkIcon": "fab fa-github"
+                }
+            ],
+            "gallery": [
+                {
+                    "id": "gal-1",
+                    "image": "assets/images/ehab-yar-umm-al-qura-university-graduation-portrait.jpg",
+                    "badgeAr": "حفل التخرج",
+                    "badgeEn": "Graduation",
+                    "titleAr": "حفل تخرج الدفعة 74 - جامعة أم القرى",
+                    "titleEn": "74th Graduation Ceremony - Umm Al-Qura",
+                    "descAr": "توثيق التكريم والاحتفال بحفل تخرج الدفعة 74 من جامعة أم القرى كعالم حاسب متميز.",
+                    "descEn": "Documenting the honor and celebration of the 74th graduation ceremony at Umm Al-Qura University.",
+                    "category": "grad"
+                },
+                {
+                    "id": "gal-2",
+                    "image": "assets/images/ehab-yar-computer-science-bachelor-excellence-uqu.jpg",
+                    "badgeAr": "الدفعة 74",
+                    "badgeEn": "74th Batch",
+                    "titleAr": "منصة التكريم الجامعي",
+                    "titleEn": "Academic Honor Stage",
+                    "descAr": "لحظة التكريم والتتويج على منصة حفل التخرج بجامعة أم القرى.",
+                    "descEn": "A distinguished moment on stage at the Umm Al-Qura University graduation ceremony.",
+                    "category": "grad"
+                },
+                {
+                    "id": "gal-3",
+                    "image": "assets/images/ehab-yar-74th-batch-graduation-ceremony-umm-al-qura.jpg",
+                    "badgeAr": "حفل التخرج",
+                    "badgeEn": "Graduation",
+                    "titleAr": "التخرج والتميز الأكاديمي - علوم الحاسب",
+                    "titleEn": "Graduation & Academic Excellence - Computer Science",
+                    "descAr": "إيهاب يار في حفل التخرج الرسمي لعلوم الحاسب بجامعة أم القرى.",
+                    "descEn": "Ehab Yar at the official Computer Science graduation ceremony at Umm Al-Qura University.",
+                    "category": "grad"
+                },
+                {
+                    "id": "gal-4",
+                    "image": "assets/images/ehab-yar-mawsem-ai-retail-forecasting-booth.jpg",
+                    "badgeAr": "لقطات التخرج",
+                    "badgeEn": "Ceremony Highlights",
+                    "titleAr": "أجواء وفرحة التخرج",
+                    "titleEn": "Graduation Joy & Atmosphere",
+                    "descAr": "مشاركة الفرحة والتتويج الأكاديمي مع الزملاء والأساتذة.",
+                    "descEn": "Sharing the celebration and academic achievement with peers and mentors.",
+                    "category": "grad"
+                },
+                {
+                    "id": "gal-5",
+                    "image": "assets/images/ehab-yar-mawsem-ai-project-presentation-honors.jpg",
+                    "badgeAr": "ذكريات التخرج",
+                    "badgeEn": "Milestone Moments",
+                    "titleAr": "التكريم والتقدير الجامعي",
+                    "titleEn": "University Honor & Recognition",
+                    "descAr": "محطة فارقة تتوج سنوات من دراسة وبحوث علوم الحاسب والأنظمة وقواعد البيانات.",
+                    "descEn": "A milestone celebrating years of Computer Science research and database systems.",
+                    "category": "grad"
+                },
+                {
+                    "id": "gal-6",
+                    "image": "assets/images/ehab-yar-college-of-computing-graduation-celebration.jpg",
+                    "badgeAr": "القيادة المهنية",
+                    "badgeEn": "Leadership",
+                    "titleAr": "الهوية المهنية والقيادة التقنية",
+                    "titleEn": "Professional Identity & Leadership",
+                    "descAr": "رئيس تقني وعالم حاسب يقود مشاريع التحول الرقمي والذكاء الاصطناعي.",
+                    "descEn": "CTO and Computer Scientist leading digital transformation and AI innovations.",
+                    "category": "work"
+                },
+                {
+                    "id": "gal-7",
+                    "image": "assets/images/ehab-yar-executive-tech-lead-studio-portrait.jpg",
+                    "badgeAr": "مشروع التخرج",
+                    "badgeEn": "Graduation Project",
+                    "titleAr": "معرض مشاريع التخرج - منصة موسم (Mawsem)",
+                    "titleEn": "Graduation Projects Exhibition - Mawsem",
+                    "descAr": "عرض وتقديم مشروع التخرج (منصة موسم للتنبؤ بالطلب بالذكاء الاصطناعي) وفريق العمل في معرض مشاريع التخرج بجامعة أم القرى.",
+                    "descEn": "Presenting the graduation project (Mawsem AI demand forecasting platform) with the engineering team at the Umm Al-Qura University Graduation Exhibition.",
+                    "category": "grad"
+                },
+                {
+                    "id": "gal-8",
+                    "image": "assets/images/ehab-yar-backend-database-architect-workspace.jpg",
+                    "badgeAr": "حفل التخرج",
+                    "badgeEn": "Graduation",
+                    "titleAr": "حفل تخرج الدفعة 74 - جامعة أم القرى (1447هـ / 2026م)",
+                    "titleEn": "74th Graduation Ceremony - Umm Al-Qura (1447H / 2026)",
+                    "descAr": "الصورة الرسمية في حفل تخرج الدفعة 74 بجامعة أم القرى - كلية الحاسبات وتتويج مسيرة علوم الحاسب الآلي.",
+                    "descEn": "Official portrait at the 74th Graduation Ceremony of Umm Al-Qura University - College of Computing.",
+                    "category": "grad"
+                },
+                {
+                    "id": "gal-9",
+                    "image": "assets/images/ehab-yar-systems-analyst-consultant-identity.jpg",
+                    "badgeAr": "محطات",
+                    "badgeEn": "Moments",
+                    "titleAr": "لقطات العمل والمشاريع الميدانية",
+                    "titleEn": "Project & Field Operations",
+                    "descAr": "متابعة وإدارة العمليات التقنية والأنظمة التشغيلية تحت الضغط العالي.",
+                    "descEn": "Managing technical operations and mission-critical systems in the field.",
+                    "category": "events"
+                },
+                {
+                    "id": "gal-10",
+                    "image": "assets/images/ehab-yar-digital-transformation-tech-conference.jpg",
+                    "badgeAr": "حفل التخرج",
+                    "badgeEn": "Graduation",
+                    "titleAr": "لحظات وفرحة التخرج مع الزملاء - الدفعة 74",
+                    "titleEn": "Graduation Moments with Classmates - 74th Batch",
+                    "descAr": "أجواء الفرحة والاحتفال بحفل التخرج الرسمي بجامعة أم القرى مع زملاء كلية الحاسب الآلي ونظم المعلومات.",
+                    "descEn": "Celebration and joy with Computer Science peers during the official graduation ceremony at Umm Al-Qura University.",
+                    "category": "grad"
+                },
+                {
+                    "id": "gal-11",
+                    "image": "assets/images/ehab-yar-hajj-technical-operations-service-center.jpg",
+                    "badgeAr": "موسم الحج 1447هـ",
+                    "badgeEn": "Hajj 1447H",
+                    "titleAr": "إدارة العمليات الميدانية - موسم الحج (مركز الخدمة)",
+                    "titleEn": "Field Technical Operations - Hajj (Service Center)",
+                    "descAr": "توثيق قيادة العمليات الرقمية والأنظمة الميدانية لجوازات الحج بمركز الخدمة تحت رئاسة الأستاذ هتان بن جمال خان.",
+                    "descEn": "Documenting digital operations and field passport systems at the Service Center led by Mr. Hattan Jamal Khan.",
+                    "category": "events"
+                },
+                {
+                    "id": "gal-12",
+                    "image": "assets/images/ehab-yar-computer-science-master-research-symposium.png",
+                    "badgeAr": "الهوية البصرية",
+                    "badgeEn": "Brand Identity",
+                    "titleAr": "الشعار الرسمي والهوية البرمجية",
+                    "titleEn": "Official Identity & Signature",
+                    "descAr": "الهوية البرمجية الرسمية لإيهاب يار feny.",
+                    "descEn": "Official brand identity for Ehab Yar feny.",
+                    "category": "work"
+                }
+            ],
+            "news": [
+                {
+                    "id": "news-1",
+                    "newspaper": "صحيفة هوية",
+                    "newspaperEn": "Howyah Newspaper",
+                    "title": "إيهاب بن نبيل يار ومستقبل الأعمال في عصر الذكاء الاصطناعي",
+                    "titleEn": "Ehab Nabeel Yar and the Future of Business in the Age of AI",
+                    "url": "https://howyah.com/%d8%a5%d9%8a%d9%87%d8%a7%d8%a8-%d8%a8%d9%86-%d9%86%d8%a8%d9%8a%d9%84-%d9%8a%d8%a7%d8%b1-%d9%88%d9%85%d8%b3%d8%aa%d9%82%d8%a8%d9%84-%d8%a7%d9%84%d8%a3%d8%b9%d9%85%d8%a7%d9%84-%d9%81%d9%8a-%d8%b9%d8%b5/",
+                    "badge": "تغطية صحفية",
+                    "badgeEn": "Press Coverage"
+                },
+                {
+                    "id": "news-2",
+                    "newspaper": "إكستيرا نيوز",
+                    "newspaperEn": "Extera News",
+                    "title": "إيهاب بن نبيل يار والذكاء الاصطناعي في صياغة مستقبل الاقتصاد الرقمي",
+                    "titleEn": "Ehab Nabeel Yar and Artificial Intelligence in Shaping the Digital Economy",
+                    "url": "https://exteranews.com/%d8%a5%d9%8a%d9%87%d8%a7%d8%a8-%d8%a8%d9%86-%d9%86%d8%a8%d9%8a%d9%84-%d9%8a%d8%a7%d8%b1-%d9%88%d8%a7%d9%84%d8%b0%d9%83%d8%a7%d8%a1-%d8%a7%d9%84%d8%a7%d8%b5%d8%b7%d9%86%d8%a7%d8%b9%d9%8a-%d9%81%d9%8a/",
+                    "badge": "تغطية صحفية",
+                    "badgeEn": "Press Coverage"
+                },
+                {
+                    "id": "news-3",
+                    "newspaper": "صحيفة أخبار الوطن",
+                    "newspaperEn": "Akhbar Al-Watan Newspaper",
+                    "title": "إيهاب بن نبيل يار: الذكاء الاصطناعي والتحول الرقمي في دعم الاقتصاد",
+                    "titleEn": "Ehab Nabeel Yar: AI & Digital Transformation Supporting the Economy",
+                    "url": "https://akhber-alwatan.com/?p=57996",
+                    "badge": "تغطية صحفية",
+                    "badgeEn": "Press Coverage"
+                },
+                {
+                    "id": "news-4",
+                    "newspaper": "كايرو 24",
+                    "newspaperEn": "Cairo 24",
+                    "title": "إيهاب بن نبيل يار يتحدث عن دور الذكاء الاصطناعي في مستقبل الاقتصاد الرقمي",
+                    "titleEn": "Ehab Nabeel Yar Speaks on the Role of AI in the Future of Digital Economy",
+                    "url": "https://www.cairo24.online/2026/08/59.html?m=1",
+                    "badge": "تغطية صحفية",
+                    "badgeEn": "Press Coverage"
+                },
+                {
+                    "id": "news-5",
+                    "newspaper": "صحيفة الدستور 24",
+                    "newspaperEn": "Aldostor 24",
+                    "title": "إيهاب بن نبيل يار ودور التخطيط الهندسي في نجاح المشاريع التقنية",
+                    "titleEn": "Ehab Nabeel Yar & The Role of System Planning in Tech Projects",
+                    "url": "https://aldostor24.com/%d8%a5%d9%8a%d9%87%d8%a7%d8%a8-%d8%a8%d9%86-%d9%86%d8%a8%d9%8a%d9%84-%d9%8a%d8%a7%d8%b1-%d9%88%d8%af%d9%88%d8%b1-%d8%a7%d9%84%d8%aa%d8%ae%d8%b7%d9%8a%d8%b7-%d8%a7%d9%84%d9%87%d9%86%d8%af%d8%b3%d9%8a/",
+                    "badge": "تغطية صحفية",
+                    "badgeEn": "Press Coverage"
+                },
+                {
+                    "id": "news-6",
+                    "newspaper": "الخبر الفوري",
+                    "newspaperEn": "Al-Khabar Al-Fawri",
+                    "title": "إيهاب بن نبيل يار وتطوير المنتجات الرقمية المبتكرة",
+                    "titleEn": "Ehab Nabeel Yar and Developing Innovative Digital Products",
+                    "url": "https://alkhabaralfawriu.com/%d8%a5%d9%8a%d9%87%d8%a7%d8%a8-%d8%a8%d9%86-%d9%86%d8%a8%d9%8a%d9%84-%d9%8a%d8%a7%d8%b1-%d9%88%d8%aa%d8%b7%d9%88%d9%8a%d8%b1-%d8%a7%d9%84%d9%85%d9%86%d8%aa%d8%ac%d8%a7%d8%aa-%d8%a7%d9%84%d8%b1%d9%82/",
+                    "badge": "تغطية صحفية",
+                    "badgeEn": "Press Coverage"
+                },
+                {
+                    "id": "news-7",
+                    "newspaper": "صحيفة الأخبار",
+                    "newspaperEn": "Al-Akhbar News",
+                    "title": "إيهاب بن نبيل يار: الذكاء الاصطناعي وآفاق التحول الرقمي الحديث",
+                    "titleEn": "Ehab Nabeel Yar: Artificial Intelligence & Modern Digital Horizons",
+                    "url": "https://alakhbar.org/26025/",
+                    "badge": "تغطية صحفية",
+                    "badgeEn": "Press Coverage"
+                },
+                {
+                    "id": "news-8",
+                    "newspaper": "مصر مباشر",
+                    "newspaperEn": "Misr Mubashir",
+                    "title": "إيهاب بن نبيل يار ومستقبل هندسة النظم السحابية وقواعد البيانات",
+                    "titleEn": "Ehab Nabeel Yar & The Future of Cloud Architecture and Databases",
+                    "url": "https://misrmubashir.com/295626",
+                    "badge": "تغطية صحفية",
+                    "badgeEn": "Press Coverage"
+                },
+                {
+                    "id": "news-9",
+                    "newspaper": "الفجر العربي 24",
+                    "newspaperEn": "Al-Fajr Al-Arabi 24",
+                    "title": "إيهاب بن نبيل يار ودور التقنيات الحديثة في استقرار قواعد البيانات",
+                    "titleEn": "Ehab Nabeel Yar and Modern Technologies in Database Reliability",
+                    "url": "https://alfagrelaraby24.com/37978/",
+                    "badge": "تغطية صحفية",
+                    "badgeEn": "Press Coverage"
+                },
+                {
+                    "id": "news-10",
+                    "newspaper": "نجوم بلس",
+                    "newspaperEn": "Nojoom Plus",
+                    "title": "إيهاب بن نبيل يار وهندسة المنتجات التقنية الذكية",
+                    "titleEn": "Ehab Nabeel Yar and Smart Tech Product Engineering",
+                    "url": "https://nojoomplus.com/149825/%d8%a5%d9%8a%d9%87%d8%a7%d8%a8-%d8%a8%d9%86-%d9%86%d8%a8%d9%8a%d9%84-%d9%8a%d8%a7%d8%b1-%d9%88%d9%87%d9%86%d8%af%d8%b3%d8%a9-%d8%a7%d9%84%d9%85%d9%86%d8%aa%d8%ac%d8%a7%d8%aa-%d8%a7%d9%84%d8%aa%d9%82/",
+                    "badge": "تغطية صحفية",
+                    "badgeEn": "Press Coverage"
+                },
+                {
+                    "id": "news-11",
+                    "newspaper": "موجز نت",
+                    "newspaperEn": "Mowjaz Net",
+                    "title": "إيهاب بن نبيل يار: الذكاء الاصطناعي وتشكيل مستقبل الأنظمة الذكية",
+                    "titleEn": "Ehab Nabeel Yar: AI & Shaping the Future of Intelligent Systems",
+                    "url": "https://mowjaz.net/%d8%a5%d9%8a%d9%87%d8%a7%d8%a8-%d8%a8%d9%86-%d9%86%d8%a8%d9%8a%d9%84-%d9%8a%d8%a7%d8%b1-%d8%a7%d9%84%d8%b0%d9%83%d8%a7%d8%a1-%d8%a7%d9%84%d8%a7%d8%b5%d8%b7%d9%86%d8%a7%d8%b9%d9%8a-%d9%88%d8%aa%d8%b4/",
+                    "badge": "تغطية صحفية",
+                    "badgeEn": "Press Coverage"
+                }
+            ],
+            "partnership": [
+                {
+                    "id": "part-1",
+                    "icon": "fas fa-robot",
+                    "titleAr": "إذا كنت تحتاج أدوات ذكاء اصطناعي مخصصة",
+                    "titleEn": "Custom AI Tools & Solutions",
+                    "descAr": "أقوم ببناء وتطوير أدوات ذكاء اصطناعي مخصصة ومساعدين أذكياء (AI Agents) لتلبية احتياجاتك اليومية، مثل جدولة المواعيد الذكية، واكتشاف التعارضات، وتحليل النصوص والبيانات باللغة الطبيعية لرفع كفاءة أعمالك.",
+                    "descEn": "I build and develop custom AI tools and intelligent agents specialized for your daily operations, providing advanced natural language processing and task automation."
+                },
+                {
+                    "id": "part-2",
+                    "icon": "fas fa-gavel",
+                    "titleAr": "إذا كنت محامياً أو صاحب مكتب محاماة",
+                    "titleEn": "If You Are a Lawyer or Law Firm Owner",
+                    "descAr": "أساعدك في بناء أنظمة أرشفة ذكية وإدارة قضايا آمنة مع هيكلة وتنظيم الوثائق والمستندات القضائية وتصنيفها تلقائياً لتسريع البحث القانوني وحماية سرية بيانات الموكلين.",
+                    "descEn": "I help you build secure case management systems to structure and organize legal documents, automating classification and accelerating legal research while protecting client data confidentiality."
+                },
+                {
+                    "id": "part-3",
+                    "icon": "fas fa-store",
+                    "titleAr": "إذا كنت تاجرًا أو صاحب متجر",
+                    "titleEn": "If You Are a Merchant",
+                    "descAr": "أساعدك في أتمتة إدارة المخزون، وتوقع مواسم ذروة الطلب وانخفاضه باستخدام الذكاء الاصطناعي (مثل نظام موسم) لتقليل الهدر وزيادة المبيعات.",
+                    "descEn": "I help you automate inventory management and forecast demand peaks using AI to reduce waste and maximize sales."
+                },
+                {
+                    "id": "part-4",
+                    "icon": "fas fa-building",
+                    "titleAr": "إذا كنت صاحب مؤسسة أو شركة",
+                    "titleEn": "If You Are a Business Owner",
+                    "descAr": "نقوم برقمنة أعمالك بالكامل وتحويل المعاملات الورقية المجهدة إلى أنظمة اتصالات إدارية وأرشفة سحابية آمنة وبنية تحتية مستقرة قابلة للتوسع.",
+                    "descEn": "We fully digitize your operations, transforming tedious paperwork into secure administrative correspondence systems and scalable infrastructure."
+                },
+                {
+                    "id": "part-5",
+                    "icon": "fas fa-lightbulb",
+                    "titleAr": "إذا كنت رائد أعمال أو صاحب فكرة",
+                    "titleEn": "If You Are an Entrepreneur",
+                    "descAr": "أقود معك التخطيط التقني وهندسة الأنظمة لبناء نموذج منتجك الأولي (MVP) في وقت قياسي وبأعلى معايير الأمان وجودة الأكواد.",
+                    "descEn": "I lead the technical planning and system architecture to build your MVP in record time with top-tier security and code quality."
+                },
+                {
+                    "id": "part-6",
+                    "icon": "fas fa-bus-alt",
+                    "titleAr": "إذا كنت تدير عمليات موسمية وميدانية",
+                    "titleEn": "If You Manage Seasonal Operations",
+                    "descAr": "نوفر لك حلولاً تقنية ميدانية (تطبيقات أندرويد متكاملة، أنظمة تذاكر ذكية، تتبع حشود) مصممة للعمل تحت الضغط العالي والمفاجئ لضمان دقة البيانات وسرعتها.",
+                    "descEn": "We provide on-the-ground technical solutions (integrated Android apps, smart ticketing systems) designed to operate smoothly under high pressure."
+                }
+            ],
+            "contact": {
+                "titleAr": "هل تبحث عن شريك تقني؟",
+                "titleEn": "Seeking a Tech Partner?",
+                "descAr": "دعنا نناقش كيف يمكن لخبرتي كعالم حاسب أن تدعم نمو مشروعك وتضمن استقراره التقني.",
+                "descEn": "Let's discuss how my expertise as a Computer Scientist can support your project's growth and ensure its technical stability.",
+                "whatsapp": "966599727412",
+                "email": "contact@eny.sa",
+                "twitter": "https://x.com/_f_eny",
+                "linkedin": "https://www.linkedin.com/in/ehab-yar-4a1bb4193/",
+                "github": "https://github.com/feny1"
+            }
+        };
 
         let siteData = initialDefaultData;
         let currentLang = 'ar';
@@ -3705,7 +3405,6 @@
                 if (langText) langText.textContent = 'English';
             }
 
-            // Translate text nodes safely without destroying inner HTML icons
             document.querySelectorAll('[data-ar], [data-en]').forEach(el => {
                 const translation = el.getAttribute(`data-${lang}`);
                 if (translation && el.children.length === 0) {
@@ -3722,7 +3421,7 @@
             updateSliderPosition();
         };
 
-        // Global Gallery Show More / Less Toggle
+        // Gallery Show More / Less
         window.toggleAllGallery = function () {
             allGalleryExpanded = !allGalleryExpanded;
             const icon = document.getElementById('gallery-toggle-icon');
@@ -3782,7 +3481,6 @@
             }
         }
 
-        // Global Gallery Filter
         window.filterGallery = function (category, btnEl) {
             activeFilter = category;
             document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
@@ -3792,11 +3490,10 @@
                 const targetBtn = document.querySelector(`.filter-btn[data-filter="${category}"]`);
                 if (targetBtn) targetBtn.classList.add('active');
             }
-
             updateGalleryVisibility();
         };
 
-        // Global News Toggle
+        // News Toggle
         window.toggleAllNews = function () {
             allNewsExpanded = !allNewsExpanded;
             const extraItems = document.querySelectorAll('.news-item-extra');
@@ -3821,7 +3518,7 @@
             }
         };
 
-        // Global Lightbox Functions
+        // Lightbox
         window.openLightbox = function (index) {
             currentLightboxIndex = parseInt(index, 10) || 0;
             updateLightboxContent();
@@ -3879,6 +3576,7 @@
             if (counterEl) counterEl.textContent = `${currentLightboxIndex + 1} / ${items.length}`;
         }
 
+        // Render Functions
         function renderHero() {
             const h = siteData.hero;
             const isAr = currentLang === 'ar';
@@ -3927,10 +3625,8 @@
 
                 const label1 = isAr ? edu.label1Ar : edu.label1En;
                 const val1 = isAr ? edu.val1Ar : edu.val1En;
-
                 const label2 = isAr ? edu.label2Ar : edu.label2En;
                 const val2 = isAr ? edu.val2Ar : edu.val2En;
-
                 const label3 = isAr ? edu.label3Ar : edu.label3En;
                 const val3 = isAr ? edu.val3Ar : edu.val3En;
 
@@ -3977,7 +3673,7 @@
                         </div>
                     </div>
                 </div>
-            `;
+                `;
             }).join('');
         }
 
@@ -3997,7 +3693,7 @@
                     ${(item.tags || []).map(t => `<span class="tag-pill">${t}</span>`).join('')}
                 </div>
             </div>
-        `).join('');
+            `).join('');
         }
 
         function renderCollaborations() {
@@ -4018,8 +3714,33 @@
                     <h3>${isAr ? item.titleAr : item.titleEn}</h3>
                     <p>${desc}</p>
                 </div>
-            `;
+                `;
             }).join('');
+        }
+
+        function renderPeople() {
+            const container = document.getElementById('people-container');
+            if (!container) return;
+            const isAr = currentLang === 'ar';
+
+            container.innerHTML = (siteData.people || []).map(person => `
+            <div class="person-card">
+                <div class="person-header">
+                    <div class="person-avatar">
+                        <i class="fas fa-user-check"></i>
+                    </div>
+                    <div>
+                        <div class="person-name">${isAr ? person.nameAr : person.nameEn}</div>
+                        <span class="person-badge">${isAr ? person.badgeAr : person.badgeEn}</span>
+                    </div>
+                </div>
+                <div class="person-org">
+                    <i class="fas fa-briefcase" style="font-size: 0.85rem;"></i>
+                    <span>${isAr ? person.roleAr : person.roleEn} • ${isAr ? person.orgAr : person.orgEn}</span>
+                </div>
+                <p class="person-desc">${isAr ? person.descAr : person.descEn}</p>
+            </div>
+            `).join('');
         }
 
         function renderProjects() {
@@ -4032,23 +3753,33 @@
                 <div class="project-info">
                     <h3>${isAr ? p.titleAr : p.titleEn}</h3>
                     <p>${isAr ? p.descAr : p.descEn}</p>
+                    ${p.linkUrl ? `
+                        <div style="margin-bottom: 1rem;">
+                            <a style="color: white;" href="${p.linkUrl}" target="_blank"
+                                rel="noopener noreferrer"
+                                class="text-white hover:underline text-sm inline-flex items-center gap-1">
+                                <span>${isAr ? (p.linkTextAr || 'زيارة الموقع') : (p.linkTextEn || 'Visit')}</span>
+                                <span>↗</span>
+                            </a>
+                        </div>
+                    ` : ''}
                     <div class="tags">
                         ${(p.tags || []).map(t => `<span>${t}</span>`).join('')}
                     </div>
                     ${p.linkUrl ? `
                         <a href="${p.linkUrl}" target="_blank" rel="noopener noreferrer" class="project-link">
-                            <span>${isAr ? (p.linkTextAr || 'عرض على GitHub') : (p.linkTextEn || 'View on GitHub')}</span>
-                            <i class="${p.linkIcon || 'fab fa-github'}"></i>
+                            <span>${isAr ? (p.linkTextAr || 'عرض الرابط') : (p.linkTextEn || 'Open Link')}</span>
+                            <i class="${p.linkIcon || 'fas fa-arrow-left'}"></i>
                         </a>
                     ` : `
                         <span class="project-link">
-                            <span>${isAr ? (p.linkTextAr || 'مشروع معتمد') : (p.linkTextEn || 'Verified')}</span>
-                            <i class="${p.linkIcon || 'fas fa-check-circle'}"></i>
+                            <span>${isAr ? 'نظام معتمد' : 'Verified'}</span>
+                            <i class="fas fa-check-circle"></i>
                         </span>
                     `}
                 </div>
             </div>
-        `).join('');
+            `).join('');
 
             calcVisibleSlides();
         }
@@ -4076,7 +3807,7 @@
                     </div>
                 </div>
             </div>
-        `).join('');
+            `).join('');
 
             updateGalleryVisibility();
         }
@@ -4108,7 +3839,7 @@
                         </a>
                     </div>
                 </div>
-            `;
+                `;
             }).join('');
 
             const toggleWrapper = document.getElementById('news-toggle-wrapper');
@@ -4128,7 +3859,7 @@
                 <h3>${isAr ? item.titleAr : item.titleEn}</h3>
                 <p>${isAr ? item.descAr : item.descEn}</p>
             </div>
-        `).join('');
+            `).join('');
         }
 
         function renderContact() {
@@ -4156,6 +3887,7 @@
             renderEducation();
             renderExpertise();
             renderCollaborations();
+            renderPeople();
             renderProjects();
             renderGallery();
             renderNews();
@@ -4163,6 +3895,7 @@
             renderContact();
         }
 
+        // Typewriter Effect
         let phraseIdx = 0;
         let charIdx = 0;
         let isDeleting = false;
@@ -4207,6 +3940,7 @@
             runTypewriter();
         }
 
+        // Slider Controls
         let currentSlide = 0;
         let visibleSlides = 3;
         let maxSlideIndex = 0;
@@ -4247,6 +3981,7 @@
             updateSliderPosition();
         }
 
+        // Scroll and Navbar Interactions
         function setupNavigation() {
             const navbar = document.getElementById('navbar');
             const backToTop = document.getElementById('back-to-top');
@@ -4307,11 +4042,10 @@
             });
         }
 
-        // Self-Executing Initialization (Works immediately & on DOMContentLoaded)
         function initPortfolioApp() {
             setupNavigation();
             calcVisibleSlides();
-            runTypewriter();
+            renderAll();
 
             window.addEventListener('resize', calcVisibleSlides);
         }
