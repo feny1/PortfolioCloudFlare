@@ -3741,12 +3741,12 @@
                     <i class="fas fa-briefcase" style="font-size: 0.85rem;"></i>
                     <span>${isAr ? person.roleAr : person.roleEn} • ${isAr ? person.orgAr : person.orgEn}</span>
                 </div>
-                 ${p.url ? `
+                 ${person.url ? `
                         <div style="margin-bottom: 1rem;">
-                            <a style="color: white;" href="${p.linkUrl}" target="_blank"
+                            <a style="color: white;" href="${person.url}" target="_blank"
                                 rel="noopener noreferrer"
                                 class="text-white hover:underline text-sm inline-flex items-center gap-1">
-                                <span>${isAr ? ( 'زيارة الموقع الشخصي') : (p.linkTextEn || 'Visit Portfolio')}</span>
+                                <span>${isAr ? ( 'زيارة الموقع الشخصي' : 'Visit Portfolio')}</span>
                                 <span>↗</span>
                             </a>
                         </div>
