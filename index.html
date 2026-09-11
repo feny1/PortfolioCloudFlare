@@ -38,36 +38,47 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
     <!-- Schema.org Person & Academic Credentials -->
-    <script type="application/ld+json">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": "Person",
+      "@id": "https://eny.sa/#person",
+      "name": "إيهاب يار",
+      "alternateName": ["Ehab Yar", "إيهاب نبيل يار"],
+      "url": "https://eny.sa",
+      "image": "https://eny.sa/gradEhabYar.jpg",
+      "jobTitle": "عالم حاسب ورئيس تقني",
+      "description": "عالم حاسب وباحث ماجستير في قسم علوم الحاسب والذكاء الاصطناعي بكلية الحاسبات بجامعة أم القرى.",
+      "alumniOf": [
         {
-          "@type": "Person",
-          "name": "إيهاب يار",
-          "@id": "https://eny.sa/#person",
-          "alternateName": "Ehab Yar",
-          "url": "https://eny.sa",
-          "jobTitle": "عالم حاسب ورئيس تقني",
-          "description": "عالم حاسب وباحث ماجستير في قسم علوم الحاسب والذكاء الاصطناعي بكلية الحاسبات بجامعة أم القرى.",
-          "alumniOf": [
-  {
-    "@type": "CollegeOrUniversity",
-    "name": "جامعة أم القرى",
-    "url": "https://uqu.edu.sa",
-    "sameAs": "https://ar.wikipedia.org/wiki/جامعة_أم_القرى"
-  }
-],
-          "sameAs": [
-            "https://x.com/_f_eny",
-            "https://github.com/feny1",
-      "https://uqu.edu.sa/profile/s44880850","https://uqu.edu.sa/profile/s444001534",
-            "https://www.linkedin.com/in/ehab-yar-4a1bb4193/"
-          ]
+          "@type": "CollegeOrUniversity",
+          "name": "جامعة أم القرى",
+          "url": "https://uqu.edu.sa",
+          "sameAs": "https://ar.wikipedia.org/wiki/جامعة_أم_القرى"
         }
+      ],
+      "sameAs": [
+        "https://x.com/_f_eny",
+        "https://github.com/feny1",
+        "https://www.linkedin.com/in/ehab-yar-4a1bb4193/",
+        "https://uqu.edu.sa/profile/s44880850",
+        "https://uqu.edu.sa/profile/s444001534",
+        "https://www.alwatan.com.sa/"
+      ],
+      "knowsAbout": [
+        "Computer Science",
+        "Artificial Intelligence",
+        "Backend Architecture",
+        "Database Management Systems"
       ]
     }
-    </script>
+  ]
+}
+</script>
+ 
 
     <link rel="stylesheet" href="assets/style.css">
 </head>
