@@ -126,7 +126,7 @@ const initialDefaultData = {
             "val3Ar": "إدارة المشاريع الهجينة، الرشيقة (Agile)، والتنبؤية (Predictive)",
             "val3En": "Agile, Predictive & Hybrid Frameworks",
             "icon": "fas fa-award",
-            "highlight": true,
+            "highlight": false,
             "overviewAr": "اعتماد مهني قيادي عالمي من معهد إدارة المشاريع الأمريكي (PMI)، يرسخ الجدارة الاحترافية في قيادة المشاريع التقنية والتحول الرقمي وإدارة النطاق والمخاطر والموارد بفرق العمل عالية الأداء.",
             "overviewEn": "Globally recognized professional credential from PMI, validating leadership in enterprise systems, digital transformation, and risk/resource governance across agile and predictive lifecycles.",
             "coreTopicsAr": [
