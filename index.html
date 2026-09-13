@@ -38,46 +38,48 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
     <!-- Schema.org Person & Academic Credentials -->
-    <script type="application/ld+json">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": "Person",
+      "@id": "https://eny.sa/#person",
+      "name": "إيهاب يار",
+      "alternateName": ["Ehab Yar", "إيهاب نبيل يار"],
+      "url": "https://eny.sa",
+      "image": "https://eny.sa/gradEhabYar.jpg",
+      "jobTitle": "عالم حاسب ورئيس تقني",
+      "description": "عالم حاسب وباحث ماجستير في قسم علوم الحاسب والذكاء الاصطناعي بكلية الحاسبات بجامعة أم القرى.",
+      "alumniOf": [
         {
-          "@type": "Person",
-          "@id": "https://eny.sa/#person",
-          "name": "إيهاب يار",
-          "alternateName": ["Ehab Yar", "إيهاب نبيل يار"],
-          "url": "https://eny.sa",
-          "image": "https://eny.sa/gradEhabYar.jpg",
-          "jobTitle": "عالم حاسب ورئيس تقني",
-          "description": "عالم حاسب وباحث ماجستير في قسم علوم الحاسب والذكاء الاصطناعي بكلية الحاسبات بجامعة أم القرى.",
-          "alumniOf": [
-            {
-              "@type": "CollegeOrUniversity",
-              "name": "جامعة أم القرى",
-              "url": "https://uqu.edu.sa",
-              "sameAs": "https://ar.wikipedia.org/wiki/جامعة_أم_القرى"
-            }
-          ],
-          "sameAs": [
-            "https://x.com/_f_eny",
-            "https://www.wikidata.org/wiki/Q141424705",
-            "https://github.com/feny1",
-            "https://www.linkedin.com/in/ehab-yar-4a1bb4193/",
-            "https://uqu.edu.sa/profile/s44880850",
-            "https://uqu.edu.sa/profile/s444001534",
-            "https://www.alwatan.com.sa/"
-          ],
-          "knowsAbout": [
-            "Computer Science",
-            "Artificial Intelligence",
-            "Backend Architecture",
-            "Database Management Systems"
-          ]
+          "@type": "CollegeOrUniversity",
+          "name": "جامعة أم القرى",
+          "url": "https://uqu.edu.sa",
+          "sameAs": "https://ar.wikipedia.org/wiki/جامعة_أم_القرى"
         }
+      ],
+      "sameAs": [
+        "https://x.com/_f_eny",
+"https://www.wikidata.org/wiki/Q141424705",
+        "https://github.com/feny1",
+        "https://www.linkedin.com/in/ehab-yar-4a1bb4193/",
+        "https://uqu.edu.sa/profile/s44880850",
+        "https://uqu.edu.sa/profile/s444001534",
+        "https://www.alwatan.com.sa/"
+      ],
+      "knowsAbout": [
+        "Computer Science",
+        "Artificial Intelligence",
+        "Backend Architecture",
+        "Database Management Systems"
       ]
     }
-    </script>
+  ]
+}
+</script>
+ 
 
     <link rel="stylesheet" href="assets/style.css">
 </head>
@@ -211,7 +213,7 @@
 
                     <div class="hero-bento-column">
                         <div class="hero-profile-bento">
-                            <div class="profile-card" style="position: relative;">
+                            <div class="profile-card">
                                 <div class="card-corner-tl"></div>
                                 <div class="card-corner-br"></div>
                                 <img id="hero-profile-img"
@@ -219,11 +221,6 @@
                                     alt="إيهاب بن نبيل يار - باحث ماجستير وعالم حاسب | Ehab Nabeel Yar Computer Scientist"
                                     class="profile-img">
                                 <div class="profile-bg-glow"></div>
-
-                                <!-- Credly Verified Badge Embed -->
-                                <div class="credly-badge-wrapper" style="position: absolute; bottom: 15px; left: 15px; z-index: 10; background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border: 1px solid rgba(56, 189, 248, 0.35); border-radius: 18px; padding: 6px; box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6); display: flex; align-items: center; justify-content: center; width: 162px; height: 282px; overflow: hidden;">
-                                    <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="b9139ac4-2bda-4019-926d-de3e76afc2c1" data-share-badge-host="https://www.credly.com"></div>
-                                </div>
                             </div>
 
                             <div class="bento-cards-stack">
@@ -372,7 +369,7 @@
             </div>
         </section>
 
-        <!-- People I Worked With Section -->
+        <!-- People I Worked With Section (New) -->
         <section id="people" style="background: rgba(255, 255, 255, 0.015);">
             <div class="container">
                 <div class="section-header">
@@ -629,6 +626,7 @@
                     <a href="#gallery" class="footer-link" data-ar="معرض الصور" data-en="Gallery">معرض الصور</a>
                     <a href="#news" class="footer-link" data-ar="مقالات وأخبار" data-en="News & Articles">مقالات وأخبار</a>
                     <a href="#contact" class="footer-link" data-ar="اتصل بي" data-en="Contact">اتصل بي</a>
+<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="b9139ac4-2bda-4019-926d-de3e76afc2c1" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
                 </div>
             </div>
         </div>
@@ -1426,9 +1424,6 @@
             initPortfolioApp();
         }
     </script>
-
-    <!-- Credly Verified Badge Embed Utility -->
-    <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
 </body>
 
 </html>
