@@ -6,6 +6,7 @@ const initialDefaultData = {
         "nameEn": "Ehab Yar",
         "phrasesAr": [
             "باحث ماجستير وعالم حاسب",
+            "محترف إدارة مشاريع معتمد (PMP®)",
             "رئيس تقني ومستشار حلول",
             "مهندس واجهات خلفية وقواعد بيانات",
             "قائد التحول الرقمي والذكاء الاصطناعي",
@@ -13,13 +14,14 @@ const initialDefaultData = {
         ],
         "phrasesEn": [
             "Master's Candidate & Computer Scientist",
+            "Certified Project Management Professional (PMP®)",
             "CTO & Technical Consultant",
             "Backend & Database Architect",
             "Digital Transformation & AI Lead",
             "Systems Analyst & Architect"
         ],
-        "descAr": "عالم حاسب وباحث ماجستير في قسم علوم الحاسب والذكاء الاصطناعي بكلية الحاسبات بجامعة أم القرى. أتخصص في تطوير الواجهات الخلفية وإدارة قواعد البيانات وهندسة أنظمة آمنة وقابلة للتوسع للشركات والعمليات الميدانية الكبرى.",
-        "descEn": "Computer Scientist and Master's Candidate at the Department of Computer Science & Artificial Intelligence, College of Computing, Umm Al-Qura University. Specializing in backend development, database architecture, and secure scalable systems for enterprises and mission-critical field operations.",
+        "descAr": "عالم حاسب وباحث ماجستير في قسم علوم الحاسب والذكاء الاصطناعي بكلية الحاسبات بجامعة أم القرى، ومحترف معتمد في إدارة المشاريع (PMP®). أتخصص في تطوير الواجهات الخلفية وإدارة قواعد البيانات وهندسة أنظمة آمنة وقابلة للتوسع للشركات والعمليات الميدانية الكبرى.",
+        "descEn": "Computer Scientist, Master's Candidate at Umm Al-Qura University, and certified Project Management Professional (PMP®). Specializing in backend development, database architecture, and secure scalable systems for enterprises and mission-critical field operations.",
         "profileImg": "assets/images/ehab-nabeel-yar-computer-scientist-profile.png",
         "logoImg": "assets/images/ehab-yar-official-logo.png"
     },
@@ -41,9 +43,9 @@ const initialDefaultData = {
         {
             "num": "PMP®",
             "labelAr": "الاعتماد المهني",
-            "labelEn": "PM Standard",
-            "valAr": "مُرشح معهد PMI العالمي",
-            "valEn": "PMI Candidate"
+            "labelEn": "Professional Credential",
+            "valAr": "محترف معتمد من PMI",
+            "valEn": "PMI Certified (Active)"
         },
         {
             "num": "100%",
@@ -102,47 +104,47 @@ const initialDefaultData = {
         {
             "id": "cert-pmp",
             "rank": "02",
-            "rankLabelAr": "الاعتماد المهني القيادي",
-            "rankLabelEn": "Executive Professional Credential",
-            "degreeAr": "محترف إدارة المشاريع (PMP®)",
+            "rankLabelAr": "الاعتماد المهني القيادي الدولي",
+            "rankLabelEn": "Global Professional Credential",
+            "degreeAr": "محترف إدارة المشاريع المعتمد (PMP®)",
             "degreeEn": "Project Management Professional (PMP®)",
-            "statusAr": "الحالة الحالية: مؤهل للاختبار ومُرشح للاعتماد (قريباً)",
-            "statusEn": "Current Status: Exam Eligible Candidate - PMI",
-            "badgeAr": "مؤهل للاختبار",
-            "badgeEn": "Exam Eligible",
+            "statusAr": "الحالة الحالية: حاصل على الاعتماد المهني الرسمي الدولي (رقم: 4514551)",
+            "statusEn": "Current Status: Officially Certified - Credential ID: 4514551",
+            "badgeAr": "معتمد رسمياً (Active)",
+            "badgeEn": "Active Credential",
             "isCert": true,
             "label1Ar": "الجهة المانحة:",
             "label1En": "Issuing Body:",
             "val1Ar": "معهد إدارة المشاريع العالمي (PMI)",
             "val1En": "Project Management Institute (PMI)",
-            "label2Ar": "المجال المعتمد:",
-            "label2En": "Certified Domain:",
-            "val2Ar": "إدارة المشاريع الاحترافية والتحول الرقمي",
-            "val2En": "Professional Project Management & Digital Transformation",
-            "label3Ar": "نطاق المنهجيات:",
-            "label3En": "Methodologies:",
-            "val3Ar": "منهجيات إدارة المشاريع الرشيقة والتنبؤية (Agile & Predictive)",
+            "label2Ar": "تاريخ المنح والصلاحية:",
+            "label2En": "Grant & Validity:",
+            "val2Ar": "سبتمبر 2026 - سبتمبر 2029",
+            "val2En": "Sep 12, 2026 – Sep 12, 2029",
+            "label3Ar": "نطاق المنهجيات والاعتماد:",
+            "label3En": "Methodology Scope:",
+            "val3Ar": "إدارة المشاريع الهجينة، الرشيقة (Agile)، والتنبؤية (Predictive)",
             "val3En": "Agile, Predictive & Hybrid Frameworks",
             "icon": "fas fa-award",
             "highlight": true,
-            "overviewAr": "تأهيل مهني معتمد من معهد إدارة المشاريع الأمريكي PMI، يُرسخ كفاءة القيادة التقنية وإدارة دورات حياة المشاريع المعقدة والتحول الرقمي.",
-            "overviewEn": "Certified preparation from PMI consolidating technical leadership capabilities across enterprise project lifecycles and digital transformation.",
+            "overviewAr": "اعتماد مهني قيادي عالمي من معهد إدارة المشاريع الأمريكي (PMI)، يرسخ الجدارة الاحترافية في قيادة المشاريع التقنية والتحول الرقمي وإدارة النطاق والمخاطر والموارد بفرق العمل عالية الأداء.",
+            "overviewEn": "Globally recognized professional credential from PMI, validating leadership in enterprise systems, digital transformation, and risk/resource governance across agile and predictive lifecycles.",
             "coreTopicsAr": [
-                "مجال الأفراد (People Domain): قيادة الفرق التقنية وإدارة أصحاب المصلحة",
-                "مجال العمليات (Process Domain): تخطيط الميزانيات، الجداول الزمنية، ومراقبة الجودة",
-                "مجال بيئة الأعمال (Business Environment): مواءمة البرمجيات مع الاستراتيجية المؤسسية",
+                "مجال الأفراد (People Domain): قيادة الفرق الهندسية وإدارة أصحاب المصلحة",
+                "مجال العمليات (Process Domain): ضبط النطاق، الجداول الزمنية، والميزانيات التقديرية",
+                "مجال بيئة الأعمال (Business Environment): مواءمة البنى التقنية مع الأهداف الاستراتيجية",
                 "منهجيات Agile و Scrum و Kanban وإدارتها في بيئات التطوير السريعة",
-                "إدارة المخاطر التقنية والتشغيلية وضمان استمرارية الأعمال"
+                "إدارة المخاطر التشغيلية والتقنية وضمان استمرارية الأعمال والحوكمة"
             ],
             "coreTopicsEn": [
                 "People Domain: Leading cross-functional technical teams & stakeholder governance",
-                "Process Domain: Budget planning, schedule baselines, and quality metrics",
+                "Process Domain: Scope baselining, schedule modeling, and budget governance",
                 "Business Environment: Aligning software architecture with corporate strategy",
                 "Agile, Scrum & Kanban execution in rapid sprint engineering cycles",
-                "Technical risk management and disaster recovery planning"
+                "Technical risk management, disaster recovery planning, and compliance"
             ],
-            "milestoneAr": "تطبيق معايير PMI العالمية في قيادة المشاريع التقنية الميدانية وتطوير الأنظمة المؤسسية.",
-            "milestoneEn": "Applying global PMI standards across high-stress field systems and enterprise IT initiatives."
+            "milestoneAr": "تطبيق المعايير القياسية العالمية لمعهد PMI في قيادة وتطوير الأنظمة التشغيلية والميدانية المعقدة.",
+            "milestoneEn": "Applying global PMI standards across mission-critical field architectures and enterprise IT systems."
         },
         {
             "id": "edu-2",
@@ -151,8 +153,8 @@ const initialDefaultData = {
             "rankLabelEn": "Foundational Degree",
             "degreeAr": "بكالوريوس علوم الحاسب الآلي (بتقدير ممتاز)",
             "degreeEn": "B.Sc. in Computer Science (With Excellence)",
-            "statusAr": "المؤهل الحالي: خريج الدفعة 74 بتقدير ممتاز مع مرتبة الشرف",
-            "statusEn": "Current Degree: 74th Batch Graduate with Excellence & Honors",
+            "statusAr": "المؤهل: خريج الدفعة 74 بتقدير ممتاز مع مرتبة الشرف",
+            "statusEn": "Degree: 74th Batch Graduate with Excellence & Honors",
             "badgeAr": "تقدير ممتاز",
             "badgeEn": "Excellence",
             "isCert": false,
@@ -341,24 +343,24 @@ const initialDefaultData = {
         {
             "id": "exp-leadership",
             "icon": "fas fa-chess",
-            "titleAr": "القيادة التقنية واستشارات التحول الرقمي",
-            "titleEn": "Technical Leadership & Digital Transformation",
-            "descAr": "العمل كشريك تقني ومستشار حلول، قيادة خرائط الطريق البرمجية من الفكرة إلى الإنتاج، وبناء نماذج المنتجات الأولية (MVP) بسرعة ودقة هندسية عالية.",
-            "descEn": "Serving as a fractional CTO and solutions architect, leading technology roadmaps from concept to production, and delivering enterprise MVPs with pristine engineering craft.",
-            "deepDiveAr": "توجيه القرارات المعمارية لتجنب الديون التقنية، اختيار حزم التقنيات الأنسب للجدوى الاقتصادية والتشغيلية، والإشراف الميداني على فرق التطوير وضمان سرعة التسليم وجودة المنتج النهائي.",
-            "deepDiveEn": "Guiding architectural choices to avoid technical debt, selecting optimal technology stacks aligned with business ROI, and mentoring development teams during rapid production releases.",
+            "titleAr": "القيادة التقنية، التحول الرقمي وإدارة المشاريع (PMP®)",
+            "titleEn": "Technical Leadership, Digital Transformation & PMP®",
+            "descAr": "قيادة التحول الرقمي والبرمجي كشريك تقني معتمد (PMP®)، توجيه خرائط الطريق الهندسية من الفكرة حتى الإنتاج، وبناء نماذج المنتجات الأولية (MVP) بأعلى كفاءة تشغيلية وجودة معمارية.",
+            "descEn": "Serving as a PMP® certified technical leader and solutions consultant, executing engineering roadmaps from concept to scale, and steering rapid MVP releases with enterprise ROI.",
+            "deepDiveAr": "تطبيق منهجيات Agile و Predictive المعيارية، اختيار حزم التقنيات المتوافقة مع الجدوى المؤسسية، وإدارة المخاطر وتجنب الديون التقنية لضمان سرعة التسليم وجودة المنتج.",
+            "deepDiveEn": "Governing projects using PMI Agile and Waterfall frameworks, mitigating architectural technical debt, and aligning technology investments directly with business outcomes.",
             "tags": [
+                "PMP® Certified",
                 "Fractional CTO",
                 "Roadmap Execution",
                 "MVP Rapid Prototyping",
                 "Technical Due Diligence",
-                "Architecture Auditing",
-                "Agile Leadership"
+                "Agile & Scrum Leadership"
             ],
-            "badgeAr": "القيادة التقنية وبناء المنتجات",
-            "badgeEn": "Technical Leadership & CTO",
-            "metricAr": "MVP تسليم سريع للمنتجات",
-            "metricEn": "Rapid Production Delivery"
+            "badgeAr": "القيادة التقنية وإدارة المشاريع",
+            "badgeEn": "Technical Leadership & PMP®",
+            "metricAr": "PMP® & Agile تسليم معياري",
+            "metricEn": "PMP® & Agile Standard"
         }
     ],
     "projectsStats": [
@@ -1733,6 +1735,20 @@ const initialDefaultData = {
     ],
     "gallery": [
         {
+            "id": "gal-pmp",
+            "image": "assets/images/ehab-yar-pmp-credential-certificate.jpg",
+            "badgeAr": "اعتماد عالمي",
+            "badgeEn": "Global Credential",
+            "titleAr": "شهادة محترف إدارة المشاريع (PMP®) المعتمدة",
+            "titleEn": "Project Management Professional (PMP®) Certificate",
+            "descAr": "الشهادة الرسمية لاجتياز واعتماد PMP الصادرة من معهد إدارة المشاريع العالمي (PMI) برقم 4514551.",
+            "descEn": "Official Project Management Professional (PMP®) certification issued by the Project Management Institute (PMI), Credential #4514551.",
+            "category": "cert",
+            "date": "سبتمبر 2026م",
+            "locationAr": "معهد إدارة المشاريع العالمي (PMI)",
+            "locationEn": "Project Management Institute (PMI)"
+        },
+        {
             "id": "gal-1",
             "image": "assets/images/ehab-yar-umm-al-qura-university-graduation-portrait.jpg",
             "badgeAr": "حفل التخرج",
@@ -1904,8 +1920,8 @@ const initialDefaultData = {
     "contact": {
         "titleAr": "هل تبحث عن شريك تقني؟",
         "titleEn": "Seeking a Tech Partner?",
-        "descAr": "دعنا نناقش كيف يمكن لخبرتي كعالم حاسب أن تدعم نمو مشروعك وتضمن استقراره التقني بأعلى المعايير الهندسية.",
-        "descEn": "Let's discuss how my expertise as a Computer Scientist can support your project's growth and ensure its technical stability with rigorous engineering.",
+        "descAr": "دعنا نناقش كيف يمكن لخبرتي كعالم حاسب ومحترف إدارة مشاريع (PMP®) أن تدعم نمو مشروعك وتضمن استقراره التقني بأعلى المعايير الهندسية.",
+        "descEn": "Let's discuss how my expertise as a Computer Scientist and certified PMP® can accelerate your project's trajectory with engineering rigor.",
         "whatsapp": "966599727412",
         "email": "contact@eny.sa",
         "twitter": "https://x.com/_f_eny",
