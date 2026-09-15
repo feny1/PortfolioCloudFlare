@@ -1,0 +1,11 @@
+# robots.txt for eny.sa
+User-agent: *
+Disallow: /admin/
+Disallow: /api/
+Disallow: /private/
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Allow: /
+
+# Sitemap
+Sitemap: https://eny.sa/sitemap.xml
