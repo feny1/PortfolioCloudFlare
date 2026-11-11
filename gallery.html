@@ -52,6 +52,10 @@
                 <li><a href="index.html#contact" data-ar="اتصل بي" data-en="Contact">اتصل بي</a></li>
             </ul>
             <div class="nav-actions">
+                <a href="assets/Ehab_Yar_CV.pdf" download="Ehab_Yar_CV.pdf" class="btn-cv-nav" title="Download CV (PDF)">
+                    <i class="fas fa-file-arrow-down"></i>
+                    <span data-ar="السيرة الذاتية (CV)" data-en="CV (PDF)">السيرة الذاتية (CV)</span>
+                </a>
                 <button id="lang-toggle" class="btn-lang" onclick="toggleLanguage()" aria-label="Toggle Language">
                     <i class="fas fa-globe" style="margin-inline-end: 4px;"></i>
                     <span class="lang-text" id="lang-text">English</span>
@@ -94,7 +98,7 @@
                             <i class="fas fa-camera"></i>
                         </div>
                         <div class="stat-metric-info">
-                            <div class="stat-val">12</div>
+                            <div class="stat-val">15</div>
                             <div class="stat-lbl" data-ar="توثيق عالي الدقة: محطات حية" data-en="HD Documentation: Moments">توثيق عالي الدقة: محطات حية</div>
                         </div>
                     </div>
@@ -112,7 +116,7 @@
                             <i class="fas fa-vr-cardboard"></i>
                         </div>
                         <div class="stat-metric-info">
-                            <div class="stat-val">04</div>
+                            <div class="stat-val">06</div>
                             <div class="stat-lbl" data-ar="أجنحة ومؤتمرات: تقنية وابتكار" data-en="Tech Showcases: Mawsem AI">أجنحة ومؤتمرات: تقنية وابتكار</div>
                         </div>
                     </div>
@@ -142,7 +146,7 @@
                 <div class="gallery-filters" id="gallery-filters" style="margin-bottom: 2.5rem;">
                     <button class="filter-btn active" data-filter="all" onclick="filterGallery('all', this)">
                         <i class="fas fa-th-large" style="margin-inline-end: 6px;"></i>
-                        <span data-ar="الكل (12)" data-en="All Photos (12)">الكل (12)</span>
+                        <span data-ar="الكل (15)" data-en="All Photos (15)">الكل (15)</span>
                     </button>
                     <button class="filter-btn" data-filter="grad" onclick="filterGallery('grad', this)">
                         <i class="fas fa-graduation-cap" style="margin-inline-end: 6px;"></i>
@@ -170,7 +174,7 @@
                     <p id="contact-desc" data-ar="دعنا نناقش كيف يمكن لخبرتي كعالم حاسب أن تدعم نمو مشروعك وتضمن استقراره التقني." data-en="Let's discuss how my expertise as a Computer Scientist can support your project's growth and ensure its technical stability.">دعنا نناقش كيف يمكن لخبرتي كعالم حاسب أن تدعم نمو مشروعك وتضمن استقراره التقني.</p>
                     <div class="social-links" id="social-links-container">
                         <a href="https://x.com/_f_eny" target="_blank" rel="noopener noreferrer" title="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
-                        <a href="https://www.linkedin.com/in/ehab-yar-4a1bb4193/" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.linkedin.com/in/ehab-yar" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
                         <a href="https://github.com/feny1" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fab fa-github"></i></a>
                     </div>
                     <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
@@ -227,7 +231,7 @@
                         <i class="fab fa-x-twitter" aria-hidden="true"></i>
                         <span>X</span>
                     </a>
-                    <a href="https://www.linkedin.com/in/ehab-yar-4a1bb4193/" target="_blank" rel="noopener noreferrer" class="footer-social-item social-linkedin" id="footer-link-linkedin" title="LinkedIn" aria-label="LinkedIn">
+                    <a href="https://www.linkedin.com/in/ehab-yar" target="_blank" rel="noopener noreferrer" class="footer-social-item social-linkedin" id="footer-link-linkedin" title="LinkedIn" aria-label="LinkedIn">
                         <i class="fab fa-linkedin" aria-hidden="true"></i>
                         <span>LinkedIn</span>
                     </a>
@@ -283,7 +287,7 @@
             <div class="gallery-item" data-category="${g.category || 'all'}" data-index="${idx}" onclick="openLightbox(${idx})">
                 <div class="gallery-card">
                     <div class="gallery-img-wrap">
-                        <img src="${g.image}" alt="${title}" class="gallery-img" loading="lazy">
+                        <img src="${g.image}" alt="${title}" class="gallery-img" loading="lazy" onerror="this.onerror=null; this.src='assets/images/ehab-yar-digital-transformation-tech-conference.jpg';">
                         <div class="gallery-overlay">
                             <div class="gallery-zoom-icon" onclick="event.stopPropagation(); openLightbox(${idx});"><i class="fas fa-expand-alt"></i></div>
                             <div class="gallery-overlay-text">
@@ -374,7 +378,13 @@
             const descEl = document.getElementById('lightbox-desc');
             const counterEl = document.getElementById('lightbox-counter');
 
-            if (imgEl) imgEl.src = cur.image;
+            if (imgEl) {
+                imgEl.src = cur.image;
+                imgEl.onerror = function () {
+                    this.onerror = null;
+                    this.src = 'assets/images/ehab-yar-digital-transformation-tech-conference.jpg';
+                };
+            }
             if (titleEl) titleEl.textContent = isAr ? cur.titleAr : cur.titleEn;
             if (descEl) descEl.textContent = isAr ? cur.descAr : cur.descEn;
             if (counterEl) counterEl.textContent = `${currentLightboxIndex + 1} / ${items.length}`;

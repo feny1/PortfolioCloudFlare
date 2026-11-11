@@ -52,11 +52,11 @@
       "@type": "Person",
       "@id": "https://eny.sa/#person",
       "name": "إيهاب يار",
-      "alternateName": ["Ehab Yar", "إيهاب نبيل يار"],
+      "alternateName": ["Ehab Yar", "إيهاب نبيل يار", "Ehab Nabeel Yar"],
       "url": "https://eny.sa",
       "image": "https://eny.sa/assets/images/ehab-nabeel-yar-computer-scientist-profile.png",
-      "jobTitle": "عالم حاسب ورئيس تقني PMP",
-      "description": "عالم حاسب وباحث ماجستير في قسم علوم الحاسب والذكاء الاصطناعي بكلية الحاسبات بجامعة أم القرى.",
+      "jobTitle": "متخصص علوم حاسب ومحلل نظم معتمد | Computer Scientist, Systems Analyst & PMP®",
+      "description": "متخصص علوم حاسب ومحلل نظم معتمد (PMI PMP® #4514551)، وباحث ماجستير في علوم الحاسب بكلية الحاسبات بجامعة أم القرى. حاصل على بكالوريوس علوم الحاسب بمرتبة الشرف (GPA: 3.60/4.00) وكفاءة لغوية (STEP: 78).",
       "alumniOf": [
         {
           "@type": "CollegeOrUniversity",
@@ -65,20 +65,54 @@
           "sameAs": "https://ar.wikipedia.org/wiki/جامعة_أم_القرى"
         }
       ],
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Project Management Professional (PMP®)",
+          "credentialCategory": "Professional Certification",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Project Management Institute (PMI)"
+          },
+          "identifier": "4514551"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Bachelor of Science in Computer Science (With Honors)",
+          "credentialCategory": "Degree",
+          "recognizedBy": {
+            "@type": "CollegeOrUniversity",
+            "name": "Umm Al-Qura University"
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Standardized Test of English Proficiency (STEP: 78)",
+          "credentialCategory": "Language Assessment",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Qiyas / Education and Training Evaluation Commission (ETEC)"
+          }
+        }
+      ],
       "sameAs": [
         "https://x.com/_f_eny",
-"https://www.wikidata.org/wiki/Q141424705",
+        "https://www.wikidata.org/wiki/Q141424705",
         "https://github.com/feny1",
-        "https://www.linkedin.com/in/ehab-yar-4a1bb4193/",
+        "https://www.linkedin.com/in/ehab-yar",
         "https://uqu.edu.sa/profile/s44880850",
         "https://uqu.edu.sa/profile/s444001534",
-        "https://www.alwatan.com.sa/"
+        "https://vibepedia.eny.sa",
+        "https://payment.eny.sa"
       ],
       "knowsAbout": [
         "Computer Science",
-        "Artificial Intelligence",
-        "Backend Architecture",
-        "Database Management Systems"
+        "Systems Analysis & Design",
+        "Process Engineering & Change Management",
+        "Project Management (PMI PMP®)",
+        "Backend Architecture & Database Systems",
+        "Serverless Edge Computing",
+        "Artificial Intelligence & AI Agents"
       ]
     }
   ]
@@ -128,6 +162,10 @@
                 <li><a href="#contact" data-ar="اتصل بي" data-en="Contact">اتصل بي</a></li>
             </ul>
             <div class="nav-actions">
+                <a href="assets/Ehab_Yar_CV.pdf" download="Ehab_Yar_CV.pdf" class="btn-cv-nav" title="Download CV (PDF)">
+                    <i class="fas fa-file-arrow-down"></i>
+                    <span data-ar="السيرة الذاتية (CV)" data-en="CV (PDF)">السيرة الذاتية (CV)</span>
+                </a>
                 <button id="lang-toggle" class="btn-lang" onclick="toggleLanguage()" aria-label="Toggle Language">
                     <i class="fas fa-globe" style="margin-inline-end: 4px;"></i>
                     <span class="lang-text" id="lang-text">English</span>
@@ -170,7 +208,7 @@
                     <div class="hero-content">
                         <div class="hero-badge-pill">
                             <span class="hero-badge-dot"></span>
-                            <span data-ar="باحث ماجستير • PMP • رئيس تقني" data-en="M.Sc. Candidate • Computer Scientist • PMP">باحث ماجستير • عالم حاسب • PMP</span>
+                            <span data-ar="باحث ماجستير • PMP® • محلل نظم معتمد" data-en="M.CS Candidate • Systems Analyst • PMP®">باحث ماجستير • PMP® • محلل نظم معتمد</span>
                         </div>
 
                         <div class="greeting" id="hero-greeting" data-ar="أهلاً بك، أنا" data-en="Welcome, I am">أهلاً بك، أنا</div>
@@ -183,24 +221,28 @@
                             <div class="hero-outline-banner">
                                 <span class="outline-stroke-text">EHAB YAR</span>
                                 <span style="color: var(--primary); font-size: 1.2rem;">/</span>
-                                <span style="font-family: var(--font-en); font-size: 0.92rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-gray); font-weight: 600;">Systems & AI Architect</span>
+                                <span style="font-family: var(--font-en); font-size: 0.92rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-gray); font-weight: 600;">Systems Analyst & PMP®</span>
                             </div>
                         </div>
 
                         <div class="role-pill-box">
                             <i class="fas fa-terminal" style="color: var(--primary); font-size: 0.9rem;"></i>
-                            <span class="role-text" id="typewriter" data-ar="باحث ماجستير وعالم حاسب" data-en="Master's Candidate & Computer Scientist">باحث ماجستير وعالم حاسب</span>
+                            <span class="role-text" id="typewriter" data-ar="متخصص علوم حاسب ومحلل نظم معتمد | PMP®" data-en="Computer Scientist, Systems Analyst & PMP®">متخصص علوم حاسب ومحلل نظم معتمد | PMP®</span>
                             <span class="typewriter-cursor"></span>
                         </div>
 
                         <p class="hero-desc" id="hero-desc"
-                            data-ar="عالم حاسب وباحث ماجستير في قسم علوم الحاسب والذكاء الاصطناعي بكلية الحاسبات بجامعة أم القرى. أتخصص في تطوير الواجهات الخلفية وإدارة قواعد البيانات وهندسة أنظمة آمنة وقابلة للتوسع."
-                            data-en="Computer Scientist and Master's Candidate at the Department of Computer Science & Artificial Intelligence, College of Computing, Umm Al-Qura University. Specializing in backend development, database architecture, and secure scalable systems.">
-                            عالم حاسب وباحث ماجستير في قسم علوم الحاسب والذكاء الاصطناعي بكلية الحاسبات بجامعة أم القرى.
-                            أتخصص في تطوير الواجهات الخلفية وإدارة قواعد البيانات وهندسة أنظمة آمنة وقابلة للتوسع.
+                            data-ar="متخصص علوم حاسب ومحلل نظم معتمد (PMI PMP® #4514551)، وباحث ماجستير في علوم الحاسب بكلية الحاسبات بجامعة أم القرى. خريج بكالوريوس علوم الحاسب بمرتبة الشرف (معدل 3.60 من 4.00) وحاصل على كفاءة لغوية (STEP: 78). أتخصص في تحليل النظم المؤسسية، إدارة التغيير، تطوير الواجهات الخلفية، وهندسة أنظمة هجينة وميدانية عالية التوافرية."
+                            data-en="Certified Computer Scientist, Systems Analyst & Project Management Professional (PMI PMP® #4514551), and Master's Candidate in Computer Science at Umm Al-Qura University. B.Sc. in Computer Science with Honors (GPA: 3.60/4.00) with verified English proficiency (STEP: 78). Specializing in enterprise systems analysis, change management, backend architecture, and mission-critical high-availability hybrid systems.">
+                            متخصص علوم حاسب ومحلل نظم معتمد (PMI PMP® #4514551)، وباحث ماجستير في علوم الحاسب بكلية الحاسبات بجامعة أم القرى.
+                            خريج بكالوريوس علوم الحاسب بمرتبة الشرف (معدل 3.60 من 4.00) وحاصل على كفاءة لغوية (STEP: 78).
                         </p>
 
                         <div class="hero-btns">
+                            <a href="assets/Ehab_Yar_CV.pdf" download="Ehab_Yar_CV.pdf" class="btn btn-cv-hero" title="Download CV (PDF)">
+                                <i class="fas fa-file-arrow-down"></i>
+                                <span data-ar="تحميل السيرة الذاتية (ATS PDF)" data-en="Download CV (ATS PDF)">تحميل السيرة الذاتية (ATS PDF)</span>
+                            </a>
                             <a href="#projects" class="btn btn-primary">
                                 <span data-ar="استعراض المشاريع" data-en="View Projects">استعراض المشاريع</span>
                                 <i class="fas fa-arrow-left arrow-icon"></i>
@@ -223,7 +265,7 @@
                                 <div class="card-corner-br"></div>
                                 <img id="hero-profile-img"
                                     src="assets/images/ehab-nabeel-yar-computer-scientist-profile.png"
-                                    alt="إيهاب بن نبيل يار - باحث ماجستير وعالم حاسب | Ehab Nabeel Yar Computer Scientist"
+                                    alt="إيهاب بن نبيل يار - متخصص علوم حاسب ومحلل نظم معتمد PMP | Ehab Nabeel Yar"
                                     class="profile-img">
                                 <div class="profile-bg-glow"></div>
                             </div>
@@ -232,8 +274,8 @@
                                 <div class="bento-sand-card">
                                     <div class="bento-sand-header">
                                         <div>
-                                            <div class="bento-sand-title" data-ar="هندسة الأنظمة والحلول الذكية" data-en="Smart Systems & Engineering">هندسة الأنظمة والحلول الذكية</div>
-                                            <div class="bento-sand-subtitle" data-ar="بناء بنى تحتية موثوقة وقابلة للتوسع" data-en="Scalable & High-Performance Architecture">بناء بنى تحتية موثوقة وقابلة للتوسع</div>
+                                            <div class="bento-sand-title" data-ar="تحليل النظم والحلول الهجينة" data-en="Systems Analysis & Hybrid Stacks">تحليل النظم والحلول الهجينة</div>
+                                            <div class="bento-sand-subtitle" data-ar="إدارة التغيير وبنى تحتية عالية التوافرية" data-en="Change Governance & High Availability">إدارة التغيير وبنى تحتية عالية التوافرية</div>
                                         </div>
                                         <div class="sand-play-btn" title="Excellence">
                                             <i class="fas fa-bolt"></i>
@@ -242,20 +284,20 @@
                                     <div>
                                         <div class="sand-pill-tag">
                                             <i class="fas fa-check-circle" style="font-size: 0.75rem;"></i>
-                                            <span data-ar="جاهزية تشغيلية 100%" data-en="100% Operational Ready">جاهزية تشغيلية 100%</span>
+                                            <span data-ar="PMP® #4514551 معتمد" data-en="Certified PMP® #4514551">PMP® #4514551 معتمد</span>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="bento-dark-badge">
                                     <div>
-                                        <div class="bento-dark-stat">74th</div>
-                                        <div class="bento-dark-label" data-ar="دفعة التميز • جامعة أم القرى" data-en="Batch of Excellence • UQU">دفعة التميز • جامعة أم القرى</div>
+                                        <div class="bento-dark-stat">3.60</div>
+                                        <div class="bento-dark-label" data-ar="مرتبة الشرف (GPA: 3.60/4) • الدفعة 74" data-en="Honors (GPA: 3.60/4) • Batch 74">مرتبة الشرف (GPA: 3.60/4) • الدفعة 74</div>
                                     </div>
                                     <div class="bento-avatars-row">
-                                        <div class="bento-avatar-icon" title="Computer Science"><i class="fas fa-graduation-cap"></i></div>
-                                        <div class="bento-avatar-icon" title="Master's Researcher"><i class="fas fa-user-graduate"></i></div>
-                                        <div class="bento-avatar-icon" title="PMP Candidate"><i class="fas fa-award"></i></div>
+                                        <div class="bento-avatar-icon" title="Computer Science Honors"><i class="fas fa-graduation-cap"></i></div>
+                                        <div class="bento-avatar-icon" title="Master's Candidate"><i class="fas fa-user-graduate"></i></div>
+                                        <div class="bento-avatar-icon" title="PMI PMP® Certified"><i class="fas fa-award"></i></div>
                                     </div>
                                 </div>
                             </div>
@@ -265,20 +307,20 @@
 
                 <div class="luminous-stat-banner">
                     <div class="stat-col">
-                        <div class="stat-num">+11</div>
-                        <div class="stat-title" data-ar="تغطية ومقال صحفي موثق" data-en="Press & Media Articles">تغطية ومقال صحفي موثق</div>
+                        <div class="stat-num">M.CS</div>
+                        <div class="stat-title" data-ar="باحث ماجستير علوم حاسب • أم القرى" data-en="M.CS Candidate (CS) • UQU">باحث ماجستير علوم حاسب • أم القرى</div>
                     </div>
                     <div class="stat-col">
-                        <div class="stat-num">+15</div>
-                        <div class="stat-title" data-ar="مشروع ونظام تقني متكامل" data-en="Enterprise & AI Systems">مشروع ونظام تقني متكامل</div>
-                    </div>
-                    <div class="stat-col">
-                        <div class="stat-num">100%</div>
-                        <div class="stat-title" data-ar="سلامة وموثوقية قواعد البيانات" data-en="Database & Backend Reliability">سلامة وموثوقية قواعد البيانات</div>
+                        <div class="stat-num">3.60</div>
+                        <div class="stat-title" data-ar="بكالوريوس بمرتبة الشرف (الدفعة 74)" data-en="B.Sc. Honors (Batch 74)">بكالوريوس بمرتبة الشرف (الدفعة 74)</div>
                     </div>
                     <div class="stat-col">
                         <div class="stat-num"><bdo dir="ltr" style="direction: ltr; unicode-bidi: isolate; display: inline-block;">PMP<sup style="font-size: 0.55em; vertical-align: super;">&reg;</sup></bdo></div>
-                        <div class="stat-title" data-ar="إدارة المشاريع والتحول الرقمي" data-en="Project Leadership Credential">إدارة المشاريع والتحول الرقمي</div>
+                        <div class="stat-title" data-ar="اعتماد مهني دولي (#4514551)" data-en="PMI Credential (#4514551)">اعتماد مهني دولي (#4514551)</div>
+                    </div>
+                    <div class="stat-col">
+                        <div class="stat-num">78</div>
+                        <div class="stat-title" data-ar="كفاءة لغوية معتمدة (STEP)" data-en="English Proficiency (STEP: 78)">كفاءة لغوية معتمدة (STEP)</div>
                     </div>
                 </div>
             </div>
@@ -559,7 +601,7 @@
                     <div class="social-links" id="social-links-container">
                         <a href="https://x.com/_f_eny" target="_blank" rel="noopener noreferrer" title="X (Twitter)"><i
                                 class="fab fa-x-twitter"></i></a>
-                        <a href="https://www.linkedin.com/in/ehab-yar-4a1bb4193/" target="_blank"
+                        <a href="https://www.linkedin.com/in/ehab-yar" target="_blank"
                             rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
                         <a href="https://github.com/feny1" target="_blank" rel="noopener noreferrer" title="GitHub"><i
                                 class="fab fa-github"></i></a>
@@ -597,7 +639,7 @@
                         <i class="fab fa-x-twitter" aria-hidden="true"></i>
                         <span>X</span>
                     </a>
-                    <a href="https://www.linkedin.com/in/ehab-yar-4a1bb4193/" target="_blank" rel="noopener noreferrer" class="footer-social-item social-linkedin" id="footer-link-linkedin" title="LinkedIn" aria-label="LinkedIn">
+                    <a href="https://www.linkedin.com/in/ehab-yar" target="_blank" rel="noopener noreferrer" class="footer-social-item social-linkedin" id="footer-link-linkedin" title="LinkedIn" aria-label="LinkedIn">
                         <i class="fab fa-linkedin" aria-hidden="true"></i>
                         <span>LinkedIn</span>
                     </a>
@@ -932,18 +974,25 @@
             if (!container) return;
             const isAr = currentLang === 'ar';
 
-            container.innerHTML = (siteData.collaborations || []).slice(0, 3).map(item => {
+            container.innerHTML = (siteData.collaborations || []).map(item => {
                 let desc = isAr ? (item.descAr || '') : (item.descEn || '');
                 if (isAr && desc.includes('الأستاذ هتان بن جمال خان')) {
                     desc = desc.replace('الأستاذ هتان بن جمال خان', '<span style="color: var(--primary); font-weight: 700;">الأستاذ هتان بن جمال خان</span>');
                 } else if (!isAr && desc.includes('Mr. Hattan Jamal Khan')) {
                     desc = desc.replace('Mr. Hattan Jamal Khan', '<span style="color: var(--primary); font-weight: 700;">Mr. Hattan Jamal Khan</span>');
                 }
+                const role = isAr ? (item.roleAr || '') : (item.roleEn || '');
+                const badge = isAr ? (item.badgeAr || '') : (item.badgeEn || '');
+
                 return `
                 <div class="collab-card">
-                    <div class="collab-icon"><i class="${item.icon || 'fas fa-building'}"></i></div>
-                    <h3>${isAr ? (item.titleAr || '') : (item.titleEn || '')}</h3>
-                    <p>${desc}</p>
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+                        <div class="collab-icon"><i class="${item.icon || 'fas fa-building'}"></i></div>
+                        ${badge ? `<span style="font-size: 0.72rem; background: rgba(244, 63, 94, 0.12); border: 1px solid rgba(244, 63, 94, 0.3); color: var(--primary); padding: 2px 9px; border-radius: 50px; font-weight: 700;">${badge}</span>` : ''}
+                    </div>
+                    <h3 style="font-size: 1.15rem; margin-bottom: 0.4rem; color: #f8fafc;">${isAr ? (item.titleAr || '') : (item.titleEn || '')}</h3>
+                    <div style="font-size: 0.85rem; color: var(--accent-cyan); font-weight: 600; margin-bottom: 0.8rem;">${role}</div>
+                    <p style="color: var(--text-gray); font-size: 0.9rem; line-height: 1.6;">${desc}</p>
                 </div>
                 `;
             }).join('');
@@ -954,39 +1003,37 @@
             if (!container) return;
             const isAr = currentLang === 'ar';
 
-            container.innerHTML = (siteData.people || []).slice(0, 3).map(person => {
+            container.innerHTML = (siteData.people || []).map(person => {
                 const name = isAr ? (person.nameAr || '') : (person.nameEn || '');
                 const badge = isAr ? (person.badgeAr || '') : (person.badgeEn || '');
                 const role = isAr ? (person.roleAr || '') : (person.roleEn || '');
                 const org = isAr ? (person.orgAr || '') : (person.orgEn || '');
-                const desc = isAr ? (person.descAr || '') : (person.descEn || '');
 
                 return `
-            <div class="person-card">
-                <div class="person-header">
-                    <div class="person-avatar">
-                        <i class="fas fa-user-check"></i>
-                    </div>
-                    <div>
-                        <div class="person-name">${name}</div>
-                        <span class="person-badge">${badge}</span>
-                    </div>
-                </div>
-                <div class="person-org">
-                    <i class="fas fa-briefcase" style="font-size: 0.85rem;"></i>
-                    <span>${role}${org ? ' • ' + org : ''}</span>
-                </div>
-                 ${person.url ? `
-                        <div style="margin-bottom: 1rem;">
-                            <a style="color: white;" href="${person.url}" target="_blank"
-                                rel="noopener noreferrer"
-                                class="text-white hover:underline text-sm inline-flex items-center gap-1">
-                                <span>${isAr ? 'زيارة الموقع الشخصي' : 'Visit Portfolio' }</span>
-                                <span>↗</span>
-                            </a>
+            <div class="person-card" style="display: flex; flex-direction: column; justify-content: space-between; padding: 1.4rem; border-radius: 16px;">
+                <div>
+                    <div class="person-header" style="margin-bottom: 0.9rem;">
+                        <div class="person-avatar">
+                            <i class="fas fa-user-check"></i>
                         </div>
-                    ` : ''}
-                <p class="person-desc">${desc}</p>
+                        <div>
+                            <div class="person-name" style="font-size: 1.08rem; font-weight: 700; color: #f8fafc;">${name}</div>
+                            <span class="person-badge" style="font-size: 0.75rem; background: rgba(56, 189, 248, 0.12); border: 1px solid rgba(56, 189, 248, 0.35); color: var(--accent-cyan); padding: 2px 8px; border-radius: 6px; font-weight: 600;">${badge}</span>
+                        </div>
+                    </div>
+                    <div class="person-org" style="font-size: 0.88rem; color: #cbd5e1; display: flex; align-items: flex-start; gap: 0.5rem; line-height: 1.5;">
+                        <i class="fas fa-briefcase" style="font-size: 0.82rem; color: var(--primary); margin-top: 0.25rem;"></i>
+                        <span>${role}${org ? ' &bull; <strong>' + org + '</strong>' : ''}</span>
+                    </div>
+                </div>
+                ${person.url ? `
+                <div style="margin-top: 1.2rem; padding-top: 0.8rem; border-top: 1px solid rgba(255, 255, 255, 0.06);">
+                    <a href="${person.url}" target="_blank" rel="noopener noreferrer" style="color: var(--accent-cyan); font-size: 0.84rem; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.35rem 0.75rem; background: rgba(56, 189, 248, 0.08); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 8px; transition: all 0.2s ease;">
+                        <span>${isAr ? 'زيارة الحساب / الموقع المعتمد' : 'Visit Profile / Portfolio'}</span>
+                        <i class="fas fa-external-link-alt" style="font-size: 0.75rem;"></i>
+                    </a>
+                </div>
+                ` : ''}
             </div>
             `;
             }).join('');
@@ -997,7 +1044,7 @@
             if (!container) return;
             const isAr = currentLang === 'ar';
 
-            container.innerHTML = (siteData.projects || []).slice(0, 3).map(p => {
+            container.innerHTML = (siteData.projects || []).slice(0, 6).map(p => {
                 const title = isAr ? (p.titleAr || '') : (p.titleEn || '');
                 const desc = isAr ? (p.descAr || '') : (p.descEn || '');
                 const badge = isAr ? (p.badgeAr || 'مشروع هندسي معتمد') : (p.badgeEn || 'Engineering System');
@@ -1053,7 +1100,7 @@
             <div class="gallery-item" data-category="${g.category || 'all'}" data-index="${idx}" onclick="openLightbox(${idx})">
                 <div class="gallery-card">
                     <div class="gallery-img-wrap">
-                        <img src="${g.image}" alt="${title}" class="gallery-img" loading="lazy">
+                        <img src="${g.image}" alt="${title}" class="gallery-img" loading="lazy" onerror="this.onerror=null; this.src='assets/images/ehab-yar-digital-transformation-tech-conference.jpg';">
                         <div class="gallery-overlay">
                             <div class="gallery-zoom-icon" onclick="event.stopPropagation(); openLightbox(${idx});"><i class="fas fa-expand-alt"></i></div>
                             <div class="gallery-overlay-text">

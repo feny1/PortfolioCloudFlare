@@ -51,6 +51,10 @@
                 <li><a href="index.html#contact" data-ar="اتصل بي" data-en="Contact">اتصل بي</a></li>
             </ul>
             <div class="nav-actions">
+                <a href="assets/Ehab_Yar_CV.pdf" download="Ehab_Yar_CV.pdf" class="btn-cv-nav" title="Download CV (PDF)">
+                    <i class="fas fa-file-arrow-down"></i>
+                    <span data-ar="السيرة الذاتية (CV)" data-en="CV (PDF)">السيرة الذاتية (CV)</span>
+                </a>
                 <button id="lang-toggle" class="btn-lang" onclick="toggleLanguage()" aria-label="Toggle Language">
                     <i class="fas fa-globe" style="margin-inline-end: 4px;"></i>
                     <span class="lang-text" id="lang-text">English</span>
@@ -146,7 +150,7 @@
                     <p id="contact-desc" data-ar="دعنا نناقش كيف يمكن لخبرتي كعالم حاسب أن تدعم نمو مشروعك وتضمن استقراره التقني." data-en="Let's discuss how my expertise as a Computer Scientist can support your project's growth and ensure its technical stability.">دعنا نناقش كيف يمكن لخبرتي كعالم حاسب أن تدعم نمو مشروعك وتضمن استقراره التقني.</p>
                     <div class="social-links" id="social-links-container">
                         <a href="https://x.com/_f_eny" target="_blank" rel="noopener noreferrer" title="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
-                        <a href="https://www.linkedin.com/in/ehab-yar-4a1bb4193/" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.linkedin.com/in/ehab-yar" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
                         <a href="https://github.com/feny1" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fab fa-github"></i></a>
                     </div>
                     <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
@@ -180,7 +184,7 @@
                         <i class="fab fa-x-twitter" aria-hidden="true"></i>
                         <span>X</span>
                     </a>
-                    <a href="https://www.linkedin.com/in/ehab-yar-4a1bb4193/" target="_blank" rel="noopener noreferrer" class="footer-social-item social-linkedin" id="footer-link-linkedin" title="LinkedIn" aria-label="LinkedIn">
+                    <a href="https://www.linkedin.com/in/ehab-yar" target="_blank" rel="noopener noreferrer" class="footer-social-item social-linkedin" id="footer-link-linkedin" title="LinkedIn" aria-label="LinkedIn">
                         <i class="fab fa-linkedin" aria-hidden="true"></i>
                         <span>LinkedIn</span>
                     </a>
@@ -244,68 +248,33 @@
                 const name = isAr ? (person.nameAr || '') : (person.nameEn || '');
                 const role = isAr ? (person.roleAr || '') : (person.roleEn || '');
                 const org = isAr ? (person.orgAr || '') : (person.orgEn || '');
-                const badge = isAr ? (person.badgeAr || 'عضو قيادي') : (person.badgeEn || 'Leadership Member');
-                const desc = isAr ? (person.descAr || '') : (person.descEn || '');
-                const highlights = isAr ? (person.highlightsAr || (person.sharedMilestonesAr ? [person.sharedMilestonesAr] : [])) : (person.highlightsEn || (person.sharedMilestonesEn ? [person.sharedMilestonesEn] : []));
-                const endorsement = isAr ? (person.endorsementAr || person.testimonialAr || '') : (person.endorsementEn || person.testimonialEn || '');
-                const tags = person.tags || [];
+                const badge = isAr ? (person.badgeAr || 'شريك مهني') : (person.badgeEn || 'Professional Partner');
 
                 return `
-                <div class="person-card" style="display: flex; flex-direction: column; justify-content: space-between;">
+                <div class="person-card" style="display: flex; flex-direction: column; justify-content: space-between; padding: 1.5rem; border-radius: 16px; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08);">
                     <div>
-                        <div class="person-header">
+                        <div class="person-header" style="margin-bottom: 1rem;">
                             <div class="person-avatar">
-                                <i class="fas fa-user-tie"></i>
+                                <i class="fas fa-user-check"></i>
                             </div>
                             <div>
-                                <div class="person-name">${name}</div>
-                                <span class="person-badge">${badge}</span>
+                                <div class="person-name" style="font-size: 1.15rem; font-weight: 700; color: #f8fafc;">${name}</div>
+                                <span class="person-badge" style="font-size: 0.78rem; background: rgba(56, 189, 248, 0.12); border: 1px solid rgba(56, 189, 248, 0.35); color: var(--accent-cyan); padding: 3px 10px; border-radius: 6px; font-weight: 600;">${badge}</span>
                             </div>
                         </div>
 
-                        <div class="person-org">
-                            <i class="fas fa-briefcase" style="font-size: 0.85rem; color: var(--primary);"></i>
+                        <div class="person-org" style="font-size: 0.92rem; color: #cbd5e1; display: flex; align-items: flex-start; gap: 0.6rem; line-height: 1.55;">
+                            <i class="fas fa-briefcase" style="font-size: 0.88rem; color: var(--primary); margin-top: 0.25rem;"></i>
                             <span>${role}${org ? ' &bull; <strong>' + org + '</strong>' : ''}</span>
                         </div>
-
-                        ${person.url ? `
-                        <div style="margin: 0.8rem 0;">
-                            <a href="${person.url}" target="_blank" rel="noopener noreferrer" style="color: var(--accent-cyan); font-size: 0.88rem; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.35rem 0.8rem; background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: var(--radius-sm); transition: var(--transition-fast);">
-                                <span>${isAr ? 'زيارة الموقع الرسمي' : 'Official Website'}</span>
-                                <i class="fas fa-external-link-alt" style="font-size: 0.75rem;"></i>
-                            </a>
-                        </div>
-                        ` : ''}
-
-                        <p class="person-desc" style="margin-top: 0.8rem;">${desc}</p>
-
-                        ${highlights.length ? `
-                        <div style="margin-top: 1.2rem; padding-top: 1rem; border-top: 1px solid rgba(255, 255, 255, 0.06);">
-                            <h4 style="font-size: 0.88rem; font-weight: 700; color: #cbd5e1; margin-bottom: 0.6rem; display: flex; align-items: center; gap: 0.4rem;">
-                                <i class="fas fa-handshake" style="color: var(--primary);"></i>
-                                <span>${isAr ? 'محاور التكامل والعمل المشترك' : 'Joint Engagement & Synergy'}</span>
-                            </h4>
-                            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.5rem;">
-                                ${highlights.map(h => `
-                                    <li style="font-size: 0.85rem; color: var(--text-gray); display: flex; align-items: flex-start; gap: 0.5rem; line-height: 1.5;">
-                                        <i class="fas fa-check" style="color: var(--accent-cyan); font-size: 0.75rem; margin-top: 0.25rem;"></i>
-                                        <span>${h}</span>
-                                    </li>
-                                `).join('')}
-                            </ul>
-                        </div>
-                        ` : ''}
-
-                        ${endorsement ? `
-                        <div class="rich-quote-card" style="margin-top: 1.2rem; font-size: 0.88rem;">
-                            "${endorsement}"
-                        </div>
-                        ` : ''}
                     </div>
 
-                    ${tags.length ? `
-                    <div style="margin-top: 1.4rem; padding-top: 0.8rem; border-top: 1px solid rgba(255, 255, 255, 0.06); display: flex; flex-wrap: wrap; gap: 0.4rem;">
-                        ${tags.map(t => `<span class="rich-tag" style="font-size: 0.75rem; padding: 0.2rem 0.6rem;">${t}</span>`).join('')}
+                    ${person.url ? `
+                    <div style="margin-top: 1.4rem; padding-top: 1rem; border-top: 1px solid rgba(255, 255, 255, 0.06);">
+                        <a href="${person.url}" target="_blank" rel="noopener noreferrer" style="color: var(--accent-cyan); font-size: 0.86rem; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 0.45rem; padding: 0.4rem 0.9rem; background: rgba(56, 189, 248, 0.08); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 8px; transition: all 0.2s ease;">
+                            <span>${isAr ? 'زيارة الموقع أو الحساب المعتمد' : 'Visit Profile / Website'}</span>
+                            <i class="fas fa-external-link-alt" style="font-size: 0.75rem;"></i>
+                        </a>
                     </div>
                     ` : ''}
                 </div>

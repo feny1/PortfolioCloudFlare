@@ -1,72 +1,76 @@
+// Official Portfolio System Data - Ehab Yar (PMP®)
 const initialDefaultData = {
     "hero": {
         "greetingAr": "أهلاً بك، أنا",
         "greetingEn": "Welcome, I am",
         "nameAr": "إيهاب يار",
         "nameEn": "Ehab Yar",
+        "titleAr": "متخصص علوم حاسب ومحلل نظم معتمد | PMP®",
+        "titleEn": "Computer Scientist, Systems Analyst & PMP®",
         "phrasesAr": [
-            "باحث ماجستير وعالم حاسب",
-            "محترف إدارة مشاريع معتمد (PMP®)",
-            "رئيس تقني ومستشار حلول",
-            "مهندس واجهات خلفية وقواعد بيانات",
-            "قائد التحول الرقمي والذكاء الاصطناعي",
-            "محلل ومصمم نظم برمجية"
+            "متخصص علوم حاسب ومحلل نظم معتمد",
+            "محترف إدارة مشاريع معتمد (PMI PMP® #4514551)",
+            "باحث ماجستير علوم حاسب - جامعة أم القرى",
+            "بكالوريوس علوم حاسب بمرتبة الشرف (GPA: 3.60/4.00)",
+            "كفاءة لغوية معتمدة (STEP: 78)",
+            "مهندس معمارية الواجهات الخلفية وقواعد البيانات"
         ],
         "phrasesEn": [
-            "Master's Candidate & Computer Scientist",
-            "Certified Project Management Professional (PMP®)",
-            "CTO & Technical Consultant",
-            "Backend & Database Architect",
-            "Digital Transformation & AI Lead",
-            "Systems Analyst & Architect"
+            "Computer Scientist & Systems Analyst",
+            "Certified Project Management Professional (PMP® #4514551)",
+            "Master's Candidate in Computer Science - UQU",
+            "B.Sc. in Computer Science with Honors (GPA: 3.60/4.00)",
+            "Certified English Proficiency (STEP: 78)",
+            "Backend & Database Architect"
         ],
-        "descAr": "عالم حاسب وباحث ماجستير في قسم علوم الحاسب والذكاء الاصطناعي بكلية الحاسبات بجامعة أم القرى، ومحترف معتمد في إدارة المشاريع (PMP®). أتخصص في تطوير الواجهات الخلفية وإدارة قواعد البيانات وهندسة أنظمة آمنة وقابلة للتوسع للشركات والعمليات الميدانية الكبرى.",
-        "descEn": "Computer Scientist, Master's Candidate at Umm Al-Qura University, and certified Project Management Professional (PMP®). Specializing in backend development, database architecture, and secure scalable systems for enterprises and mission-critical field operations.",
+        "descAr": "متخصص علوم حاسب ومحلل نظم معتمد (PMI PMP® #4514551)، وباحث ماجستير في علوم الحاسب بكلية الحاسبات بجامعة أم القرى. خريج بكالوريوس علوم الحاسب بمرتبة الشرف (معدل 3.60 من 4.00) وحاصل على كفاءة لغوية (STEP: 78). أتخصص في تحليل النظم المؤسسية، إدارة التغيير، تطوير الواجهات الخلفية، وهندسة أنظمة هجينة عالية التوافرية لبيئات العمل الحيوية.",
+        "descEn": "Certified Computer Scientist, Systems Analyst & Project Management Professional (PMI PMP® #4514551), and Master's Candidate in Computer Science at Umm Al-Qura University. Graduated B.Sc. in Computer Science with Honors (GPA: 3.60/4.00) with verified English proficiency (STEP: 78). Specializing in enterprise systems analysis, change management, backend architecture, and mission-critical high-availability hybrid systems.",
         "profileImg": "assets/images/ehab-nabeel-yar-computer-scientist-profile.png",
-        "logoImg": "assets/images/ehab-yar-official-logo.png"
+        "logoImg": "assets/images/ehab-yar-official-logo.png",
+        "cvPdf": "assets/Ehab_Yar_CV.pdf"
     },
     "educationStats": [
         {
-            "num": "01",
-            "labelAr": "المؤهل الحالي",
-            "labelEn": "Current Degree",
-            "valAr": "طالب ماجستير علوم حاسب",
-            "valEn": "M.Sc. Candidate (CS)"
+            "num": "M.CS",
+            "labelAr": "المؤهل الأكاديمي الحالي",
+            "labelEn": "Current Academic Degree",
+            "valAr": "باحث ماجستير علوم حاسب • أم القرى",
+            "valEn": "M.CS Candidate (CS) • UQU"
         },
         {
-            "num": "74",
-            "labelAr": "دفعة التخرج",
-            "labelEn": "Graduation Batch",
-            "valAr": "الدفعة 74 - مرتبة الشرف",
-            "valEn": "74th Batch - Honors"
+            "num": "3.60",
+            "labelAr": "بكالوريوس علوم الحاسب",
+            "labelEn": "B.Sc. in Computer Science",
+            "valAr": "مرتبة الشرف (3.60/4.00) • الدفعة 74",
+            "valEn": "With Honors (GPA: 3.60/4.00)"
         },
         {
             "num": "PMP®",
-            "labelAr": "الاعتماد المهني",
-            "labelEn": "Professional Credential",
-            "valAr": "محترف معتمد من PMI",
-            "valEn": "PMI Certified (Active)"
+            "labelAr": "الاعتماد المهني الدولي",
+            "labelEn": "PMI Global Credential",
+            "valAr": "محترف معتمد (#4514551)",
+            "valEn": "Active Credential (#4514551)"
         },
         {
-            "num": "100%",
-            "labelAr": "التخصص والمسار",
-            "labelEn": "Core Domain",
-            "valAr": "علوم الحاسب والذكاء الاصطناعي",
-            "valEn": "CS & AI Architecture"
+            "num": "78",
+            "labelAr": "كفاءة اللغة الإنجليزية",
+            "labelEn": "English Proficiency (STEP)",
+            "valAr": "كفاءة معتمدة (قياس - 78)",
+            "valEn": "ETEC Qiyas Score: 78"
         }
     ],
     "education": [
         {
-            "id": "edu-1",
+            "id": "edu-master",
             "rank": "01",
             "rankLabelAr": "المستوى الأكاديمي المتقدم",
-            "rankLabelEn": "Advanced Academic Level",
-            "degreeAr": "ماجستير علوم الحاسب (عام)",
-            "degreeEn": "M.Sc. in Computer Science (General)",
-            "statusAr": "الحالة الدراسية الحالية: طالب ماجستير (مستمر)",
-            "statusEn": "Current Study Status: Master's Candidate (In Progress)",
-            "badgeAr": "قيد الدراسة حالياً",
-            "badgeEn": "Current Candidate",
+            "rankLabelEn": "Advanced Graduate Level",
+            "degreeAr": "ماجستير علوم الحاسب (قيد الدراسة)",
+            "degreeEn": "M.CS in Computer Science (Candidate)",
+            "statusAr": "الحالة الدراسية: باحث ماجستير مستمر بقسم علوم الحاسب والذكاء الاصطناعي",
+            "statusEn": "Current Status: Master's Candidate at Dept. of Computer Science & AI",
+            "badgeAr": "باحث ماجستير مستمر",
+            "badgeEn": "Master's Candidate",
             "isCert": false,
             "label1Ar": "الجامعة:",
             "label1En": "University:",
@@ -76,87 +80,87 @@ const initialDefaultData = {
             "label2En": "College:",
             "val2Ar": "كلية الحاسبات",
             "val2En": "College of Computing",
-            "label3Ar": "القسم / التخصص:",
+            "label3Ar": "القسم / المسار:",
             "label3En": "Department / Major:",
             "val3Ar": "قسم علوم الحاسب والذكاء الاصطناعي",
             "val3En": "Dept. of Computer Science & AI",
             "icon": "fas fa-user-graduate",
             "highlight": true,
-            "overviewAr": "برنامج دراسات عليا متقدم يركز على بحوث الحوسبة المتقدمة، خوارزميات الذكاء الاصطناعي، الأنظمة الموزعة، وهندسة قواعد البيانات المعقدة.",
-            "overviewEn": "Advanced graduate program focusing on advanced computing research, AI algorithms, distributed systems, and complex database engineering.",
+            "overviewAr": "برنامج دراسات عليا متقدم يركز على بحوث الحوسبة المتقدمة، الحوسبة السحابية الطرفية بدون خادم (Serverless Edge Computing)، خوارزميات الذكاء الاصطناعي، وهندسة قواعد البيانات والأنظمة الموزعة.",
+            "overviewEn": "Advanced graduate program focusing on advanced computing research, Serverless Edge Computing, AI algorithms, and distributed database systems architecture.",
             "coreTopicsAr": [
-                "خوارزميات متقدمة وهياكل بيانات معقدة",
+                "الحوسبة السحابية الطرفية بدون خادم (Serverless Edge Computing)",
+                "خوارزميات متقدمة وهياكل بيانات معقدة وتحليل الأداء",
                 "نظم قواعد البيانات المتقدمة والمعالجة الموزعة",
                 "هندسة الذكاء الاصطناعي وتحليل البيانات الضخمة",
-                "أمن المعلومات والتحقق الرسمي من صحة البرمجيات",
-                "منهجية البحث العلمي والندوات البحثية المتخصصة"
+                "منهجية البحث العلمي وإعداد المراجعات المنهجية (SLR)"
             ],
             "coreTopicsEn": [
-                "Advanced Algorithms & Complex Data Structures",
-                "Advanced Database Systems & Distributed Processing",
-                "AI Engineering & Big Data Analytics",
-                "Information Security & Formal Software Verification",
-                "Scientific Research Methodology & Research Symposiums"
+                "Serverless Edge Computing & Latency Optimization",
+                "Advanced Algorithms & Computational Complexity",
+                "Advanced Distributed Database Management Systems",
+                "Artificial Intelligence Engineering & Big Data Analytics",
+                "Systematic Literature Reviews (SLR) & Scientific Research"
             ],
-            "milestoneAr": "المشاركة في ندوات أبحاث الماجستير وتقديم أوراق بحثية حول أداء النظم وقواعد البيانات الموزعة.",
-            "milestoneEn": "Active participation in Master's Research Symposiums presenting papers on distributed database performance."
+            "milestoneAr": "نشر ورقة بحثية لمراجعة منهجية للحوسبة السحابية الطرفية بدون خادم على منصة ResearchGate والمشاركة في الندوات العلمية.",
+            "milestoneEn": "Published a Systematic Literature Review on Serverless Edge Computing on ResearchGate and active participation in scientific symposiums."
         },
         {
             "id": "cert-pmp",
             "rank": "02",
             "rankLabelAr": "الاعتماد المهني القيادي الدولي",
-            "rankLabelEn": "Global Professional Credential",
-            "degreeAr": "محترف إدارة المشاريع المعتمد (PMP®)",
-            "degreeEn": "Project Management Professional (PMP®)",
-            "statusAr": "الحالة الحالية: حاصل على الاعتماد المهني الرسمي الدولي (رقم: 4514551)",
-            "statusEn": "Current Status: Officially Certified - Credential ID: 4514551",
-            "badgeAr": "معتمد رسمياً (Active)",
-            "badgeEn": "Active Credential",
+            "rankLabelEn": "Global Leadership Credential",
+            "degreeAr": "محترف إدارة المشاريع المعتمد (PMI PMP®)",
+            "degreeEn": "Project Management Professional (PMI PMP®)",
+            "statusAr": "اعتماد رسمي دولي من معهد إدارة المشاريع الأمريكي (رقم الاعتماد: 4514551)",
+            "statusEn": "Globally Certified by Project Management Institute (Credential ID: 4514551)",
+            "badgeAr": "معتمد رسمياً (#4514551)",
+            "badgeEn": "PMI Credential #4514551",
             "isCert": true,
             "label1Ar": "الجهة المانحة:",
             "label1En": "Issuing Body:",
             "val1Ar": "معهد إدارة المشاريع العالمي (PMI)",
             "val1En": "Project Management Institute (PMI)",
-            "label2Ar": "تاريخ المنح والصلاحية:",
-            "label2En": "Grant & Validity:",
-            "val2Ar": "سبتمبر 2026 - سبتمبر 2029",
-            "val2En": "Sep 12, 2026 – Sep 12, 2029",
+            "label2Ar": "فترة الصلاحية:",
+            "label2En": "Validity Window:",
+            "val2Ar": "12 سبتمبر 2026 – 12 سبتمبر 2029 (رقم: 4514551)",
+            "val2En": "12 September 2026 – 12 September 2029 (ID: 4514551)",
             "label3Ar": "نطاق المنهجيات والاعتماد:",
-            "label3En": "Methodology Scope:",
+            "label3En": "Methodology Frameworks:",
             "val3Ar": "إدارة المشاريع الهجينة، الرشيقة (Agile)، والتنبؤية (Predictive)",
             "val3En": "Agile, Predictive & Hybrid Frameworks",
             "icon": "fas fa-award",
             "highlight": false,
-            "overviewAr": "اعتماد مهني قيادي عالمي من معهد إدارة المشاريع الأمريكي (PMI)، يرسخ الجدارة الاحترافية في قيادة المشاريع التقنية والتحول الرقمي وإدارة النطاق والمخاطر والموارد بفرق العمل عالية الأداء.",
-            "overviewEn": "Globally recognized professional credential from PMI, validating leadership in enterprise systems, digital transformation, and risk/resource governance across agile and predictive lifecycles.",
+            "overviewAr": "اعتماد مهني قيادي عالمي يرسخ الجدارة الاحترافية في إدارة نطاق المشاريع التقنية والتحول الرقمي، حوكمة التغيير، إدارة المخاطر، وقيادة الفرق الهندسية عالية الأداء وفق معايير معهد PMI العالمي.",
+            "overviewEn": "Globally recognized professional credential validating expertise in enterprise IT transformation, change governance, risk mitigation, and cross-functional agile leadership.",
             "coreTopicsAr": [
                 "مجال الأفراد (People Domain): قيادة الفرق الهندسية وإدارة أصحاب المصلحة",
-                "مجال العمليات (Process Domain): ضبط النطاق، الجداول الزمنية، والميزانيات التقديرية",
-                "مجال بيئة الأعمال (Business Environment): مواءمة البنى التقنية مع الأهداف الاستراتيجية",
+                "مجال العمليات (Process Domain): ضبط النطاق، الجداول الزمنية، وحوكمة التغيير",
+                "مجال بيئة الأعمال (Business Environment): مواءمة البنى التقنية مع الأهداف المؤسسية",
                 "منهجيات Agile و Scrum و Kanban وإدارتها في بيئات التطوير السريعة",
-                "إدارة المخاطر التشغيلية والتقنية وضمان استمرارية الأعمال والحوكمة"
+                "إدارة المخاطر التشغيلية والتقنية وضمان استمرارية الأعمال وحوكمة العقود"
             ],
             "coreTopicsEn": [
-                "People Domain: Leading cross-functional technical teams & stakeholder governance",
-                "Process Domain: Scope baselining, schedule modeling, and budget governance",
-                "Business Environment: Aligning software architecture with corporate strategy",
-                "Agile, Scrum & Kanban execution in rapid sprint engineering cycles",
-                "Technical risk management, disaster recovery planning, and compliance"
+                "People Domain: Cross-functional technical team leadership & stakeholder governance",
+                "Process Domain: Scope baselining, schedule modeling, and change control governance",
+                "Business Environment: Strategic alignment of software architecture with corporate goals",
+                "Agile, Scrum & Kanban execution in fast-paced software engineering sprints",
+                "Operational risk mitigation, business continuity planning, and IT governance"
             ],
-            "milestoneAr": "تطبيق المعايير القياسية العالمية لمعهد PMI في قيادة وتطوير الأنظمة التشغيلية والميدانية المعقدة.",
+            "milestoneAr": "تطبيق المعايير القياسية العالمية لمعهد PMI في قيادة وتطوير الأنظمة التشغيلية والميدانية الحيوية.",
             "milestoneEn": "Applying global PMI standards across mission-critical field architectures and enterprise IT systems."
         },
         {
-            "id": "edu-2",
+            "id": "edu-bachelor",
             "rank": "03",
             "rankLabelAr": "المؤهل الجامعي الأساسي",
-            "rankLabelEn": "Foundational Degree",
-            "degreeAr": "بكالوريوس علوم الحاسب الآلي (بتقدير ممتاز)",
-            "degreeEn": "B.Sc. in Computer Science (With Excellence)",
-            "statusAr": "المؤهل: خريج الدفعة 74 بتقدير ممتاز مع مرتبة الشرف",
-            "statusEn": "Degree: 74th Batch Graduate with Excellence & Honors",
-            "badgeAr": "تقدير ممتاز",
-            "badgeEn": "Excellence",
+            "rankLabelEn": "Foundational University Degree",
+            "degreeAr": "بكالوريوس علوم الحاسب الآلي (بمرتبة الشرف)",
+            "degreeEn": "B.Sc. in Computer Science (With Honors)",
+            "statusAr": "خريج الدفعة 74 بمرتبة الشرف (المعدل التراكمي: 3.60 / 4.00)",
+            "statusEn": "74th Batch Graduate with Honors (Cumulative GPA: 3.60 / 4.00)",
+            "badgeAr": "مرتبة الشرف (GPA: 3.60/4.00)",
+            "badgeEn": "Honors (GPA: 3.60/4.00)",
             "isCert": false,
             "label1Ar": "الجامعة:",
             "label1En": "University:",
@@ -172,24 +176,67 @@ const initialDefaultData = {
             "val3En": "Dept. of Computer Science & AI",
             "icon": "fas fa-graduation-cap",
             "highlight": false,
-            "overviewAr": "دراسة أكاديمية شملت أصول علوم الحاسب النظرية والتطبيقية، أسس الخوارزميات، نظرية التعقيد، تصميم المترجمات، وهندسة قواعد البيانات.",
-            "overviewEn": "Comprehensive foundation covering theoretical and applied computer science, algorithms, complexity theory, compiler design, and database systems.",
+            "overviewAr": "دراسة أكاديمية شملت أصول علوم الحاسب النظرية والتطبيقية، أسس الخوارزميات، نظرية التعقيد، هندسة البرمجيات، وتصميم نظم قواعد البيانات وتحليل النظم.",
+            "overviewEn": "Rigorous curriculum covering theoretical and applied computer science, algorithmic complexity, software engineering principles, database systems, and systems analysis.",
             "coreTopicsAr": [
                 "قواعد البيانات ونظم إدارتها (RDBMS, SQL, Normalization, ACID)",
-                "هندسة البرمجيات والتحليل الكينوني (OOP, Design Patterns, UML)",
-                "أنظمة التشغيل وإدارة الذاكرة والعمليات المتزامنة (Concurrency, Threads)",
-                "شبكات الحاسب وبروتوكولات الاتصال (TCP/IP, Routing, Security)",
-                "مشروع التخرج المتميز: منصة موسم للتنبؤ بالطلب بالذكاء الاصطناعي (معرض إنجاز)"
+                "تحليل وتصميم النظم وهندسة البرمجيات (BPMN, UML, SRS, OOP)",
+                "أنظمة التشغيل والمعالجة المتزامنة وإدارة الذاكرة والعمليات",
+                "شبكات الحاسب وبروتوكولات الاتصال وأمن المعلومات",
+                "مشروع التخرج المتميز: منصة موسم للتنبؤ بالطلب بالذكاء الاصطناعي (SARIMAX)"
             ],
             "coreTopicsEn": [
-                "Database Systems & Storage Engines (RDBMS, SQL, Normalization, ACID)",
-                "Software Engineering & Object-Oriented Design (OOP, Patterns, UML)",
+                "Relational Database Systems (RDBMS, SQL, ACID Transactions, Normalization)",
+                "Systems Analysis & Software Engineering (BPMN, UML, SRS, OOP Patterns)",
                 "Operating Systems, Memory Allocation, and Concurrency Controls",
-                "Computer Networks & Communication Protocols (TCP/IP, Routing, Security)",
-                "Honors Capstone Project: Mawsem AI Retail Demand Forecasting (Injaz Expo)"
+                "Computer Networks, Communication Protocols, and Cyber Defense",
+                "Honors Capstone Project: Mawsem AI Retail Demand Forecasting (SARIMAX)"
             ],
-            "milestoneAr": "التكريم في الحفل الرسمي للدفعة 74 بجامعة أم القرى وعرض مشروع التخرج في المعرض السنوي للكلية.",
-            "milestoneEn": "Honored at the official 74th graduation ceremony and showcased capstone at the annual college exposition."
+            "milestoneAr": "التخرج بمرتبة الشرف (معدل 3.60 من 4.00) والتكريم في الحفل الرسمي للدفعة 74 وعرض مشروع التخرج في المعرض السنوي.",
+            "milestoneEn": "Graduated with Honors (GPA: 3.60/4.00), honored at the official 74th graduation ceremony, and presented honors capstone at the annual exhibition."
+        },
+        {
+            "id": "cert-step",
+            "rank": "04",
+            "rankLabelAr": "الكفاءة اللغوية والأكاديمية",
+            "rankLabelEn": "Language & Academic Competence",
+            "degreeAr": "كفاءة اللغة الإنجليزية المعتمدة (اختبار STEP)",
+            "degreeEn": "Standardized Test of English Proficiency (STEP)",
+            "statusAr": "درجة معتمدة رسمياً: 78 (المركز الوطني للقياس - قياس / هيئة تقويم التعليم والتدريب)",
+            "statusEn": "Officially Certified Score: 78 (Qiyas / ETEC National Center for Assessment)",
+            "badgeAr": "درجة معتمدة (78)",
+            "badgeEn": "Score: 78",
+            "isCert": true,
+            "label1Ar": "الجهة المانحة:",
+            "label1En": "Testing Authority:",
+            "val1Ar": "المركز الوطني للقياس (قياس)",
+            "val1En": "National Center for Assessment (Qiyas / ETEC)",
+            "label2Ar": "نوع التقييم:",
+            "label2En": "Assessment Type:",
+            "val2Ar": "الكفاءة اللغوية الأكاديمية والمهنية",
+            "val2En": "Standardized English Proficiency",
+            "label3Ar": "الدرجة المحققة:",
+            "label3En": "Achieved Score:",
+            "val3Ar": "78 من 100 (مستوى متقدم)",
+            "val3En": "78 / 100 (Advanced Proficiency)",
+            "icon": "fas fa-language",
+            "highlight": false,
+            "overviewAr": "كفاءة لغوية متقدمة تدعم إعداد الأوراق العلمية ونشرها، دراسة المراجع والمواصفات المعمارية القياسية، والتعامل الاحترافي مع الوثائق الهندسية الدولية والمجتمعات التقنية العالمية.",
+            "overviewEn": "Documented advanced English proficiency enabling research publication, deep study of international architectural standards, and seamless cross-border technical communication.",
+            "coreTopicsAr": [
+                "القراءة الأكاديمية والتحليلية للأوراق البحثية والمواصفات الهندسية (RFCs)",
+                "الصياغة التقنية المتقدمة لوثائق متطلبات البرمجيات (SRS) والمذكرات المعمارية",
+                "التواصل المهني في بيئات المشاريع الدولية وفرق العمل متعددة الجنسيات",
+                "استيعاب المنهجيات القياسية الدولية الصادرة باللغة الإنجليزية (PMI Standards)"
+            ],
+            "coreTopicsEn": [
+                "Academic reading & synthesis of computing research papers and RFCs",
+                "Professional authoring of Software Requirements Specifications (SRS)",
+                "Effective cross-cultural communication in global engineering environments",
+                "Thorough mastery of international methodologies and PMI standards"
+            ],
+            "milestoneAr": "تحقيق درجة 78 في اختبار STEP المعتمد من المركز الوطني للقياس (قياس).",
+            "milestoneEn": "Achieved verified score of 78 on the standardized STEP examination administered by Qiyas / ETEC."
         }
     ],
     "expertiseStats": [
@@ -298,24 +345,26 @@ const initialDefaultData = {
         {
             "id": "exp-3",
             "icon": "fas fa-network-wired",
-            "titleAr": "الشبكات، الخوادم المحلية والمراقبة الحية",
-            "titleEn": "Networking, Local Infrastructure & Telemetry",
-            "descAr": "خبرة متخصصة في إدارة الخوادم المحلية (On-Premises)، تكوين شبكات الـ VLAN المعزولة، وإعداد لوحات تحكم حية لمراقبة الأداء والعمليات الميدانية في الوقت الفعلي.",
-            "descEn": "Specialized in local on-premises server management, isolated VLAN provisioning, and building real-time telemetry dashboards for mission-critical field operations.",
-            "deepDiveAr": "تأمين الشبكات الداخلية للمراكز الحساسة، إدارة طوابير الاتصالات ذات زمن الاستجابة المنخفض، وبناء أدوات تتبع ورصد حي لكفاءة الخوادم والأجهزة الطرفية.",
-            "deepDiveEn": "Hardening internal LAN infrastructures, architecting low-latency local telemetry bridges, and deploying real-time health checks and threshold alert systems.",
+            "titleAr": "إدارة ممارسات DevOps، الخوادم والمراقبة الحية",
+            "titleEn": "DevOps Management, Infrastructure & Live Telemetry",
+            "descAr": "خبرة متخصصة في إدارة ممارسات DevOps وأتمتة خطوط النشر المستمر (CI/CD Pipelines)، إدارة الحاويات والخوادم، تكوين الشبكات المعزولة، وإعداد لوحات تحكم حية لمراقبة الأداء وضمان اتفاقيات مستوى الخدمة (SLAs).",
+            "descEn": "Specialized in enterprise DevOps management, automated CI/CD deployment pipelines, container orchestration, on-premises and cloud servers, and real-time telemetry dashboards enforcing high availability SLAs.",
+            "deepDiveAr": "أتمتة دورات النشر والإطلاق الآمن، إدارة حاويات Docker، مراقبة صحة الخوادم والخدمات الحيوية، إدارة طوابير الاتصالات ذات زمن الاستجابة المنخفض، وبناء أدوات تتبع ورصد حي لكفاءة التطبيقات والأجهزة الطرفية.",
+            "deepDiveEn": "Automating continuous integration and deployment pipelines, orchestrating Docker containers, monitoring critical business services, managing low-latency queues, and deploying real-time telemetry dashboards.",
             "tags": [
+                "DevOps Management",
+                "CI/CD Pipelines",
+                "Docker Containers",
+                "SLA Adherence",
                 "On-Premises Infrastructure",
                 "VLAN Segmentation",
                 "Telemetry & Dashboards",
-                "Syslog Monitoring",
-                "Low-Latency Queues",
                 "Failover Strategies"
             ],
-            "badgeAr": "البنية التحتية والشبكات المحلية",
-            "badgeEn": "Local Infra & Telemetry",
-            "metricAr": "VLANs & مراقبة حية",
-            "metricEn": "VLANs & Real-Time Telemetry"
+            "badgeAr": "إدارة DevOps والبنية التحتية",
+            "badgeEn": "DevOps & Infrastructure",
+            "metricAr": "DevOps & SLAs مراقبة حية",
+            "metricEn": "DevOps & SLA Observability"
         },
         {
             "id": "exp-ai",
@@ -365,44 +414,44 @@ const initialDefaultData = {
     ],
     "projectsStats": [
         {
-            "num": "07+",
-            "labelAr": "مشاريع وأنظمة منجزة",
+            "num": "08+",
+            "labelAr": "مشاريع وأنظمة متكاملة",
             "labelEn": "Engineered Systems",
-            "valAr": "أنظمة تشغيلية وحلول ذكية",
-            "valEn": "Enterprise & AI Platforms"
+            "valAr": "أنظمة تشغيلية وأبحاث علمية",
+            "valEn": "Enterprise, Field & Research"
         },
         {
             "num": "85%",
             "labelAr": "تقليص زمن معالجة الوثائق",
-            "labelEn": "Document Sorting Boost",
-            "valAr": "في تطبيق الجوازات الميداني",
-            "valEn": "Hajj Passport Operations"
+            "labelEn": "Verification Acceleration",
+            "valAr": "في نظام الجوازات الميداني",
+            "valEn": "In Hajj Field Operations"
         },
         {
             "num": "0%",
             "labelAr": "نسبة فقدان البيانات",
             "labelEn": "Data Loss Record",
-            "valAr": "في أنظمة الاتصالات الإدارية",
-            "valEn": "In Enterprise Digitization"
+            "valAr": "في أنظمة التحول الرقمي",
+            "valEn": "In Enterprise Systems"
         },
         {
             "num": "100%",
-            "labelAr": "توثيق واختبارات معيارية",
-            "labelEn": "Verified Documentation",
+            "labelAr": "جاهزية واستقرار معماري",
+            "labelEn": "Architectural Readiness",
             "valAr": "مستندات وأكواد مرجعية معتمدة",
-            "valEn": "Verified Architecture Specs"
+            "valEn": "Production Specifications"
         }
     ],
     "projects": [
         {
             "id": "prj-passport",
-            "titleAr": "تطبيق مكتب الجوازات (خدمات الحج الميدانية)",
-            "titleEn": "Passport Office App (Hajj Field Operations)",
-            "descAr": "تطبيق متطور مصمم لأتمتة فحص وتدقيق وثائق وجوازات سفر الحجاج عبر طوابير معالجة غير متزامنة، مما أسهم في تقليص زمن فرز الوثائق بنسبة 85% وضمان استمرارية التشغيل الميداني دون توقف.",
-            "descEn": "A mission-critical field application automating the verification and cross-matching of pilgrim passports using asynchronous queues, cutting document sorting time by 85% with zero downtime.",
+            "titleAr": "تطبيق مكتب الجوازات الميداني (Mission-Critical OCR/NFC Hybrid System)",
+            "titleEn": "Field Passport Office App (Mission-Critical OCR/NFC Hybrid System)",
+            "descAr": "تطبيق هجين ميداني لمعالجة وفحص وثائق وجوازات سفر الحجاج بنمط Offline-First مع طوابير معالجة غير متزامنة وتقنيات قراءة الشرائح الذكية، مما خفض زمن الفرز بنسبة 85% مع استقرار تشغيلي 100%.",
+            "descEn": "A mission-critical field application automating verification and cross-matching of pilgrim passports using an offline-first architecture, async queues, OCR, and NFC chip reading, cutting audit time by 85% with zero downtime.",
             "category": "field",
             "featured": true,
-            "badgeAr": "نظام تشغيلي معتمد",
+            "badgeAr": "نظام تشغيلي ميداني معتمد",
             "badgeEn": "Mission-Critical Production",
             "problemAr": "الضغط الهائل خلال ذروة وصول الحجاج واضطرار الموظفين لتدقيق آلاف الجوازات الورقية يدوياً، مما كان يسبب تأخيرات وازدحاماً ومخاطر أخطاء بشرية.",
             "problemEn": "Extreme throughput surges during pilgrim arrival windows requiring manual audit of tens of thousands of passports, risking operational bottlenecks and human error.",
@@ -412,23 +461,23 @@ const initialDefaultData = {
             "impactEn": "Reduced per-document audit time from 3 minutes to under 25 seconds (85% boost), processing tens of thousands of records with zero mismatch errors.",
             "tags": [
                 "OCR & NFC",
-                "Asynchronous Queues",
                 "Offline-First Hybrid",
-                "Systems Architecture",
-                "High Concurrency",
-                "Hajj Operations"
+                "Asynchronous Queues",
+                "Mission-Critical",
+                "Hajj Operations",
+                "High Concurrency"
             ],
-            "linkUrl": "https://eny.sa/assets/passport_app.pdf",
+            "linkUrl": "assets/passport_app.pdf",
             "linkTextAr": "عرض المستند المرجعي والمواصفات (PDF)",
             "linkTextEn": "View Architecture Specification (PDF)",
             "linkIcon": "fas fa-file-pdf"
         },
         {
-            "id": "prj-1",
+            "id": "prj-mawsem",
             "titleAr": "منصة موسم (Mawsem) - التنبؤ بالطلب بالذكاء الاصطناعي",
             "titleEn": "Mawsem - AI Retail Demand Forecasting Platform",
-            "descAr": "منصة وطنية متقدمة للتنبؤ بالطلب في قطاع التجزئة وسلاسل الإمداد بالاعتماد على خوارزميات SARIMAX وتحليل السلاسل الزمنية، كُرمت كمشروع تخرج متميز في كلية الحاسبات بجامعة أم القرى.",
-            "descEn": "An advanced AI platform predicting retail demand and inventory dynamics using SARIMAX time-series modeling, honored as a top capstone project at Umm Al-Qura University.",
+            "descAr": "منصة وطنية متقدمة للتنبؤ بالطلب في قطاع التجزئة وسلاسل الإمداد بالاعتماد على خوارزميات SARIMAX وتحليل السلاسل الزمنية، كُرمت كمشروع تخرج متميز بمرتبة الشرف بكلية الحاسبات بجامعة أم القرى.",
+            "descEn": "An advanced AI platform predicting retail demand and inventory dynamics using SARIMAX time-series modeling, honored as an honors capstone project at Umm Al-Qura University.",
             "category": "ai",
             "featured": true,
             "badgeAr": "مشروع تخرج بمرتبة الشرف",
@@ -440,29 +489,114 @@ const initialDefaultData = {
             "impactAr": "تحقيق دقة تنبؤ تفوق 88% في البيانات التجريبية، وعرض المنصة في معرض مشاريع التخرج بجامعة أم القرى مع إشادة لجان التحكيم والأكاديميين.",
             "impactEn": "Achieved over 88% forecast accuracy across validation datasets; prominently showcased at the UQU Graduation Capstone Exhibition.",
             "tags": [
-                "AI / Machine Learning",
                 "SARIMAX Algorithms",
-                "Time-Series",
-                "Python & Data Science",
-                "Node.js",
-                "Laravel",
-                "React"
+                "Time-Series Forecasting",
+                "AI & Machine Learning",
+                "Python Data Science",
+                "Retail Analytics",
+                "UQU Honors"
             ],
-            "linkUrl": "https://eny.sa/assets/mawsem.pdf",
+            "linkUrl": "assets/mawsem.pdf",
             "linkTextAr": "عرض البوستر المرجعي للمشروع (PDF)",
             "linkTextEn": "View Capstone Poster (PDF)",
             "linkIcon": "fas fa-file-pdf"
         },
         {
+            "id": "prj-fenydb",
+            "titleAr": "محرك FenyDB - محرك قواعد بيانات NoSQL Key-Value خفيف وعالي الأداء",
+            "titleEn": "FenyDB - Ultra-Lightweight High-Performance NoSQL Key-Value Engine",
+            "descAr": "محرك قواعد بيانات NoSQL Key-Value خفيف فائق السرعة، مبني من الصفر لإدارة وتخزين البيانات المفتاحية في الذاكرة مع آليات المزامنة القرصية وتأمين المعاملات والعمليات المتزامنة بزمن استجابة فائق.",
+            "descEn": "An ultra-lightweight, high-performance embedded NoSQL Key-Value database engine written from scratch, supporting atomic storage, caching, and low-latency concurrency control.",
+            "category": "tools",
+            "featured": true,
+            "badgeAr": "محرك قواعد بيانات مخصص",
+            "badgeEn": "Custom Storage Engine",
+            "problemAr": "ثقل محركات قواعد البيانات التقليدية واستهلاكها المفرط لموارد الذاكرة في الأنظمة المضمنة والخدمات الطرفية الخفيفة التي تتطلب سرعة فائقة.",
+            "problemEn": "Heavy conventional database servers introduce excessive memory footprint and overhead for lightweight edge daemons requiring instant key-value lookup.",
+            "solutionAr": "تصميم محرك تخزين مدمج يعمل بذاكرة مؤقتة فائقة السرعة مع كتابة متزامنة للقرص، ومعالجة ذكية لحالات السباق وإدارة الموارد الذاتية بدون اعتماديات خارجية.",
+            "solutionEn": "Designed an in-memory embedded storage engine with deterministic disk sync, smart race-condition locks, and zero external dependencies.",
+            "impactAr": "تحقيق أداء قراءة وكتابة فائق بزمن استجابة أقل من جزء من الثانية، ونشر المستودع المصدري على GitHub للمطورين.",
+            "impactEn": "Delivered sub-millisecond read/write operations with rock-solid stability, published as an open-source engine on GitHub.",
+            "tags": [
+                "FenyDB",
+                "NoSQL Key-Value",
+                "Database Architecture",
+                "Low Latency",
+                "Concurrency Control",
+                "Storage Engine"
+            ],
+            "linkUrl": "https://github.com/feny1",
+            "linkTextAr": "عرض المشروع على GitHub",
+            "linkTextEn": "View Source on GitHub",
+            "linkIcon": "fab fa-github"
+        },
+        {
+            "id": "prj-paper",
+            "titleAr": "ورقة بحثية منشورة: مراجعة منهجية للحوسبة السحابية الطرفية بدون خادم",
+            "titleEn": "Published Research: Serverless Edge Computing - A Systematic Literature Review",
+            "descAr": "ورقة بحثية علمية منشورة وموثقة على ResearchGate، تقدم مراجعة منهجية شاملة (Systematic Literature Review) لأحدث معمارية الحوسبة الطرفية بدون خادم وتحليل الكمون وتحديات توزيع الأحمال.",
+            "descEn": "Published scientific paper indexed on ResearchGate providing a comprehensive Systematic Literature Review (SLR) on Serverless Edge Computing architectures, latency models, and distributed resource orchestration.",
+            "category": "research",
+            "featured": true,
+            "badgeAr": "ورقة بحثية منشورة (ResearchGate)",
+            "badgeEn": "Published Paper (ResearchGate)",
+            "problemAr": "تشتت الدراسات الأكاديمية حول دمج الحوسبة بدون خادم (Serverless) مع شبكات الحوسبة الطرفية (Edge Computing) وصعوبة تحديد الأنماط المعمارية المثلى لخفض زمن الاستجابة.",
+            "problemEn": "Fragmented academic literature concerning the convergence of serverless paradigms with edge topologies, complicating architectural selection for latency-critical applications.",
+            "solutionAr": "إجراء مراجعة منهجية قائمة على معايير علمية دقيقة، استخلصت وصنفت أكثر من 50 نموذجاً معمارياً لتحليل أزمنة البدء على البارد (Cold Starts) وكفاءة توزيع الحوسبة.",
+            "solutionEn": "Conducted an exhaustive Systematic Literature Review classifying over 50 architectural frameworks to synthesize cold-start mitigations and edge computation dispatching.",
+            "impactAr": "توثيق الورقة البحثية ونشرها للباحثين والمطورين على منصة ResearchGate لدعم بحوث الماجستير وتطوير النظم الطرفية الحديثة.",
+            "impactEn": "Published and made accessible on ResearchGate to empower computing researchers and systems architects exploring edge-native software paradigms.",
+            "tags": [
+                "ResearchGate",
+                "Serverless Edge Computing",
+                "Systematic Review (SLR)",
+                "Academic Research",
+                "Distributed Systems"
+            ],
+            "linkUrl": "https://www.researchgate.net",
+            "linkTextAr": "عرض الورقة على ResearchGate",
+            "linkTextEn": "View on ResearchGate",
+            "linkIcon": "fas fa-book-open"
+        },
+        {
+            "id": "prj-vibepedia",
+            "titleAr": "منصة فايب بيديا (Vibepedia) - الدليل المعماري للبرمجة بالذكاء الاصطناعي",
+            "titleEn": "Vibepedia - Architectural Guide for AI-Assisted Programming",
+            "descAr": "منصة ودليل معرفي معماري متخصص يوثق أفضل الممارسات والأنماط المعمارية للبرمجة بمساعدة وكلاء الذكاء الاصطناعي التوليدي، وتوجيه المطورين لبناء برمجيات نظيفة وقابلة للصيانة (vibepedia.eny.sa).",
+            "descEn": "A dedicated architectural knowledge portal documenting patterns and best practices for AI-assisted programming and agentic workflows, guiding developers in maintaining clean software (vibepedia.eny.sa).",
+            "category": "ai",
+            "featured": true,
+            "badgeAr": "منصة معرفية نشطة",
+            "badgeEn": "Active Knowledge Platform",
+            "problemAr": "انتشار البرمجة العشوائية بمساعدة أدوات الذكاء الاصطناعي وتراكم الديون التقنية نتيجة غياب القواعد المعمارية الصارمة للتوجيه والتحقق.",
+            "problemEn": "Proliferation of undisciplined AI code generation leading to severe architectural drift and technical debt without structured engineering guidelines.",
+            "solutionAr": "بناء دليل مرجعي معماري متكامل يوضح نماذج توجيه النماذج (Context Engineering)، التحقق الصارم من الأكواد، وأنماط الهندسة المعمارية المتوافقة مع الذكاء الاصطناعي.",
+            "solutionEn": "Crafted a comprehensive engineering reference framework establishing context engineering patterns, test-driven validation, and AI-resilient architecture.",
+            "impactAr": "منصة منشورة ومتاحة على نطاق واسع لخدمة مجتمع المطورين والمهندسين في تحسين جودة البرمجيات المطورة بالذكاء الاصطناعي.",
+            "impactEn": "Live portal at vibepedia.eny.sa serving the tech community in elevating code quality and architectural integrity in AI-driven workflows.",
+            "tags": [
+                "Vibepedia",
+                "AI-Assisted Programming",
+                "Architecture Guide",
+                "Prompt Engineering",
+                "Code Quality",
+                "Live Platform"
+            ],
+            "linkUrl": "https://vibepedia.eny.sa",
+            "linkTextAr": "زيارة منصة فايب بيديا",
+            "linkTextEn": "Visit Vibepedia Platform",
+            "linkIcon": "fas fa-external-link-alt"
+        },
+        {
             "id": "prj-payment",
-            "titleAr": "المدفوعات مع إيهاب (Payments with Ehab)",
-            "titleEn": "Payments with Ehab - Merchant Financial Hub",
-            "descAr": "بوابة موحدة وسريعة تتيح للمتاجر وأصحاب الأعمال عرض ومشاركة بيانات حساباتهم البنكية ووسائل التحويل المعتمدة لعملائهم بضغطة زر وبأعلى درجات الأمان.",
-            "descEn": "A centralized, blazing-fast financial portal enabling merchants and business owners to display and share bank details and verified payment methods with clients.",
+            "titleAr": "منصة المدفوعات مع إيهاب (Payments with Ehab)",
+            "titleEn": "Payments with Ehab - Edge-Powered Merchant Financial Hub",
+            "descAr": "بوابة مالية سريعة وخفيفة مبنية على تقنيات Edge Computing (Cloudflare Workers)، تتيح للمتاجر والشركاء مشاركة بيانات الحسابات البنكية والتحقق اللحظي من بنية الآيبان (payment.eny.sa).",
+            "descEn": "A centralized, ultra-fast fintech portal running on Cloudflare Workers edge nodes, enabling businesses to share bank details and validate IBAN structures with zero latency (payment.eny.sa).",
             "category": "enterprise",
             "featured": true,
-            "badgeAr": "منظومة إنتاجية حية",
-            "badgeEn": "Live Production Hub",
+            "badgeAr": "منظومة إنتاجية حية (Edge)",
+            "badgeEn": "Live Edge Production Hub",
             "problemAr": "صعوبة إرسال أرقام الحسابات البنكية والآيبان بشكل نصي غير منسق مما يعرض العملاء للخطأ في التحويل ويقلل معدل إتمام الصفقات التجارية.",
             "problemEn": "Messy plain-text copying of IBAN and bank account numbers leads to customer wire errors, transaction friction, and lower checkout conversion.",
             "solutionAr": "بناء صفحة مالية خفيفة وفائقة السرعة مدعومة بـ Cloudflare Workers مع نسخ الحسابات المباشر بلمسة واحدة والتحقق الآلي من صحة أرقام الآيبان.",
@@ -472,22 +606,22 @@ const initialDefaultData = {
             "tags": [
                 "Edge Computing",
                 "Cloudflare Workers",
-                "JavaScript ES6+",
-                "Tailwind CSS",
+                "Fintech Portal",
                 "IBAN Validation",
-                "Fintech UX"
+                "JavaScript ES6+",
+                "Live Production"
             ],
-            "linkUrl": "https://payment.eny.sa/",
+            "linkUrl": "https://payment.eny.sa",
             "linkTextAr": "زيارة المنصة مباشرة",
             "linkTextEn": "Visit Live Portal",
             "linkIcon": "fas fa-external-link-alt"
         },
         {
-            "id": "prj-2",
+            "id": "prj-corresp",
             "titleAr": "نظام الاتصالات الإدارية والأرشفة الذكية",
             "titleEn": "Administrative Correspondence & Smart Archiving",
-            "descAr": "مشروع تحول رقمي شامل لمؤسسة شعاع الشروق المتميزة، مبني بلغة PHP النقية وتصميم كينوني (OOP) مخصص مع خوارزمية Naive Bayes لتصنيف المعاملات وتتبعها.",
-            "descEn": "Comprehensive digital transformation for Shoa'a Shorouk, built with pure object-oriented PHP and a custom Naive Bayes document classifier.",
+            "descAr": "مشروع تحول رقمي شامل لمؤسسة شعاع الشروق المتميزة، مبني بلغة PHP النقية وتصميم كينوني (OOP) مخصص مع خوارزمية Naive Bayes لتصنيف المعاملات وتتبعها بنسبة فقدان بيانات 0%.",
+            "descEn": "Comprehensive digital transformation for Shoa'a Shorouk, built with pure object-oriented PHP and a custom Naive Bayes document classifier achieving 0% data loss.",
             "category": "enterprise",
             "featured": false,
             "badgeAr": "تحول رقمي مؤسسي",
@@ -508,34 +642,9 @@ const initialDefaultData = {
             ]
         },
         {
-            "id": "prj-3",
-            "titleAr": "نظام مراقبة الخوادم المحلية في الوقت الفعلي",
-            "titleEn": "Real-Time Local Servers Telemetry & Monitoring",
-            "descAr": "نظام هندسي ذكي لمراقبة صحة الخوادم والأجهزة الطرفية محلياً مع لوحة تحكم تفاعلية وقنوات تنبيه فورية عبر الرسائل عند تجاوز عتبات الاستخدام.",
-            "descEn": "A smart telemetry system monitoring on-premises server health and terminal status with interactive dashboards and instant threshold alerts.",
-            "category": "tools",
-            "featured": false,
-            "badgeAr": "أنظمة مراقبة واستقرار",
-            "badgeEn": "Infrastructure Telemetry",
-            "problemAr": "حدوث اختناقات غير متوقعة في الذاكرة أو المعالج للخوادم الميدانية أثناء ساعات العمل الكثيفة دون وجود مؤشرات تحذيرية مسبقة.",
-            "problemEn": "Unanticipated RAM and CPU spikes during high-concurrency business peaks with no advance warning triggers.",
-            "solutionAr": "بناء مجمّع مؤشرات (Metrics Collector) خفيف الوزن يعمل في الخلفية ويبث القياسات عبر اتصالات WebSocket للوحة مراقبة مركزية.",
-            "solutionEn": "Constructed a daemon metrics collector streaming health signals via WebSockets into a live central monitoring cockpit.",
-            "impactAr": "تحقيق رؤية تشغيلية كاملة على مدار الساعة والاستجابة للأعطال المحتملة قبل تأثيرها على المستخدمين الميدانيين.",
-            "impactEn": "Achieved continuous infrastructure observability, resolving bottlenecks before impacting mission operations.",
-            "tags": [
-                "Real-Time Telemetry",
-                "WebSockets",
-                "Dashboard Analytics",
-                "Daemon Architecture",
-                "Linux Servers",
-                "Alerting Systems"
-            ]
-        },
-        {
-            "id": "prj-6",
+            "id": "prj-pphp",
             "titleAr": "محرك ومفسر قوالب PPHP (لغة برمجية مخصصة)",
-            "titleEn": "PPHP Template Engine & Interpreter",
+            "titleEn": "PPHP Template Engine & Compiler",
             "descAr": "محرك قوالب ومفسر مخصص لـ PHP يهدف لتبسيط وتسريع عملية التطوير وفصل منطق الواجهة عن المعالجة الخلفية، مع دعم كامل لإضافات VS Code مفتوح المصدر.",
             "descEn": "A custom template language and compiler for PHP built to decouple presentation logic from backend processing, with open-source VS Code syntax extension.",
             "category": "tools",
@@ -553,275 +662,256 @@ const initialDefaultData = {
                 "AST & Lexing",
                 "PHP Internals",
                 "VS Code Extension",
-                "Open Source",
-                "Software Engineering"
+                "Open Source"
             ],
             "linkUrl": "https://github.com/feny1/pphp",
-            "linkTextAr": "عرض المشروع والمستودع على GitHub",
-            "linkTextEn": "View Source on GitHub",
+            "linkTextAr": "عرض المستودع على GitHub",
+            "linkTextEn": "View on GitHub",
             "linkIcon": "fab fa-github"
-        },
-        {
-            "id": "prj-4",
-            "titleAr": "السكرتير الذكي (Smart Secretary AI)",
-            "titleEn": "Smart Secretary - Generative AI Agent",
-            "descAr": "مساعد إداري مدعوم بالذكاء الاصطناعي التوليدي يفهم اللغة الطبيعية العربية، يحلل المذكرات، ويكتشف تعارضات المواعيد وجدولتها آلياً بدقة متناهية.",
-            "descEn": "An AI administrative assistant powered by generative models, understanding natural Arabic dialogue, parsing meeting notes, and auto-resolving calendar conflicts.",
-            "category": "ai",
-            "featured": false,
-            "badgeAr": "حلول ذكاء توليدي",
-            "badgeEn": "Generative AI Solution",
-            "problemAr": "إهدار الوقت في تنسيق الاجتماعات وقراءة المراسلات الطويلة واستخراج بنود العمل والقرارات التنفيذية يدوياً.",
-            "problemEn": "Valuable management hours wasted coordinating schedules, reading verbose memos, and manually drafting meeting action items.",
-            "solutionAr": "ربط واجهات برمجة التطبيقات لـ Gemini API مع معالجة لغوية عربية دقيقة وتطبيق قواعد منطقية لاكتشاف التعارضات الزمنية ومزامنة التقويمات.",
-            "solutionEn": "Integrated Gemini API with Arabic NLP prompts and deterministic conflict-resolution rules for calendar synchronization.",
-            "impactAr": "رفع إنتاجية مديري العمليات بنسبة تتجاوز 40% في إدارة المواعيد وتلخيص محاضر الجلسات التنفيذية.",
-            "impactEn": "Boosted executive scheduling productivity by over 40% with automated summaries and conflict mitigation.",
-            "tags": [
-                "Gemini API",
-                "Generative AI",
-                "Arabic NLP",
-                "Calendar Automation",
-                "Intelligent Agents"
-            ]
         }
     ],
     "collabStats": [
         {
             "num": "04+",
-            "labelAr": "مواسم حج تشغيلية",
+            "labelAr": "مواسم حج تشغيلية متتالية",
             "labelEn": "Consecutive Hajj Seasons",
-            "valAr": "قيادة وإدارة العمليات التقنية",
-            "valEn": "Field Technical Leadership"
+            "valAr": "قيادة وتطوير النظم الميدانية",
+            "valEn": "Field Systems Leadership"
+        },
+        {
+            "num": "85%",
+            "labelAr": "تقليص زمن التدقيق الميداني",
+            "labelEn": "Verification Time Reduced",
+            "valAr": "عبر نظام الجوازات الهجين",
+            "valEn": "Via Hybrid Passport App"
         },
         {
             "num": "100%",
-            "labelAr": "استقرار في فترات الذروة",
-            "labelEn": "Uptime Under Peak Load",
-            "valAr": "بدون أي توقف للأنظمة",
-            "valEn": "Zero Operational Downtime"
+            "labelAr": "الالتزام باتفاقيات الخدمة",
+            "labelEn": "SLA Adherence Record",
+            "valAr": "في بيئات البنية التحتية الحيوية",
+            "valEn": "In Critical Infrastructure"
         },
         {
-            "num": "10k+",
-            "labelAr": "وثائق وجوازات سفر مُدققة",
-            "labelEn": "Verified Records",
-            "valAr": "مطابقة إلكترونية فورية",
-            "valEn": "Electronic Cross-Matching"
-        },
-        {
-            "num": "3+",
-            "labelAr": "شراكات ومؤسسات كبرى",
-            "labelEn": "Enterprise Partnerships",
-            "valAr": "قطاع الحج والقطاع الخاص",
-            "valEn": "Hajj & Commercial Sectors"
+            "num": "06",
+            "labelAr": "خبرات وسجلات مؤسسية كبرى",
+            "labelEn": "Major Enterprise Track Records",
+            "valAr": "جهات حكومية ومؤسسات وطنية",
+            "valEn": "Gov & Enterprise Entities"
         }
     ],
     "collaborations": [
         {
-            "id": "collab-3",
-            "icon": "fas fa-kaaba",
-            "titleAr": "شركة ضيوف البيت (خدمات حجاج بيت الله الحرام)",
-            "titleEn": "Albait Guests (Hajj Pilgrims Services)",
-            "roleAr": "إدارة وتطوير العمليات التقنية وأنظمة جوازات الحج",
-            "roleEn": "Technical Operations & Hajj Passport Systems Lead",
-            "periodAr": "4 مواسم متتالية (تحت رئاسة أ. هتان بن جمال خان)",
-            "periodEn": "4 Consecutive Seasons (Under Mr. Hattan Jamal Khan)",
-            "descAr": "مسيرة ممتدة لأربعة مواسم حج متتالية في إدارة العمليات التقنية الميدانية، رقمنة أنظمة جوازات الحج، وتطوير الحلول الذكية لمتابعة الحشود ومطابقة الوثائق بدقة بالغة تحت الضغط العالي.",
-            "descEn": "Extensive track record across 4 consecutive Hajj seasons managing on-site field technical operations, digitizing pilgrim passport workflows, and engineering smart real-time verification systems under intense operational pressure.",
+            "id": "collab-mis",
+            "icon": "fas fa-bolt",
+            "titleAr": "شركة المعمر لأنظمة المعلومات (MIS) / تشغيل شركة الكهرباء",
+            "titleEn": "Al-Moammar Information Systems (MIS) / Saudi Electricity Company Operations",
+            "roleAr": "أخصائي دعم التطبيقات وإدارة DevOps (Application Support & DevOps Management Specialist)",
+            "roleEn": "Application Support & DevOps Management Specialist",
+            "periodAr": "إدارة ممارسات DevOps ودعم التطبيقات الحيوية",
+            "periodEn": "DevOps Management & Critical Application Support",
+            "descAr": "إدارة وتشغيل ممارسات الـ DevOps المؤسسية للتطبيقات والأنظمة الحيوية لشركة الكهرباء، أتمتة خطوط التكامل والنشر المستمر (CI/CD Pipelines)، إدارة الحاويات والبيئات التشغيلية، ومراقبة البنية التحتية وضمان اتفاقيات مستوى الخدمة (SLAs) بأعلى معايير التوافرية.",
+            "descEn": "Leading enterprise DevOps management and application support for critical Saudi Electricity Company systems, automating CI/CD pipelines, orchestrating containers and release lifecycles, and driving continuous telemetry to maintain strict SLA adherence and 99.99% availability.",
+            "badgeAr": "إدارة ممارسات DevOps وبنية حيوية",
+            "badgeEn": "DevOps Management & Infra",
+            "orgAr": "شركة المعمر لأنظمة المعلومات (MIS)",
+            "orgEn": "Al-Moammar Information Systems (MIS)",
             "scopeAr": [
-                "تطوير منظومة الربط الميداني لبيانات الجوازات وتدقيق الهويات",
-                "الإشراف على البنية التحتية والشبكات المعزولة بمركز الخدمة",
-                "معالجة المشاكل التقنية اللحظية وضمان سير تدفق الحجاج بسلاسة",
-                "العمل الوثيق تحت قيادة وتوجيهات رئيس المركز الأستاذ هتان بن جمال خان"
+                "بناء وإدارة خطوط التكامل والنشر المستمر (CI/CD Pipelines) لضمان سرعة وموثوقية التحديثات البرمجية",
+                "إدارة الحاويات والبيئات التشغيلية (Containers) وأتمتة إجراءات التوزيع والتحديث الآمن",
+                "مراقبة الأنظمة الحيوية لشركة الكهرباء والاستجابة الفورية للأعطال وفق اتفاقيات الـ SLAs",
+                "تطبيق ممارسات البنية التحتية وأتمتة الاختبارات الدورية لمنع انقطاع الخدمات الحيوية",
+                "إجراء تحليل الأسباب الجذرية (RCA) وتحسين أداء البيئات التشغيلية لتقليل زمن التوقف"
             ],
             "scopeEn": [
-                "Architected on-site identity cross-checking and passport audit workflows",
-                "Managed dedicated local networks and server workstations at the Service Center",
-                "Mitigated critical real-time technical hurdles ensuring smooth pilgrim processing",
-                "Direct collaboration under Service Center Head Mr. Hattan Jamal Khan"
+                "Architecting and maintaining enterprise CI/CD pipelines for seamless, automated software delivery",
+                "Managing containerized environments and orchestrating safe deployment/rollback workflows",
+                "Proactively monitoring Saudi Electricity Co. critical applications to enforce strict SLA guarantees",
+                "Implementing infrastructure automation and automated testing to safeguard continuous uptime",
+                "Executing Root Cause Analysis (RCA) and performance tuning to eliminate operational friction"
             ],
-            "outcomesAr": "تحقيق نسبة إنجاز قياسية في فرز الوثائق، استقرار تام للأنظمة طوال موسم الحج، والحصول على إشادات قيادية بفضل كفاءة وموثوقية الحلول المنفذة.",
-            "outcomesEn": "Set historic benchmarks in document processing speed with 100% uptime across peak Hajj days, recognized by leadership for outstanding technical reliability.",
+            "outcomesAr": "تحقيق استقرار تشغيلي مستمر للأنظمة الحيوية، أتمتة النشر والتحديثات، والالتزام الصارم باتفاقيات مستوى الخدمة (SLAs).",
+            "outcomesEn": "Achieved seamless continuous delivery, reduced release risks, and sustained 24/7 SLA compliance in critical infrastructure."
+        },
+        {
+            "id": "collab-balady",
+            "icon": "fas fa-landmark",
+            "titleAr": "شركة الخليج / أمانة العاصمة المقدسة (منصة بلدي)",
+            "titleEn": "Al-Khaleej / Holy Makkah Municipality (Balady Platform)",
+            "roleAr": "مسؤول إدارة التغيير وتحليل النظم (Change Management Officer & Systems Analyst)",
+            "roleEn": "Change Management Officer & Systems Analyst",
+            "periodAr": "قسم تحليل العمليات والتحول البلدي",
+            "periodEn": "Process Analysis Division & Municipal Transformation",
+            "descAr": "العمل بقسم تحليل العمليات على هندسة الإجراءات البلدية، توحيد متطلبات وإطار إدارة التغيير (CR Framework)، وتحليل طلبات التعديل والتكامل مع منصة بلدي الوطنية.",
+            "descEn": "Operating in the Process Analysis division on municipal workflow re-engineering, standardizing the Change Request (CR) Framework, and analyzing system integration requirements with the national Balady platform.",
+            "badgeAr": "تحليل نظم وإدارة تغيير",
+            "badgeEn": "Systems Analysis & Change Mgmt",
+            "orgAr": "شركة الخليج / أمانة العاصمة المقدسة",
+            "orgEn": "Al-Khaleej / Holy Makkah Municipality",
+            "scopeAr": [
+                "هندسة العمليات والإجراءات البلدية ونمذجة تدفقات البيانات (BPMN & DFD)",
+                "صياغة وتوحيد إطار عمل طلبات التغيير البرمجية (CR Framework)",
+                "إعداد وثائق متطلبات البرمجيات (SRS) ومطابقتها مع معايير منصة بلدي",
+                "مراجعة واختبار سيناريوهات الإطلاق وضمان التوافق المؤسسي"
+            ],
+            "scopeEn": [
+                "Re-engineering municipal business workflows and modeling data flows (BPMN & DFD)",
+                "Standardizing the corporate Software Change Request (CR) governance framework",
+                "Authoring Software Requirements Specifications (SRS) aligned with Balady platform rules",
+                "Supervising pre-release testing cycles ensuring seamless system interoperability"
+            ],
+            "outcomesAr": "حوكمة طلبات التغيير وتسريع وتيرة اعتماد المتطلبات وتحقيق التكامل السلس مع منصة بلدي.",
+            "outcomesEn": "Institutionalized change governance, accelerated requirement approval cycles, and ensured seamless Balady integration."
+        },
+        {
+            "id": "collab-render",
+            "icon": "fas fa-utensils",
+            "titleAr": "مطاعم ومطابخ ريندر",
+            "titleEn": "Render Restaurants & Kitchens",
+            "roleAr": "مدير العمليات التقنية وأخصائي الأنظمة (Technical Operations Manager & Specialist)",
+            "roleEn": "Technical Operations Manager & Specialist",
+            "periodAr": "إدارة البنية التحتية والأنظمة ونقاط البيع",
+            "periodEn": "Infrastructure, POS & Systems Operations",
+            "descAr": "إدارة وتأمين البنية التقنية الشاملة، الإشراف على الشبكات وخوادم التشغيل المحلية، تكامل وإدارة نقاط البيع (POS)، وأتمتة التقارير الإدارية والتشغيلية وسلاسل الإمداد.",
+            "descEn": "Directing full-spectrum IT and systems operations, managing on-premises servers and isolated network infrastructure, integrating Point of Sale (POS) terminals, and automating operational reporting.",
+            "badgeAr": "إدارة عمليات وأنظمة محلية",
+            "badgeEn": "Systems & Technical Operations",
+            "orgAr": "مطاعم ومطابخ ريندر",
+            "orgEn": "Render Restaurants & Kitchens",
+            "scopeAr": [
+                "إدارة وصيانة شبكات الفروع والخوادم المحلية ومنظومة نقاط البيع (POS)",
+                "أتمتة تقارير المبيعات والمخزون وسلاسل الإمداد وربطها بقواعد البيانات",
+                "تطبيق خطط استمرارية الأعمال والنسخ الاحتياطي الدوري المشفر",
+                "حل المشكلات التقنية وتدريب فرق التشغيل على الأنظمة الحديثة"
+            ],
+            "scopeEn": [
+                "Managing branch networks, local database servers, and Point of Sale (POS) terminals",
+                "Automating sales, inventory, and supply chain reporting pipelines with zero manual delay",
+                "Enforcing business continuity protocols with automated encrypted local backups",
+                "Troubleshooting mission-critical bottlenecks and mentoring operational personnel"
+            ],
+            "outcomesAr": "خفض زمن استخراج التقارير اليومية بنسبة 70%، واستقرار تام لنقاط البيع في ساعات الذروة.",
+            "outcomesEn": "Cut daily reporting turnaround by 70% with 100% POS uptime during commercial rush periods."
+        },
+        {
+            "id": "collab-albait",
+            "icon": "fas fa-kaaba",
+            "titleAr": "شركة ضيوف البيت (مواسم حج 2023 - 2026)",
+            "titleEn": "Albait Guests (Consecutive Hajj Seasons 2023 - 2026)",
+            "roleAr": "مشرف العمليات التقنية ومطور النظم (Technical Operations Supervisor & Systems Developer)",
+            "roleEn": "Technical Operations Supervisor & Systems Developer",
+            "periodAr": "4 مواسم حج متتالية (تحت قيادة أ. هتان بن جمال خان)",
+            "periodEn": "4 Consecutive Hajj Seasons (Under Mr. Hattan Jamal Khan)",
+            "descAr": "إشراف وتنفيذ العمليات التقنية الميدانية لـ 4 مواسم حج متتالية، وهندسة وتطوير 4 أجيال من نظام الجوازات الميداني (Offline-First Hybrid) ونظام إسكان الحجاج تحت قيادة أ. هتان خان، مما أسهم في خفض زمن التدقيق بنسبة 85%.",
+            "descEn": "Supervising and executing on-site field technical operations across 4 consecutive Hajj seasons, developing 4 generations of the Mission-Critical Field Passport App (Offline-First Hybrid) and pilgrim housing system under Mr. Hattan Khan, cutting audit time by 85%.",
+            "badgeAr": "عمليات ميدانية وأنظمة حج حيوية",
+            "badgeEn": "Mission-Critical Hajj Operations",
             "orgAr": "شركة ضيوف البيت (خدمات حجاج بيت الله الحرام)",
             "orgEn": "Albait Guests (Hajj Pilgrims Services)",
-            "overviewAr": "مسيرة ممتدة لأربعة مواسم حج متتالية في إدارة العمليات التقنية الميدانية، رقمنة أنظمة جوازات الحج، وتطوير الحلول الذكية لمتابعة الحشود ومطابقة الوثائق بدقة بالغة تحت الضغط العالي.",
-            "overviewEn": "Extensive track record across 4 consecutive Hajj seasons managing on-site field technical operations, digitizing pilgrim passport workflows, and engineering smart real-time verification systems under intense operational pressure.",
-            "responsibilitiesAr": [
-                "تطوير منظومة الربط الميداني لبيانات الجوازات وتدقيق الهويات",
-                "الإشراف على البنية التحتية والشبكات المعزولة بمركز الخدمة",
-                "معالجة المشاكل التقنية اللحظية وضمان سير تدفق الحجاج بسلاسة",
-                "العمل الوثيق تحت قيادة وتوجيهات رئيس المركز الأستاذ هتان بن جمال خان"
-            ],
-            "responsibilitiesEn": [
-                "Architected on-site identity cross-checking and passport audit workflows",
-                "Managed dedicated local networks and server workstations at the Service Center",
-                "Mitigated critical real-time technical hurdles ensuring smooth pilgrim processing",
-                "Direct collaboration under Service Center Head Mr. Hattan Jamal Khan"
-            ],
-            "impactAr": "تحقيق نسبة إنجاز قياسية في فرز الوثائق، استقرار تام للأنظمة طوال موسم الحج، والحصول على إشادات قيادية بفضل كفاءة وموثوقية الحلول المنفذة.",
-            "impactEn": "Set historic benchmarks in document processing speed with 100% uptime across peak Hajj days, recognized by leadership for outstanding technical reliability."
-        },
-        {
-            "id": "collab-2",
-            "icon": "fas fa-building",
-            "titleAr": "مؤسسة شعاع الشروق المتميزة",
-            "titleEn": "Shoa'a Shorouk Co.",
-            "roleAr": "مدير مشاريع التحول الرقمي وهندسة النظم",
-            "roleEn": "Digital Transformation & Systems Engineering Lead",
-            "periodAr": "مشروع استشاري تنفيذي شامل",
-            "periodEn": "Comprehensive Executive Consulting Project",
-            "descAr": "إدارة وقيادة مشروع التحول الرقمي الكامل للمؤسسة، بما في ذلك بناء نظام الاتصالات الإدارية والأرشفة السحابية، وتحسين البنية التحتية التقنية وتدريب الكوادر.",
-            "descEn": "Directed full-scale digital transformation, developing custom administrative correspondence and cloud archiving suites while modernizing infrastructure and training staff.",
             "scopeAr": [
-                "إعادة هندسة العمليات الإدارية وتحويلها إلى تدفقات برمجية مؤتمتة",
-                "برمجة نظام متكامل للأرشفة والتصنيف الآلي بدون تكاليف تراخيص دورية",
-                "تأمين قواعد البيانات وإنشاء نسخ احتياطية دورية مشفرة",
-                "تدريب موظفي المؤسسة على إدارة ومتابعة المعاملات السحابية"
+                "تطوير 4 أجيال متتابعة من تطبيق فحص ومطابقة جوازات الحجاج الميداني",
+                "تطبيق معمارية Offline-First مع طوابير معالجة غير متزامنة لمنع التعطل",
+                "تطوير وإدارة نظام إسكان وتفويج الحجاج وتوزيع الغرف والمخيمات",
+                "العمل الميداني المباشر والتنسيق القيادي مع رئيس المركز أ. هتان خان"
             ],
             "scopeEn": [
-                "Re-engineered corporate workflows into automated, audited digital streams",
-                "Authored custom archiving and classification platforms avoiding recurring licensing fees",
-                "Hardened database security and configured automated encrypted backups",
-                "Trained personnel on managing workflows and operational transparency"
+                "Architected 4 consecutive generations of the on-site pilgrim passport verification app",
+                "Implemented an offline-first architecture with asynchronous queues preventing field lockups",
+                "Engineered the pilgrim accommodation, room allotment, and camp crowd tracking system",
+                "Direct field execution and operational synergy with Service Center Head Mr. Hattan Khan"
             ],
-            "outcomesAr": "التخلص التام من الأوراق في المخاطبات الرسمية، تسريع وتيرة اتخاذ القرارات، وزيادة كفاءة الإنتاجية المؤسسية بنسبة تفوق 60%.",
-            "outcomesEn": "Eliminated paper dependency entirely, accelerated corporate approvals, and elevated operational efficiency by over 60%.",
-            "orgAr": "مؤسسة شعاع الشروق المتميزة",
-            "orgEn": "Shoa'a Shorouk Co.",
-            "overviewAr": "إدارة وقيادة مشروع التحول الرقمي الكامل للمؤسسة، بما في ذلك بناء نظام الاتصالات الإدارية والأرشفة السحابية، وتحسين البنية التحتية التقنية وتدريب الكوادر.",
-            "overviewEn": "Directed full-scale digital transformation, developing custom administrative correspondence and cloud archiving suites while modernizing infrastructure and training staff.",
-            "responsibilitiesAr": [
-                "إعادة هندسة العمليات الإدارية وتحويلها إلى تدفقات برمجية مؤتمتة",
-                "برمجة نظام متكامل للأرشفة والتصنيف الآلي بدون تكاليف تراخيص دورية",
-                "تأمين قواعد البيانات وإنشاء نسخ احتياطية دورية مشفرة",
-                "تدريب موظفي المؤسسة على إدارة ومتابعة المعاملات السحابية"
-            ],
-            "responsibilitiesEn": [
-                "Re-engineered corporate workflows into automated, audited digital streams",
-                "Authored custom archiving and classification platforms avoiding recurring licensing fees",
-                "Hardened database security and configured automated encrypted backups",
-                "Trained personnel on managing workflows and operational transparency"
-            ],
-            "impactAr": "التخلص التام من الأوراق في المخاطبات الرسمية، تسريع وتيرة اتخاذ القرارات، وزيادة كفاءة الإنتاجية المؤسسية بنسبة تفوق 60%.",
-            "impactEn": "Eliminated paper dependency entirely, accelerated corporate approvals, and elevated operational efficiency by over 60%."
+            "outcomesAr": "تقليص زمن معالجة وتدقيق الجواز من 3 دقائق إلى 25 ثانية (تسريع 85%)، وتدقيق عشرات آلاف السجلات بدقة 100%.",
+            "outcomesEn": "Reduced passport verification time from 3 minutes to under 25 seconds (85% boost), auditing tens of thousands of records with 100% precision."
         },
         {
-            "id": "collab-1",
-            "icon": "fas fa-rocket",
-            "titleAr": "فريق FENY (منظومة البرمجيات والحلول الرقمية)",
-            "titleEn": "FENY Technical Team & Solutions",
-            "roleAr": "رئيس الفريق التقني ومطور الحلول الرئيسي",
-            "roleEn": "CTO, Lead Developer & System Architect",
-            "periodAr": "مستمر منذ التأسيس",
-            "periodEn": "Ongoing Since Inception",
-            "descAr": "قيادة الفريق التقني لتنفيذ خرائط الطريق البرمجية، ابتكار أدوات تطوير متقدمة (مثل PPHP)، وتقديم استشارات التحول الرقمي وتطوير الحلول السريعة كعالم حاسب.",
-            "descEn": "Leading the core technical team in executing development roadmaps, inventing developer tooling (e.g. PPHP), and delivering digital transformation consulting.",
+            "id": "collab-miras",
+            "icon": "fas fa-robot",
+            "titleAr": "شركة ميراس",
+            "titleEn": "Miras Company",
+            "roleAr": "مدرب تقني متخصص في هندسة وبناء وكلاء الذكاء الاصطناعي (Technical Trainer - AI Agents)",
+            "roleEn": "Technical Trainer - AI Agents Engineering & Development",
+            "periodAr": "تدريب تقني متقدم وهندسة ذكاء اصطناعي",
+            "periodEn": "Advanced Technical Training & AI Engineering",
+            "descAr": "تقديم تدريب وتأهيل تقني متقدم للمبرمجين في هندسة وبناء وكلاء الذكاء الاصطناعي (AI Agents)، وهندسة الأوامر المتقدمة (Prompt Engineering)، وأتمتة العمليات عبر نماذج اللغة الكبيرة.",
+            "descEn": "Delivering advanced technical training on architecting and deploying autonomous AI Agents, advanced prompt engineering, and workflow automation using Large Language Models.",
+            "badgeAr": "هندسة وكلاء الذكاء الاصطناعي",
+            "badgeEn": "AI Agents Architecture",
+            "orgAr": "شركة ميراس",
+            "orgEn": "Miras Company",
             "scopeAr": [
-                "تحديد الهيكلية التقنية (Architecture) لمشاريع المنظومة",
-                "إدارة دورات التطوير الرشيقة (Agile Sprints) ومراجعات الأكواد",
-                "بناء وتدشين أدوات برمجية مفتوحة المصدر تخدم مجتمع المطورين",
-                "تقديم الاستشارات التقنية المباشرة لرواد الأعمال والشركات الناشئة"
+                "إعداد وتقديم حقائب تدريبية متخصصة في هندسة وبناء وكلاء الذكاء الاصطناعي",
+                "تدريب المهندسين على دمج واجهات LLMs واستخدام تقنيات Function Calling",
+                "تطبيق حالات عملية لأتمتة سير العمل البرمجي والمؤسسي بالذكاء الاصطناعي",
+                "الإشراف على المشاريع التطبيقية للمتدربين وتقييم كفاءتها الهندسية"
             ],
             "scopeEn": [
-                "Architecting high-level infrastructure design and modular codebase frameworks",
-                "Guiding agile sprint iterations, CI/CD pipelines, and rigorous code reviews",
-                "Publishing open-source packages and developer tools for the broader ecosystem",
-                "Advising startups and corporate ventures on MVP execution and cloud scale"
+                "Designed and delivered specialized hands-on curricula on autonomous AI Agents engineering",
+                "Trained developers on orchestrating LLM APIs, function calling, and structured outputs",
+                "Implemented practical enterprise workflows automated with intelligent agents",
+                "Supervised hands-on capstone agent builds evaluating architectural efficiency"
             ],
-            "outcomesAr": "بناء منظومة رقمية متماسكة، نشر أدوات برمجية حظيت بتقدير المطورين، وإطلاق عدة حلول تشغيلية ومالية ناجحة.",
-            "outcomesEn": "Built a cohesive software brand, deployed widely acknowledged developer tools, and brought multiple enterprise tools to live production.",
-            "orgAr": "فريق FENY (منظومة البرمجيات والحلول الرقمية)",
-            "orgEn": "FENY Technical Team & Solutions",
-            "overviewAr": "قيادة الفريق التقني لتنفيذ خرائط الطريق البرمجية، ابتكار أدوات تطوير متقدمة (مثل PPHP)، وتقديم استشارات التحول الرقمي وتطوير الحلول السريعة كعالم حاسب.",
-            "overviewEn": "Leading the core technical team in executing development roadmaps, inventing developer tooling (e.g. PPHP), and delivering digital transformation consulting.",
-            "responsibilitiesAr": [
-                "تحديد الهيكلية التقنية (Architecture) لمشاريع المنظومة",
-                "إدارة دورات التطوير الرشيقة (Agile Sprints) ومراجعات الأكواد",
-                "بناء وتدشين أدوات برمجية مفتوحة المصدر تخدم مجتمع المطورين",
-                "تقديم الاستشارات التقنية المباشرة لرواد الأعمال والشركات الناشئة"
-            ],
-            "responsibilitiesEn": [
-                "Architecting high-level infrastructure design and modular codebase frameworks",
-                "Guiding agile sprint iterations, CI/CD pipelines, and rigorous code reviews",
-                "Publishing open-source packages and developer tools for the broader ecosystem",
-                "Advising startups and corporate ventures on MVP execution and cloud scale"
-            ],
-            "impactAr": "بناء منظومة رقمية متماسكة، نشر أدوات برمجية حظيت بتقدير المطورين، وإطلاق عدة حلول تشغيلية ومالية ناجحة.",
-            "impactEn": "Built a cohesive software brand, deployed widely acknowledged developer tools, and brought multiple enterprise tools to live production."
+            "outcomesAr": "تأهيل كوادر هندسية قادرة على بناء ودمج وكلاء الذكاء الاصطناعي في الأنظمة البرمجية بنجاح.",
+            "outcomesEn": "Upskilled software engineers to architect and integrate autonomous AI agents into enterprise stacks."
         },
         {
-            "id": "collab-4",
-            "icon": "fas fa-university",
-            "titleAr": "جامعة أم القرى - كلية الحاسبات",
-            "titleEn": "Umm Al-Qura University - College of Computing",
-            "roleAr": "باحث ماجستير ومطور مشاريع بحثية وميدانية",
-            "roleEn": "Master's Researcher & Academic Co-author",
-            "periodAr": "المرحلة الجامعية والدراسات العليا",
-            "periodEn": "Undergraduate & Graduate Studies",
-            "descAr": "شراكة علمية وبحثية مستمرة مع أعضاء هيئة التدريس والزملاء الباحثين، تمثلت في إنجاز مشاريع تخرج متميزة، وتقديم أوراق في ندوات أبحاث الماجستير.",
-            "descEn": "Continuous academic and scientific collaboration with faculty professors and fellow researchers, producing honors capstone projects and research symposium publications.",
+            "id": "collab-naqaba",
+            "icon": "fas fa-bus",
+            "titleAr": "النقابة العامة للسيارات",
+            "titleEn": "General Syndicate of Cars (Naqaba)",
+            "roleAr": "تدريب تعاوني رسمي - تحليل النظم وبيانات النقل الميداني (Co-op Systems Analyst)",
+            "roleEn": "Co-op Systems Analyst & Field Data Trainee",
+            "periodAr": "برنامج تدريب تعاوني رسمي مكثف (15 أسبوعاً)",
+            "periodEn": "Official 15-Week Intensive Co-op Program",
+            "descAr": "برنامج تدريب تعاوني رسمي مكثف لمدة 15 أسبوعاً، شمل تحليل نظم نقل الحجاج، تدفقات البيانات التشغيلية، وبناء لوحات تفاعلية للبيانات الميدانية باستخدام Power BI و SQL.",
+            "descEn": "Comprehensive 15-week official cooperative training program covering pilgrim transport systems analysis, operational data flows, and interactive telemetry dashboards using Power BI and SQL.",
+            "badgeAr": "تحليل نظم وبيانات ميدانية",
+            "badgeEn": "Systems Analysis & Fleet Data",
+            "orgAr": "النقابة العامة للسيارات",
+            "orgEn": "General Syndicate of Cars",
             "scopeAr": [
-                "تطوير خوارزميات التنبؤ بالسلاسل الزمنية في منصة موسم",
-                "المشاركة الفعالة في المعارض الأكاديمية وندوات الدراسات العليا",
-                "تبادل الخبرات التقنية وحل المشكلات الحسابية المتقدمة مع الزملاء",
-                "الإسهام في الأنشطة التقنية لكلية الحاسبات وقسم علوم الحاسب"
+                "تحليل نظم إدارة حركة الحافلات وأسطول النقل الميداني خلال موسم الحج",
+                "استعلام ومعالجة قواعد البيانات الضخمة المعقدة باستخدام SQL",
+                "تصميم لوحات تحكم ومؤشرات أداء تفاعلية عبر Power BI لمتابعة الأسطول",
+                "إعداد تقارير تحليلية لدعم اتخاذ القرارات اللوجستية والميدانية"
             ],
             "scopeEn": [
-                "Developed predictive time-series algorithms on the Mawsem platform",
-                "Active participation in university expos, symposiums, and research workshops",
-                "Peer collaboration on complex computational algorithms and system models",
-                "Contributing to university computing initiatives and student mentorship"
+                "Analyzed transport dispatch systems and seasonal bus fleet movement workflows",
+                "Queried and profiled large-scale relational transportation databases via SQL",
+                "Crafted dynamic operational KPI telemetry dashboards leveraging Power BI",
+                "Compiled analytical reports supporting logistical field decision-making"
             ],
-            "outcomesAr": "التخرج بتقدير ممتاز مع مرتبة الشرف، والحصول على تقدير الأكاديميين ولجان التحكيم في معرض مشاريع التخرج.",
-            "outcomesEn": "Graduated with Excellence & Honors, receiving high praise from evaluation panels at the annual Capstone Exposition.",
-            "orgAr": "جامعة أم القرى - كلية الحاسبات",
-            "orgEn": "Umm Al-Qura University - College of Computing",
-            "overviewAr": "شراكة علمية وبحثية مستمرة مع أعضاء هيئة التدريس والزملاء الباحثين، تمثلت في إنجاز مشاريع تخرج متميزة، وتقديم أوراق في ندوات أبحاث الماجستير.",
-            "overviewEn": "Continuous academic and scientific collaboration with faculty professors and fellow researchers, producing honors capstone projects and research symposium publications.",
-            "responsibilitiesAr": [
-                "تطوير خوارزميات التنبؤ بالسلاسل الزمنية في منصة موسم",
-                "المشاركة الفعالة في المعارض الأكاديمية وندوات الدراسات العليا",
-                "تبادل الخبرات التقنية وحل المشكلات الحسابية المتقدمة مع الزملاء",
-                "الإسهام في الأنشطة التقنية لكلية الحاسبات وقسم علوم الحاسب"
-            ],
-            "responsibilitiesEn": [
-                "Developed predictive time-series algorithms on the Mawsem platform",
-                "Active participation in university expos, symposiums, and research workshops",
-                "Peer collaboration on complex computational algorithms and system models",
-                "Contributing to university computing initiatives and student mentorship"
-            ],
-            "impactAr": "التخرج بتقدير ممتاز مع مرتبة الشرف، والحصول على تقدير الأكاديميين ولجان التحكيم في معرض مشاريع التخرج.",
-            "impactEn": "Graduated with Excellence & Honors, receiving high praise from evaluation panels at the annual Capstone Exposition."
+            "outcomesAr": "إتمام 15 أسبوعاً من التدريب التعاوني بنجاح متميز وبناء نماذج تحليلية ذكية لبيانات النقل الميداني.",
+            "outcomesEn": "Completed 15 weeks of rigorous co-op training, delivering high-impact fleet telemetry models."
         }
     ],
     "peopleStats": [
         {
+            "num": "12",
+            "labelAr": "شخصيات وقيادات مهنية",
+            "labelEn": "Professional Network",
+            "valAr": "قيادات ومسؤولو بلدي وزملاء مشاريع",
+            "valEn": "Executive Leaders, Supervisors & Peers"
+        },
+        {
             "num": "06",
-            "labelAr": "قيادات وزملاء بارزون",
-            "labelEn": "Featured Leaders & Peers",
-            "valAr": "شراكات حقيقية ومشاريع مشتركة",
-            "valEn": "Verified Mutual Collaboration"
+            "labelAr": "أمانة العاصمة المقدسة (بلدي)",
+            "labelEn": "Balady Directorate (Municipality)",
+            "valAr": "وكالة التحول الرقمي وإدارة بلدي",
+            "valEn": "Digital Transformation Agency • Balady"
+        },
+        {
+            "num": "04",
+            "labelAr": "فريق منصة موسم (Mawsem)",
+            "labelEn": "Mawsem Engineering Authors",
+            "valAr": "مشروع تخرج بمرتبة الشرف",
+            "valEn": "Honors Capstone Authors"
         },
         {
             "num": "04",
             "labelAr": "مواسم حج بقيادة مشتركة",
             "labelEn": "Shared Hajj Seasons",
-            "valAr": "مع أ. هتان بن جمال خان",
+            "valAr": "تحت قيادة أ. هتان بن جمال خان",
             "valEn": "Led by Mr. Hattan Khan"
-        },
-        {
-            "num": "04",
-            "labelAr": "مهندسو مشروع موسم",
-            "labelEn": "Mawsem Engineering Team",
-            "valAr": "أبحاث الذكاء الاصطناعي",
-            "valEn": "AI & Systems Authors"
-        },
-        {
-            "num": "100%",
-            "labelAr": "روابط ومصادر موثقة",
-            "labelEn": "Verified Links & Portfolios",
-            "valAr": "مواقع شخصية وحسابات رسمية",
-            "valEn": "Live Portfolios & Profiles"
         }
     ],
     "people": [
@@ -829,179 +919,145 @@ const initialDefaultData = {
             "id": "person-hattan",
             "nameAr": "أ. هتان بن جمال خان",
             "nameEn": "Mr. Hattan Jamal Khan",
-            "roleAr": "رئيس مركز الخدمة",
-            "roleEn": "Head of Service Center",
             "badgeAr": "قيادة وإشراف تنفيذي",
             "badgeEn": "Executive Leadership",
-            "orgAr": "شركة ضيوف البيت (خدمات الحج)",
-            "orgEn": "Albait Guests (Hajj Services)",
-            "descAr": "قائد ميداني متميز، جمعتني به مسيرة عمل وثيقة على مدار 4 مواسم حج في إدارة العمليات التقنية، رقمنة أنظمة جوازات الحج، وتطوير الحلول الذكية لمتابعة الحشود ومطابقة الوثائق بدقة عالية تحت أقسى ظروف الضغط الميداني.",
-            "descEn": "Distinguished field leader with whom I collaborated over 4 consecutive Hajj seasons, leading technical operations, automating pilgrim passport workflows, and delivering high-accuracy mission-critical platforms under peak operational demands.",
-            "testimonialAr": "\"إن الانضباط التقني والتنفيذ الدقيق للحلول البرمجية تحت وطأة ضغوط الحج هو ما ميز عمل إيهاب يار طوال 4 مواسم تشغيلية ناجحة.\"",
-            "testimonialEn": "\"Technical discipline and flawless software execution under peak Hajj pressures defined Ehab Yar's dedication throughout 4 successful operational seasons.\"",
-            "sharedMilestonesAr": "إدارة تشغيل مركز الخدمة في 4 مواسم حج متتالية بنسبة توافرية 100% وخفض زمن التدقيق بنسبة 85%.",
-            "sharedMilestonesEn": "Operated the Service Center across 4 Hajj seasons with 100% uptime and an 85% reduction in verification time.",
-            "highlightsAr": [
-                "إدارة تشغيل مركز الخدمة في 4 مواسم حج متتالية بنسبة توافرية 100% وخفض زمن التدقيق بنسبة 85%."
-            ],
-            "highlightsEn": [
-                "Operated the Service Center across 4 Hajj seasons with 100% uptime and an 85% reduction in verification time."
-            ],
-            "endorsementAr": "\"إن الانضباط التقني والتنفيذ الدقيق للحلول البرمجية تحت وطأة ضغوط الحج هو ما ميز عمل إيهاب يار طوال 4 مواسم تشغيلية ناجحة.\"",
-            "endorsementEn": "\"Technical discipline and flawless software execution under peak Hajj pressures defined Ehab Yar's dedication throughout 4 successful operational seasons.\"",
-            "tags": [
-                "قيادة وإشراف تنفيذي",
-                "رئيس مركز الخدمة"
-            ]
+            "roleAr": "رئيس مركز الخدمة",
+            "roleEn": "Head of Service Center",
+            "orgAr": "شركة ضيوف البيت (خدمات حجاج بيت الله الحرام)",
+            "orgEn": "Albait Guests (Hajj Pilgrims Services)",
+            "url": ""
         },
         {
             "id": "person-khaled",
             "nameAr": "خالد الجمل",
             "nameEn": "Khaled Al-Jamal",
+            "badgeAr": "شريك مؤسس وإداري",
+            "badgeEn": "Co-founder & Executive",
             "roleAr": "شريك مؤسس وعضو مجلس إدارة",
             "roleEn": "Co-founder & Board Member",
-            "badgeAr": "فريق FENY",
-            "badgeEn": "FENY Core Team",
-            "orgAr": "منظومة FENY",
-            "orgEn": "FENY",
-            "descAr": "شريك مؤسس ومساهم رئيسي في بناء استراتيجية ورؤية منظومة FENY، قيادة خرائط الطريق البرمجية، وهندسة البنى التحتية للمشاريع الرقمية المشتركة وتطوير المنتجات التقنية.",
-            "descEn": "Co-founder and pivotal contributor to the founding and scaling of FENY, guiding technology roadmaps, system infrastructure, and collaborative product engineering.",
-            "testimonialAr": "\"الشراكة مع إيهاب تعني الدقة الهندسية العالية وتحويل أي تعقيد برمجي إلى حل رقمي سلس ومنتج جاهز للمنافسة.\"",
-            "testimonialEn": "\"Partnering with Ehab ensures pristine engineering rigor and transforming complex problems into fluid, market-ready digital products.\"",
-            "sharedMilestonesAr": "تأسيس منظومة FENY، إطلاق عدة منتجات ومحركات برمجية، وتقديم استشارات التحول الرقمي للشركات.",
-            "sharedMilestonesEn": "Founded FENY, launched multiple developer engines, and delivered enterprise digital transformation consulting.",
-            "highlightsAr": [
-                "تأسيس منظومة FENY، إطلاق عدة منتجات ومحركات برمجية، وتقديم استشارات التحول الرقمي للشركات."
-            ],
-            "highlightsEn": [
-                "Founded FENY, launched multiple developer engines, and delivered enterprise digital transformation consulting."
-            ],
-            "endorsementAr": "\"الشراكة مع إيهاب تعني الدقة الهندسية العالية وتحويل أي تعقيد برمجي إلى حل رقمي سلس ومنتج جاهز للمنافسة.\"",
-            "endorsementEn": "\"Partnering with Ehab ensures pristine engineering rigor and transforming complex problems into fluid, market-ready digital products.\"",
-            "tags": [
-                "فريق FENY",
-                "شريك مؤسس وعضو مجلس إدارة"
-            ]
+            "orgAr": "منظومة FENY التقنية",
+            "orgEn": "FENY Ecosystem",
+            "url": ""
         },
         {
             "id": "person-abdulaziz",
             "nameAr": "عبدالعزيز حافظ",
             "nameEn": "Abdulaziz Hafiz",
-            "roleAr": "مهنـدس برمجـيات وذكـاء اصطناعـي",
-            "roleEn": "Software & AI Engineer",
             "badgeAr": "زميل جامعة ومشاريع",
-            "badgeEn": "Colleague & Co-builder",
+            "badgeEn": "University Colleague & Co-builder",
+            "roleAr": "مهندس برمجيات وذكاء اصطناعي",
+            "roleEn": "Software & AI Engineer",
             "orgAr": "جامعة أم القرى • مبادرات تقنية",
             "orgEn": "UQU • Technical Initiatives",
-            "descAr": "زميل دراسة متميز بكلية الحاسبات بجامعة أم القرى وشريك في مشاريع برمجية وهندسية متعددة، تمحورت حول تحليل الأنظمة وتطوير البرمجيات الحديثة وحل المشكلات الحسابية المعقدة.",
-            "descEn": "Distinguished peer at UQU College of Computing and co-builder across multiple software initiatives, emphasizing systems analysis, modern architecture, and advanced algorithmic problem solving.",
-            "url": "https://ahafiz.sa",
-            "testimonialAr": "\"يمتلك إيهاب قدرة استثنائية في هندسة قواعد البيانات وإدارة تفاصيل الأنظمة المعقدة بكفاءة عالية وهدوء مهني.\"",
-            "testimonialEn": "\"Ehab possesses an extraordinary aptitude for database architecture and managing complex systems with composure and deep technical skill.\"",
-            "sharedMilestonesAr": "التعاون في مشاريع برمجية متقدمة في كلية الحاسبات بجامعة أم القرى ومبادرات تطوير الويب والذكاء الاصطناعي.",
-            "sharedMilestonesEn": "Collaborated on advanced software projects at UQU College of Computing and web/AI development initiatives.",
-            "highlightsAr": [
-                "التعاون في مشاريع برمجية متقدمة في كلية الحاسبات بجامعة أم القرى ومبادرات تطوير الويب والذكاء الاصطناعي."
-            ],
-            "highlightsEn": [
-                "Collaborated on advanced software projects at UQU College of Computing and web/AI development initiatives."
-            ],
-            "endorsementAr": "\"يمتلك إيهاب قدرة استثنائية في هندسة قواعد البيانات وإدارة تفاصيل الأنظمة المعقدة بكفاءة عالية وهدوء مهني.\"",
-            "endorsementEn": "\"Ehab possesses an extraordinary aptitude for database architecture and managing complex systems with composure and deep technical skill.\"",
-            "tags": [
-                "زميل جامعة ومشاريع",
-                "مهنـدس برمجـيات وذكـاء اصطناعـي"
-            ]
+            "url": "https://ahafiz.sa"
         },
         {
             "id": "person-malek",
             "nameAr": "مالك اللهيبي",
             "nameEn": "Malek AlLehaibi",
+            "badgeAr": "زميل وشريك مشروع موسم",
+            "badgeEn": "Colleague & Mawsem Co-author",
             "roleAr": "مهندس برمجيات ونظم ذكية",
             "roleEn": "Software & AI Systems Engineer",
-            "badgeAr": "شريك مشروع موسم (Mawsem)",
-            "badgeEn": "Mawsem Co-author",
             "orgAr": "جامعة أم القرى (مشروع التخرج)",
             "orgEn": "Umm Al-Qura University",
-            "descAr": "زميل دراسة ومشاريع تقنية متعددة، وشريك رئيسي في إنجاز وتطوير مشروع التخرج المتميز (منصة موسم للتنبؤ بالطلب بالذكاء الاصطناعي) وتحليل نماذج السلاسل الزمنية.",
-            "descEn": "Academic colleague and core collaborator on the Mawsem AI demand forecasting platform, contributing to time-series modeling and software validation.",
-            "url": "https://www.linkedin.com/in/malikallehaibi/",
-            "testimonialAr": "\"العمل المشترك في منصة موسم أثبت احترافية إيهاب العالية في هندسة الواجهات الخلفية وبناء أنظمة التنبؤ.\"",
-            "testimonialEn": "\"Teaming up on Mawsem proved Ehab's high caliber in backend architecture and predictive systems engineering.\"",
-            "sharedMilestonesAr": "تطوير منصة موسم للتنبؤ بالطلب، وعرضها في معرض مشاريع التخرج بجامعة أم القرى والتكريم بمرتبة الشرف.",
-            "sharedMilestonesEn": "Co-authored Mawsem platform, featured at the UQU Capstone Exhibition, earning academic honors.",
-            "highlightsAr": [
-                "تطوير منصة موسم للتنبؤ بالطلب، وعرضها في معرض مشاريع التخرج بجامعة أم القرى والتكريم بمرتبة الشرف."
-            ],
-            "highlightsEn": [
-                "Co-authored Mawsem platform, featured at the UQU Capstone Exhibition, earning academic honors."
-            ],
-            "endorsementAr": "\"العمل المشترك في منصة موسم أثبت احترافية إيهاب العالية في هندسة الواجهات الخلفية وبناء أنظمة التنبؤ.\"",
-            "endorsementEn": "\"Teaming up on Mawsem proved Ehab's high caliber in backend architecture and predictive systems engineering.\"",
-            "tags": [
-                "شريك مشروع موسم (Mawsem)",
-                "مهندس برمجيات ونظم ذكية"
-            ]
+            "url": "https://www.linkedin.com/in/malikallehaibi/"
         },
         {
             "id": "person-zeyad",
             "nameAr": "زياد فلاته",
             "nameEn": "Zyad Fallatah",
+            "badgeAr": "زميل وشريك مشروع موسم",
+            "badgeEn": "Colleague & Mawsem Co-author",
             "roleAr": "مهندس برمجيات وحلول رقمية",
             "roleEn": "Software & Solutions Engineer",
-            "badgeAr": "شريك مشروع موسم (Mawsem)",
-            "badgeEn": "Mawsem Co-author",
             "orgAr": "جامعة أم القرى (مشروع التخرج)",
             "orgEn": "Umm Al-Qura University",
-            "descAr": "زميل دراسة ومشاريع برمجية، وشريك أساسي في تطوير منظومة منصة موسم المعروضة في معرض إنجاز، مع التركيز على تدفق البيانات وتكامل الواجهات وتجربة المستخدم.",
-            "descEn": "Academic peer and key engineering partner on the Mawsem forecasting platform showcased at the Injaz exhibition, focusing on data pipelines and UI integration.",
-            "url": "https://zyadfallatah.com/",
-            "testimonialAr": "\"إيهاب يجمع بين الرؤية المعمارية الشاملة والقدرة على كتابة أكواد واجهات خلفية نظيفة وموثوقة للغاية.\"",
-            "testimonialEn": "\"Ehab bridges high-level architectural foresight with the discipline of writing remarkably clean, reliable backend code.\"",
-            "sharedMilestonesAr": "المشاركة في إنجاز منصة موسم وعرضها في معرض إنجاز السنوي للكلية.",
-            "sharedMilestonesEn": "Co-authored the Mawsem platform, featured at the College of Computing's annual Injaz exhibition.",
-            "highlightsAr": [
-                "المشاركة في إنجاز منصة موسم وعرضها في معرض إنجاز السنوي للكلية."
-            ],
-            "highlightsEn": [
-                "Co-authored the Mawsem platform, featured at the College of Computing's annual Injaz exhibition."
-            ],
-            "endorsementAr": "\"إيهاب يجمع بين الرؤية المعمارية الشاملة والقدرة على كتابة أكواد واجهات خلفية نظيفة وموثوقة للغاية.\"",
-            "endorsementEn": "\"Ehab bridges high-level architectural foresight with the discipline of writing remarkably clean, reliable backend code.\"",
-            "tags": [
-                "شريك مشروع موسم (Mawsem)",
-                "مهندس برمجيات وحلول رقمية"
-            ]
+            "url": "https://zyadfallatah.com/"
         },
         {
             "id": "person-mohammed",
             "nameAr": "محمد الشريف",
             "nameEn": "Mohammed Al-Sharif",
+            "badgeAr": "زميل وشريك مشروع موسم",
+            "badgeEn": "Colleague & Mawsem Co-author",
             "roleAr": "مهندس برمجيات ونظم",
             "roleEn": "Software & Systems Engineer",
-            "badgeAr": "شريك مشروع موسم (Mawsem)",
-            "badgeEn": "Mawsem Co-author",
             "orgAr": "جامعة أم القرى (مشروع التخرج)",
             "orgEn": "Umm Al-Qura University",
-            "descAr": "زميل دراسة ومشاريع متعددة، ومشارك في بناء منصة موسم التنبؤية بالذكاء الاصطناعي، وهندسة نماذج المعالجة وربط المكونات البرمجية بالواجهات الخلفية.",
-            "descEn": "Peer across university software initiatives and co-creator of the Mawsem AI platform, focusing on computational models and backend component wiring.",
-            "url": "https://mki7r.github.io/portfolio/",
-            "testimonialAr": "\"تجربة العمل مع إيهاب في بناء أنظمة معقدة تؤكد التزامه الصارم بأفضل معايير هندسة البرمجيات.\"",
-            "testimonialEn": "\"Building complex systems alongside Ehab demonstrated his unwavering commitment to software engineering best practices.\"",
-            "sharedMilestonesAr": "إنجاز وتدشين منصة موسم للتنبؤ بالطلب بالذكاء الاصطناعي في كلية الحاسبات بجامعة أم القرى.",
-            "sharedMilestonesEn": "Delivered the Mawsem AI retail platform at the UQU College of Computing.",
-            "highlightsAr": [
-                "إنجاز وتدشين منصة موسم للتنبؤ بالطلب بالذكاء الاصطناعي في كلية الحاسبات بجامعة أم القرى."
-            ],
-            "highlightsEn": [
-                "Delivered the Mawsem AI retail platform at the UQU College of Computing."
-            ],
-            "endorsementAr": "\"تجربة العمل مع إيهاب في بناء أنظمة معقدة تؤكد التزامه الصارم بأفضل معايير هندسة البرمجيات.\"",
-            "endorsementEn": "\"Building complex systems alongside Ehab demonstrated his unwavering commitment to software engineering best practices.\"",
-            "tags": [
-                "شريك مشروع موسم (Mawsem)",
-                "مهندس برمجيات ونظم"
-            ]
+            "url": "https://mki7r.github.io/portfolio/"
+        },
+        {
+            "id": "person-ahmed-albishri",
+            "nameAr": "أحمد البشري",
+            "nameEn": "Ahmed Al-Bishri",
+            "badgeAr": "المدير العام لإدارة بلدي",
+            "badgeEn": "General Director • Balady",
+            "roleAr": "المدير العام للإدارة العامة لبلدي",
+            "roleEn": "General Director of Balady General Directorate",
+            "orgAr": "أمانة العاصمة المقدسة • وكالة التحول الرقمي",
+            "orgEn": "Holy Makkah Municipality • Digital Transformation Agency",
+            "url": ""
+        },
+        {
+            "id": "person-muneer-alotaibi",
+            "nameAr": "منير العتيبي",
+            "nameEn": "Muneer Al-Otaibi",
+            "badgeAr": "مدير إدارة التحليل (مدير مباشر)",
+            "badgeEn": "Director of Systems Analysis (Direct Manager)",
+            "roleAr": "مدير إدارة التحليل (مديري المباشر)",
+            "roleEn": "Director of Systems Analysis Dept. (Direct Manager)",
+            "orgAr": "إدارة بلدي • أمانة العاصمة المقدسة (وكالة التحول الرقمي)",
+            "orgEn": "Balady Directorate • Holy Makkah Municipality",
+            "url": ""
+        },
+        {
+            "id": "person-abdulrahman-wazira",
+            "nameAr": "عبدالرحمن وزيره",
+            "nameEn": "Abdulrahman Wazira",
+            "badgeAr": "مشرف إدارة بلدي",
+            "badgeEn": "Balady Dept. Supervisor",
+            "roleAr": "مشرف بإدارة بلدي",
+            "roleEn": "Supervisor at Balady Administration",
+            "orgAr": "أمانة العاصمة المقدسة • وكالة التحول الرقمي",
+            "orgEn": "Holy Makkah Municipality • Digital Transformation Agency",
+            "url": ""
+        },
+        {
+            "id": "person-wael-alzahrani",
+            "nameAr": "وائل الزهراني",
+            "nameEn": "Wael Al-Zahrani",
+            "badgeAr": "محلل نظم ومسؤول طلبات التغيير",
+            "badgeEn": "Systems Analyst & CR Officer",
+            "roleAr": "مهندس محلل نظم ومسؤول طلبات التغيير (قسم التحليل)",
+            "roleEn": "Systems Analyst Engineer & Change Request (CR) Officer",
+            "orgAr": "إدارة بلدي • أمانة العاصمة المقدسة (وكالة التحول الرقمي)",
+            "orgEn": "Balady Directorate • Holy Makkah Municipality",
+            "url": ""
+        },
+        {
+            "id": "person-ahmed-ibriq",
+            "nameAr": "أحمد إبريق",
+            "nameEn": "Ahmed Ibriq",
+            "badgeAr": "برمجيات ونظم ومسؤول تغيير",
+            "badgeEn": "Software & Systems & CR Officer",
+            "roleAr": "مهندس برمجيات ومحلل نظم ومسؤول طلبات التغيير (قسم التحليل)",
+            "roleEn": "Software Engineer, Systems Analyst & Change Request (CR) Officer",
+            "orgAr": "إدارة بلدي • أمانة العاصمة المقدسة (وكالة التحول الرقمي)",
+            "orgEn": "Balady Directorate • Holy Makkah Municipality",
+            "url": ""
+        },
+        {
+            "id": "person-sari-alsulami",
+            "nameAr": "ساري السلمي",
+            "nameEn": "Sari Al-Sulami",
+            "badgeAr": "محلل نظم وتوثيق فني",
+            "badgeEn": "Systems Analyst & Documentation Engineer",
+            "roleAr": "مهندس محلل وموثق نظم (قسم التوثيق)",
+            "roleEn": "Systems Analyst & Technical Documentation Engineer",
+            "orgAr": "إدارة بلدي • أمانة العاصمة المقدسة (وكالة التحول الرقمي)",
+            "orgEn": "Balady Directorate • Holy Makkah Municipality",
+            "url": ""
         }
     ],
     "newsStats": [
@@ -1736,17 +1792,45 @@ const initialDefaultData = {
     "gallery": [
         {
             "id": "gal-pmp",
-            "image": "assets/images/ehab-yar-pmp-credential-certificate.jpg",
-            "badgeAr": "اعتماد عالمي",
-            "badgeEn": "Global Credential",
+            "image": "assets/images/ehab-yar-pmi-pmp-credential-certificate.jpg",
+            "badgeAr": "اعتماد دولي PMP®",
+            "badgeEn": "PMI Global Credential",
             "titleAr": "شهادة محترف إدارة المشاريع (PMP®) المعتمدة",
             "titleEn": "Project Management Professional (PMP®) Certificate",
-            "descAr": "الشهادة الرسمية لاجتياز واعتماد PMP الصادرة من معهد إدارة المشاريع العالمي (PMI) برقم 4514551.",
-            "descEn": "Official Project Management Professional (PMP®) certification issued by the Project Management Institute (PMI), Credential #4514551.",
+            "descAr": "الشهادة الرسمية الصادرة من معهد إدارة المشاريع العالمي (PMI) برقم الاعتماد 4514551 وتاريخ 12 سبتمبر 2026 حتى 12 سبتمبر 2029.",
+            "descEn": "Official Project Management Professional (PMP®) credential issued by PMI (ID: 4514551, Valid: 12 Sep 2026 – 12 Sep 2029).",
             "category": "cert",
-            "date": "سبتمبر 2026م",
+            "date": "12 سبتمبر 2026م",
             "locationAr": "معهد إدارة المشاريع العالمي (PMI)",
             "locationEn": "Project Management Institute (PMI)"
+        },
+        {
+            "id": "gal-hajj-conf-6",
+            "image": "assets/images/20261111_164307.jpg",
+            "badgeAr": "أمانة العاصمة المقدسة وبلدي",
+            "badgeEn": "Balady & Holy Makkah Municipality",
+            "titleAr": "مؤتمر ومعرض الحج - النسخة السادسة",
+            "titleEn": "6th Hajj Conference & Exhibition",
+            "descAr": "مشاركة إيهاب يار في مؤتمر ومعرض الحج (النسخة السادسة) بالتعاون مع أمانة العاصمة المقدسة، تحت تشغيل شركة الخليج للكمبيوتر والمعدات الإلكترونية المحدودة، واستعراض شاشات وأنظمة 'بلدي في خدمة ضيوف الرحمن'.",
+            "descEn": "Ehab Yar at the 6th Hajj Conference & Exhibition in collaboration with Holy Makkah Municipality, operated by Al-Khaleej Computers & Electronic Equipment Ltd., showcasing the 'Balady Serving Pilgrims' interactive digital ecosystem.",
+            "category": "events",
+            "date": "النسخة السادسة",
+            "locationAr": "جدة سوبردوم - مؤتمر ومعرض الحج",
+            "locationEn": "Jeddah Superdome - Hajj Conference & Exhibition"
+        },
+        {
+            "id": "gal-hajj-conf-6-touch",
+            "image": "assets/images/20261111_164308.jpg",
+            "badgeAr": "أمانة العاصمة المقدسة والخليج",
+            "badgeEn": "Holy Makkah Municipality & Al-Khaleej",
+            "titleAr": "استعراض الأنظمة الذكية - مؤتمر ومعرض الحج",
+            "titleEn": "Interactive Systems Showcase - 6th Hajj Conference",
+            "descAr": "التفاعل مع الشاشات الرقمية الميدانية لمنصة بلدي واستعراض الحلول التقنية الداعمة لجاهزية مكة المكرمة والمشاعر المقدسة ورفع كفاءة أعمال الحج.",
+            "descEn": "Demonstrating Balady interactive kiosk workflows and smart digital solutions empowering municipal readiness and pilgrim journey optimization.",
+            "category": "events",
+            "date": "النسخة السادسة",
+            "locationAr": "جدة سوبردوم - مؤتمر ومعرض الحج",
+            "locationEn": "Jeddah Superdome - Hajj Conference & Exhibition"
         },
         {
             "id": "gal-1",
@@ -1918,74 +2002,75 @@ const initialDefaultData = {
         }
     ],
     "contact": {
-        "titleAr": "هل تبحث عن شريك تقني؟",
-        "titleEn": "Seeking a Tech Partner?",
-        "descAr": "دعنا نناقش كيف يمكن لخبرتي كعالم حاسب ومحترف إدارة مشاريع (PMP®) أن تدعم نمو مشروعك وتضمن استقراره التقني بأعلى المعايير الهندسية.",
-        "descEn": "Let's discuss how my expertise as a Computer Scientist and certified PMP® can accelerate your project's trajectory with engineering rigor.",
+        "titleAr": "هل تبحث عن شريك تقني ومحلل نظم؟",
+        "titleEn": "Seeking a Systems Analyst & Tech Partner?",
+        "descAr": "دعنا نناقش كيف يمكن لخبرتي كمتخصص علوم حاسب ومحلل نظم معتمد (PMI PMP®) وباحث ماجستير بجامعة أم القرى أن تدعم نمو أعمالك وهندسة متطلباتك بأعلى المعايير الهندسية.",
+        "descEn": "Let's discuss how my expertise as a Computer Scientist, Systems Analyst, and certified PMP® can streamline your enterprise architecture and ensure operational excellence.",
         "whatsapp": "966599727412",
         "email": "contact@eny.sa",
         "twitter": "https://x.com/_f_eny",
-        "linkedin": "https://www.linkedin.com/in/ehab-yar-4a1bb4193/",
-        "github": "https://github.com/feny1"
+        "linkedin": "https://www.linkedin.com/in/ehab-yar",
+        "github": "https://github.com/feny1",
+        "cvPdf": "assets/Ehab_Yar_CV.pdf"
     },
     "projectStats": [
         {
-            "num": "07+",
-            "labelAr": "مشاريع وأنظمة منجزة",
+            "num": "08+",
+            "labelAr": "مشاريع وأنظمة متكاملة",
             "labelEn": "Engineered Systems",
-            "valAr": "أنظمة تشغيلية وحلول ذكية",
-            "valEn": "Enterprise & AI Platforms"
+            "valAr": "أنظمة تشغيلية وأبحاث علمية",
+            "valEn": "Enterprise, Field & Research"
         },
         {
             "num": "85%",
             "labelAr": "تقليص زمن معالجة الوثائق",
-            "labelEn": "Document Sorting Boost",
-            "valAr": "في تطبيق الجوازات الميداني",
-            "valEn": "Hajj Passport Operations"
+            "labelEn": "Verification Acceleration",
+            "valAr": "في نظام الجوازات الميداني",
+            "valEn": "In Hajj Field Operations"
         },
         {
             "num": "0%",
             "labelAr": "نسبة فقدان البيانات",
             "labelEn": "Data Loss Record",
-            "valAr": "في أنظمة الاتصالات الإدارية",
-            "valEn": "In Enterprise Digitization"
+            "valAr": "في أنظمة التحول الرقمي",
+            "valEn": "In Enterprise Systems"
         },
         {
             "num": "100%",
-            "labelAr": "توثيق واختبارات معيارية",
-            "labelEn": "Verified Documentation",
+            "labelAr": "جاهزية واستقرار معماري",
+            "labelEn": "Architectural Readiness",
             "valAr": "مستندات وأكواد مرجعية معتمدة",
-            "valEn": "Verified Architecture Specs"
+            "valEn": "Production Specifications"
         }
     ],
     "collaborationStats": [
         {
             "num": "04+",
-            "labelAr": "مواسم حج تشغيلية",
+            "labelAr": "مواسم حج تشغيلية متتالية",
             "labelEn": "Consecutive Hajj Seasons",
-            "valAr": "قيادة وإدارة العمليات التقنية",
-            "valEn": "Field Technical Leadership"
+            "valAr": "قيادة وتطوير النظم الميدانية",
+            "valEn": "Field Systems Leadership"
+        },
+        {
+            "num": "85%",
+            "labelAr": "تقليص زمن التدقيق الميداني",
+            "labelEn": "Verification Time Reduced",
+            "valAr": "عبر نظام الجوازات الهجين",
+            "valEn": "Via Hybrid Passport App"
         },
         {
             "num": "100%",
-            "labelAr": "استقرار في فترات الذروة",
-            "labelEn": "Uptime Under Peak Load",
-            "valAr": "بدون أي توقف للأنظمة",
-            "valEn": "Zero Operational Downtime"
+            "labelAr": "الالتزام باتفاقيات الخدمة",
+            "labelEn": "SLA Adherence Record",
+            "valAr": "في بيئات البنية التحتية الحيوية",
+            "valEn": "In Critical Infrastructure"
         },
         {
-            "num": "10k+",
-            "labelAr": "وثائق وجوازات سفر مُدققة",
-            "labelEn": "Verified Records",
-            "valAr": "مطابقة إلكترونية فورية",
-            "valEn": "Electronic Cross-Matching"
-        },
-        {
-            "num": "3+",
-            "labelAr": "شراكات ومؤسسات كبرى",
-            "labelEn": "Enterprise Partnerships",
-            "valAr": "قطاع الحج والقطاع الخاص",
-            "valEn": "Hajj & Commercial Sectors"
+            "num": "06",
+            "labelAr": "خبرات وسجلات مؤسسية كبرى",
+            "labelEn": "Major Enterprise Track Records",
+            "valAr": "جهات حكومية ومؤسسات وطنية",
+            "valEn": "Gov & Enterprise Entities"
         }
     ]
 };

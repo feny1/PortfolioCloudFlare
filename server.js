@@ -20,7 +20,26 @@ app.get('/404', (req, res) => {
   res.status(404).sendFile(path.join(__dirname, '404.html'));
 });
 
-// SPA fallback for all routes as defined in _redirects
+// Robust image fallback resolver
+app.get(/\.(jpg|jpeg|png|webp|gif|svg)$/i, (req, res, next) => {
+  const fs = require('fs');
+  const filename = path.basename(req.path);
+  const possiblePaths = [
+    path.join(__dirname, 'assets', 'images', filename),
+    path.join(__dirname, 'public', 'assets', 'aistudio', filename),
+    path.join(__dirname, 'assets', filename),
+    path.join(__dirname, filename),
+    path.join(__dirname, 'public', filename)
+  ];
+  for (const p of possiblePaths) {
+    if (fs.existsSync(p)) {
+      return res.sendFile(p);
+    }
+  }
+  return res.status(404).send('Image file not found on server');
+});
+
+// SPA fallback for all remaining HTML/page routes
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
