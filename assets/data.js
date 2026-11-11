@@ -886,11 +886,11 @@ const initialDefaultData = {
     ],
     "peopleStats": [
         {
-            "num": "12",
+            "num": "14",
             "labelAr": "شخصيات وقيادات مهنية",
             "labelEn": "Professional Network",
-            "valAr": "قيادات ومسؤولو بلدي وزملاء مشاريع",
-            "valEn": "Executive Leaders, Supervisors & Peers"
+            "valAr": "قيادات ومسؤولو بلدي وعلم والخليج وزملاء مشاريع",
+            "valEn": "Executive Leaders, Elm, Al-Khaleej & Peers"
         },
         {
             "num": "06",
@@ -1057,6 +1057,30 @@ const initialDefaultData = {
             "roleEn": "Systems Analyst & Technical Documentation Engineer",
             "orgAr": "إدارة بلدي • أمانة العاصمة المقدسة (وكالة التحول الرقمي)",
             "orgEn": "Balady Directorate • Holy Makkah Municipality",
+            "url": ""
+        },
+        {
+            "id": "person-abdulrahman-safar",
+            "nameAr": "عبدالرحمن سفر",
+            "nameEn": "Abdulrahman Safar",
+            "badgeAr": "مدير مشروع نسك تمكين",
+            "badgeEn": "Project Manager • Nusuk Tamkeen",
+            "roleAr": "مدير مشروع نسك تمكين",
+            "roleEn": "Project Manager - Nusuk Tamkeen",
+            "orgAr": "شركة علم (Elm)",
+            "orgEn": "Elm Company",
+            "url": ""
+        },
+        {
+            "id": "person-fahad-alosaimi",
+            "nameAr": "فهد العصيمي",
+            "nameEn": "Fahad Al-Osaimi",
+            "badgeAr": "مدير المشاريع التقنية",
+            "badgeEn": "Technical Project Manager",
+            "roleAr": "مدير المشاريع التقنية",
+            "roleEn": "Technical Project Manager",
+            "orgAr": "شركة الخليج للكمبيوتر والمعدات الإلكترونية المحدودة",
+            "orgEn": "Al-Khaleej Computers & Electronic Equipment Ltd.",
             "url": ""
         }
     ],
